@@ -45,7 +45,7 @@ To add a plugin, add it under the `require` directive in `site/composer.json` or
 
 Example: `"wpackagist-plugin/akismet": "dev-trunk"`
 
-Whenever you add a new plugin or update the WP version, run `composer update` from inside the `site` directory to install your new packages.
+Whenever you add a new plugin or update the WP version, run `composer install && composer update` from inside the `site` directory to install your new packages.
 
 The `plugins` directory is tracked by Git so you can add plugins that are not available to be installed by Composer if you really need to, but using Composer is highly recommended so you can easily track dependencies and their versions.
 

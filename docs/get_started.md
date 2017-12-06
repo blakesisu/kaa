@@ -76,16 +76,6 @@ The username is the email you added to `wordpress_sites.yml` and the password is
 
 Go to the Plugins section and activate all the plugins.
 
-### Activating VersionPress
-
-VersionPress has a multi-step activation process.
-
-1. Click the regular "Activate" link.
-1. Once that is done click the new "Please finish the activation" link for the second step.
-1. Click the big "Activate VersionPress" button at the bottom.
-
-Note: if you try changing the environment name on the last step it will be ignored. The `VP_ENVIRONMENT` constant has already been defined in each `site/config/environments/<environment>.php` file.
-
 ## 5. Sync WordPress data
 
-If you need to sync your local environment with staging or production check out [Syncing Dev, Staging, and Production](syncing_dev_staging_production.md).
+If you need to sync your local environment's content with staging or production check out [Syncing Dev, Staging, and Production](syncing_dev_staging_production.md).

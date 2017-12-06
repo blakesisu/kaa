@@ -6,6 +6,8 @@ This is a starter repo for building a bespoke WordPress site using modern dev to
 
 TO DO. Talk about general workflow and how things are synced and managed.
 
+- WordPress plugins are managed using Composer
+
 ## Stack
 
 ### Server
@@ -33,11 +35,8 @@ TO DO. Talk about general workflow and how things are synced and managed.
   - Using Composer to manage all dependencies, including WordPress
   - Easier environment-specific configuration
   - Separate WP core files from our site files
-- [VersionPress](https://versionpress.net/) - Use Git for WP version control.
-  - Undo changes
-  - Create staging sites
-  - Efficient Backups
-  - Merge databases
+- [WP Sync DB](https://github.com/wp-sync-db/wp-sync-db) - Push, pull, and sync database tables between WordPress installations
+- [WP Sync DB Media Files](https://github.com/wp-sync-db/wp-sync-db-media-files) - Sync media libraries between WordPress installations
 - [Advanced Custom Fields](https://www.advancedcustomfields.com/)
 
 ## Theme Development
@@ -72,7 +71,6 @@ TO DO. Talk about general workflow and how things are synced and managed.
       - **uploads** - Uploads
     - **wp** - WordPress core (never edit)
     - `index.php` - WordPress view bootstrapper
-    - `wp-config.common.php` - Added by VersionPress (just ignore)
     - `wp-config.php` - Required by WP (never edit)
   - .env - Automatically configured by Trellis
   - `composer.json` - Manage versions of WordPress, plugins & dependencies
@@ -94,8 +92,8 @@ TO DO. Talk about general workflow and how things are synced and managed.
 ### Setting up a new project
 
 1. [Configure everything for local development](docs/get_started.md)
-1. [Setup a remote server for staging/production](docs/remote_server_setup.md)
 1. [Create custom site/theme](docs/development_workflow.md)
+1. [Setup a remote server for staging/production](docs/remote_server_setup.md)
 1. [Deploy changes to staging/production](docs/deployment_workflow.md)
 1. [Keep everything in sync between Dev, Staging, and Production](docs/syncing_dev_staging_production.md)
 

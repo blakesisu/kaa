@@ -209,4 +209,4 @@ Go to the Plugins section and activate all the plugins.
 
 ## 7. Sync WordPress data
 
-If you need to sync your local environment with staging or production check out [Syncing Dev, Staging, and Production](syncing_dev_staging_production.md).
+If you need to sync the remote server's content with your local environment or staging check out [Syncing Dev, Staging, and Production](syncing_dev_staging_production.md).
