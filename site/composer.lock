@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b79b660ed1a01d6179a8832318c48356",
+    "content-hash": "acaa772f4b40b7830e0ee3597a1da519",
     "packages": [
         {
             "name": "composer/installers",
@@ -405,7 +405,7 @@
             "version": "1.5",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/wp-sync-db/wp-sync-db/archive/1.5.zip",
+                "url": "https://github.com/corysimmons/wp-sync-db/archive/1.6.zip",
                 "reference": null,
                 "shasum": null
             },
