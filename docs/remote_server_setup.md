@@ -176,6 +176,8 @@ At this point we will have a properly configured server with PHP, Nginx, Databas
 
 ## 4. Deploy files to remote server
 
+**Make sure your latest changes have been committed and pushed to GitHub before you deploy.**
+
 To deploy the site's files run the following command from inside the `trellis` directory. Where `<site-name>` is the site name you added to the `<environment>/wordpress_sites.yml` file in Step 2.2.
 
 ```
