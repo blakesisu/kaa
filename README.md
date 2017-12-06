@@ -35,7 +35,7 @@ TO DO. Talk about general workflow and how things are synced and managed.
   - Using Composer to manage all dependencies, including WordPress
   - Easier environment-specific configuration
   - Separate WP core files from our site files
-- [WP Sync DB](https://github.com/wp-sync-db/wp-sync-db) - Push, pull, and sync database tables between WordPress installations
+- [WP Sync DB](https://github.com/wp-sync-db/wp-sync-db) - Push and pull database tables between WordPress installations
 - [WP Sync DB Media Files](https://github.com/wp-sync-db/wp-sync-db-media-files) - Sync media libraries between WordPress installations
 - [Advanced Custom Fields](https://www.advancedcustomfields.com/)
 
