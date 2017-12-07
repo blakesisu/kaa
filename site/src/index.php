@@ -1,5 +1,5 @@
 <?php get_header(); ?>
 
-<h1>Main page content goes here</h1>
+<?php include("template-parts/home/hero.php"); ?>
 
 <?php get_footer(); ?>

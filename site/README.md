@@ -109,8 +109,14 @@ the `src` directory and they will be directly copied over to the `site/web/app/t
 
 #### SVGs
 
+SVGs are stored in the `src/template-parts/svgs` directory
+
 ```php
-<?php echo file_get_contents("kiwi.svg"); ?>
+// from root .php file
+<?php include("svgs/kiwi.svg"); ?>
+
+// from /template-parts/sub-directory/*.php
+<?php include(__DIR__ ."/../svgs/kiwi.svg"); ?>
 ```
 
 ### Javascript
