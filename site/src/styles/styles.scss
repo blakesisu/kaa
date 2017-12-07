@@ -1,0 +1,16 @@
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+@import 'reset';
+@import 'utilities';
+
+html,
+body {
+  height: 100%;
+  font-family: $regular;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-size: 100px;
+}

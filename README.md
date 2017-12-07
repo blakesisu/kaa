@@ -5,87 +5,15 @@ This is a starter repo for building a bespoke WordPress site using modern dev to
 ## Philosophy
 
 TO DO. Talk about general workflow and how things are synced and managed.
-
 - WordPress plugins are managed using Composer
 
-## Stack
+## This project consists of two parts
 
-### Server
+The WordPress CMS, Plugins, Themes and files found inside the `site` directory.
 
-- [Trellis](https://roots.io/trellis/) - Uses Ansible to configure consistent dev/stage/production environments
-  - Ubuntu 16.04 Xenial LTS
-  - Nginx (with optional FastCGI micro-caching)
-  - PHP 7.1
-  - MariaDB (a drop-in MySQL replacement)
-  - SSL support (scores an A+ on the [Qualys SSL Labs Test](https://www.ssllabs.com/ssltest/))
-  - Let's Encrypt integration for free SSL certificates
-  - HTTP/2 support (requires SSL)
-  - Composer
-  - WP-CLI
-  - sSMTP (mail delivery)
-  - MailHog
-  - Memcached
-  - Fail2ban
-  - ferm
+Trellis' Ansible files used to serve the `site` directory across consistent dev/stag/production environments.
 
-## CMS
-
-- [Wordpress](https://wordpress.org/) - The web's most popular CMS
-- [Bedrock](https://roots.io/bedrock/) - Improved WordPress boilerplate
-  - Using Composer to manage all dependencies, including WordPress
-  - Easier environment-specific configuration
-  - Separate WP core files from our site files
-- [WP Sync DB](https://github.com/wp-sync-db/wp-sync-db) - Push and pull database tables between WordPress installations
-- [WP Sync DB Media Files](https://github.com/wp-sync-db/wp-sync-db-media-files) - Sync media libraries between WordPress installations
-- [Advanced Custom Fields](https://www.advancedcustomfields.com/)
-
-## Theme Development
-
-- [Gulp](http://gulpjs.com/) - Efficient, configurable, streaming task runner
-- [BrowserSync](https://www.browsersync.io/) - Live reload changes
-- [Webpack 2.6](https://webpack.github.io) - Automatic common module chunk bundling and tree shaking
-- [Babel](https://babeljs.io/) - Use the latest ECMAScript features
-- [Sass](http://sass-lang.com/) - Easier CSS dev with variables, nesting, partials, import, mixins, inheritance, and operators
-- [PostCSS](http://postcss.org/) - Autoprefix CSS
-- [ESLint](http://eslint.org/) - Catch syntax and style issues
-
-## Client
-
-- [jQuery](https://jquery.com/) - Get off my lawn!
-- [Lodash](https://lodash.com/) - Little utilities like throttle/debounce
-- [Postal](https://github.com/postaljs/postal.js) - pub/sub library to allow decoupled communication between components
-- [Modernizr](https://modernizr.com) - Browser feature detection (touch-events)
-
-## Project Structure
-
-- **site** - Bedrock-based WordPress site
-  - **config** - WordPress configuration files
-    - **environments** - Environment specific configs
-    - `application.php` - Primary WP config file (wp-config.php equivalent)
-  - **vendor** - Composer packages (never edit)
-  - **web** - Web root (vhost document root)
-    - **app** - wp-content equivalent
-      - **mu-plugins** - Must use plugins
-      - **plugins** - General Plugins
-      - **themes** - Themes
-      - **uploads** - Uploads
-    - **wp** - WordPress core (never edit)
-    - `index.php` - WordPress view bootstrapper
-    - `wp-config.php` - Required by WP (never edit)
-  - .env - Automatically configured by Trellis
-  - `composer.json` - Manage versions of WordPress, plugins & dependencies
-- **trellis** - Trellis Ansible files
-  - **deploy-hooks**
-    - `build-before.yml` - Custom commands to run before deploying
-  - **group_vars** - Environment variables for Ansible
-    - **all**
-    - **development**
-    - **production**
-    - **staging**
-  - **hosts** - Server host names for each environment
-  - **lib**
-  - **roles**
-  - `dotfiles` - Various configs
+The two directories have their own README's with more info.
 
 ## Docs
 

@@ -1,91 +1,160 @@
-# [Bedrock](https://roots.io/bedrock/)
-[![Packagist](https://img.shields.io/packagist/v/roots/bedrock.svg?style=flat-square)](https://packagist.org/packages/roots/bedrock)
-[![Build Status](https://img.shields.io/travis/roots/bedrock.svg?style=flat-square)](https://travis-ci.org/roots/bedrock)
+# Sisu Theme Starter
 
-Bedrock is a modern WordPress stack that helps you get started with the best development tools and project structure.
+Use this repo as a starting point for your next custom WordPress theme.
 
-Much of the philosophy behind Bedrock is inspired by the [Twelve-Factor App](http://12factor.net/) methodology including the [WordPress specific version](https://roots.io/twelve-factor-wordpress/).
+## Tech Stack
 
-## Features
+### Client
 
-* Better folder structure
-* Dependency management with [Composer](http://getcomposer.org)
-* Easy WordPress configuration with environment specific files
-* Environment variables with [Dotenv](https://github.com/vlucas/phpdotenv)
-* Autoloader for mu-plugins (use regular plugins as mu-plugins)
-* Enhanced security (separated web root and secure passwords with [wp-password-bcrypt](https://github.com/roots/wp-password-bcrypt))
+- [jQuery](https://jquery.com/) - Get off my lawn!
+- [Lodash](https://lodash.com/) - Little utilities like throttle/debounce
+- [Postal](https://github.com/postaljs/postal.js) - pub/sub library to allow decoupled communication between components
+- [Modernizr](https://modernizr.com) - Browser feature detection (touch-events)
 
-Use [Trellis](https://github.com/roots/trellis) for additional features:
+### Development
 
-* Easy development environments with [Vagrant](http://www.vagrantup.com/)
-* Easy server provisioning with [Ansible](http://www.ansible.com/) (Ubuntu 16.04, PHP 7.1, MariaDB)
-* One-command deploys
+- [Gulp](http://gulpjs.com/) - Efficient, configurable, streaming task runner
+- [Gulp File Include](https://github.com/coderhaoxin/gulp-file-include) - Basic HTML templating/includes.
+- [BrowserSync](https://www.browsersync.io/) - Live reload changes
+- [Webpack 2.6](https://webpack.github.io) - Automatic common module chunk bundling and tree shaking
+- [Babel](https://babeljs.io/) - Use the latest ECMAScript features like all the cool kids
+- [Sass](http://sass-lang.com/) - Easier CSS dev with variables, nesting, partials, import, mixins, inheritance, and operators
+- [PostCSS](http://postcss.org/) - Autoprefix CSS
+- [ESLint](http://eslint.org/) - Catch syntax and style issues
 
-See a complete working example in the [roots-example-project.com repo](https://github.com/roots/roots-example-project.com).
+### CMS
 
-## Requirements
+- [Wordpress](https://wordpress.org/) - The web's most popular CMS
+- [Bedrock](https://roots.io/bedrock/) - Improved WordPress boilerplate
+  - Using Composer to manage all dependencies, including WordPress
+  - Easier environment-specific configuration
+  - Separate WP core files from our site files
+- [WP Sync DB](https://github.com/wp-sync-db/wp-sync-db) - Push and pull database tables between WordPress installations
+- [WP Sync DB Media Files](https://github.com/wp-sync-db/wp-sync-db-media-files) - Sync media libraries between WordPress installations
+- [Advanced Custom Fields](https://www.advancedcustomfields.com/)
 
-* PHP >= 5.6
-* Composer - [Install](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
+## To Do
 
-## Installation
+- [ ] Adjust Gulp to only update changed files
+- [ ] BrowserSync
+- [ ] Add better example site starting point
 
-1. Create a new project in a new folder for your project:
+## Get Started
 
-  `composer create-project roots/bedrock your-project-folder-name`
+1. Install [Node v6.9+](https://nodejs.org/en/) globally if you don't have it already
+1. Install [Yarn](https://yarnpkg.com/) globally if you don't have it already
+1. Using terminal change directories to the project root `cd /path/to/your-project/site`
+1. Install dependencies by running `yarn`
+1. Run any of the available commands found below
 
-2. Update environment variables in `.env`  file:
-  * `DB_NAME` - Database name
-  * `DB_USER` - Database user
-  * `DB_PASSWORD` - Database password
-  * `DB_HOST` - Database host
-  * `WP_ENV` - Set to environment (`development`, `staging`, `production`)
-  * `WP_HOME` - Full URL to WordPress home (http://example.com)
-  * `WP_SITEURL` - Full URL to WordPress including subdirectory (http://example.com/wp)
-  * `AUTH_KEY`, `SECURE_AUTH_KEY`, `LOGGED_IN_KEY`, `NONCE_KEY`, `AUTH_SALT`, `SECURE_AUTH_SALT`, `LOGGED_IN_SALT`, `NONCE_SALT`
+## Commands
 
-  If you want to automatically generate the security keys (assuming you have wp-cli installed locally) you can use the very handy [wp-cli-dotenv-command][wp-cli-dotenv]:
+| Command | Description |
+|---------|-------------|
+| `yarn` | Install dependencies |
+| `yarn dev` | - Transpile CSS and Javascript - View at [http://localhost:3000/](http://localhost:3000/) - BrowserSync will automatically reload CSS or refresh the page when JS, SCSS, or content changes. |
+| `yarn build` | Use Gulp to build static output to the `site/web/app/themes/dist` folder |
+| `yarn lint` | Lint code using ESLint |
 
-      wp package install aaemnnosttv/wp-cli-dotenv-command
+## Project Structure
 
-      wp dotenv salts regenerate
+- **config** - WordPress configuration files
+  - **environments** - Environment specific configs
+  - `application.php` - Primary WP config file (wp-config.php equivalent)
+- **node_modules** - Node packages (never edit)
+- **src** - Custom theme development files to be transpiled/copied into `site/web/app/themes/dist`. Directories with an asterisk "*" will NOT be copied over.
+  - **data** - Custom data in JSON files to be used in templates and javascript
+  - **fonts**
+  - **images**
+  - **template-parts** - PHP partials
+    - **common** - Global elements
+    - **svgs** - SVGs that will inlined by including them as partials
+  - **scripts*** - Scripts will be transpiled with Webpack to `site/web/app/themes/dist/js`. See `webpack.config.js` for more details
+    - **components** - javascript class files grouped by the areas of the application that they are used
+    - **constants** - Constants groups into files by type (ActionTypes.js, NotificationTypes.js, etc..)
+    - **services** - Stand-alone JavaScript modules (non-class components)
+    - `scripts.js` - File is the entrypoint for webpack and will be built to `site/web/app/themes/dist/scripts.js`
+  - **styles*** - Sass files transpiled to `dist/css`
+  - `footer.php`
+  - `functions.php` - Customize WP parameters for this theme
+  - `header.php`
+  - `index.php` - Home page template
+  - `page.php` - Default page template
+  - `*.php` - Other page templates
+- **vendor** - Composer packages (never edit)
+- **web** - Web root (vhost document root)
+  - **app** - wp-content equivalent
+    - **mu-plugins** - Must use plugins
+    - **plugins** - General Plugins
+    - **themes** - Themes
+    - **uploads** - Uploads
+  - **wp** - WordPress core (never edit)
+  - `index.php` - WordPress view bootstrapper
+  - `wp-config.php` - Required by WP (never edit)
+- .env - Automatically configured by Trellis
+- `composer.json` - Manage versions of WordPress, plugins & dependencies
+- `dotfiles` - Various configs for the different parts of the stack
 
-  Or, you can cut and paste from the [Roots WordPress Salt Generator][roots-wp-salt].
 
-3. Add theme(s) in `web/app/themes` as you would for a normal WordPress site.
+## Development Workflow
 
-4. Set your site vhost document root to `/path/to/site/web/` (`/path/to/site/current/web/` if using deploys)
+### Static files
 
-5. Access WP admin at `http://example.com/wp/wp-admin`
+For files and folders that are completely static and don't need to go through the asset pipeline, put them in
+the `src` directory and they will be directly copied over to the `site/web/app/themes/dist` directory.
 
-## Deploys
+### PHP
 
-There are two methods to deploy Bedrock sites out of the box:
+#### Partials
 
-* [Trellis](https://github.com/roots/trellis)
-* [bedrock-capistrano](https://github.com/roots/bedrock-capistrano)
+#### SVGs
 
-Any other deployment method can be used as well with one requirement:
+```php
+<?php echo file_get_contents("kiwi.svg"); ?>
+```
 
-`composer install` must be run as part of the deploy process.
+### Javascript
 
-## Documentation
+You can use ES6 and use both relative imports or import libraries from npm.
 
-Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://roots.io/bedrock/docs/).
+### Modernizr
 
-## Contributing
+```javascript
+if (Modernizr.touchevents) {
+	console.log('touch events');
+} else {
+	console.log('no touch events');
+}
+```
 
-Contributions are welcome from everyone. We have [contributing guidelines](https://github.com/roots/guidelines/blob/master/CONTRIBUTING.md) to help you get started.
+### Postal
 
-## Community
+```javascript
+import postal from 'postal';
+import { HOME } from '../constants/Channels';
 
-Keep track of development and community news.
+const channel = postal.channel(HOME);
 
-* Participate on the [Roots Discourse](https://discourse.roots.io/)
-* Follow [@rootswp on Twitter](https://twitter.com/rootswp)
-* Read and subscribe to the [Roots Blog](https://roots.io/blog/)
-* Subscribe to the [Roots Newsletter](https://roots.io/subscribe/)
-* Listen to the [Roots Radio podcast](https://roots.io/podcast/)
+channel.subscribe('some.event', (args) => {
+	console.log('some.event called');
+	console.log('args', args);
+});
 
-[roots-wp-salt]:https://roots.io/salts.html
-[wp-cli-dotenv]:https://github.com/aaemnnosttv/wp-cli-dotenv-command
+channel.publish('some.event', {
+	foo: true,
+	bar: false
+});
+
+```
+
+### CSS
+
+Any SCSS file directly under the `src/styles/` folder will get compiled with [PostCSS Next](http://cssnext.io/)
+to `site/web/app/themes/dist/css/{filename}.css`.
+
+
+
+
+
+
+
