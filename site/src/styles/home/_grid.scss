@@ -186,5 +186,22 @@ $hm-grid-text-break: 1010px;
       order: 4;
     }
   }
+
+  // layout six
+  // ----------------------------------------- //
+  .hm-grid--6 {
+    .hm-grid__item--square-lrg {
+      order: 1;
+    }
+    .hm-grid__item--vertical {
+      order: 2;
+    }
+    .hm-grid__item--text {
+      order: 3;
+    }
+    .hm-grid__item--horizontal {
+      order: 4;
+    }
+  }
 }
 

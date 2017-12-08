@@ -6,5 +6,6 @@
 <?php include("template-parts/home/grid-3.php"); ?>
 <?php include("template-parts/home/grid-4.php"); ?>
 <?php include("template-parts/home/grid-5.php"); ?>
+<?php include("template-parts/home/grid-6.php"); ?>
 
 <?php get_footer(); ?>
