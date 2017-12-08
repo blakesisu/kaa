@@ -38,6 +38,7 @@ Use this repo as a starting point for your next custom WordPress theme.
 - [ ] Adjust Gulp to only update changed files
 - [ ] BrowserSync
 - [ ] Add better example site starting point
+- [ ] PHP templating language?
 
 ## Get Started
 
