@@ -43,8 +43,8 @@
     <div class="hm-image-block hm-grid__item hm-grid__item--vertical">
       <picture class="hm-image-block__picture">
         <source srcset="<?php bloginfo('template_url'); ?>/images/home/grid-1/waterfall-sml.jpg" media="(max-width: 700px)">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/home/grid-1/waterfall-lrg-2.jpg">
-        <img class="hm-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/home/grid-1/waterfall-lrg-2.jpg" alt="">
+        <source srcset="<?php bloginfo('template_url'); ?>/images/home/grid-1/waterfall-lrg.jpg">
+        <img class="hm-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/home/grid-1/waterfall-lrg.jpg" alt="">
       </picture>
     </div>
 
