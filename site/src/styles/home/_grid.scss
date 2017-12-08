@@ -70,13 +70,11 @@ $hm-grid-text-break: 1010px;
 @media (max-width: $hm-grid-text-break) {
   // layout one
   // ----------------------------------------- //
-  .hm-grid--1 {
-    .hm-grid__item--square {
-      height: 50%;
-    }
-    .hm-grid__item--vertical {
-      height: 50%;
-    }
+  .hm-grid__item--square {
+    height: 50%;
+  }
+  .hm-grid__item--vertical {
+    height: 50%;
   }
 }
 
@@ -98,6 +96,23 @@ $hm-grid-text-break: 1010px;
       order: 1;
     }
     .hm-grid__item--square {
+      order: 2;
+    }
+    .hm-grid__item--vertical {
+      order: 3;
+    }
+    .hm-grid__item--horizontal {
+      order: 4;
+    }
+  }
+
+  // layout three
+  // ----------------------------------------- //
+  .hm-grid--3 {
+    .hm-grid__item--square {
+      order: 1;
+    }
+    .hm-grid__item--square-lrg {
       order: 2;
     }
     .hm-grid__item--vertical {
