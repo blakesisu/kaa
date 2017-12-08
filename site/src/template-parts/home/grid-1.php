@@ -29,7 +29,7 @@
     </div>
 
     <!-- Text Block -->
-    <div class="hm-text-block hm-grid__item hm-grid__item--square">
+    <div class="hm-text-block hm-grid__item hm-grid__item--text">
       <div class="hm-text-block__content">
         <h1 class="hm-text-block__header">Reveal</h1>
         <div class="hm-text-block__dash"></div>
@@ -43,8 +43,8 @@
     <div class="hm-image-block hm-grid__item hm-grid__item--vertical">
       <picture class="hm-image-block__picture">
         <source srcset="<?php bloginfo('template_url'); ?>/images/home/grid-1/waterfall-sml.jpg" media="(max-width: 700px)">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/home/grid-1/waterfall-lrg.jpg">
-        <img class="hm-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/home/grid-1/waterfall-lrg.jpg" alt="">
+        <source srcset="<?php bloginfo('template_url'); ?>/images/home/grid-1/waterfall-lrg-2.jpg">
+        <img class="hm-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/home/grid-1/waterfall-lrg-2.jpg" alt="">
       </picture>
     </div>
 

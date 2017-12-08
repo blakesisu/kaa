@@ -12,15 +12,13 @@ $hm-grid-text-break: 1010px;
 // min-width since the mobile styles are so different it was easier to not have to override anything
 // ------------------------------------------------------------------------------------------------- //
 @media (min-width: $hm-grid-single-column-break + 1) {
+  // grid
   .hm-grid {
     position: relative;
+    background-color: $lightBrown;
   }
-  .hm-grid--3-high {
-    padding-top: 84.375%;
-  }
-  .hm-grid--2-high {
-    padding-top: 56.25%;
-  }
+
+  // content
   .hm-grid__content {
     position: absolute;
     top: 0;
@@ -41,49 +39,84 @@ $hm-grid-text-break: 1010px;
     width: 100%;
     height: 100%;
   }
-  .hm-grid__item--square-lrg {
-    width: 66.7%;
-    height: 66.7%;
-  }
-  .hm-grid__item--square {
-    width: 33.3%;
-    height: 33.3%;
-  }
-  .hm-grid__item--horizontal {
-    width: 66.7%;
-    height: 33.3%;
-  }
-  .hm-grid__item--vertical {
-    width: 33.3%;
-    height: 66.7%;
-  }
 
-  // layout one
+  // three blocks high
   // ----------------------------------------- //
-  .hm-grid--1 {
+  .hm-grid--3-high {
+    padding-top: 84.375%;
 
+    .hm-grid__item--square-lrg {
+      width: 66.7%;
+      height: 66.7%;
+    }
+    .hm-grid__item--text,
+    .hm-grid__item--square {
+      width: 33.3%;
+      height: 33.3%;
+    }
+    .hm-grid__item--horizontal {
+      width: 66.7%;
+      height: 33.3%;
+    }
+    .hm-grid__item--vertical {
+      width: 33.3%;
+      height: 66.7%;
+    }
+  }
+
+  // two blocks high
+  // ----------------------------------------- //
+  .hm-grid--2-high {
+    padding-top: 56.25%;
+
+    .hm-grid__item--square-lrg {
+      width: 66.7%;
+      height: 100%;
+    }
+    .hm-grid__item--text,
+    .hm-grid__item--square {
+      width: 33.3%;
+      height: 50%;
+    }
+    .hm-grid__item--horizontal {
+      width: 66.7%;
+      height: 50%;
+    }
+    .hm-grid__item--vertical {
+      width: 33.3%;
+      height: 100%;
+    }
   }
 }
 
 // Make text blocks taller
 // ------------------------------------------------------------------------------------------------- //
 @media (max-width: $hm-grid-text-break) {
-  // layout one
-  // ----------------------------------------- //
-  .hm-grid__item--square {
-    height: 50%;
+  // three blocks high
+  .hm-grid--3-high {
+    .hm-grid__item--text {
+      height: 50%;
+    }
+    .hm-grid__item--vertical {
+      height: 50%;
+    }
   }
-  .hm-grid__item--vertical {
-    height: 50%;
+
+  // two blocks high
+  .hm-grid--2-high {
+    .hm-grid__item--text {
+      height: 60%;
+    }
+    .hm-grid__item--square {
+      height: 40%;
+    }
   }
 }
 
 // single column
 // ------------------------------------------------------------------------------------------------- //
 @media (max-width: $hm-grid-single-column-break) {
-  .hm-grid {
-
-  }
+  // content
   .hm-grid__content {
     display: flex;
     flex-direction: column;
@@ -95,7 +128,7 @@ $hm-grid-text-break: 1010px;
     .hm-grid__item--square-lrg {
       order: 1;
     }
-    .hm-grid__item--square {
+    .hm-grid__item--text {
       order: 2;
     }
     .hm-grid__item--vertical {
@@ -109,7 +142,7 @@ $hm-grid-text-break: 1010px;
   // layout three
   // ----------------------------------------- //
   .hm-grid--3 {
-    .hm-grid__item--square {
+    .hm-grid__item--text {
       order: 1;
     }
     .hm-grid__item--square-lrg {
@@ -120,6 +153,20 @@ $hm-grid-text-break: 1010px;
     }
     .hm-grid__item--horizontal {
       order: 4;
+    }
+  }
+
+  // layout four
+  // ----------------------------------------- //
+  .hm-grid--4 {
+    .hm-grid__item--square-lrg {
+      order: 1;
+    }
+    .hm-grid__item--text {
+      order: 2;
+    }
+    .hm-grid__item--square {
+      order: 3;
     }
   }
 }

@@ -2,7 +2,7 @@
   <div class="hm-grid__content">
 
     <!-- Text Block -->
-    <div class="hm-text-block hm-grid__item hm-grid__item--square">
+    <div class="hm-text-block hm-grid__item hm-grid__item--text">
       <div class="hm-text-block__content">
         <h1 class="hm-text-block__header">Weave</h1>
         <div class="hm-text-block__dash"></div>

@@ -1,6 +1,7 @@
 @media (min-width: $hm-grid-single-column-break + 1) {
   .hm-image-block {
-
+    line-height: 0;
+    font-size: 0;
   }
   .hm-image-block__picture {
     position: absolute;
