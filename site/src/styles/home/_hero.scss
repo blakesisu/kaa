@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url(../images/home/hero-lrg.jpg) no-repeat left top;
+  background: url(../images/home/hero-lrg.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -30,13 +30,21 @@
   -webkit-font-smoothing: auto;
 }
 
-// mobile
+// not full screen
+// ------------------------------------------------------------------------------------------------- //
+@media (max-width: 1010px) {
+  .hm-hero {
+    height: auto;
+    padding-top: 60%;
+  }
+}
+
+// hide scroll cta
 // ------------------------------------------------------------------------------------------------- //
 @media (max-width: 700px) {
   .hm-hero {
     height: auto;
     padding-top: 60%;
-    background-image: url(../images/home/hero-sml.jpg);
   }
   // scroll
   .hm-scroll-cta {
