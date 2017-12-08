@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/css/styles.css'; ?>">
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.0-beta1/picturefill.min.js"></script>
+
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

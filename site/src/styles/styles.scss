@@ -5,12 +5,15 @@
 @import 'utilities';
 
 // home
+@import 'home/mixins';
 @import 'home/hero';
+@import 'home/grid';
 
 html,
 body {
   height: 100%;
   font-family: $regular;
   -webkit-font-smoothing: antialiased;
+  color: $brown;
 }
 

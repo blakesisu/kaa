@@ -1,6 +1,6 @@
 // convert Photoshop letterspacing value to ems
 @function ps2em($val) {
-  @return ( $val / 1000 ) * 1em
+  @return ( $val / 1000 ) * 1em;
 }
 
 // https://www.sitepoint.com/converting-typographic-units-sass/

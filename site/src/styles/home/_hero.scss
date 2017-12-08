@@ -1,4 +1,4 @@
-.hero {
+.hm-hero {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -8,7 +8,7 @@
 
 // scroll
 // ----------------------------------------- //
-.hero-scroll {
+.hm-scroll-cta {
   position: absolute;
   bottom: 25px;
   left: 50%;
@@ -20,25 +20,26 @@
     margin-bottom: 9px;
   }
 }
-.hero-scroll__text {
+.hm-scroll-cta__text {
   font-family: $demiBold;
   font-size: 7px;
   text-transform: uppercase;
   color: #fff;
   display: block;
   letter-spacing: ps2em(150);
+  -webkit-font-smoothing: auto;
 }
 
 // mobile
 // ------------------------------------------------------------------------------------------------- //
 @media (max-width: 700px) {
-  .hero {
+  .hm-hero {
     height: auto;
     padding-top: 60%;
     background-image: url(../images/home/hero-sml.jpg);
   }
   // scroll
-  .hero-scroll {
+  .hm-scroll-cta {
     display: none;
   }
 }
