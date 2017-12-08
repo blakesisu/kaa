@@ -4,8 +4,8 @@
   "description": "DC Comics Pineapple Prototype",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf ./web/app/themes/dist && cross-env NODE_ENV=production gulp build",
-    "dev": "rm -rf ./web/app/themes/dist && gulp dev",
+    "build": "rm -rf ./web/app/themes/dist/* && cross-env NODE_ENV=production gulp build",
+    "dev": "rm -rf ./web/app/themes/dist/* && gulp dev",
     "lint": "eslint src"
   },
   "author": "",

@@ -14,7 +14,12 @@ $hm-grid-text-break: 1010px;
 @media (min-width: $hm-grid-single-column-break + 1) {
   .hm-grid {
     position: relative;
+  }
+  .hm-grid--3-high {
     padding-top: 84.375%;
+  }
+  .hm-grid--2-high {
+    padding-top: 56.25%;
   }
   .hm-grid__content {
     position: absolute;
@@ -32,7 +37,11 @@ $hm-grid-text-break: 1010px;
     position: relative;
     overflow: hidden;
   }
-  .hm-grid__item--bg-square {
+  .hm-grid__item--full {
+    width: 100%;
+    height: 100%;
+  }
+  .hm-grid__item--square-lrg {
     width: 66.7%;
     height: 66.7%;
   }
@@ -85,7 +94,7 @@ $hm-grid-text-break: 1010px;
   // layout one
   // ----------------------------------------- //
   .hm-grid--1 {
-    .hm-grid__item--bg-square {
+    .hm-grid__item--square-lrg {
       order: 1;
     }
     .hm-grid__item--square {
