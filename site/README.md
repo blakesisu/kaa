@@ -36,6 +36,7 @@ Use this repo as a starting point for your next custom WordPress theme.
 ## To Do
 
 - [ ] Adjust Gulp to only update changed files
+- [ ] Fix SASS sourcemaps
 - [ ] BrowserSync
 - [ ] Add better example site starting point
 - [ ] PHP templating language?
