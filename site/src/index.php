@@ -10,4 +10,6 @@
 <?php include("template-parts/home/grid-7.php"); ?>
 <?php include("template-parts/home/grid-8.php"); ?>
 
+<?php include("template-parts/home/follow.php"); ?>
+
 <?php get_footer(); ?>

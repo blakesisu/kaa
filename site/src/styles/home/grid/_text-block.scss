@@ -23,10 +23,7 @@
     margin-bottom: 10.5%;
   }
   .hm-text-block__dash {
-    background-color: $orange;
-    width: 11.8%;
-    height: 0.59vw;
-    display: inline-block;
+    @include dash;
   }
   .hm-text-block__description-container {
     display: flex;
@@ -91,10 +88,7 @@
     margin-bottom: 7.1%;
   }
   .hm-text-block__dash {
-    background-color: $orange;
-    width: 8.8%;
-    height: 1.87vw;
-    display: inline-block;
+    @include dash-small;
     margin-bottom: 7%;
   }
   .hm-text-block__description-container {

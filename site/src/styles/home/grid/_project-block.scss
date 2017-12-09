@@ -47,14 +47,7 @@
       transition: opacity 0.3s $easeInOutQuad;
     }
     .hm-project-block__cta-btn {
-      font-family: $medium;
-      display: inline-block;
-      font-size: 11px;
-      color: $lightBrown;
-      text-transform: uppercase;
-      border: 1px solid $lightBrown;
-      letter-spacing: ps2em(200);
-      padding: 15px 18px;
+      @include button;
     }
 
     // copy:hover
@@ -133,8 +126,7 @@
       margin-bottom: 2.75%;
     }
     .hm-project-block__cta-btn {
-      font-size: 0.81vw;
-      padding: 1.65% 1.98%;
+      @include button-lrg;
     }
   }
 
