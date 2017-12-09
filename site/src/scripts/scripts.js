@@ -1,2 +1,3 @@
-// components
+// pages
+import './home/home';
 

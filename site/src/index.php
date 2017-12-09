@@ -11,5 +11,6 @@
 <?php include("template-parts/home/grid-8.php"); ?>
 
 <?php include("template-parts/home/follow.php"); ?>
+<?php include("template-parts/home/instagram.php"); ?>
 
 <?php get_footer(); ?>
