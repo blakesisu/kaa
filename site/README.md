@@ -54,7 +54,7 @@ Use this repo as a starting point for your next custom WordPress theme.
 | Command | Description |
 |---------|-------------|
 | `yarn` | Install dependencies |
-| `yarn dev` | - Transpile CSS and Javascript - View at [http://localhost:3000/](http://localhost:3000/) - BrowserSync will automatically reload CSS or refresh the page when JS, SCSS, or content changes. |
+| `yarn dev` | - Transpile CSS and Javascript and move static files to the `site/web/app/themes/dist` folder |
 | `yarn build` | Use Gulp to build static output to the `site/web/app/themes/dist` folder |
 | `yarn lint` | Lint code using ESLint |
 
