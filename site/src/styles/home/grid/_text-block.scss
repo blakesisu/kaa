@@ -25,7 +25,7 @@
   .hm-text-block__dash {
     background-color: $orange;
     width: 11.8%;
-    height: 7px;
+    height: 0.59vw;
     display: inline-block;
   }
   .hm-text-block__description-container {
@@ -46,19 +46,26 @@
 @media (min-width: $hm-grid-break) {
   // text block
   // ----------------------------------------- //
-  .hm-text-block__dash {
-    height: 10px;
-  }
   .hm-text-block__description {
     font-size: 0.952vw;
   }
 }
 
-// Make text blocks taller
+// Make text blocks height based on content
 // ------------------------------------------------------------------------------------------------- //
 @media (max-width: $hm-grid-text-break) {
+  .hm-text-block__content {
+    position: relative;
+    height: auto;
+    display: block;
+  }
+  .hm-text-block__header {
+    margin-top: 15%;
+  }
   .hm-text-block__description-container {
-    min-height: 73%;
+    display: block;
+    min-height: 0;
+    padding: 8% 0 15%;
   }
 }
 
@@ -86,7 +93,7 @@
   .hm-text-block__dash {
     background-color: $orange;
     width: 8.8%;
-    height: 7px;
+    height: 1.87vw;
     display: inline-block;
     margin-bottom: 7%;
   }

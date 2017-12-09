@@ -1,6 +1,6 @@
 // Grid vars
 $hm-grid-single-column-break: 700px;
-$hm-grid-break: 1366px;
+$hm-grid-break: 1367px;
 $hm-grid-text-break: 1010px;
 
 // Grid blocks
@@ -89,26 +89,20 @@ $hm-grid-text-break: 1010px;
   }
 }
 
-// Make text blocks taller
+// Make text blocks height based on content
 // ------------------------------------------------------------------------------------------------- //
 @media (max-width: $hm-grid-text-break) {
-  // three blocks high
-  .hm-grid--3-high {
-    .hm-grid__item--text {
-      height: 50%;
-    }
-    .hm-grid__item--vertical {
-      height: 50%;
-    }
-  }
-
-  // two blocks high
+  .hm-grid--3-high,
   .hm-grid--2-high {
+
     .hm-grid__item--text {
-      height: 65%;
+      // flex: 1 1 auto;
+      height: auto;
     }
+    .hm-grid__item--vertical,
     .hm-grid__item--square {
-      height: 35%;
+      flex: 1 1 1%;
+      height: auto;
     }
   }
 }
