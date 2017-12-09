@@ -30,7 +30,24 @@
   -webkit-font-smoothing: auto;
 }
 
-// not full screen
+// larger screens
+// ------------------------------------------------------------------------------------------------- //
+@media (min-width: 1366px + 1) {
+  .hm-scroll-cta {
+    bottom: 34px;
+
+    svg {
+      width: 8px;
+      height: 34px;
+      margin-bottom: 14px;
+    }
+  }
+  .hm-scroll-cta__text {
+    font-size: 10px;
+  }
+}
+
+// not full screen height
 // ------------------------------------------------------------------------------------------------- //
 @media (max-width: 1010px) {
   .hm-hero {
