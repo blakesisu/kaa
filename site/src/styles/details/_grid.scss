@@ -1,0 +1,200 @@
+// Grid vars
+$details-grid-single-column-break: 700px;
+$details-grid-break: 1367px;
+$details-grid-text-break: 1010px;
+
+// grid blocks
+@import "grid/image-block";
+@import "grid/text-block";
+
+// grid Styles
+// min-width since the mobile styles are so different it was easier to not have to override anything
+// ------------------------------------------------------------------------------------------------- //
+@media (min-width: $details-grid-single-column-break + 1) {
+  // grid
+  .details-grid {
+    position: relative;
+    // background-color: $lightBrown;
+  }
+
+  // content
+  .details-grid__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  // grid item
+  .details-grid__item {
+    position: relative;
+    overflow: hidden;
+  }
+  .details-grid__item--full {
+    width: 100%;
+    height: 100%;
+  }
+
+  // three blocks high
+  // ----------------------------------------- //
+  .details-grid--3-high {
+    padding-top: 84.375%;
+
+    .details-grid__item--square-lrg {
+      width: 66.7%;
+      height: 66.7%;
+    }
+    .details-grid__item--text,
+    .details-grid__item--square {
+      width: 33.3%;
+      height: 33.3%;
+    }
+    .details-grid__item--horizontal {
+      width: 66.7%;
+      height: 33.3%;
+    }
+    .details-grid__item--vertical {
+      width: 33.3%;
+      height: 66.7%;
+    }
+  }
+
+  // two blocks high
+  // ----------------------------------------- //
+  .details-grid--2-high {
+    padding-top: 56.25%;
+
+    .details-grid__item--square-lrg {
+      width: 66.7%;
+      height: 100%;
+    }
+    .details-grid__item--text,
+    .details-grid__item--square {
+      width: 33.3%;
+      height: 50%;
+    }
+    .details-grid__item--horizontal {
+      width: 66.7%;
+      height: 50%;
+    }
+    .details-grid__item--vertical {
+      width: 33.3%;
+      height: 100%;
+    }
+  }
+}
+
+// Make text blocks height based on content
+// ------------------------------------------------------------------------------------------------- //
+@media (max-width: $details-grid-text-break) {
+  .details-grid--3-high,
+  .details-grid--2-high {
+
+    .details-grid__item--text {
+      // flex: 1 1 auto;
+      height: auto;
+    }
+    .details-grid__item--vertical,
+    .details-grid__item--square {
+      flex: 1 1 1%;
+      height: auto;
+    }
+  }
+}
+
+// single column
+// ------------------------------------------------------------------------------------------------- //
+@media (max-width: $details-grid-single-column-break) {
+  // content
+  .details-grid__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // layout one
+  // ----------------------------------------- //
+  .details-grid--1 {
+    .details-grid__item--square-lrg {
+      order: 1;
+    }
+    .details-grid__item--text {
+      order: 2;
+    }
+    .details-grid__item--vertical {
+      order: 3;
+    }
+    .details-grid__item--horizontal {
+      order: 4;
+    }
+  }
+
+  // layout three
+  // ----------------------------------------- //
+  .details-grid--3 {
+    .details-grid__item--text {
+      order: 1;
+    }
+    .details-grid__item--square-lrg {
+      order: 2;
+    }
+    .details-grid__item--vertical {
+      order: 3;
+    }
+    .details-grid__item--horizontal {
+      order: 4;
+    }
+  }
+
+  // layout four
+  // ----------------------------------------- //
+  .details-grid--4 {
+    .details-grid__item--square-lrg {
+      order: 1;
+    }
+    .details-grid__item--text {
+      order: 2;
+    }
+    .details-grid__item--square {
+      order: 3;
+    }
+  }
+
+  // layout five
+  // ----------------------------------------- //
+  .details-grid--5 {
+    .details-grid__item--horizontal {
+      order: 1;
+    }
+    .details-grid__item--vertical {
+      order: 2;
+    }
+    .details-grid__item--text {
+      order: 3;
+    }
+    .details-grid__item--square-lrg {
+      order: 4;
+    }
+  }
+
+  // layout six
+  // ----------------------------------------- //
+  .details-grid--6 {
+    .details-grid__item--square-lrg {
+      order: 1;
+    }
+    .details-grid__item--vertical {
+      order: 2;
+    }
+    .details-grid__item--text {
+      order: 3;
+    }
+    .details-grid__item--horizontal {
+      order: 4;
+    }
+  }
+}
+

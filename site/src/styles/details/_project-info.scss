@@ -1,0 +1,39 @@
+.details-project_info {
+  background-color: #fff;
+}
+.details-project_info__container {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+// header
+.details-project_info__header {
+  font-size: 21px;
+  font-family: $bold;
+  color: $lightBrown;
+  text-transform: uppercase;
+  letter-spacing: 0.315em;
+  margin-bottom: 25px;
+}
+
+// dash
+.details-project_info__dash {
+  @include dash;
+  margin-bottom: 20px;
+}
+
+// description
+.details-project_info__description {
+  font-size: 13px;
+  margin: 0 auto 24px;
+  max-width: 510px;
+  line-height: 1.9;
+}
+
+// cta
+.details-project_info__cta {
+
+}
+.details-project_info__cta-link {
+  @include button;
+}

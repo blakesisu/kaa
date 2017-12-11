@@ -1,0 +1,102 @@
+@media (min-width: $details-grid-single-column-break + 1) {
+  .details-text-block {
+    background: $white;
+  }
+  .details-text-block__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 12% 0 14%;
+  }
+  .details-text-block__header {
+    font-family: $bold;
+    font-size: 3.65vw;
+    margin-left: -1%;
+    text-transform: uppercase;
+    color: $lightBrown;
+    letter-spacing: ps2em(300);
+    margin-bottom: 10.5%;
+  }
+  .details-text-block__dash {
+    @include dash;
+  }
+  .details-text-block__description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 60%;
+    padding: 8% 0;
+  }
+  .details-text-block__description {
+    font-size: 13px;
+    line-height: 1.95;
+  }
+}
+
+// make text scale up on larger screens based on viewport
+// ------------------------------------------------------------------------------------------------- //
+@media (min-width: $details-grid-break) {
+  // text block
+  // ----------------------------------------- //
+  .details-text-block__description {
+    font-size: 0.952vw;
+  }
+}
+
+// Make text blocks height based on content
+// ------------------------------------------------------------------------------------------------- //
+@media (max-width: $details-grid-text-break) {
+  .details-text-block__content {
+    position: relative;
+    height: auto;
+    display: block;
+  }
+  .details-text-block__header {
+    margin-top: 15%;
+  }
+  .details-text-block__description-container {
+    display: block;
+    min-height: 0;
+    padding: 8% 0 15%;
+  }
+}
+
+// single column
+// ------------------------------------------------------------------------------------------------- //
+@media (max-width: $details-grid-single-column-break) {
+  // text block
+  // ----------------------------------------- //
+  .details-text-block {
+
+  }
+  .details-text-block__content {
+    position: relative;
+    padding: 8% 9.4%;
+  }
+  .details-text-block__header {
+    font-family: $bold;
+    font-size: 12vw;
+    text-transform: uppercase;
+    color: $lightBrown;
+    letter-spacing: ps2em(300);
+    margin-left: -1%;
+    margin-bottom: 7.1%;
+  }
+  .details-text-block__dash {
+    @include dash-small;
+    margin-bottom: 7%;
+  }
+  .details-text-block__description-container {
+
+  }
+  .details-text-block__description {
+    font-size: 15px;
+    line-height: 1.7;
+    letter-spacing: 0.005em;
+  }
+}
