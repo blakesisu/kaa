@@ -1,0 +1,20 @@
+// body copy
+// ----------------------------------------- //
+@mixin hm-body-copy {
+  font-family: $regular;
+  font-size: 13px;
+  line-height: 1.95;
+}
+
+@mixin hm-body-copy--large {
+  font-family: $regular;
+  font-size: 0.952vw;
+  line-height: 1.95;
+}
+
+@mixin hm-body-copy--small {
+  font-family: $regular;
+  font-size: 15px;
+  line-height: 1.7;
+  letter-spacing: 0.005em;
+}

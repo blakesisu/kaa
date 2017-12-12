@@ -14,7 +14,14 @@
 @mixin button-lrg {
   @include button;
   font-size: 0.81vw;
-  padding: 1.65% 1.98%;
+  padding: 1.1vw 1.32vw;
+}
+
+@mixin button--small {
+  @include button;
+  letter-spacing: 0.21em;
+  font-size: 12.5px;
+  padding: 16px 23px;
 }
 
 // dash

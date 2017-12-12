@@ -33,8 +33,7 @@
     padding: 8% 0;
   }
   .hm-text-block__description {
-    font-size: 13px;
-    line-height: 1.95;
+    @include hm-body-copy;
   }
 }
 
@@ -44,7 +43,7 @@
   // text block
   // ----------------------------------------- //
   .hm-text-block__description {
-    font-size: 0.952vw;
+    @include hm-body-copy--large;
   }
 }
 
@@ -95,8 +94,6 @@
 
   }
   .hm-text-block__description {
-    font-size: 15px;
-    line-height: 1.7;
-    letter-spacing: 0.005em;
+    @include hm-body-copy--small;
   }
 }
