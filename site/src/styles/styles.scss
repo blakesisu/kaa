@@ -10,6 +10,11 @@
 @import 'home/grid';
 @import 'home/follow';
 
+// home
+@import 'details/mixins';
+@import 'details/hero';
+@import 'details/grid';
+
 html,
 body {
   height: 100%;
