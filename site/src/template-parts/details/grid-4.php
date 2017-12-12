@@ -1,5 +1,4 @@
-<section class="details-grid details-grid--4">
-  <div class="details-grid__content">
+<section class="details-grid details-grid--4 details-hero">
 
     <!-- Image Block -->
     <div class="details-image-block">
@@ -9,5 +8,4 @@
       </picture>
     </div>
 
-  </div>
 </section>
