@@ -2,11 +2,22 @@
 
 }
 .hm-instagram__list {
-
+  display: flex;
+  flex-wrap: wrap;
 }
 .hm-instagram__item {
-
+  flex: 1 1 16.666666667%;
+}
+.hm-instagram__link {
+  position: relative;
+  display: block;
+  padding-top: 100%;
+  overflow: hidden;
 }
 .hm-instagram__img {
-
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }

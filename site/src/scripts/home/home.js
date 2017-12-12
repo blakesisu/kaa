@@ -4,8 +4,6 @@ import Instafeed from 'instafeed.js';
 // variables
 let feed;
 
-console.log('init home');
-
 // Instagram
 // -------------------------------------------------------------------------------------------- //
 if ($('.hm-instagram').length > 0) {
@@ -18,7 +16,9 @@ if ($('.hm-instagram').length > 0) {
     resolution: 'low_resolution',
     template: `
       <li class="hm-instagram__item">
-        <img class="hm-instagram__img" src="{{image}}" />
+        <a class="hm-instagram__link" href="{{link}}" target="_blank">
+          <img class="hm-instagram__img" src="{{image}}" />
+        </a>
       </li>
     `,
     // wait until images have loaded
