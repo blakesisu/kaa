@@ -24,10 +24,9 @@
 
 // description
 .hm-follow__description {
-  font-size: 13px;
-  margin: 0 auto 24px;
+  @include hm-body-copy;
+  margin: 0 auto 22px;
   max-width: 510px;
-  line-height: 1.9;
 }
 
 // cta
@@ -36,4 +35,65 @@
 }
 .hm-follow__cta-link {
   @include button;
+}
+
+// make text scale up on larger screens based on viewport
+// ------------------------------------------------------------------------------------------------- //
+@media (min-width: $hm-grid-break - 1) {
+  .hm-follow__container {
+    padding: 4.4% 1.47%;
+  }
+
+  // header
+  .hm-follow__header {
+    font-size: 1.54vw;
+    margin-bottom: 1.89%;
+  }
+
+  // description
+  .hm-follow__description {
+    @include hm-body-copy--large;
+    margin-bottom: 1.66%;
+    max-width: 38.47%;
+  }
+
+  .hm-follow__cta-link {
+    @include button-lrg;
+  }
+}
+
+// small styles
+// ---------------------------------------------------------------------------------------------- //
+@media (max-width: $hm-grid-single-column-break) {
+  .hm-follow__container {
+    padding: 28px 20px 35px;
+  }
+
+  // header
+  .hm-follow__header {
+    font-size: 5.35vw;
+    line-height: 1.5;
+    letter-spacing: 0.2em;
+    margin-bottom: 15px;
+  }
+
+  // dash
+  .hm-follow__dash {
+    @include dash-small;
+    margin-bottom: 18px;
+  }
+
+  // description
+  .hm-follow__description {
+    @include hm-body-copy--small;
+    margin-bottom: 26px;
+  }
+
+  // cta
+  .hm-follow__cta {
+
+  }
+  .hm-follow__cta-link {
+    @include button--small;
+  }
 }
