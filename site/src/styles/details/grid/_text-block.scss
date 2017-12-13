@@ -1,4 +1,9 @@
 @media (min-width: $details-grid-single-column-break + 1) {
+  // .details-text-blurb {
+  //   margin: 15% auto;
+  //   width: 71%;
+  // }
+
   .details-greyback {
     background: grey;
     color: white;
@@ -6,13 +11,24 @@
   .details-text-block {
     background: $white;
   }
+
   .details-text-block__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 12% 0 14%;
+    text-align: center;
+    margin-bottom: 2%;
+  }
+
+  .details-text-block__header-content {
     position: relative;
-    // top: 0;
-    // left: 0;
     width: 100%;
     height: 5%;
-    // display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding: 0 12% 0 14%;
@@ -28,8 +44,19 @@
     letter-spacing: ps2em(300);
     // margin-bottom: 10.5%;
   }
+  .details-text-mini__header {
+    font-family: $bold;
+    font-size: 30px;
+    // margin-left: -1%;
+    text-transform: uppercase;
+    color: 615954;
+    letter-spacing: ps2em(300);
+    // margin-bottom: 10.5%;
+  }
   .details-text-block__dash {
     @include dash;
+    display: block;
+    margin: 0 auto;
   }
   .details-text-block__description-container {
     display: flex;
@@ -38,9 +65,32 @@
     min-height: 60%;
     padding: 8% 0;
   }
-  .details-text-block__description {
-    font-size: 13px;
+
+  .details-text-grid__1 {
+    font-size: 30px;
+    line-height: 1.7;
+    overflow-wrap: break-word;
+    margin: 15% auto;
+    width: 71%;
+  }
+
+  .details-text-grid__2, .details-text-grid__3, .details-text-grid__5 {
+    font-size: 24px;
     line-height: 1.95;
+  }
+
+  .details-text-grid__2 {
+    margin: 7% auto;
+    width: 62%;
+  }
+
+  .details-text-grid__3 {
+    margin: 12% auto;
+    width: 68%;
+  }
+  .details-text-grid__5 {
+    margin: 26% auto;
+    width: 72%;
   }
 }
 
@@ -95,7 +145,9 @@
   }
   .details-text-block__dash {
     @include dash-small;
-    margin-bottom: 7%;
+    display: block;
+    margin: 0 auto;
+    // margin-bottom: 7%;
   }
   .details-text-block__description-container {
 
