@@ -7,6 +7,11 @@ $details-grid-text-break: 1010px;
 @import "grid/image-block";
 @import "grid/text-block";
 
+// no glob line-height for details page
+body {
+  line-height: 0;
+}
+
 // grid Styles
 // min-width since the mobile styles are so different it was easier to not have to override anything
 // ------------------------------------------------------------------------------------------------- //
@@ -14,6 +19,10 @@ $details-grid-text-break: 1010px;
   // grid
   .details-grid {
     position: relative;
+  }
+
+  .details-grid--0 {
+    line-height: 1;
   }
 
   .details-grid--1 {
@@ -40,6 +49,7 @@ $details-grid-text-break: 1010px;
   .details-grid--6 {
     height: 55vh;
     width: 100%;
+    line-height: 1;
   }
 
   .details-grid-inline {
