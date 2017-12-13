@@ -1,4 +1,4 @@
-<section class="details-grid details-grid--4 details-hero">
+<section class="details-grid details-grid--4">
 
     <!-- Image Block -->
     <div class="details-image-block">
