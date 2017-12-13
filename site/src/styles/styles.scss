@@ -1,19 +1,24 @@
 @import 'vars';
 @import 'mixins';
+@import 'functions';
 @import 'fonts';
 @import 'reset';
 @import 'utilities';
 
+// common
+@import 'common/footer';
+
 // home
-@import 'home/vars';
 @import 'home/mixins';
 @import 'home/hero';
 @import 'home/grid';
 @import 'home/follow';
+@import 'home/instagram';
 
 html,
 body {
   height: 100%;
+  font-size: $baseFontSize;
   font-family: $regular;
   -webkit-font-smoothing: antialiased;
   color: $brown;
