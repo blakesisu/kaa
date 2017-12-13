@@ -14,11 +14,11 @@ $details-grid-text-break: 1010px;
   // grid
   .details-grid {
     position: relative;
-    // background-color: $lightBrown;
   }
 
   .details-grid--1 {
     height: 51vh;
+    color: #ab9e95;
   }
 
   .details-grid--2, .details-grid--7 {
@@ -89,6 +89,7 @@ $details-grid-text-break: 1010px;
   .details-grid__asym-longleft-right {
     width: 33%;
     height: 100%;
+    padding-left: 3%;
     // display: inline-flex;
   }
   .details-projects {
@@ -103,48 +104,24 @@ $details-grid-text-break: 1010px;
     display: flex;
     flex-direction: column;
   }
-  .details-projects-title {
-    font-family: $bold;
-    font-size: 18px;
-    color: $lightBrown;
-  }
-  .details-projects-item {
-    font-family: $regular;
-    font-size: 18px;
-    color: $brown;
-    a {
-      color: $orange;
-    }
-  }
-  .details-contact-message,
-  .details-contact-button,
-  .details-contact-share > .share-text {
-    color: #ab9e95;
-  }
-  .details-contact-message > * {
-    font-family: $regular;
-    font-size: 30px;
-  }
-  .details-contact-share > .share-text {
-    font-family: $medium;
-    font-size: 15px;
-  }
   .details-contact > * {
-    margin: 5% 0;
+    margin: 10% 0;
   }
   .details-projects * {
-    margin: 2% 0;
+    margin: 3% 0;
   }
   .details-projects-column {
     width: 33%;
   }
   .details-contact-button {
     @include button;
+    font-family: $medium;
+    font-size: 15px;
   }
   .details-asym-container{
     height: 100%;
     width: 100%;
     display: inline-flex;
-    padding: 7%;
+    padding: 5% 9%;
   }
 }

@@ -57,6 +57,7 @@
         <div class="details-contact-message">
           <span> Lifestyle design starts with a story.</span>
           <br>
+          <br>
           <span>Let us help tell yours.</span>
         </div>
         <div class="details-contact-cta">

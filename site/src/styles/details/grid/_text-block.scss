@@ -53,6 +53,34 @@
     letter-spacing: ps2em(300);
     // margin-bottom: 10.5%;
   }
+
+  .details-projects-title {
+    font-family: $bold;
+    letter-spacing: ps2em(300);
+    font-size: 18px;
+    color: $lightBrown;
+  }
+  .details-projects-item {
+    font-family: $regular;
+    font-size: 18px;
+    color: $brown;
+    a {
+      color: $orange;
+    }
+  }
+  .details-contact-message,
+  .details-contact-button,
+  .details-contact-share > .share-text {
+    color: #ab9e95;
+  }
+  .details-contact-message > * {
+    font-family: $regular;
+    font-size: 30px;
+  }
+  .details-contact-share > .share-text {
+    font-family: $medium;
+    font-size: 15px;
+  }
   .details-text-block__dash {
     @include dash;
     display: block;
@@ -127,9 +155,6 @@
 @media (max-width: $details-grid-single-column-break) {
   // text block
   // ----------------------------------------- //
-  .details-text-block {
-
-  }
   .details-text-block__content {
     position: relative;
     padding: 8% 9.4%;
@@ -157,4 +182,5 @@
     line-height: 1.7;
     letter-spacing: 0.005em;
   }
+
 }
