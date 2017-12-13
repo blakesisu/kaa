@@ -21,3 +21,20 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
+// three columns
+// ------------------------------------------------------------------------------------------------- //
+@media (max-width: 1000px) {
+  .hm-instagram__item {
+    flex-basis: 33.333%;
+  }
+}
+
+
+// two columns
+// ------------------------------------------------------------------------------------------------- //
+@media (max-width: $hm-grid-single-column-break) {
+  .hm-instagram__item {
+    flex-basis: 50%;
+  }
+}
