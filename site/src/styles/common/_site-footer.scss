@@ -53,9 +53,10 @@
 
 // pages
 .site-footer__pages {
-  margin-bottom: 0.35vw;
+  text-align: right;
 }
 .site-footer__page-item {
+  margin-bottom: 0.35vw;
   display: inline-block;
   margin-left: px2vw(51, $designLarge);
 }
@@ -131,10 +132,10 @@
   // ----------------------------------------- //
   // pages
   .site-footer__pages {
-    margin-bottom: 5px;
   }
   .site-footer__page-item {
     margin-left: 36px;
+    margin-bottom: 5px;
   }
   .site-footer__page-link {
     font-size: 10.67px;
@@ -163,6 +164,22 @@
 
 
   .site-footer__social-link {
+  }
+}
+
+// make links on right stack vertically to allow more room
+// ------------------------------------------------------------------------------------------------- //
+@media (max-width: 970px) {
+  .site-footer__links {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .site-footer__pages {
+    margin-bottom: 20px;
+  }
+  .site-footer__page-item {
+    display: block;
+    margin: 0 0 10px 0;
   }
 }
 

@@ -6,7 +6,9 @@
 @import 'utilities';
 
 // common
-@import 'common/footer';
+@import 'common/site-header';
+@import 'common/site-nav';
+@import 'common/site-footer';
 
 // home
 @import 'home/mixins';

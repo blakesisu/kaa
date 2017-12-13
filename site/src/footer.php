@@ -1,4 +1,4 @@
-  <?php include("template-parts/common/footer.php"); ?>
+  <?php include("template-parts/common/site-footer.php"); ?>
 
   <script src="<?php echo get_stylesheet_directory_uri().'/js/manifest.js'; ?>"></script>
   <script src="<?php echo get_stylesheet_directory_uri().'/js/vendor.js'; ?>"></script>
