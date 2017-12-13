@@ -15,14 +15,24 @@ body {
 // grid Styles
 // min-width since the mobile styles are so different it was easier to not have to override anything
 // ------------------------------------------------------------------------------------------------- //
+.details-grid--0 {
+  line-height: 1;
+}
+
+.details-grid--6 {
+  line-height: 1;
+}
+
+
 @media (min-width: $details-grid-single-column-break + 1) {
   // grid
   .details-grid {
     position: relative;
   }
 
-  .details-grid--0 {
-    line-height: 1;
+  .details-grid-inline {
+    @extend .details-grid;
+    display: inline-flex;
   }
 
   .details-grid--1 {
@@ -49,12 +59,6 @@ body {
   .details-grid--6 {
     height: 55vh;
     width: 100%;
-    line-height: 1;
-  }
-
-  .details-grid-inline {
-    @extend .details-grid;
-    display: inline-flex;
   }
 
   // content
@@ -80,27 +84,23 @@ body {
   .details-grid__asym-longright-left {
     width: 33%;
     height: 100%;
-    // display: inline-flex;
   }
 
   .details-grid__asym-longright-right {
     width: 67%;
     height: 100%;
-    // display: inline-flex;
   }
 
   // Grid 6
   .details-grid__asym-longleft-left {
     width: 67%;
     height: 100%;
-    // display: inline-flex;
   }
 
   .details-grid__asym-longleft-right {
     width: 33%;
     height: 100%;
     padding-left: 3%;
-    // display: inline-flex;
   }
   .details-projects {
     display: inline-flex;

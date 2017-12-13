@@ -94,6 +94,7 @@
     padding: 8% 0;
   }
 
+
   .details-text-grid__1 {
     font-size: 30px;
     line-height: 1.7;
@@ -161,12 +162,13 @@
   }
   .details-text-block__header {
     font-family: $bold;
-    font-size: 12vw;
+    font-size: 8vw;
     text-transform: uppercase;
     color: $lightBrown;
     letter-spacing: ps2em(300);
     margin-left: -1%;
     margin-bottom: 7.1%;
+    text-align: center;
   }
   .details-text-block__dash {
     @include dash-small;
