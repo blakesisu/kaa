@@ -88,6 +88,15 @@
   // margin-bottom: 10.5%;
 }
 
+.details-left-container-title,
+.details-right-container-title {
+
+  @media (max-width: $details-grid-single-column-break) {
+    text-align: center;
+    margin-top: 3%;
+  }
+}
+
 .details-projects-title {
   font-family: $bold;
   letter-spacing: ps2em(300);
