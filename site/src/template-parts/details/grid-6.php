@@ -61,7 +61,7 @@
         </div>
         <div class="details-contact-share">
           <!-- svg not currently working
-          <img class="share-icon" srcset="<?php bloginfo('template_url'); ?>/images/details/share.svg" alt="share icon">
+          <?php include(__DIR__ ."/../svgs/share.svg"); ?>
           -->
           <span class="share-text">SHARE</span>
         </div>
