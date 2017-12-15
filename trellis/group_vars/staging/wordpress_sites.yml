@@ -5,13 +5,13 @@
 wordpress_sites:
   kaa:
     site_hosts:
-      - canonical: 138.197.196.176
+      - canonical: 165.227.56.50
         # redirects:
         #   - otherdomain.com
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:UncleSisu/kaa.git # replace with your Git repo URL
     repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
-    branch: master
+    branch: develop
     multisite:
       enabled: false
     ssl:
@@ -19,3 +19,6 @@ wordpress_sites:
       provider: letsencrypt
     cache:
       enabled: false
+    htpasswd:
+      - name: sisu
+        password: K@@!
