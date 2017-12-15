@@ -40,9 +40,6 @@
           <span class="details-projects-item">Manolo Langis</span>
           <span class="details-projects-item">Roger Davies</span>
         </div>
-
-        <div class="details-projects-container"></div>
-        <div class="details-projects-container"></div>
       </div>
     </div>
 
