@@ -60,8 +60,9 @@
           </div>
         </div>
         <div class="details-contact-share">
-          <!-- svg not currently working
-          <?php include(__DIR__ ."/../svgs/share.svg"); ?>
+          <!--
+            svg not currently working
+            use php include from svgs folder that Steven sent in slack
           -->
           <span class="share-text">SHARE</span>
         </div>
