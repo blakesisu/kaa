@@ -23,6 +23,18 @@
   text-rendering: optimizeLegibility;
 }
 
+// Light
+// ----------------------------------------- //
+@font-face {
+  font-family: 'Avenir-Light';
+  src: url('../fonts/Avenir-Light/Avenir-Light.eot');
+  src: url('../fonts/Avenir-Light/Avenir-Light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Avenir-Light/Avenir-Light.woff') format('woff'),
+       url('../fonts/Avenir-Light/Avenir-Light.ttf') format('truetype');
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
 // Regular
 // ----------------------------------------- //
 @font-face {
