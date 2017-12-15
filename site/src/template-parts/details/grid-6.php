@@ -64,6 +64,10 @@
             svg not currently working
             use php include from svgs folder that Steven sent in slack
           -->
+
+          <span class="share-icon">
+            <?php include(__DIR__ ."/../svgs/share.svg"); ?>
+          </span>
           <span class="share-text">SHARE</span>
         </div>
       </div>
