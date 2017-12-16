@@ -7,20 +7,38 @@
     <div class="details-text-block__dash"></div>
   </div>
 
-    <!-- Image Block -->
+  <!-- Image Block -->
   <div class="details-grid-inline details-grid--7 grid-item2">
-    <div class="details-grid__horizontal">
-      <picture class="details-image-block__picture">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/details/grid-7/details-poolhouse.jpg">
-        <img class="details-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/details/grid-7/details-poolhouse.jpg" alt="">
-      </picture>
+    <div class="details-project-block details-grid__horizontal">
+      <a href="#" class="details-project-block__link">
+        <div class="details-project-block__copy">
+          <h2 class="details-project-block__header">Ipsum &amp; Lorem</h2>
+          <p class="details-project-block__cta">
+            <span class="details-project-block__cta-btn">Explore More</span>
+          </p>
+        </div>
+        <p class="details-project-block__more">More <?php include(__DIR__ ."/../svgs/chevron-right.svg"); ?></p>
+        <picture class="details-image-block__picture">
+          <source srcset="<?php bloginfo('template_url'); ?>/images/details/grid-7/details-poolhouse.jpg">
+          <img class="details-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/details/grid-7/details-poolhouse.jpg" alt="">
+        </picture>
+      </a>
     </div>
 
-    <div class="details-grid__horizontal grid-item3">
-      <picture class="details-image-block__picture">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/details/grid-7/details-livingroom.jpg">
-        <img class="details-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/details/grid-7/details-livingroom.jpg" alt="">
-      </picture>
+    <div class="details-project-block details-grid__horizontal">
+      <a href="#" class="details-project-block__link">
+        <div class="details-project-block__copy">
+          <h2 class="details-project-block__header">Ipsum &amp; Lorem</h2>
+          <p class="details-project-block__cta">
+            <span class="details-project-block__cta-btn">Explore More</span>
+          </p>
+        </div>
+        <p class="details-project-block__more">More <?php include(__DIR__ ."/../svgs/chevron-right.svg"); ?></p>
+        <picture class="details-image-block__picture">
+          <source srcset="<?php bloginfo('template_url'); ?>/images/details/grid-7/details-livingroom.jpg">
+          <img class="details-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/details/grid-7/details-livingroom.jpg" alt="">
+        </picture>
+      </a>
     </div>
 
   </div>
