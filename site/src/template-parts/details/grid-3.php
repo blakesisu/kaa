@@ -10,8 +10,9 @@
     <!-- Image Block -->
     <div class="details-grid__horizontal grid-item2">
       <picture class="details-image-block__picture">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/details/grid-3/details-kitchen.jpg">
-        <img class="details-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/details/grid-3/details-kitchen.jpg" alt="">
+        <source srcset="<?php bloginfo('template_url'); ?>/images/details/grid-3/details-kitchen-lg.jpg">
+        <source srcset="<?php bloginfo('template_url'); ?>/images/details/grid-3/details-kitchen-sm.jpg" media="(max-width: 700px)">
+        <img class="details-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/details/grid-3/details-kitchen-lg.jpg" alt="">
       </picture>
     </div>
 

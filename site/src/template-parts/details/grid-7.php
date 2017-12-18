@@ -19,8 +19,9 @@
         </div>
         <p class="details-project-block__more">More <?php include(__DIR__ ."/../svgs/chevron-right.svg"); ?></p>
         <picture class="details-image-block__picture">
-          <source srcset="<?php bloginfo('template_url'); ?>/images/details/grid-7/details-poolhouse.jpg">
-          <img class="details-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/details/grid-7/details-poolhouse.jpg" alt="">
+          <source srcset="<?php bloginfo('template_url'); ?>/images/details/grid-7/details-poolhouse-lg.jpg">
+          <source srcset="<?php bloginfo('template_url'); ?>/images/details/grid-7/details-poolhouse-sm.jpg" media="(max-width: 700px)">
+          <img class="details-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/details/grid-7/details-poolhouse-lg.jpg" alt="">
         </picture>
       </a>
     </div>
@@ -35,8 +36,9 @@
         </div>
         <p class="details-project-block__more">More <?php include(__DIR__ ."/../svgs/chevron-right.svg"); ?></p>
         <picture class="details-image-block__picture">
-          <source srcset="<?php bloginfo('template_url'); ?>/images/details/grid-7/details-livingroom.jpg">
-          <img class="details-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/details/grid-7/details-livingroom.jpg" alt="">
+          <source srcset="<?php bloginfo('template_url'); ?>/images/details/grid-7/details-livingroom-lg.jpg">
+          <source srcset="<?php bloginfo('template_url'); ?>/images/details/grid-7/details-livingroom-sm.jpg" media="(max-width: 700px)">
+          <img class="details-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/details/grid-7/details-livingroom-lg.jpg" alt="">
         </picture>
       </a>
     </div>
