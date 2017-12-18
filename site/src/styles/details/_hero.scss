@@ -1,9 +1,71 @@
+// .details-hero {
+//   position: relative;
+//   width: 100%;
+//   height: 85vh;
+//   // background: url(../images/home/hero-lrg.jpg) no-repeat center center;
+//   // background-size: cover;
+// }
+
+// not full screen height
+// ------------------------------------------------------------------------------------------------- //
+// @media (max-width: 1010px) {
+//   .details-hero {
+//     height: auto;
+//     // padding-top: 60%;
+//   }
+// }
+
+
+////////////
+////////////
+
 .details-hero {
   position: relative;
   width: 100%;
-  height: 85vh;
-  // background: url(../images/home/hero-lrg.jpg) no-repeat center center;
-  // background-size: cover;
+  height: 84.5vh;
+  background: url(../images/details/hero/details-hero-lg.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+// scroll
+// ----------------------------------------- //
+.details-scroll-cta {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  svg {
+    fill: #fff;
+    width: 6px;
+    height: 24px;
+    margin-bottom: 9px;
+  }
+}
+.details-scroll-cta__text {
+  font-family: $demiBold;
+  font-size: 7px;
+  text-transform: uppercase;
+  color: #fff;
+  display: block;
+  letter-spacing: ps2em(150);
+  -webkit-font-smoothing: auto;
+}
+
+// larger screens
+// ------------------------------------------------------------------------------------------------- //
+@media (min-width: 1366px + 1) {
+  .details-scroll-cta {
+    bottom: 34px;
+
+    svg {
+      width: 8px;
+      height: 34px;
+      margin-bottom: 14px;
+    }
+  }
+  .details-scroll-cta__text {
+    font-size: 10px;
+  }
 }
 
 // not full screen height
@@ -11,6 +73,19 @@
 @media (max-width: 1010px) {
   .details-hero {
     height: auto;
-    // padding-top: 60%;
+    padding-top: 60%;
+  }
+}
+
+// hide scroll cta
+// ------------------------------------------------------------------------------------------------- //
+@media (max-width: 700px) {
+  .details-hero {
+    height: auto;
+    padding-top: 60%;
+  }
+  // scroll
+  .details-scroll-cta {
+    display: none;
   }
 }

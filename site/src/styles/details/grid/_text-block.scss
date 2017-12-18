@@ -8,16 +8,12 @@
 
 .details-text-grid__1 {
   font-size: 30px;
-  font-size: calc(80% + 1vw);
-  @media (min-width: $details-grid-break) {
-    font-size: 30px;
-  }
+  font-size: 1.7vw;
   font-family: $light;
   color: $lightBrown;
-  line-height: 1.7;
+  line-height: 1.6;
   overflow-wrap: break-word;
-  margin: 17% auto;
-  width: 71%;
+  padding: 0 13%;
   @media (max-width: $details-grid-single-column-break) {
     font-size: 40px;
     font-size: 5vw;
@@ -29,10 +25,7 @@
 
 .details-text-grid__2 {
   font-size: 24px;
-  font-size: calc(45% + 1vw);
-  @media (min-width: $details-grid-break) {
-    font-size: 24px;
-  }
+  font-size: 1.3vw;
   font-family: $regular;
   line-height: 1.95;
   margin: 6% auto;
@@ -48,16 +41,12 @@
 }
 
 .details-text-grid__3 {
-  margin: 8% auto;
   font-family: $regular;
   color: $brown;
-  width: 68%;
   font-size: 24px;
-  font-size: calc(45% + 1vw);
-  @media (min-width: $details-grid-break) {
-    font-size: 24px;
-  }
-  line-height: 1.95;
+  font-size: 1.3vw;
+  padding: 0 15%;
+  line-height: 1.8;
   @media (max-width: $details-grid-single-column-break) {
     margin: 0% auto;
     padding: 8% 4%;
@@ -69,15 +58,11 @@
 }
 
 .details-text-grid__5 {
-  margin: 26% auto;
-  width: 72%;
   font-family: $regular;
   font-size: 24px;
-  font-size: calc(45% + 1vw);
-  @media (min-width: $details-grid-break) {
-    font-size: 24px;
-  }
+  font-size: 1.3vw;
   line-height: 1.95;
+  padding: 0 11%;
   @media (max-width: $details-grid-single-column-break) {
     margin: 0% auto;
     padding: 8% 4%;
@@ -90,16 +75,12 @@
 
 .details-text-block__header {
   font-family: $bold;
-  font-size: 4.1vw;
-  // margin-left: -1%;
+  font-size: 3.8vw;
   text-transform: uppercase;
   color: $lightBrown;
-  letter-spacing: ps2em(300);
-  // margin-bottom: 10.5%;
-
+  letter-spacing: ps2em(250);
   @media (max-width: $details-grid-single-column-break) {
     font-size: 8.5vw;
-    // margin-bottom: 7.1%;
     text-align: center;
     letter-spacing: .27em;
     line-height: 43px;
