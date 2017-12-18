@@ -4,8 +4,8 @@
     <!-- Image Block -->
     <div class="details-grid__asym-longright-left grid-item1">
       <picture class="details-image-block__picture">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/details/grid-5/details-cornerview-lg.jpg">
         <source srcset="<?php bloginfo('template_url'); ?>/images/details/grid-5/details-cornerview-sm.jpg" media="(max-width: 700px)">
+        <source srcset="<?php bloginfo('template_url'); ?>/images/details/grid-5/details-cornerview-lg.jpg">
         <img class="details-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/details/grid-5/details-cornerview-lg.jpg" alt="">
       </picture>
     </div>
