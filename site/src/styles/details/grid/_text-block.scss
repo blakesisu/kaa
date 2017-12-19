@@ -17,9 +17,10 @@
   @media (max-width: $details-grid-single-column-break) {
     font-size: 40px;
     font-size: 5vw;
-    margin: 11% auto;
+    margin: 9% auto;
     width: 94%;
-    line-height: 1.6;
+    line-height: 1.8;
+    padding: 0 0;
   }
 }
 
@@ -190,7 +191,8 @@
     font-size: 15px;
   }
 
-  padding: 22px 26px;
+  // padding: 22px 26px;
+  padding: 1.2vw 1.5vw;
   @media (max-width: $details-grid-single-column-break) {
     font-size: 4.3vw;
     font-size: 13px;
@@ -229,6 +231,11 @@
   align-items: center;
   .share-icon {
     @media (min-width: $details-grid-single-column-break + 1) {
+      width: 7%;
+      margin-right: 4vw;
+    }
+
+    @media (min-width: $details-grid-break + 1) {
       width: 7%;
       margin-right: 2vw;
     }

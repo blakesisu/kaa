@@ -23,9 +23,11 @@ body {
 .details-grid--6 {
   line-height: 1;
   width: 100%;
-  height: 60vh;
+  @media (min-width: $details-grid-single-column-break + 1) {
+    height: 60vh;
+  }
   @media (max-width: $details-grid-single-column-break) {
-    height: 65vh;
+    // height: 65vh;
     // margin: 4% 0;
   }
 }
@@ -63,10 +65,7 @@ body {
 
 .details-projects {
   display: flex;
-  justify-content: space-around;
   flex-flow: column wrap;
-  // align-content: flex-start;
-  // max-height: 100%;
   height: 100%;
   width: 100%;
   @media (max-width: $details-grid-single-column-break) {
@@ -92,6 +91,7 @@ body {
   padding-left: 3%;
   @media (max-width: $details-grid-single-column-break) {
     width: 100%;
+    // height: 91vw;
   }
 }
 
@@ -188,11 +188,9 @@ body {
   }
 
   .details-grid__horizontal {
-    // width: 100%;
     display: inherit;
     flex-direction: row;
     flex: 1 1 0;
-    // height: 100%;
     height: auto;
     align-items: center;
   }
@@ -204,7 +202,6 @@ body {
 
   .details-grid__asym-longright-right {
     width: 67%;
-    // height: 100%;
   }
 
   // Grid 6
@@ -213,7 +210,6 @@ body {
     width: 100%;
     display: inline-flex;
     padding: 5% 9%;
-    // padding: 4% 3%;
   }
 }
 
@@ -245,9 +241,6 @@ body {
   }
 
   .details-grid--6 > .details-asym-container {
-    // flex-direction: column;
-    // padding: 0;
-    margin-top: 15%;
-    // padding: 2%;
+    margin: 15% 0 8% 0;
   }
 }
