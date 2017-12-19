@@ -24,6 +24,11 @@
 @import 'details/details-and-contact';
 @import 'details/related-projects';
 
+// about
+@import 'about/mixins';
+@import 'about/hero';
+@import 'about/grid';
+
 html,
 body {
   height: 100%;
