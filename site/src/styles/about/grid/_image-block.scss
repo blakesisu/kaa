@@ -1,0 +1,30 @@
+@media (min-width: $about-grid-single-column-break + 1) {
+  .about-image-block {
+    line-height: 0;
+    font-size: 0;
+    width: 100%;
+  }
+  .about-image-block__picture {
+    position: relative;
+    width: 100%;
+  }
+  .about-image-block__img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+// single column
+// ------------------------------------------------------------------------------------------------- //
+@media (max-width: $about-grid-single-column-break) {
+  .about-image-block {
+    line-height: 0;
+    font-size: 0;
+  }
+  .about-image-block__picture {
+    width: 100%;
+  }
+  .about-image-block__img {
+    width: 100%;
+  }
+}

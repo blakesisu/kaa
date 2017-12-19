@@ -1,0 +1,110 @@
+.about-hero {
+  position: relative;
+  width: 100%;
+  // height: 85vh;
+  @media (max-width: 1010px) {
+      height: auto;
+      // padding-top: 60%;
+  }
+}
+
+.about-project-hero__block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background-color: grey;
+  opacity: .75;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+// TODO: make text not same opacity as parent
+.about-project-hero__text {
+  font-family: $bold;
+  font-size: 50px;
+  font-size: 3.9vw;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: ps2em(315);
+  margin-bottom: 25px;
+  opacity: 1;
+}
+
+// not full screen height
+// ------------------------------------------------------------------------------------------------- //
+
+// .about-hero {
+//   position: relative;
+//   width: 100%;
+//   height: 84.5vh;
+//   background: url(../images/about/hero/about-hero-lg.jpg) no-repeat center center;
+//   background-size: cover;
+// }
+//
+// // scroll
+// // ----------------------------------------- //
+// .about-scroll-cta {
+//   position: absolute;
+//   bottom: 25px;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   svg {
+//     fill: #fff;
+//     width: 6px;
+//     height: 24px;
+//     margin-bottom: 9px;
+//   }
+// }
+// .about-scroll-cta__text {
+//   font-family: $demiBold;
+//   font-size: 7px;
+//   text-transform: uppercase;
+//   color: #fff;
+//   display: block;
+//   letter-spacing: ps2em(150);
+//   -webkit-font-smoothing: auto;
+// }
+//
+// // larger screens
+// // ------------------------------------------------------------------------------------------------- //
+// @media (min-width: 1366px + 1) {
+//   .about-scroll-cta {
+//     bottom: 34px;
+//
+//     svg {
+//       width: 8px;
+//       height: 34px;
+//       margin-bottom: 14px;
+//     }
+//   }
+//   .about-scroll-cta__text {
+//     font-size: 10px;
+//   }
+// }
+//
+// // not full screen height
+// // ------------------------------------------------------------------------------------------------- //
+// @media (max-width: 1010px) {
+//   .about-hero {
+//     height: auto;
+//     padding-top: 60%;
+//   }
+// }
+//
+// // hide scroll cta
+// // ------------------------------------------------------------------------------------------------- //
+// @media (max-width: 700px) {
+//   .about-hero {
+//     height: auto;
+//     padding-top: 60%;
+//   }
+//   // scroll
+//   .about-scroll-cta {
+//     display: none;
+//   }
+// }
