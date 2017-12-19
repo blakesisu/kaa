@@ -1,91 +1,59 @@
-// .details-hero {
-//   position: relative;
-//   width: 100%;
-//   height: 85vh;
-//   // background: url(../images/home/hero-lrg.jpg) no-repeat center center;
-//   // background-size: cover;
-// }
-
-// not full screen height
-// ------------------------------------------------------------------------------------------------- //
-// @media (max-width: 1010px) {
-//   .details-hero {
-//     height: auto;
-//     // padding-top: 60%;
-//   }
-// }
-
-
-////////////
-////////////
-
 .details-hero {
-  position: relative;
-  width: 100%;
-  height: 84.5vh;
-  background: url(../images/details/hero/details-hero-lg.jpg) no-repeat center center;
-  background-size: cover;
+
+}
+.details-hero__container {
+
 }
 
-// scroll
-// ----------------------------------------- //
-.details-scroll-cta {
-  position: absolute;
-  bottom: 25px;
-  left: 50%;
-  transform: translateX(-50%);
-  svg {
-    fill: #fff;
-    width: 6px;
-    height: 24px;
-    margin-bottom: 9px;
-  }
-}
-.details-scroll-cta__text {
-  font-family: $demiBold;
-  font-size: 7px;
+// header
+.details-hero__header {
+  font-family: $bold;
+  font-size: 3.8vw;
   text-transform: uppercase;
-  color: #fff;
+  color: $lightBrown;
+  letter-spacing: ps2em(250);
+  text-align: center;
+  margin-bottom: 2vw;
+  line-height: 1;
+  padding: 0 20px;
+}
+
+// dash
+.details-hero__dash {
+  @include dash;
   display: block;
-  letter-spacing: ps2em(150);
-  -webkit-font-smoothing: auto;
+  margin: 0 auto;
 }
 
-// larger screens
+// picture
+.details-hero__picture {
+  line-height: 0;
+  font-size: 0;
+  display: block;
+}
+.details-hero__img {
+  width: 100%;
+}
+
+// mobile
 // ------------------------------------------------------------------------------------------------- //
-@media (min-width: 1366px + 1) {
-  .details-scroll-cta {
-    bottom: 34px;
-
-    svg {
-      width: 8px;
-      height: 34px;
-      margin-bottom: 14px;
-    }
+@media (max-width: $details-grid-single-column-break) {
+  // header
+  .details-hero__header {
+    font-size: px2vw(32.5, $designSmall);
+    text-align: center;
+    letter-spacing: .27em;
+    letter-spacing: ps2em(300);
+    line-height: px2lh(32.5, 42.5);
+    margin-bottom: 3.8vw;
+    padding: 0 10px;
   }
-  .details-scroll-cta__text {
-    font-size: 10px;
+
+  // dash
+  .details-hero__dash {
+    @include dash-small;
+    display: block;
+    margin: 0 auto;
   }
 }
 
-// not full screen height
-// ------------------------------------------------------------------------------------------------- //
-@media (max-width: 1010px) {
-  .details-hero {
-    height: auto;
-    padding-top: 60%;
-  }
-}
-
-// hide scroll cta
-// ------------------------------------------------------------------------------------------------- //
-@media (max-width: 700px) {
-  .details-hero {
-    height: auto;
-    padding-top: 60%;
-  }
-  // scroll
-  .details-scroll-cta {
-    display: none;
-  }
-}

@@ -1,17 +1,7 @@
-// Grid vars
-$details-grid-single-column-break: 700px;
-$details-grid-break: 1367px;
-$details-grid-text-break: 1010px;
-
 // grid blocks
 @import "grid/image-block";
 @import "grid/text-block";
 @import "grid/project-block";
-
-// no glob line-height for details page
-body {
-  line-height: 0;
-}
 
 // grid Styles
 // min-width since the mobile styles are so different it was easier to not have to override anything
