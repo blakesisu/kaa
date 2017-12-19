@@ -14,7 +14,14 @@
 @mixin button-lrg {
   @include button;
   font-size: 0.81vw;
-  padding: 1.65% 1.98%;
+  padding: 1.1vw 1.32vw;
+}
+
+@mixin button--small {
+  @include button;
+  letter-spacing: 0.21em;
+  font-size: 12.5px;
+  padding: 16px 23px;
 }
 
 // dash
@@ -31,54 +38,4 @@
   width: 7.2vw;
   height: 1.87vw;
   display: inline-block;
-}
-
-// convert Photoshop letterspacing value to ems
-// ----------------------------------------- //
-@function ps2em($val) {
-  @return ( $val / 1000 ) * 1em;
-}
-
-// https://www.sitepoint.com/converting-typographic-units-sass/
-// ----------------------------------------- //
-@function convert($value, $currentUnit, $convertUnit){
-  @if $currentUnit == px{
-
-    @if $convertUnit == ems{
-      @return $value / 16 + 0em;
-    }
-    @else if $convertUnit == percent{
-      @return percentage($value / 16);
-    }
-
-  }@else if $currentUnit == ems{
-
-    @if $convertUnit == px{
-      @return $value * 16 + 0px;
-    }
-    @else if $convertUnit == percent{
-      @return percentage($value);
-    }
-
-  }@else if $currentUnit == percent{
-
-    @if $convertUnit == px{
-      @return $value * 16 / 100 + 0px;
-    }
-    @else if $convertUnit == ems{
-      @return $value / 100 + 0em;
-    }
-
-  }@else if $currentUnit == pts{
-
-    @if $convertUnit == px{
-      @return $value * 1.3333 +0px;
-    }
-    @else if $convertUnit == ems{
-      @return $value / 12 + 0em;
-    }
-    @else if $convertUnit == percent{
-      @return percentage($value / 12)
-    }
-  }
 }

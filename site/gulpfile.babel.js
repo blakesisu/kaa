@@ -24,32 +24,6 @@ const staticFiles = [
   '!src/scripts{,/**}',
   '!src/styles{,/**}'
 ];
-// const staticFiles = [
-//   'src/data/**/*.*',
-//   'src/docs/**/*.*',
-//   'src/fonts/**/*.*',
-//   'src/images/**/*.*',
-//   'src/videos/**/*.*',
-//   'src/wiki/**/*.*',
-//   'src/*.png',
-//   'src/*.ico',
-// ];
-
-// HTML
-// ------------------------------------------------------- //
-// gulp.task('html', () => (
-//   gulp.src('src/*.html')
-//     // .pipe(plumber({ errorHandle: reportError }))
-//     .pipe(fileinclude({
-//       indent: true
-//     }))
-//     // catch any errors
-//     .on('error', reportError)
-//     // output files
-//     .pipe(gulp.dest('./dist'))
-//     // // update browserSync
-//     .pipe(browserSync.stream())
-// ));
 
 // Styles
 // ------------------------------------------------------- //

@@ -41,4 +41,18 @@ $demiBoldItalic: 'AvenirNext-DemiBoldItalic', 'Helvetica Neue', Helvetica, Arial
 $bold: 'AvenirNext-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $boldItalic: 'AvenirNext-BoldItalic', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
+$baseFontSize: 16px;
+
+// Design Screen Sizes (used for functions)
+// ------------------------------------------------------------------------------------------------- //
+$designLarge: 1920;
+$designMedium: 1366;
+$designSmall: 375;
+
+// Home Page
+// ------------------------------------------------------------------------------------------------- //
+$hm-grid-single-column-break: 700px;
+$hm-grid-break: 1367px;
+$hm-grid-text-break: 1010px;
+
 
