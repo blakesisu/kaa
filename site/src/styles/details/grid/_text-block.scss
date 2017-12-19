@@ -239,6 +239,10 @@
       width: 7%;
       margin-right: 2vw;
     }
+
+    @media (max-width: $details-grid-single-column-break) {
+      margin-right: 4vw;
+    }
   }
 
   .share-text {
