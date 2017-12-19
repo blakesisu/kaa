@@ -25,12 +25,14 @@
 }
 
 .about-text-grid__2 {
-  font-size: 24px;
-  font-size: 1.3vw;
+  font-size: 30px;
+  font-size: 1.55vw;
   font-family: $regular;
-  line-height: 1.95;
+  color: $lightBrown;
+  line-height: 1.7;
+  // letter-spacing: .2px;
   margin: 6% auto;
-  width: 62%;
+  width: 67%;
   @media (max-width: $about-grid-single-column-break) {
     margin: 0% auto;
     padding: 8% 4%;
