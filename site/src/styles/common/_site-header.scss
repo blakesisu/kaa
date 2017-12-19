@@ -1,11 +1,7 @@
 // scale based on screen width
 // ------------------------------------------------------------------------------------------------- //
 .site-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
+
 }
 .site-header__container {
   display: flex;
@@ -24,7 +20,7 @@
   align-items: flex-start;
 
   svg {
-    fill: #fff;
+    fill: $orange;
     width: px2vw(130, $designLarge);
     height: auto;
   }
@@ -42,6 +38,7 @@
   line-height: px2lh(14, 20.6);
   letter-spacing: ps2em(300);
   margin: 1.3vw 0 0 1.55vw;
+  display: none;
 }
 .site-header__tagline--small {
   display: none;
@@ -56,7 +53,7 @@
 
 // book cta
 .site-header__book-cta {
-  color: $white;
+  color: $brown;
   font-size: px2vw(10, $designLarge);
   text-transform: uppercase;
   letter-spacing: ps2em(160);
@@ -69,7 +66,7 @@
 
   }
   svg {
-    fill: $white;
+    fill: $brown;
     margin-left: 0.5vw;
     width: px2vw(32, $designLarge);
     height: auto;
@@ -80,11 +77,53 @@
 .site-header__menu-btn {
   margin: 2.15vw 2.1vw 0 2.1vw;
   svg {
-    fill: $white;
+    fill: $brown;
     width: px2vw(25, $designLarge);
     height: auto;
   }
 }
+
+// Header on home page
+// ----------------------------------------- //
+// Absolute position site header on home page
+// Use white color
+.home {
+  .site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+  // logo
+  .site-header__brand-link {
+    svg {
+      fill: $white;
+    }
+  }
+
+  // tagline
+  .site-header__tagline--large {
+    display: block;
+  }
+
+  // cta
+  .site-header__book-cta {
+    color: $white;
+    svg {
+      fill: $white;
+    }
+  }
+
+  // menu btn
+  .site-header__menu-btn {
+    svg {
+      fill: $white;
+    }
+  }
+}
+
 
 // Use fixed sizes for medium screens
 // ------------------------------------------------------------------------------------------------- //
@@ -133,15 +172,10 @@
     background-color: $white;
     height: 80px;
     overflow: hidden;
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-    // width: 100%;
-    // z-index: 999;
+    margin-bottom: 7.3vw;
   }
   .site-header__container {
-    // display: flex;
-    // justify-content: space-between;
+
   }
 
   // brand
@@ -151,10 +185,8 @@
   }
 
   // logo
-  .site-header__brand-link {
-    // display: flex;
-    // align-items: flex-start;
-
+  .site-header__brand-link,
+  .home .site-header__brand-link {
     svg {
       fill: $orange;
       width: 63px;
@@ -165,7 +197,8 @@
   .site-header__tagline {
 
   }
-  .site-header__tagline--large {
+  .site-header__tagline--large,
+  .home .site-header__tagline--large {
     font-size: 10px;
     color: $brown;
     line-height: px2lh(10, 14);
@@ -173,18 +206,18 @@
     margin: 11px 0 0 16px;
   }
   .site-header__tagline--small {
-    // display: none;
+
   }
 
   // utility links
   // ----------------------------------------- //
   .site-header__utility-links {
-    // display: flex;
-    // align-items: flex-start;
+
   }
 
   // book cta
-  .site-header__book-cta {
+  .site-header__book-cta,
+  .home .site-header__book-cta {
     margin: 27px 0 0 0;
 
     span {
@@ -198,7 +231,8 @@
   }
 
   // menu btn
-  .site-header__menu-btn {
+  .site-header__menu-btn,
+  .home .site-header__menu-btn {
     margin: 30px 20px 0 21px;
     svg {
       fill: $brown;
