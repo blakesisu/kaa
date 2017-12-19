@@ -26,14 +26,11 @@ body {
   @media (min-width: $details-grid-single-column-break + 1) {
     height: 60vh;
   }
-  @media (max-width: $details-grid-single-column-break) {
-    // height: 65vh;
-    // margin: 4% 0;
-  }
 }
 
 .details-projects * {
-  margin: 3% 0;
+  margin: 3% 0 2% 0;
+  // margin: 2% 0;
 
   @media (max-width: $details-grid-single-column-break) {
     margin: 4% 0;
@@ -68,9 +65,11 @@ body {
   flex-flow: column wrap;
   height: 100%;
   width: 100%;
+  @media (min-width: $details-grid-single-column-break + 1) {
+    height: 90%;
+  }
   @media (max-width: $details-grid-single-column-break) {
     padding: 0 3%;
-    // height: 91vw;
   }
 }
 
@@ -78,7 +77,6 @@ body {
   width: 67%;
   height: 100%;
   @media (max-width: $details-grid-single-column-break) {
-    // height: 55vh;
     height: 91vw;
     width: 100%;
     margin-bottom: 23%;
@@ -88,7 +86,7 @@ body {
 .details-grid__asym-longleft-right {
   width: 33%;
   height: 100%;
-  padding-left: 3%;
+  padding-left: 4%;
   @media (max-width: $details-grid-single-column-break) {
     width: 100%;
     // height: 91vw;
@@ -209,7 +207,7 @@ body {
     height: 100%;
     width: 100%;
     display: inline-flex;
-    padding: 5% 9%;
+    padding: 4% 9%;
   }
 }
 
