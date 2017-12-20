@@ -1,0 +1,171 @@
+// about vars
+$about-single-column-break: 700px;
+$about-break: 1367px;
+$about-text-break: 1010px;
+
+// about blocks
+@import "about/image-block";
+@import "about/text-block";
+@import "about/project-block";
+
+// no glob line-height for about page
+body {
+  line-height: 0;
+}
+
+// grid Styles
+// min-width since the mobile styles are so different it was easier to not have to override anything
+// ------------------------------------------------------------------------------------------------- //
+.item1 {
+  order: 1;
+}
+
+.item2 {
+  order: 2;
+}
+
+.about-contact {
+  // line-height: 1;
+  width: 100%;
+  .about-contact-details {
+    line-height: 2.5vw;
+  }
+  @media (min-width: $about-single-column-break + 1) {
+    // height: 60vh;
+  }
+}
+
+.about-more-family-members * {
+  margin: 3% 0 2% 0;
+  // margin: 2% 0;
+
+  @media (max-width: $about-single-column-break) {
+    margin: 4% 0;
+  }
+}
+
+.about-more-family {
+  width: 100%;
+  height: 40vw;
+}
+
+.about-more-family-members > * {
+  @media (min-width: $about-single-column-break + 1) {
+    width: 26%;
+  }
+  @media (max-width: $about-single-column-break) {
+    width: 50%;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.about-more-family-members {
+  display: flex;
+  flex-flow: column wrap;
+  height: 100%;
+  width: 100%;
+  @media (min-width: $about-single-column-break + 1) {
+    height: 90%;
+  }
+  @media (max-width: $about-single-column-break) {
+    padding: 0 3%;
+  }
+}
+
+.about-asym-longleft-left {
+  width: 67%;
+  height: 100%;
+
+  @media (max-width: $about-single-column-break) {
+    // height: 91vw;
+    width: 100%;
+    // margin-bottom: 23%;
+  }
+}
+
+.about-asym-longleft-right {
+  width: 33%;
+  height: 100%;
+  @media (max-width: $about-single-column-break) {
+    width: 100%;
+    // height: 91vw;
+  }
+}
+
+.about-asym-short {
+  display: flex;
+  text-align: center;
+  flex-flow: column;
+  align-self: center;
+  & > * {
+    padding: 4% 0;
+  }
+}
+
+
+@media (min-width: $about-single-column-break + 1) {
+  // grid
+  .about-grid {
+    position: relative;
+  }
+
+  .about-inline {
+    @extend .about-grid;
+    display: inline-flex;
+  }
+
+  // content
+  .about-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .about-item {
+    position: relative;
+    overflow: hidden;
+  }
+  .about-item--full {
+    width: 100%;
+    height: 100%;
+  }
+
+  .about-horizontal {
+    display: inherit;
+    flex-direction: row;
+    flex: 1 1 0;
+    height: auto;
+    align-items: center;
+  }
+
+  .about-asym-longright-left {
+    width: 33%;
+    height: 100%;
+  }
+
+  .about-asym-longright-right {
+    width: 67%;
+  }
+
+  // Grid 6
+  .about-asym-container{
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+    // padding: 4% 9%;
+  }
+}
+
+
+@media (max-width: $about-single-column-break) {
+  .about-join > .about-asym-container {
+    // margin: 15% 0 8% 0;
+  }
+}

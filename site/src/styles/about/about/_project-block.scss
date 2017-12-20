@@ -1,4 +1,4 @@
-@media (min-width: $about-grid-single-column-break + 1) {
+@media (min-width: $about-single-column-break + 1) {
   .about-project-block {
 
   }
@@ -116,7 +116,7 @@
 
 // make text scale up on larger screens based on viewport
 // ------------------------------------------------------------------------------------------------- //
-@media (min-width: $about-grid-break) {
+@media (min-width: $about-break) {
   // only show text overlay on non-touch devices
   // ----------------------------------------- //
   .no-touchevents {
@@ -153,7 +153,7 @@
 
 // single column
 // ------------------------------------------------------------------------------------------------- //
-@media (max-width: $about-grid-single-column-break) {
+@media (max-width: $about-single-column-break) {
   .about-project-block {
     position: relative;
     line-height: 0;

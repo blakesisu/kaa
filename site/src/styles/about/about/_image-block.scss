@@ -1,7 +1,8 @@
-@media (min-width: $about-grid-single-column-break + 1) {
+@media (min-width: $about-single-column-break + 1) {
   .about-image-block {
     line-height: 0;
     font-size: 0;
+    display: block;
     width: 100%;
   }
   .about-image-block__picture {
@@ -16,10 +17,11 @@
 
 // single column
 // ------------------------------------------------------------------------------------------------- //
-@media (max-width: $about-grid-single-column-break) {
+@media (max-width: $about-single-column-break) {
   .about-image-block {
     line-height: 0;
     font-size: 0;
+    display: block;
   }
   .about-image-block__picture {
     width: 100%;
