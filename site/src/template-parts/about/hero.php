@@ -1,4 +1,4 @@
-<section class="about-grid about-grid--0">
+<section class="about-grid about-hello-hero">
   <!-- Image Block (Background image) -->
   <div class="about-hero">
     <picture class="about-image-block__picture">
