@@ -12,7 +12,7 @@ get_header(); ?>
 <?php include("template-parts/details/grid-3.php"); ?>
 <?php include("template-parts/details/grid-4.php"); ?>
 <?php include("template-parts/details/grid-5.php"); ?>
-<?php include("template-parts/details/grid-6.php"); ?>
-<?php include("template-parts/details/grid-7.php"); ?>
+<?php include("template-parts/details/details-and-contact.php"); ?>
+<?php include("template-parts/details/related-projects.php"); ?>
 
 <?php get_footer(); ?>
