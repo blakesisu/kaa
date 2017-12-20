@@ -8,7 +8,6 @@
     </div>
 
     <!-- Image/Text Block -->
-    <div class="about-column">
       <div class="about-inline about-values">
         <!-- Image Block -->
         <div class="about-horizontal item1">
@@ -70,8 +69,6 @@
             <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quesque volutpat mattis eros. Nullam malesuada era ut turpis. Suspendisse urna nibh, viverra non, semper suscipit.</span>
           </div>
         </div>
-
       </div>
-    </div>
 
 </section>

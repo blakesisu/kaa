@@ -24,6 +24,13 @@ body {
   order: 2;
 }
 
+.about-family-column {
+  display: flex;
+  width: 100;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
 .about-contact {
   // line-height: 1;
   width: 100%;
