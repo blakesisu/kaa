@@ -69,7 +69,7 @@
 
 // large text block
 .pd-grid__block--large {
-  color: #ab9e95;
+  color: $lightLightBrown;
   font-size: px2vw(30, $designLarge);
   line-height: px2lh(30, 51);
   letter-spacing: ps2em(-10);
