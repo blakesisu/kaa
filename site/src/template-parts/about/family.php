@@ -1,21 +1,21 @@
 <section class="about-grid about-family">
 
     <!-- Text Block -->
-    <div class="about-header-container item1">
+    <div class="about-header-container">
       <div class="about-header-7">
         <h1 class="about-text-mini__header">OUR FAMILY</h1>
       </div>
     </div>
 
     <!-- Image/Text Block -->
-    <div class="about-family-column">
+    <div class="about-family-main">
       <!-- Image Block -->
 
       <!-- Text Block TODO: check landing for layout inspiration on text blocks-->
-      <div class="about-family-person item1">
-        <div class="about-text-1">
-          <span>ELEVATING DESIGN THROUGH LEADERSHIP</span>
-          <div class="about-text-block__dash"></div>
+      <div class="about-family-person">
+        <div class="about-text-flex-column">
+          <span class="about-text-1">ELEVATING DESIGN THROUGH LEADERSHIP</span>
+          <div class="about-text-block__dash-left"></div>
         </div>
       </div>
 
@@ -25,6 +25,11 @@
           <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-grant-lg.jpg">
           <img class="about-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-grant-lg.jpg" alt="">
         </picture>
+
+        <div class="about-family-description">
+          <h3 class="about-family-name">GRANT KIRKPATRICK</h3>
+          <span class="about-family-title">Founding Partner</span>
+        </div>
       </div>
       <div class="about-family-person">
         <picture class="about-image-block__picture">

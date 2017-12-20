@@ -1,0 +1,12 @@
+// section class .about-contact
+
+.about-contact {
+  // line-height: 1;
+  width: 100%;
+  .about-contact-details {
+    line-height: 2.5vw;
+  }
+  @media (min-width: $about-single-column-break + 1) {
+    // height: 60vh;
+  }
+}

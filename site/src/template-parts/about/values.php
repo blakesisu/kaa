@@ -20,10 +20,10 @@
 
         <!-- Text Block TODO: check landing for layout inspiration on text blocks-->
         <div class="about-horizontal item2">
-          <div class="about-text-1">
-            <span>ARCHITECTURAL INTERGRITY &amp; AUTHENTICITY</span>
+          <div class="about-text-flex-column">
+            <span class="about-text-1">ARCHITECTURAL INTERGRITY &amp; AUTHENTICITY</span>
             <div class="about-text-block__dash-left"></div>
-            <span>Morbi in sem quis dui placerat ornare, pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu cras neque id cursus faucibus consequat.</span>
+            <span class="about-text-1">Morbi in sem quis dui placerat ornare, pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu cras neque id cursus faucibus consequat.</span>
           </div>
         </div>
 
@@ -42,10 +42,10 @@
 
         <!-- Text Block TODO: check landing for layout inspiration on text blocks-->
         <div class="about-horizontal item1">
-          <div class="about-text-1">
-            <span>EMBRACING DIFFERENT VOICES</span>
+          <div class="about-text-flex-column">
+            <span class="about-text-1">EMBRACING DIFFERENT VOICES</span>
             <div class="about-text-block__dash-right"></div>
-            <span>Phasellus ultrices nulla ques nibh. Quisque a lectus. Donectsum consectetuer ligula vulputate sem tristique cursus. nam nullants quam, gravida non, comodo a, sodales sit amet, nisi.</span>
+            <span class="about-text-1">Phasellus ultrices nulla ques nibh. Quisque a lectus. Donectsum consectetuer ligula vulputate sem tristique cursus. nam nullants quam, gravida non, comodo a, sodales sit amet, nisi.</span>
           </div>
         </div>
 
@@ -63,10 +63,10 @@
 
         <!-- Text Block TODO: check landing for layout inspiration on text blocks-->
         <div class="about-horizontal item2">
-          <div class="about-text-1">
-            <span>WORK HARD, PLAY HARDER</span>
+          <div class="about-text-flex-column">
+            <span class="about-text-1">WORK HARD, PLAY HARDER</span>
             <div class="about-text-block__dash-left"></div>
-            <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quesque volutpat mattis eros. Nullam malesuada era ut turpis. Suspendisse urna nibh, viverra non, semper suscipit.</span>
+            <span class="about-text-1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quesque volutpat mattis eros. Nullam malesuada era ut turpis. Suspendisse urna nibh, viverra non, semper suscipit.</span>
           </div>
         </div>
       </div>

@@ -1,0 +1,77 @@
+// section class .about-more-family
+
+// containers
+.about-more-family-members * {
+  margin: 3% 0 2% 0;
+  // margin: 2% 0;
+
+  @media (max-width: $about-single-column-break) {
+    margin: 4% 0;
+  }
+}
+
+.about-more-family {
+  width: 100%;
+  height: 40vw;
+}
+
+.about-more-family-members > * {
+  @media (min-width: $about-single-column-break + 1) {
+    width: 26%;
+  }
+  @media (max-width: $about-single-column-break) {
+    width: 50%;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.about-more-family-members {
+  display: flex;
+  flex-flow: column wrap;
+  height: 100%;
+  width: 100%;
+  @media (min-width: $about-single-column-break + 1) {
+    height: 90%;
+  }
+  @media (max-width: $about-single-column-break) {
+    padding: 0 3%;
+  }
+}
+
+// texts
+.about-more-family-name {
+  font-family: $bold;
+  letter-spacing: ps2em(300);
+  font-size: 18px;
+  font-size: 1.35vw;
+  @media (min-width: $about-break) {
+    font-size: 18px;
+  }
+  color: $lightBrown;
+  @media (max-width: $about-single-column-break) {
+    letter-spacing: 5px;
+    font-size: 28px;
+    font-size: 3.1vw;
+  }
+}
+
+.about-more-family-title {
+  font-family: $regular;
+  font-size: 18px;
+  font-size: 1.35vw;
+  @media (min-width: $about-break) {
+    font-size: 18px;
+  }
+  color: $brown;
+  a {
+    color: $orange;
+  }
+  @media (max-width: $about-single-column-break) {
+    letter-spacing: 1.5px;
+    font-size: 28px;
+    font-size: 3.1vw;
+  }
+}
