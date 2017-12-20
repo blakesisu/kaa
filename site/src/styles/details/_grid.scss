@@ -1,234 +1,144 @@
-// grid blocks
-@import "grid/image-block";
-@import "grid/text-block";
-@import "grid/project-block";
-
-// grid Styles
-// min-width since the mobile styles are so different it was easier to not have to override anything
+// grid
 // ------------------------------------------------------------------------------------------------- //
-.details-grid--0 {
-  line-height: 1;
+
+// Layouts
+// ------------------------------------------------------------------------------------------------- //
+// These are the different layouts for the image and text blocks
+// The text and image blocks will scale to fit these layouts
+.pd-grid {
+  display: flex;
 }
 
-.details-grid--6 {
-  line-height: 1;
+// full layout
+.pd-grid--full {
+  .pd-grid__block--text {
+    padding: 7vw 18.2vw;
+  }
+}
+
+// half layout
+.pd-grid--half {
+  .pd-grid__block {
+    flex: 1 1 50%;
+  }
+  .pd-grid__block--text {
+    padding: 2vw 7.6vw;
+  }
+}
+
+// third layout
+.pd-grid--third {
+  .pd-grid__block--image {
+    flex: 1 1 33.333%;
+  }
+  .pd-grid__block--text {
+    flex: 1 1 66.666%;
+    padding: 2vw 8vw;
+  }
+}
+
+// blocks
+// ----------------------------------------- //
+// Images or text
+// Text can be large and/or on a brown background
+.pd-grid__block {
+
+}
+
+// image block
+.pd-grid__block--image {
+
+}
+.pd-grid__picture {
+  display: block;
+  line-height: 0;
+}
+.pd-image__img {
   width: 100%;
-  @media (min-width: $details-grid-single-column-break + 1) {
-    height: 60vh;
-  }
 }
 
-.details-projects * {
-  margin: 3% 0 2% 0;
-  // margin: 2% 0;
-
-  @media (max-width: $details-grid-single-column-break) {
-    margin: 4% 0;
-  }
-}
-
-.details-contact > * {
-  margin: 10% 0;
-
-  @media (max-width: $details-grid-single-column-break) {
-    text-align: center;
-    margin: 8% 0;
-  }
-
-}
-
-.details-projects > * {
-  @media (min-width: $details-grid-single-column-break + 1) {
-    width: 33%;
-  }
-  @media (max-width: $details-grid-single-column-break) {
-    width: 50%;
-  }
-
+// text block
+.pd-grid__block--text {
   display: flex;
   flex-direction: column;
-  align-self: flex-start;
+  justify-content: center;
+  font-size: px2vw(24, $designLarge);
+  line-height: px2lh(24, 46);
+  letter-spacing: ps2em(6);
 }
 
-.details-projects {
-  display: flex;
-  flex-flow: column wrap;
-  height: 100%;
-  width: 100%;
-  @media (min-width: $details-grid-single-column-break + 1) {
-    height: 90%;
-  }
-  @media (max-width: $details-grid-single-column-break) {
-    padding: 0 3%;
-  }
+// large text block
+.pd-grid__block--large {
+  color: #ab9e95;
+  font-size: px2vw(30, $designLarge);
+  line-height: px2lh(30, 51);
+  letter-spacing: ps2em(-10);
 }
 
-.details-grid__asym-longleft-left {
-  width: 67%;
-  height: 100%;
-  @media (max-width: $details-grid-single-column-break) {
-    height: 91vw;
-    width: 100%;
-    margin-bottom: 23%;
-  }
+// brown text block
+.pd-grid__block--brown {
+  color: $white;
+  background-color: $brown;
 }
 
-.details-grid__asym-longleft-right {
-  width: 33%;
-  height: 100%;
-  padding-left: 4%;
-  @media (max-width: $details-grid-single-column-break) {
-    width: 100%;
-    // height: 91vw;
-  }
-}
-
-
-@media (min-width: $details-grid-single-column-break + 1) {
-  // grid
-  .details-grid {
-    position: relative;
+// fixed text size
+// ------------------------------------------------------------------------------------------------- //
+@media (max-width: $details-grid-break) {
+  // text block
+  .pd-grid__block--text {
+    font-size: 17.075px;
   }
 
-  .details-grid-inline {
-    @extend .details-grid;
-    display: inline-flex;
-  }
-
-  .details-grid--1 {
-    // height: 51vh;
-    // height: 35vh;
-    color: #ab9e95;
-    .grid-item1 {
-      order: 1;
-    }
-    .grid-item2 {
-      order: 2;
-    }
-  }
-
-  .details-grid--2 {
-    // height: 50vh;
-  }
-
-  .details-grid--7 {
-    // height: 36vh;
-    .grid-item1 {
-      order: 1;
-    }
-    .grid-item2 {
-      order: 2;
-    }
-  }
-
-  .details-grid--3 {
-    // height: 64vh;
-    // height: 44vh;
-    .grid-item1 {
-      order: 1;
-    }
-    .grid-item2 {
-      order: 2;
-    }
-  }
-
-  .details-grid--4 {
-    // height: 100vh;
-    // height: 71vh;
-  }
-
-  .details-grid--5 {
-    // height: 87vh;
-    // height: 62vh;
-    .grid-item1 {
-      order: 1;
-    }
-    .grid-item2 {
-      order: 2;
-      display: flex;
-      align-items: center;
-    }
-  }
-
-  .details-grid--6 {
-    // height: 63vh;
-    width: 100%;
-  }
-
-  // content
-  .details-grid__content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-flow: row wrap;
-  }
-
-  .details-grid__item {
-    position: relative;
-    overflow: hidden;
-  }
-  .details-grid__item--full {
-    width: 100%;
-    height: 100%;
-  }
-
-  .details-grid__horizontal {
-    display: inherit;
-    flex-direction: row;
-    flex: 1 1 0;
-    height: auto;
-    align-items: center;
-  }
-
-  .details-grid__asym-longright-left {
-    width: 33%;
-    height: 100%;
-  }
-
-  .details-grid__asym-longright-right {
-    width: 67%;
-  }
-
-  // Grid 6
-  .details-asym-container{
-    height: 100%;
-    width: 100%;
-    display: inline-flex;
-    padding: 4% 9%;
+  // large text block
+  .pd-grid__block--large {
+    font-size: 21.3438px;
   }
 }
 
-
+// mobile styles
+// ------------------------------------------------------------------------------------------------- //
 @media (max-width: $details-grid-single-column-break) {
-  .details-grid--1, .details-grid--3, .details-grid--5 {
-    display: flex;
+  // layouts
+  // ----------------------------------------- //
+  .pd-grid {
     flex-direction: column;
-    .grid-item1 {
-      order: 2;
-    }
-    .grid-item2 {
-      order: 1;
-    }
   }
-  .details-grid--7 {
-    display: flex;
-    // height: 100vh;
-    flex-direction: column;
-    .grid-item1 {
-      order: 1;
+  .pd-grid--image-left {
+    flex-direction: column-reverse;
+  }
+  .pd-grid--image-right {
+    flex-direction: column-reverse;
+  }
+
+  // make sections full width
+  .pd-grid--full,
+  .pd-grid--half,
+  .pd-grid--third {
+    .pd-grid__block {
+      flex-basis: 100%;
     }
-    .grid-item2 {
-      order: 3;
-    }
-    .grid-item2 {
-      order: 2;
+    .pd-grid__block--text {
+      padding: 9vw 5.5vw;
     }
   }
 
-  .details-grid--6 > .details-asym-container {
-    margin: 15% 0 8% 0;
+  // blocks
+  // ----------------------------------------- //
+  // image
+  .pd-grid__block--image {
+
+  }
+
+  // text
+  .pd-grid__block--text {
+    display: block;
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  // large text block
+  .pd-grid__block--text.pd-grid__block--large {
+    font-size: 20px;
+    line-height: px2lh(20, 32.5);
   }
 }
