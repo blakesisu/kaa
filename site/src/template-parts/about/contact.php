@@ -2,7 +2,7 @@
 
     <!-- Image Block -->
   <div class='about-asym-container'>
-    <div class="about-asym-longright-left about-asym-short item1">
+    <div class="about-asym-longright-left about-asym-short contact-item1">
       <div class="about-right-container-title">
         <span class="about-text-mini__header">CONTACT US</span>
       </div>
@@ -24,7 +24,7 @@
     </div>
 
     <!-- Text Block -->
-    <div class="about-asym-longright-right item2">
+    <div class="about-asym-longright-right contact-item2">
 
       <picture class="about-image-block__picture">
         <source srcset="<?php bloginfo('template_url'); ?>/images/about/contact/map-sm.jpg" media="(max-width: 700px)">

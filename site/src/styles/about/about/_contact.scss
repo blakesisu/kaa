@@ -6,7 +6,17 @@
   .about-contact-details {
     line-height: 2.5vw;
   }
-  @media (min-width: $about-single-column-break + 1) {
-    // height: 60vh;
+
+  @media (max-width: $about-single-column-break) {
+    .about-asym-container {
+      display: flex;
+      flex-flow: column wrap;
+    }
+    .about-asym-container > .contact-item1 {
+      order: 2;
+    }
+    .about-asym-container > .contact-item2 {
+      order: 1;
+    }
   }
 }

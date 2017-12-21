@@ -6,7 +6,7 @@
   // margin: 2% 0;
 
   @media (max-width: $about-single-column-break) {
-    margin: 4% 0;
+    // margin: 4% 0;
   }
 }
 
@@ -20,6 +20,7 @@
 }
 
 .about-more-family-members > * {
+  height: 8%;
   @media (min-width: $about-single-column-break + 1) {
     width: 26%;
   }
@@ -56,6 +57,9 @@
   }
   color: $lightBrown;
   @media (max-width: $about-single-column-break) {
+    // overflow-wrap: break-word;
+    // word-wrap: break-word;
+    // hyphens: auto;
     letter-spacing: 5px;
     font-size: 28px;
     font-size: 3.1vw;
