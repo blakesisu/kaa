@@ -45,7 +45,7 @@ $pd-details__single-column-break: 950px;
   text-transform: uppercase;
   margin-bottom: px2vw(39, $designMedium);
 
-  @media (max-width: $details-grid-break) {
+  @media (max-width: $pd-details__single-column-break) {
     font-size: 21.3438px;
     margin-bottom: 39px;
     text-align: center;
@@ -152,7 +152,7 @@ $pd-details__single-column-break: 950px;
 .pd-contact {
   flex: 0 0 auto;
 
-  @media (max-width: $details-grid-break) {
+  @media (max-width: $pd-details__single-column-break) {
     text-align: center;
   }
 }
