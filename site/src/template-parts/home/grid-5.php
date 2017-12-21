@@ -43,8 +43,11 @@
         <h1 class="hm-text-block__header">Delight</h1>
         <div class="hm-text-block__dash"></div>
         <div class="hm-text-block__description-container">
-          <p class="hm-text-block__description">Incorporating touches of whimsy and purposeful imperfection. The most inviting homes have an unforgettable character and offer us moments of delight and surprise, just like the people we love spending time with.</p>
+          <p class="hm-text-block__description">Incorporating touches of whimsy and purposeful imperfection. The most inviting homes have an unforgettable character and offer us moments of delight and surprise, just like the people we love spending time with. <a class="hm-text-block__inline-cta" href="#">More on Delight</a></p>
         </div>
+        <p class="hm-text-block__cta">
+          <a class="hm-text-block__cta-btn" href="#">More on Delight</a>
+        </p>
       </div>
     </div>
 

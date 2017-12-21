@@ -7,8 +7,11 @@
         <h1 class="hm-text-block__header">Weave</h1>
         <div class="hm-text-block__dash"></div>
         <div class="hm-text-block__description-container">
-          <p class="hm-text-block__description">Seamlessly connecting indoor and outdoor living to deepen a homeowner’s love of nature. Instead of putting windows in our walls, our walls are windows. And doors, for that matter. </p>
+          <p class="hm-text-block__description">Seamlessly connecting indoor and outdoor living to deepen a homeowner’s love of nature. Instead of putting windows in our walls, our walls are windows. And doors, for that matter. <a class="hm-text-block__inline-cta" href="#">Explore More</a></p>
         </div>
+        <p class="hm-text-block__cta">
+          <a class="hm-text-block__cta-btn" href="#">Explore More</a>
+        </p>
       </div>
     </div>
 

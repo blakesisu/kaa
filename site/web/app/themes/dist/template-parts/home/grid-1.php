@@ -34,8 +34,11 @@
         <h1 class="hm-text-block__header">Reveal</h1>
         <div class="hm-text-block__dash"></div>
         <div class="hm-text-block__description-container">
-          <p class="hm-text-block__description">Exposing the elements that support a home and form its structure communicates ‘this place is real’ and reminds us of the endless combinations of textures and materials found in nature. </p>
+          <p class="hm-text-block__description">Exposing the elements that support a home and form its structure communicates ‘this place is real’ and reminds us of the endless combinations of textures and materials found in nature. <a class="hm-text-block__inline-cta" href="#">See How</a></p>
         </div>
+        <p class="hm-text-block__cta">
+          <a class="hm-text-block__cta-btn" href="#">See How</a>
+        </p>
       </div>
     </div>
 

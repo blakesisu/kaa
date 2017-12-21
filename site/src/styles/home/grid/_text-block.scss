@@ -35,6 +35,16 @@
   .hm-text-block__description {
     @include hm-body-copy;
   }
+  .hm-text-block__inline-cta {
+    text-transform: uppercase;
+    color: $orange;
+    font-family: $medium;
+    font-size: 11px;
+    letter-spacing: ps2em(200);
+  }
+  .hm-text-block__cta {
+    display: none;
+  }
 }
 
 // make text scale up on larger screens based on viewport
@@ -44,6 +54,9 @@
   // ----------------------------------------- //
   .hm-text-block__description {
     @include hm-body-copy--large;
+  }
+  .hm-text-block__inline-cta {
+    font-size: px2vw(15, $designLarge);
   }
 }
 
@@ -85,15 +98,26 @@
     letter-spacing: ps2em(300);
     margin-left: -1%;
     margin-bottom: 7.1%;
+    margin-top: 0;
   }
   .hm-text-block__dash {
     @include dash-small;
     margin-bottom: 7%;
   }
   .hm-text-block__description-container {
-
+    padding: 0;
   }
   .hm-text-block__description {
     @include hm-body-copy--small;
+  }
+  .hm-text-block__inline-cta {
+    display: none;
+  }
+  .hm-text-block__cta {
+    display: block;
+    margin-top: 26px;
+  }
+  .hm-text-block__cta-btn {
+    @include button--small;
   }
 }

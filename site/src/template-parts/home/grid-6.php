@@ -16,8 +16,11 @@
         <h1 class="hm-text-block__header">Craft</h1>
         <div class="hm-text-block__dash"></div>
         <div class="hm-text-block__description-container">
-          <p class="hm-text-block__description">Our senses recognize one-of-a-kind objects, architectural elements and the care that went into making them. These handmade elements in our homes ground us as they balance the equal and opposite desire for our spirits to soar.</p>
+          <p class="hm-text-block__description">Our senses recognize one-of-a-kind objects, architectural elements and the care that went into making them. These handmade elements in our homes ground us as they balance the equal and opposite desire for our spirits to soar. <a class="hm-text-block__inline-cta" href="#">Dive into our process</a></p>
         </div>
+        <p class="hm-text-block__cta">
+          <a class="hm-text-block__cta-btn" href="#">Dive Into Our Process</a>
+        </p>
       </div>
     </div>
 

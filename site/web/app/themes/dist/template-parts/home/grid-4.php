@@ -25,8 +25,11 @@
         <h1 class="hm-text-block__header">Sculpt</h1>
         <div class="hm-text-block__dash"></div>
         <div class="hm-text-block__description-container">
-          <p class="hm-text-block__description">Harmonizing form and scale, variety and contrast. By combining right angles with the occasional sinuous curve, which draws the eye through the space, a home becomes both restful and energizing.</p>
+          <p class="hm-text-block__description">Harmonizing form and scale, variety and contrast. By combining right angles with the occasional sinuous curve, which draws the eye through the space, a home becomes both restful and energizing. <a class="hm-text-block__inline-cta" href="#">View More</a></p>
         </div>
+        <p class="hm-text-block__cta">
+          <a class="hm-text-block__cta-btn" href="#">View More</a>
+        </p>
       </div>
     </div>
 

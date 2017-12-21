@@ -25,8 +25,11 @@
         <h1 class="hm-text-block__header">Levitate</h1>
         <div class="hm-text-block__dash"></div>
         <div class="hm-text-block__description-container">
-          <p class="hm-text-block__description">To inspire; to help us rise above the everyday. Architecture can literally and figuratively elevate us, lifting our spirits and allowing us to momentarily defy gravity.</p>
+          <p class="hm-text-block__description">To inspire; to help us rise above the everyday. Architecture can literally and figuratively elevate us, lifting our spirits and allowing us to momentarily defy gravity. <a class="hm-text-block__inline-cta" href="#">Read More</a></p>
         </div>
+        <p class="hm-text-block__cta">
+          <a class="hm-text-block__cta-btn" href="#">Read More</a>
+        </p>
       </div>
     </div>
 
