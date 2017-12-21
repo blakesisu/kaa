@@ -1,5 +1,8 @@
 // grid
 // ------------------------------------------------------------------------------------------------- //
+// For the text block I had to place a div with a paragraph inside of it so JS can measure height correctly
+// Using JS to measure if text is taller than image and adding/removing 'has-max-text' class
+// Had to do this because images and text could be of varying heights
 
 // Layouts
 // ------------------------------------------------------------------------------------------------- //
@@ -7,38 +10,91 @@
 // The text and image blocks will scale to fit these layouts
 .pd-grid {
   display: flex;
+
+  // mobile
+  @media (max-width: $details-grid-single-column-break) {
+    flex-direction: column;
+  }
+}
+
+.pd-grid--image-left {
+  // mobile
+  @media (max-width: $details-grid-single-column-break) {
+    flex-direction: column-reverse;
+  }
+}
+.pd-grid--image-right {
+  // mobile
+  @media (max-width: $details-grid-single-column-break) {
+    flex-direction: column-reverse;
+  }
 }
 
 // full layout
+// ----------------------------------------- //
 .pd-grid--full {
-  .pd-grid__block--text {
+  .pd-grid__block--text p {
     padding: 7vw 18.2vw;
+  }
+
+  // mobile
+  @media (max-width: $details-grid-single-column-break) {
+    .pd-grid__block {
+      flex-basis: 100%;
+    }
+    .pd-grid__block--text p {
+      padding: 9vw 5.5vw;
+    }
   }
 }
 
 // half layout
+// ----------------------------------------- //
 .pd-grid--half {
   .pd-grid__block {
     flex: 1 1 50%;
   }
-  .pd-grid__block--text {
-    padding: 2vw 7.6vw;
+  .pd-grid__block--text p {
+    padding: 6vw 7.6vw;
+  }
+
+  // mobile
+  @media (max-width: $details-grid-single-column-break) {
+    .pd-grid__block {
+      flex-basis: 100%;
+    }
+    .pd-grid__block--text p {
+      padding: 9vw 5.5vw;
+    }
   }
 }
 
 // third layout
+// ----------------------------------------- //
 .pd-grid--third {
   .pd-grid__block--image {
     flex: 1 1 33.333%;
   }
   .pd-grid__block--text {
     flex: 1 1 66.666%;
-    padding: 2vw 8vw;
+    p {
+      padding: 6vw 8vw;
+    }
+  }
+
+  // mobile
+  @media (max-width: $details-grid-single-column-break) {
+    .pd-grid__block {
+      flex-basis: 100%;
+    }
+    .pd-grid__block--text p {
+      padding: 9vw 5.5vw;
+    }
   }
 }
 
 // blocks
-// ----------------------------------------- //
+// ------------------------------------------------------------------------------------------------- //
 // Images or text
 // Text can be large and/or on a brown background
 .pd-grid__block {
@@ -46,18 +102,32 @@
 }
 
 // image block
+// ----------------------------------------- //
 .pd-grid__block--image {
-
+  position: relative;
+  overflow: hidden;
 }
 .pd-grid__picture {
   display: block;
   line-height: 0;
 }
-.pd-image__img {
+.pd-grid__img {
   width: 100%;
 }
 
+// cropped image block for when text is taller than image
+.pd-grid.has-max-text {
+  .pd-grid__img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: 100%;
+  }
+}
+
 // text block
+// ----------------------------------------- //
 .pd-grid__block--text {
   display: flex;
   flex-direction: column;
@@ -65,6 +135,18 @@
   font-size: px2vw(24, $designLarge);
   line-height: px2lh(24, 46);
   letter-spacing: ps2em(6);
+
+  // fixed font size
+  @media (max-width: $details-grid-break) {
+    font-size: 17.075px;
+  }
+
+  // mobile
+  @media (max-width: $details-grid-single-column-break) {
+    display: block;
+    font-size: 17px;
+    line-height: 1.75;
+  }
 }
 
 // large text block
@@ -73,72 +155,21 @@
   font-size: px2vw(30, $designLarge);
   line-height: px2lh(30, 51);
   letter-spacing: ps2em(-10);
+
+  // fixed font size
+  @media (max-width: $details-grid-break) {
+    font-size: 21.3438px;
+  }
+
+  // mobile
+  @media (max-width: $details-grid-single-column-break) {
+    font-size: 20px;
+    line-height: px2lh(20, 32.5);
+  }
 }
 
 // brown text block
 .pd-grid__block--brown {
   color: $white;
   background-color: $brown;
-}
-
-// fixed text size
-// ------------------------------------------------------------------------------------------------- //
-@media (max-width: $details-grid-break) {
-  // text block
-  .pd-grid__block--text {
-    font-size: 17.075px;
-  }
-
-  // large text block
-  .pd-grid__block--large {
-    font-size: 21.3438px;
-  }
-}
-
-// mobile styles
-// ------------------------------------------------------------------------------------------------- //
-@media (max-width: $details-grid-single-column-break) {
-  // layouts
-  // ----------------------------------------- //
-  .pd-grid {
-    flex-direction: column;
-  }
-  .pd-grid--image-left {
-    flex-direction: column-reverse;
-  }
-  .pd-grid--image-right {
-    flex-direction: column-reverse;
-  }
-
-  // make sections full width
-  .pd-grid--full,
-  .pd-grid--half,
-  .pd-grid--third {
-    .pd-grid__block {
-      flex-basis: 100%;
-    }
-    .pd-grid__block--text {
-      padding: 9vw 5.5vw;
-    }
-  }
-
-  // blocks
-  // ----------------------------------------- //
-  // image
-  .pd-grid__block--image {
-
-  }
-
-  // text
-  .pd-grid__block--text {
-    display: block;
-    font-size: 17px;
-    line-height: 1.75;
-  }
-
-  // large text block
-  .pd-grid__block--text.pd-grid__block--large {
-    font-size: 20px;
-    line-height: px2lh(20, 32.5);
-  }
 }

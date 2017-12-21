@@ -139,8 +139,12 @@ export default {
 
     alias: {
       modernizr$: path.resolve(__dirname, '.modernizrrc'),
-      postal: path.resolve('node_modules', 'postal/lib/postal.lodash.js'),
-      Easing: path.resolve('node_modules', 'gsap/src/uncompressed/easing/EasePack.js')
+      postal: isProd ?
+        path.resolve('node_modules', 'postal/lib/postal.lodash.min.js') :
+        path.resolve('node_modules', 'postal/lib/postal.lodash.js'),
+      Easing: isProd ?
+        path.resolve('node_modules', 'gsap/src/minified/easing/EasePack.min.js') :
+        path.resolve('node_modules', 'gsap/src/uncompressed/easing/EasePack.js')
     }
   },
 
