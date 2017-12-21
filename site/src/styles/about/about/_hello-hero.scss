@@ -1,5 +1,17 @@
 // section class .about-hero
 
+.hero-desktop {
+  @media(max-width: $about-single-column-break) {
+    display: none;
+  }
+}
+
+.hero-mobile {
+  @media(min-width: $about-single-column-break + 1) {
+    display: none;
+  }
+}
+
 .about-hero {
   position: relative;
   width: 100%;
@@ -35,6 +47,11 @@
   letter-spacing: ps2em(230);
   padding: 2.3%;
   opacity: 1;
+  @media(max-width: $about-single-column-break) {
+    font-size: 20px;
+    font-size: 7.5vw;
+    line-height: 20px;
+  }
 }
 
 // not full screen height
