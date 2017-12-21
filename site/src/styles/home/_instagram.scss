@@ -16,6 +16,18 @@
 }
 .hm-instagram__img {
   position: absolute;
+}
+.hm-instagram__img.is-square {
+  width: 100%;
+  top: 0;
+}
+.hm-instagram__img.is-portrait {
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.hm-instagram__img.is-landscape {
   height: 100%;
   top: 0;
   left: 50%;
