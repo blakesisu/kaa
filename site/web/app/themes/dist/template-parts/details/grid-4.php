@@ -3,7 +3,7 @@
     <picture class="pd-grid__picture">
       <source srcset="<?php bloginfo('template_url'); ?>/images/details/grid-4/details-poolside-sm.jpg" media="(max-width: 700px)">
       <source srcset="<?php bloginfo('template_url'); ?>/images/details/grid-4/details-poolside-lg.jpg">
-      <img class="pd-image__img" srcset="<?php bloginfo('template_url'); ?>/images/details/grid-4/details-poolside-lg.jpg" alt="">
+      <img class="pd-grid__img" srcset="<?php bloginfo('template_url'); ?>/images/details/grid-4/details-poolside-lg.jpg" alt="">
     </picture>
   </div>
 </section>
