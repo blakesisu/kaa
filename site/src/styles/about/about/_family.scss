@@ -16,6 +16,17 @@
   @media (max-width: $about-single-column-break) {
     width: 50%;
   }
+
+  &:nth-child(1) {
+    display: flex;
+    .about-text-flex-column {
+      justify-content: center;
+
+      & >  .about-text-block__dash-left {
+        margin: 3% 0 0 13%;
+      }
+    }
+  }
 }
 
 .about-family-description {
@@ -53,4 +64,23 @@
   height: 1.5vw;
   color: #fff;
   text-align: left;
+}
+
+.about-family-headline {
+  font-size: 45px;
+  font-size: 2.5vw;
+  font-family: $bold;
+  color: $lightBrown;
+  line-height: 1.4;
+  letter-spacing: .8vw;
+  overflow-wrap: break-word;
+  padding: 0 13%;
+  @media (max-width: $about-single-column-break) {
+    font-size: 40px;
+    font-size: 5vw;
+    // margin: 9% auto;
+    // width: 94%;
+    // line-height: 1.8;
+    // padding: 0 0;
+  }
 }

@@ -14,7 +14,7 @@
       <!-- Text Block TODO: check landing for layout inspiration on text blocks-->
       <div class="about-family-person">
         <div class="about-text-flex-column">
-          <span class="about-text-1">ELEVATING DESIGN THROUGH LEADERSHIP</span>
+          <span class="about-family-headline">ELEVATING DESIGN THROUGH LEADERSHIP</span>
           <div class="about-text-block__dash-left"></div>
         </div>
       </div>
