@@ -35,6 +35,19 @@ body {
   order: 2;
 }
 
+
+.about-desktop {
+  @media(max-width: $about-single-column-break) {
+    display: none;
+  }
+}
+
+.about-mobile {
+  @media(min-width: $about-single-column-break + 1) {
+    display: none;
+  }
+}
+
 .about-asym-longleft-left {
   width: 67%;
   height: 100%;

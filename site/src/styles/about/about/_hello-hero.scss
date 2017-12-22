@@ -1,17 +1,5 @@
 // section class .about-hero
 
-.hero-desktop {
-  @media(max-width: $about-single-column-break) {
-    display: none;
-  }
-}
-
-.hero-mobile {
-  @media(min-width: $about-single-column-break + 1) {
-    display: none;
-  }
-}
-
 .about-hero {
   position: relative;
   width: 100%;

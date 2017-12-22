@@ -97,13 +97,25 @@
     width: 50%;
   }
 
+  // first text box before bio pics
   &:nth-child(1) {
     display: flex;
+
     .about-text-flex-column {
       justify-content: center;
 
       & >  .about-text-block__dash-left {
         margin: 3% 0 0 13%;
+      }
+    }
+
+    @media (max-width: $about-single-column-break) {
+      width: 100%;
+      .about-text-flex-column >  .about-text-block__dash-left {
+        margin: 5% 0 0 0;
+        width: 6.71vw;
+        height: 1.59vw;
+        align-self: center;
       }
     }
   }
@@ -136,6 +148,16 @@
   text-transform: uppercase;
   color: #fff;
   letter-spacing: ps2em(230);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  @media (max-width: $about-single-column-break) {
+    font-size: 40px;
+    font-size: 4vw;
+    // margin: 9% auto;
+    // width: 94%;
+    // line-height: 1.8;
+    // padding: 0 0;
+  }
 }
 .about-family-title {
   font-family: $regular;
@@ -144,6 +166,14 @@
   height: 1.5vw;
   color: #fff;
   text-align: left;
+  @media (max-width: $about-single-column-break) {
+    font-size: 40px;
+    font-size: 4vw;
+    // margin: 9% auto;
+    // width: 94%;
+    // line-height: 1.8;
+    // padding: 0 0;
+  }
 }
 
 .about-family-headline {
@@ -157,10 +187,19 @@
   padding: 0 13%;
   @media (max-width: $about-single-column-break) {
     font-size: 40px;
-    font-size: 5vw;
+    font-size: 7vw;
     // margin: 9% auto;
     // width: 94%;
     // line-height: 1.8;
     // padding: 0 0;
+  }
+}
+
+@media (max-width: $about-single-column-break) {
+  .about-family {
+    margin-top: 15%;
+  }
+  .about-family-copy {
+    display: none;
   }
 }
