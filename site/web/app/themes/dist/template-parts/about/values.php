@@ -64,8 +64,7 @@
         <!-- Text Block TODO: check landing for layout inspiration on text blocks-->
         <div class="about-horizontal item2">
           <div class="about-value-text-column">
-            <span class="about-value-header">WORK HARD,</span>
-            <span class="about-value-header">PLAY HARDER</span>
+            <span class="about-value-header">WORK HARD, PLAY HARDER</span>
             <div class="about-text-block__dash-left"></div>
             <span class="about-value-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quesque volutpat mattis eros. Nullam malesuada era ut turpis. Suspendisse urna nibh, viverra non, semper suscipit.</span>
           </div>
