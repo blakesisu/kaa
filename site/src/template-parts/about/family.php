@@ -20,108 +20,157 @@
       </div>
 
       <div class="about-family-person">
-        <picture class="about-image-block__picture">
-          <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-grant-sm.jpg" media="(max-width: 700px)">
-          <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-grant-lg.jpg">
-          <img class="about-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-grant-lg.jpg" alt="">
-        </picture>
-        <div class="about-family-description">
-          <div class="about-family-info">
-            <h3 class="about-family-name">GRANT KIRKPATRICK</h3>
-            <span class="about-family-title">Founding Partner</span>
+        <a href="#" class="about-family-link">
+          <div class="about-family-copy">
+            <p class="about-family-bio">VIEW BIO</p>
           </div>
-        </div>
+
+          <picture class="about-image-block__picture">
+            <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-grant-sm.jpg" media="(max-width: 700px)">
+            <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-grant-lg.jpg">
+            <img class="about-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-grant-lg.jpg" alt="">
+          </picture>
+          <div class="about-family-background"></div>
+          <div class="about-family-description">
+            <div class="about-family-info">
+              <h3 class="about-family-name">GRANT KIRKPATRICK</h3>
+              <span class="about-family-title">Founding Partner</span>
+            </div>
+          </div>
+        </a>
       </div>
       <div class="about-family-person">
-        <picture class="about-image-block__picture">
-          <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-duan-sm.jpg" media="(max-width: 700px)">
-          <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-duan-lg.jpg">
-          <img class="about-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-duan-lg.jpg" alt="">
-        </picture>
-        <div class="about-family-description">
-          <div class="about-family-info">
-            <h3 class="about-family-name">DUAN TRAN</h3>
-            <span class="about-family-title">Partner</span>
+        <a href="#" class="about-family-link">
+          <div class="about-family-copy">
+            <p class="about-family-bio">VIEW BIO</p>
           </div>
-        </div>
+          <picture class="about-image-block__picture">
+            <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-duan-sm.jpg" media="(max-width: 700px)">
+            <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-duan-lg.jpg">
+            <img class="about-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-duan-lg.jpg" alt="">
+          </picture>
+          <div class="about-family-background"></div>
+          <div class="about-family-description">
+            <div class="about-family-info">
+              <h3 class="about-family-name">DUAN TRAN</h3>
+              <span class="about-family-title">Partner</span>
+            </div>
+          </div>
+        </a>
       </div>
       <div class="about-family-person">
-        <picture class="about-image-block__picture">
-          <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-patti-sm.jpg" media="(max-width: 700px)">
-          <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-patti-lg.jpg">
-          <img class="about-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-patti-lg.jpg" alt="">
-        </picture>
-        <div class="about-family-description">
-          <div class="about-family-info">
-            <h3 class="about-family-name">PATTI BAKER</h3>
-            <span class="about-family-title">Principal</span>
+        <a href="#" class="about-family-link">
+          <div class="about-family-copy">
+            <p class="about-family-bio">VIEW BIO</p>
           </div>
-        </div>
+          <picture class="about-image-block__picture">
+            <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-patti-sm.jpg" media="(max-width: 700px)">
+            <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-patti-lg.jpg">
+            <img class="about-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-patti-lg.jpg" alt="">
+          </picture>
+          <div class="about-family-background"></div>
+          <div class="about-family-description">
+            <div class="about-family-info">
+              <h3 class="about-family-name">PATTI BAKER</h3>
+              <span class="about-family-title">Principal</span>
+            </div>
+          </div>
+        </a>
       </div>
       <div class="about-family-person">
-        <picture class="about-image-block__picture">
-          <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-steve-sm.jpg" media="(max-width: 700px)">
-          <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-steve-lg.jpg">
-          <img class="about-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-steve-lg.jpg" alt="">
-        </picture>
-        <div class="about-family-description">
-          <div class="about-family-info">
-            <h3 class="about-family-name">STEVE STRAUGHAN</h3>
-            <span class="about-family-title">Design Coordinator</span>
+        <a href="#" class="about-family-link">
+          <div class="about-family-copy">
+            <p class="about-family-bio">VIEW BIO</p>
           </div>
-        </div>
+          <picture class="about-image-block__picture">
+            <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-steve-sm.jpg" media="(max-width: 700px)">
+            <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-steve-lg.jpg">
+            <img class="about-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-steve-lg.jpg" alt="">
+          </picture>
+          <div class="about-family-background"></div>
+          <div class="about-family-description">
+            <div class="about-family-info">
+              <h3 class="about-family-name">STEVE STRAUGHAN</h3>
+              <span class="about-family-title">Design Coordinator</span>
+            </div>
+          </div>
+        </a>
       </div>
       <div class="about-family-person">
-        <picture class="about-image-block__picture">
-          <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-lisa-sm.jpg" media="(max-width: 700px)">
-          <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-lisa-lg.jpg">
-          <img class="about-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-lisa-lg.jpg" alt="">
-        </picture>
-        <div class="about-family-description">
-          <div class="about-family-info">
-            <h3 class="about-family-name">LISA COPELAND</h3>
-            <span class="about-family-title">CFO</span>
+        <a href="#" class="about-family-link">
+          <div class="about-family-copy">
+            <p class="about-family-bio">VIEW BIO</p>
           </div>
-        </div>
+          <picture class="about-image-block__picture">
+            <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-lisa-sm.jpg" media="(max-width: 700px)">
+            <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-lisa-lg.jpg">
+            <img class="about-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-lisa-lg.jpg" alt="">
+          </picture>
+          <div class="about-family-background"></div>
+          <div class="about-family-description">
+            <div class="about-family-info">
+              <h3 class="about-family-name">LISA COPELAND</h3>
+              <span class="about-family-title">CFO</span>
+            </div>
+          </div>
+        </a>
       </div>
       <div class="about-family-person">
-        <picture class="about-image-block__picture">
-          <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-michael-sm.jpg" media="(max-width: 700px)">
-          <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-michael-lg.jpg">
-          <img class="about-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-michael-lg.jpg" alt="">
-        </picture>
-        <div class="about-family-description">
-          <div class="about-family-info">
-            <h3 class="about-family-name">MICHAEL MCGOWAN</h3>
-            <span class="about-family-title">Landscape Studio Director</span>
+        <a href="#" class="about-family-link">
+          <div class="about-family-copy">
+            <p class="about-family-bio">VIEW BIO</p>
           </div>
-        </div>
+          <picture class="about-image-block__picture">
+            <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-michael-sm.jpg" media="(max-width: 700px)">
+            <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-michael-lg.jpg">
+            <img class="about-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-michael-lg.jpg" alt="">
+          </picture>
+          <div class="about-family-background"></div>
+          <div class="about-family-description">
+            <div class="about-family-info">
+              <h3 class="about-family-name">MICHAEL MCGOWAN</h3>
+              <span class="about-family-title">Landscape Studio Director</span>
+            </div>
+          </div>
+        </a>
       </div>
       <div class="about-family-person">
-        <picture class="about-image-block__picture">
-          <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-meghan-sm.jpg" media="(max-width: 700px)">
-          <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-meghan-lg.jpg">
-          <img class="about-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-meghan-lg.jpg" alt="">
-        </picture>
-        <div class="about-family-description">
-          <div class="about-family-info">
-            <h3 class="about-family-name">MEGHAN BECKMANN</h3>
-            <span class="about-family-title">Project Manager</span>
+        <a href="#" class="about-family-link">
+          <div class="about-family-copy">
+            <p class="about-family-bio">VIEW BIO</p>
           </div>
-        </div>
+          <picture class="about-image-block__picture">
+            <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-meghan-sm.jpg" media="(max-width: 700px)">
+            <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-meghan-lg.jpg">
+            <img class="about-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-meghan-lg.jpg" alt="">
+          </picture>
+          <div class="about-family-background"></div>
+          <div class="about-family-description">
+            <div class="about-family-info">
+              <h3 class="about-family-name">MEGHAN BECKMANN</h3>
+              <span class="about-family-title">Project Manager</span>
+            </div>
+          </div>
+        </a>
       </div>
       <div class="about-family-person">
-        <picture class="about-image-block__picture">
-          <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-todd-sm.jpg" media="(max-width: 700px)">
-          <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-todd-lg.jpg">
-          <img class="about-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-todd-lg.jpg" alt="">
-        </picture>
-        <div class="about-family-description">
-          <div class="about-family-info">
-            <h3 class="about-family-name">TODD PAOLILLO</h3>
-            <span class="about-family-title">Sr. Project Manager</span>
+        <a href="#" class="about-family-link">
+          <div class="about-family-copy">
+            <p class="about-family-bio">VIEW BIO</p>
           </div>
-        </div>
+          <picture class="about-image-block__picture">
+            <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-todd-sm.jpg" media="(max-width: 700px)">
+            <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-todd-lg.jpg">
+            <img class="about-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-todd-lg.jpg" alt="">
+          </picture>
+          <div class="about-family-background"></div>
+          <div class="about-family-description">
+            <div class="about-family-info">
+              <h3 class="about-family-name">TODD PAOLILLO</h3>
+              <span class="about-family-title">Sr. Project Manager</span>
+            </div>
+          </div>
+        </a>
       </div>
 
     </div>

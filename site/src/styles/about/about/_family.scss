@@ -1,5 +1,70 @@
 // section class .about-family
 
+@media (min-width: $about-single-column-break + 1) {
+  .about-family-link {
+    // position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  // only show text overlay on non-touch devices
+  // ----------------------------------------- //
+  .no-touchevents {
+    // copy
+    .about-family-copy {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 5;
+      background-color: rgba(97, 89, 84, 0.0);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      transition: background-color 0.3s $easeInOutQuad;
+    }
+    .about-family-bio {
+      font-family: $bold;
+      font-size: 21px;
+      text-transform: uppercase;
+      color: #fff;
+      letter-spacing: ps2em(315);
+      margin-bottom: 25px;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.3s $easeInOutQuad,
+                  transform 0.3s $easeInOutQuad;
+    }
+
+    // copy:hover
+    .about-family-link:hover {
+      .about-family-copy {
+        background-color: rgba(255, 168, 56, 0.9);
+      }
+      .about-family-bio {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .about-family-background,
+      .about-family-description {
+        display: none;
+      }
+// .about-project-block__cta {
+      //   opacity: 1;
+      // }
+    }
+
+    // more
+    .about-project-block__more {
+      display: none;
+    }
+  }
+}
+
 // containers
 .about-family-main {
   display: flex;
@@ -7,6 +72,21 @@
   height: 100%;
   flex-flow: row wrap;
   // justify-content: center;
+}
+
+.about-family-background {
+  background-color: rgba(97, 89, 84, 0.75);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  // color: #fff;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // text-align: center;
 }
 
 .about-family-person {
