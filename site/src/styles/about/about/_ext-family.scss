@@ -13,7 +13,7 @@
 .about-ext-family {
   width: 100%;
   height: 30vw;
-  padding: 1% 7%;
+  padding: 1% 7% 1% 3%;
   @media (max-width: $about-single-column-break) {
     height: 120vw;
   }
@@ -21,6 +21,7 @@
 
 .about-ext-family-members > * {
   height: 8%;
+  margin-left: 4%;
   @media (min-width: $about-single-column-break + 1) {
     width: 24%;
   }
