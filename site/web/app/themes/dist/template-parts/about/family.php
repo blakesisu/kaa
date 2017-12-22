@@ -22,7 +22,9 @@
       <div class="about-family-person">
         <a href="#" class="about-family-link">
           <div class="about-family-copy">
-            <p class="about-family-bio">VIEW BIO</p>
+            <div class="about-family-bio">
+              <p class="about-family-bio-text">VIEW BIO</p>
+            </div>
           </div>
 
           <picture class="about-image-block__picture">
@@ -42,7 +44,11 @@
       <div class="about-family-person">
         <a href="#" class="about-family-link">
           <div class="about-family-copy">
-            <p class="about-family-bio">VIEW BIO</p>
+            <div class="about-family-copy">
+              <div class="about-family-bio">
+                <p class="about-family-bio-text">VIEW BIO</p>
+              </div>
+            </div>
           </div>
           <picture class="about-image-block__picture">
             <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-duan-sm.jpg" media="(max-width: 700px)">
@@ -61,7 +67,9 @@
       <div class="about-family-person">
         <a href="#" class="about-family-link">
           <div class="about-family-copy">
-            <p class="about-family-bio">VIEW BIO</p>
+            <div class="about-family-bio">
+              <p class="about-family-bio-text">VIEW BIO</p>
+            </div>
           </div>
           <picture class="about-image-block__picture">
             <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-patti-sm.jpg" media="(max-width: 700px)">
@@ -80,7 +88,9 @@
       <div class="about-family-person">
         <a href="#" class="about-family-link">
           <div class="about-family-copy">
-            <p class="about-family-bio">VIEW BIO</p>
+            <div class="about-family-bio">
+              <p class="about-family-bio-text">VIEW BIO</p>
+            </div>
           </div>
           <picture class="about-image-block__picture">
             <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-steve-sm.jpg" media="(max-width: 700px)">
@@ -99,7 +109,9 @@
       <div class="about-family-person">
         <a href="#" class="about-family-link">
           <div class="about-family-copy">
-            <p class="about-family-bio">VIEW BIO</p>
+            <div class="about-family-bio">
+              <p class="about-family-bio-text">VIEW BIO</p>
+            </div>
           </div>
           <picture class="about-image-block__picture">
             <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-lisa-sm.jpg" media="(max-width: 700px)">
@@ -118,7 +130,9 @@
       <div class="about-family-person">
         <a href="#" class="about-family-link">
           <div class="about-family-copy">
-            <p class="about-family-bio">VIEW BIO</p>
+            <div class="about-family-bio">
+              <p class="about-family-bio-text">VIEW BIO</p>
+            </div>
           </div>
           <picture class="about-image-block__picture">
             <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-michael-sm.jpg" media="(max-width: 700px)">
@@ -137,7 +151,9 @@
       <div class="about-family-person">
         <a href="#" class="about-family-link">
           <div class="about-family-copy">
-            <p class="about-family-bio">VIEW BIO</p>
+            <div class="about-family-bio">
+              <p class="about-family-bio-text">VIEW BIO</p>
+            </div>
           </div>
           <picture class="about-image-block__picture">
             <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-meghan-sm.jpg" media="(max-width: 700px)">
@@ -156,7 +172,9 @@
       <div class="about-family-person">
         <a href="#" class="about-family-link">
           <div class="about-family-copy">
-            <p class="about-family-bio">VIEW BIO</p>
+            <div class="about-family-bio">
+              <p class="about-family-bio-text">VIEW BIO</p>
+            </div>
           </div>
           <picture class="about-image-block__picture">
             <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-todd-sm.jpg" media="(max-width: 700px)">

@@ -28,22 +28,33 @@
       transition: background-color 0.3s $easeInOutQuad;
     }
     .about-family-bio {
-      font-family: $bold;
-      font-size: 21px;
-      text-transform: uppercase;
-      color: #fff;
-      letter-spacing: ps2em(315);
-      margin-bottom: 25px;
+      display: flex;
+      border: 1px solid #fff;
+      width: 30%;
+      height: 10%;
+      align-self: center;
+      // align-content: center;
+      align-items: center;
+      justify-content: center;
       opacity: 0;
       transform: translateY(8px);
       transition: opacity 0.3s $easeInOutQuad,
                   transform 0.3s $easeInOutQuad;
     }
+    .about-family-bio-text {
+      font-family: $bold;
+      font-size: 24px;
+      font-size: px2vw(24, $designLarge);
+      text-transform: uppercase;
+      color: #fff;
+      letter-spacing: ps2em(10);
+      line-height: px2lh(24, 35);
+    }
 
     // copy:hover
     .about-family-link:hover {
       .about-family-copy {
-        background-color: rgba(255, 168, 56, 0.9);
+        background-color: rgba(190, 109, 62, 0.9);
       }
       .about-family-bio {
         opacity: 1;
