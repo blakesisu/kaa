@@ -11,9 +11,9 @@
     </div>
 
     <!-- Text Block -->
-    <div class="about-asym-longleft-right about-asym-short item2">
+    <div class="about-asym-longleft-right item2 about-join-text-block">
       <div class="about-right-container-title">
-        <h1 class="about-text-mini__header">JOIN US</h1>
+        <h1 class="about-text-mini__header about-join-header">JOIN US</h1>
       </div>
       <div class="about-join-details">
         <div class="about-join-message">

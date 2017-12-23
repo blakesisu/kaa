@@ -1,8 +1,23 @@
 // section class .about-join
 
 // containers
+.about-join-details {
+  & > * {
+    margin: 5% 0;
+  }
+}
 
 // texts
+.about-join-text-block {
+  display: flex;
+  text-align: left;
+  flex-flow: column;
+  align-self: center;
+  & > * {
+    padding: 4% 20%;
+  }
+}
+
 .about-join-message,
 .about-join-button {
   color: #ab9e95;
