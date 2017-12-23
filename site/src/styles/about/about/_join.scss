@@ -2,6 +2,10 @@
 
 // containers
 .about-join-details {
+
+  display: flex;
+  flex-flow: column;
+  align-items: center;
   & > * {
     margin: 5% 0;
   }
@@ -9,12 +13,24 @@
 
 // texts
 .about-join-text-block {
-  display: flex;
-  text-align: left;
-  flex-flow: column;
-  align-self: center;
-  & > * {
-    padding: 4% 20%;
+  @media (max-width: $about-single-column-break) {
+    display: flex;
+    text-align: left;
+    flex-flow: column;
+    // margin: 15% 0;
+    padding: 0% 3%;
+    // & > * {
+    //   margin: 4% 0;
+    // }
+    .about-right-container-title {
+      margin: 10% 0;
+    }
+  }
+
+  @media (min-width: $about-single-column-break + 1) {
+    & > * {
+      padding: 4% 20%;
+    }
   }
 }
 
@@ -27,11 +43,6 @@
   font-family: $medium;
   font-size: 15px;
   font-size: 1.08vw;
-  @media (min-width: $about-break) {
-    font-size: 15px;
-  }
-
-  // padding: 22px 26px;
   padding: 1.2vw 1.5vw;
   @media (max-width: $about-single-column-break) {
     font-size: 4.3vw;
@@ -39,17 +50,16 @@
     padding: 17px 20px;
   }
 }
-.about-join-message > * {
+.about-join-message {
   font-family: $regular;
   font-size: 30px;
-  font-size: 2.17vw;
-  line-height: 2.5vw;
-  @media (min-width: $about-break) {
-    font-size: 30px;
-  }
+
+  font-size: px2vw(30, $designLarge);
+  letter-spacing: ps2em(300);
+  line-height: px2lh(30, 80);
   @media (max-width: $about-single-column-break) {
-    letter-spacing: .5px;
-    font-size: 40px;
-    font-size: 4.7vw;
+    font-size: px2vw(20, $designSmall);
+    letter-spacing: ps2em(10);
+    line-height: px2lh(20, 30);
   }
 }
