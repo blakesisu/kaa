@@ -2,7 +2,7 @@
 
     <!-- Text Block -->
     <div class="about-header-container">
-      <div class="about-header-7">
+      <div class="about-family-header">
         <h1 class="about-text-mini__header">OUR FAMILY</h1>
       </div>
     </div>

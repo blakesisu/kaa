@@ -31,7 +31,7 @@
       display: flex;
       border: 1px solid #fff;
       width: 30%;
-      height: 10%;
+      height: 13%;
       align-self: center;
       // align-content: center;
       align-items: center;
@@ -42,7 +42,7 @@
                   transform 0.3s $easeInOutQuad;
     }
     .about-family-bio-text {
-      font-family: $bold;
+      font-family: $regular;
       font-size: 24px;
       font-size: px2vw(24, $designLarge);
       text-transform: uppercase;
@@ -116,7 +116,7 @@
       justify-content: center;
 
       & >  .about-text-block__dash-left {
-        margin: 3% 0 0 13%;
+        margin: 3% 0 0 12%;
       }
     }
 
@@ -142,8 +142,11 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: center;
-  padding-bottom: 5%;
+  // align-items: center;
+  padding: 0 0 5% 15%;
+  @media (max-width: $about-single-column-break) {
+    padding: 0 0 7% 10%;
+  }
 }
 
 .about-family-info {
@@ -166,7 +169,7 @@
 
   font-size: px2vw(30, $designLarge);
   letter-spacing: ps2em(300);
-  line-height: px2lh(30, 80);
+  line-height: px2lh(30, 40);
 
   text-transform: uppercase;
   color: #fff;
@@ -208,7 +211,7 @@
   line-height: 1.4;
   letter-spacing: .8vw;
   overflow-wrap: break-word;
-  padding: 0 13%;
+  padding: 0 12%;
   @media (max-width: $about-single-column-break) {
     font-size: 25px;
     text-align: center;
@@ -226,4 +229,19 @@
   .about-family-copy {
     display: none;
   }
+}
+
+.about-family-header {
+  @extend .about-text-block__header-content;
+  margin-bottom: 6%;
+  @media (max-width: $about-single-column-break) {
+    margin-bottom: 8%;
+  }
+
+  & > * {
+    @media (min-width: $about-single-column-break + 1) {
+      margin-right: 2%;
+    }
+  }
+
 }
