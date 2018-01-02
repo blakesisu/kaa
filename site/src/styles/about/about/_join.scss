@@ -55,7 +55,14 @@
   font-size: 15px;
   font-size: px2vw(15, $designLarge);
   letter-spacing: ps2em(200);
-  line-height: px2lh(15, 18);
+  line-height: px2lh(15, 60);
+  padding: 0 25px;
+
+  @media (max-width: $about-break) {
+    font-size: px2vw(12, $designLarge);
+    line-height: px2lh(10, 50);
+  }
+
   @media (max-width: $about-single-column-break) {
     padding: 9px 27px;
     font-size: 12px;
