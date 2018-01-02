@@ -7,7 +7,7 @@
         <span class="about-text-mini__header">CONTACT US</span>
       </div>
 
-      <div class="about-contact-details">
+      <div class="about-contact-details about-contact-text-block">
         <ul class="about-contact-endpoints">
           <li>310.821.1400</li>
           <li>info@kaadesigngroup.com</li>

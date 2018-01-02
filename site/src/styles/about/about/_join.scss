@@ -5,31 +5,35 @@
 
   display: flex;
   flex-flow: column;
-  align-items: center;
+  align-items: left;
+
   & > * {
     margin: 5% 0;
+  }
+  @media (max-width: $about-single-column-break) {
+    align-items: center;
   }
 }
 
 // texts
 .about-join-text-block {
-  @media (max-width: $about-single-column-break) {
-    display: flex;
-    text-align: left;
-    flex-flow: column;
-    // margin: 15% 0;
-    padding: 0% 3%;
-    // & > * {
-    //   margin: 4% 0;
-    // }
-    .about-right-container-title {
-      margin: 10% 0;
-    }
+  display: flex;
+  flex-flow: column;
+  align-self: center;
+  padding: 2% 5%;
+
+  .about-right-container-title {
+    margin-bottom: 10%;
   }
 
-  @media (min-width: $about-single-column-break + 1) {
-    & > * {
-      padding: 4% 20%;
+  @media (max-width: $about-single-column-break) {
+    display: flex;
+    text-align: center;
+    flex-flow: column;
+    padding: 0% 3%;
+    .about-right-container-title {
+      text-align: center;
+      margin: 10% 0;
     }
   }
 }
@@ -42,12 +46,14 @@
   @include button;
   font-family: $medium;
   font-size: 15px;
-  font-size: 1.08vw;
-  padding: 1.2vw 1.5vw;
+  font-size: px2vw(15, $designLarge);
+  letter-spacing: ps2em(200);
+  line-height: px2lh(15, 18);
   @media (max-width: $about-single-column-break) {
-    font-size: 4.3vw;
-    font-size: 13px;
-    padding: 17px 20px;
+    font-size: 12px;
+    font-size: px2vw(12, $designSmall);
+    letter-spacing: ps2em(200);
+    line-height: px2lh(12, 30);
   }
 }
 .about-join-message {
@@ -55,8 +61,8 @@
   font-size: 30px;
 
   font-size: px2vw(30, $designLarge);
-  letter-spacing: ps2em(300);
-  line-height: px2lh(30, 80);
+  letter-spacing: ps2em(10);
+  line-height: px2lh(30, 50);
   @media (max-width: $about-single-column-break) {
     font-size: px2vw(20, $designSmall);
     letter-spacing: ps2em(10);

@@ -1,10 +1,15 @@
 // section class .about-contact
 
 .about-contact {
-  // line-height: 1;
   width: 100%;
-  .about-contact-details {
-    line-height: 2.5vw;
+
+  @media (min-width: $about-single-column-break + 1) {
+    .about-asym-container > .contact-item1 {
+      padding: 0 5%;
+    }
+    // .about-asym-container > .contact-item2 {
+    //   order: 1;
+    // }
   }
 
   @media (max-width: $about-single-column-break) {
@@ -18,5 +23,44 @@
     .about-asym-container > .contact-item2 {
       order: 1;
     }
+  }
+}
+
+.about-right-container-title {
+  text-align: left;
+  @media (max-width: $about-single-column-break) {
+    text-align: center;
+    margin: 10% 0;
+  }
+}
+
+.about-contact-text-block {
+  display: flex;
+  flex-flow: column;
+  text-align: left;
+  padding: 2% 5%;
+
+  @media (max-width: $about-single-column-break) {
+    display: flex;
+    text-align: center;
+    flex-flow: column;
+    padding: 0% 3%;
+  }
+}
+
+.about-contact-details {
+  font-family: $regular;
+  font-size: 18px;
+  font-size: px2vw(18, $designLarge);
+  letter-spacing: ps2em(10);
+  line-height: px2lh(18, 35);
+  @media (max-width: $about-single-column-break) {
+    font-size: 15px;
+    font-size: px2vw(15, $designSmall);
+    letter-spacing: ps2em(10);
+    line-height: px2lh(15, 25);
+  }
+  a {
+    color: $orange;
   }
 }
