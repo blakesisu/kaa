@@ -9,9 +9,13 @@
 
   & > * {
     margin: 5% 0;
+    @media (max-width: $about-single-column-break) {
+      margin: 3% 0;
+    }
   }
   @media (max-width: $about-single-column-break) {
     align-items: center;
+    margin-bottom: 5%;
   }
 }
 
@@ -23,7 +27,10 @@
   padding: 2% 7%;
 
   .about-right-container-title {
-    margin-bottom: 10%;
+    margin-bottom: 15%;
+    @media (max-width: $about-single-column-break) {
+      margin-bottom: 10%;
+    }
   }
 
   @media (max-width: $about-single-column-break) {
@@ -50,6 +57,7 @@
   letter-spacing: ps2em(200);
   line-height: px2lh(15, 18);
   @media (max-width: $about-single-column-break) {
+    padding: 9px 27px;
     font-size: 12px;
     font-size: px2vw(12, $designSmall);
     letter-spacing: ps2em(200);
