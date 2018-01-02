@@ -5,7 +5,7 @@
 
   @media (min-width: $about-single-column-break + 1) {
     .about-asym-container > .contact-item1 {
-      padding: 0 5%;
+      padding: 0 4%;
     }
     // .about-asym-container > .contact-item2 {
     //   order: 1;
@@ -28,6 +28,7 @@
 
 .about-right-container-title {
   text-align: left;
+  margin-bottom: 9%;
   @media (max-width: $about-single-column-break) {
     text-align: center;
     margin: 10% 0;
