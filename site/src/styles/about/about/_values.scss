@@ -12,12 +12,12 @@
 .about-value-header {
   font-size: 50px;
   font-size: px2vw(50, $designLarge);
-  letter-spacing: ps2em(320);
+  letter-spacing: ps2em(300);
   line-height: px2lh(50, 70);
   font-family: $bold;
   color: $lightBrown;
   overflow-wrap: break-word;
-  padding: 0 13%;
+  padding: 0 15%;
   @media (max-width: $about-single-column-break) {
     font-size: 25px;
     font-size: px2vw(25, $designSmall);
@@ -36,7 +36,7 @@
   color: $brown;
   overflow-wrap: break-word;
   width: 85%;
-  padding: 0 13%;
+  padding: 0 15%;
   @media (max-width: $about-single-column-break) {
     font-size: 15px;
     font-size: px2vw(15, $designSmall);
@@ -54,7 +54,7 @@
     margin: 2% 0;
   }
   & > .about-text-block__dash-left {
-    margin-left: 13%;
+    margin-left: 15%;
     @media (max-width: $about-single-column-break) {
       margin-left: 5%;
       width: 7vw;
@@ -84,8 +84,11 @@
     &:nth-child(odd) {
       text-align: right;
 
+      .about-value-header {
+        padding: 0 13% 0 8%;
+      }
       .about-value-content {
-        padding: 0 0 0 15%;
+        padding: 0 0 0 18%;
       }
     }
 
