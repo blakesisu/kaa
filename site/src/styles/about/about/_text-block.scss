@@ -36,7 +36,8 @@
   font-size: px2vw(30, $designLarge);
   letter-spacing: ps2em(0);
   line-height: px2lh(30, 50);
-  margin: 5.7vw auto;
+  // margin: 5.7vw auto;
+  margin: 4.7vw auto 6.7vw auto;
   width: 67%;
   @media (max-width: $about-break) {
     letter-spacing: .01em;
