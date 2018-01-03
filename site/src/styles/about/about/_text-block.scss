@@ -120,6 +120,10 @@
   text-transform: uppercase;
   color: #615954;
   letter-spacing: ps2em(300);
+  @media (max-width: $about-break) {
+    font-size: 20.5px;
+    letter-spacing: 7.172px;
+  }
   @media (max-width: $about-single-column-break) {
     font-size: 40px;
     font-size: 5vw;
