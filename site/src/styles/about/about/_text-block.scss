@@ -36,16 +36,14 @@
   font-size: px2vw(30, $designLarge);
   letter-spacing: ps2em(0);
   line-height: px2lh(30, 50);
-  // margin: 5.7vw auto;
-  margin: 4.7vw auto 6.7vw auto;
+  margin: 4.7vw auto 7vw auto;
   width: 67%;
   @media (max-width: $about-break) {
-    letter-spacing: .01em;
     width: 66%;
   }
   @media (max-width: $about-single-column-break) {
     margin: 0% auto;
-    padding: 8% 2%;
+    padding: 9% 5% 14.5%;
     font-size: 20px;
     font-size: px2vw(20, $designSmall);
     letter-spacing: ps2em(0);
