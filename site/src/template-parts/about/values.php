@@ -2,9 +2,7 @@
 
     <!-- Text Block -->
     <div class="about-header-container item1">
-      <div class="about-value-headline">
-        <h1 class="about-text-mini__header">Values over rules</h1>
-      </div>
+      <h1 class="about-value-headline">Values over rules</h1>
     </div>
 
     <!-- Image/Text Block -->

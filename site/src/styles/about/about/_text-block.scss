@@ -118,27 +118,6 @@
   }
 }
 
-.about-text-mini__header {
-  font-family: $bold;
-  font-size: 30px;
-  font-size: 1.8vw;
-  @media (min-width: $about-break) {
-    font-size: 30px;
-  }
-  text-transform: uppercase;
-  color: #615954;
-  letter-spacing: ps2em(300);
-  @media (max-width: $about-break) {
-    font-size: 20.5px;
-    letter-spacing: 7.172px;
-  }
-  @media (max-width: $about-single-column-break) {
-    font-size: 40px;
-    font-size: 5vw;
-    letter-spacing: .35em;
-  }
-}
-
 .about-header-7 {
   @extend .about-text-block__header-content;
   margin-bottom: 3%;

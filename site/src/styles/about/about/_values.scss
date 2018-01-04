@@ -3,10 +3,13 @@
 // headline
 // ----------------------------------------- //
 .about-value-headline {
+  @include about-mini-header;
   text-align: center;
-  margin-bottom: 5.8%;
+  margin-bottom: 4.8%;
+
   @media (max-width: $about-single-column-break) {
-    margin-bottom: 11%;
+    @include about-mini-header--small;
+    margin-bottom: 8%;
   }
 }
 

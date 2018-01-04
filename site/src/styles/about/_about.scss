@@ -31,7 +31,7 @@ body {
 }
 
 .about-asym-longleft-left {
-  width: 67%;
+  width: 66.7%;
   height: 100%;
 
   @media (max-width: $about-single-column-break) {
@@ -42,7 +42,7 @@ body {
 }
 
 .about-asym-longleft-right {
-  width: 33%;
+  width: 33.3%;
   height: 100%;
   @media (max-width: $about-single-column-break) {
     width: 100%;
@@ -51,7 +51,7 @@ body {
 }
 
 .about-asym-longright-left {
-  width: 33%;
+  width: 33.3%;
   height: 100%;
   @media (max-width: $about-single-column-break) {
     width: 100%;
@@ -59,7 +59,7 @@ body {
 }
 
 .about-asym-longright-right {
-  width: 67%;
+  width: 66.7%;
 
   @media (max-width: $about-single-column-break) {
     width: 100%;
@@ -71,9 +71,6 @@ body {
   text-align: center;
   flex-flow: column;
   align-self: center;
-  & > * {
-    padding: 4% 0;
-  }
 }
 
 

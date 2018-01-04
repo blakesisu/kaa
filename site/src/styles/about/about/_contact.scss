@@ -5,7 +5,7 @@
 
   @media (min-width: $about-single-column-break + 1) {
     .about-asym-container > .contact-item1 {
-      padding: 0 4%;
+      padding: 0 4.7%;
     }
     // .about-asym-container > .contact-item2 {
     //   order: 1;
@@ -19,6 +19,7 @@
     }
     .about-asym-container > .contact-item1 {
       order: 2;
+      padding: 8.5% 3%;
     }
     .about-asym-container > .contact-item2 {
       order: 1;
@@ -39,7 +40,6 @@
   display: flex;
   flex-flow: column;
   text-align: left;
-  padding: 2% 5%;
 
   @media (max-width: $about-single-column-break) {
     display: flex;
@@ -49,12 +49,25 @@
   }
 }
 
+.about-contact-header {
+  @include about-mini-header;
+  text-align: left;
+  margin-bottom: 14%;
+
+  @media (max-width: $about-single-column-break) {
+    text-align: center;
+    @include about-mini-header--small;
+    margin-bottom: 7%;
+  }
+}
+
 .about-contact-details {
   font-family: $regular;
   font-size: 18px;
   font-size: px2vw(18, $designLarge);
   letter-spacing: ps2em(10);
   line-height: px2lh(18, 35);
+
   @media (max-width: $about-single-column-break) {
     font-size: 15px;
     font-size: px2vw(15, $designSmall);

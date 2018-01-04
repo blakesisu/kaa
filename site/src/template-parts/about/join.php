@@ -12,20 +12,9 @@
 
     <!-- Text Block -->
     <div class="about-asym-longleft-right item2 about-join-text-block">
-      <div class="about-right-container-title">
-        <h1 class="about-text-mini__header about-join-header">JOIN US</h1>
-      </div>
-      <div class="about-join-details">
-        <div class="about-join-message">
-          <h1>Nuture your craft and be inspired. Help us design the California dream.</h1>
-        </div>
-        <br>
-        <div class="about-join-cta">
-          <div type=button class="about-join-button">
-            SEE CAREER OPPORTUNITIES
-          </div>
-        </div>
-      </div>
+      <h1 class="about-join-title">JOIN US</h1>
+      <h2 class="about-join-message">Nuture your craft and be inspired. Help us design the California dream.</h2>
+      <button class="about-join-button">SEE CAREER OPPORTUNITIES</button>
     </div>
   </div>
 
