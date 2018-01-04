@@ -25,7 +25,7 @@
   text-align: center;
 }
 
-// TODO: make text not same opacity as parent
+
 .about-project-hero__text {
   font-family: $bold;
   font-size: 70px;
@@ -35,11 +35,13 @@
   letter-spacing: ps2em(300);
   line-height: px2lh(70, 90);
   z-index: 7;
+
   @media(max-width: $about-single-column-break) {
     font-family: $bold;
     font-size: 32px;
     font-size: px2vw(32, $designSmall);
     letter-spacing: ps2em(300);
     line-height: px2lh(32, 40);
+    padding: 0 px2vw(20, $designSmall);
   }
 }
