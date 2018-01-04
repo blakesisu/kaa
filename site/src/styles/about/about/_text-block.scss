@@ -171,23 +171,6 @@
   }
 }
 
-.about-text-block__dash-center {
-  @include dash;
-  display: block;
-  margin: 0 auto;
-}
-
-.about-text-block__dash-left {
-  @include dash;
-  display: block;
-  align-self: flex-start;
-}
-
-.about-text-block__dash-right {
-  @include dash;
-  display: block;
-  align-self: flex-end;
-}
 .about-text-block__description-container {
   display: flex;
   flex-direction: column;
@@ -243,12 +226,6 @@
   .about-text-block__content {
     position: relative;
     padding: 8% 9.4%;
-  }
-  .about-text-block__dash {
-    @include dash-small;
-    display: block;
-    margin: 0 auto;
-    // margin-bottom: 7%;
   }
   .about-text-block__description {
     font-size: 15px;

@@ -111,20 +111,10 @@
 
     .about-text-flex-column {
       justify-content: center;
-
-      & >  .about-text-block__dash-left {
-        margin: 3% 0 0 12%;
-      }
     }
 
     @media (max-width: $about-single-column-break) {
       width: 100%;
-      .about-text-flex-column >  .about-text-block__dash-left {
-        margin: 5% 0 0 0;
-        width: 6.71vw;
-        height: 1.59vw;
-        align-self: center;
-      }
     }
   }
 }
