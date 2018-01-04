@@ -1,24 +1,15 @@
 // section class .about-ext-family
 
 // containers
-.about-ext-family-members * {
-  // margin: 3% 0 2% 0;
-  // margin-left: 5%;
-
-  @media (max-width: $about-single-column-break) {
-    margin: 2% 0;
-  }
-}
-
 .about-ext-family {
   width: 100%;
   height: 30vw;
-  padding: 5% 0 5% 7%;
-  // padding: 5% 7%;
-  // padding: 5% 0;
+  padding: 4% 0;
+  @media (min-width: $about-single-column-break + 1) {
+  }
   @media (max-width: $about-single-column-break) {
     height: 213vw;
-    padding: 5% 7% 5% 1%;
+    padding: 9% 4% 6% 4%;
   }
 }
 
@@ -29,6 +20,8 @@
   }
   @media (max-width: $about-single-column-break) {
     width: 50%;
+    height: 12%;
+    padding: 0 2%;
   }
 
   display: flex;
@@ -36,27 +29,13 @@
   align-self: flex-start;
 }
 
-// .about-ext-family-members > * {
-//   margin-left: 4%;
-//   @media (min-width: $about-single-column-break + 1) {
-//     width: 24%;
-//   }
-//   @media (max-width: $about-single-column-break) {
-//     width: 50%;
-//   }
-//
-//   display: flex;
-//   flex-direction: column;
-//   align-self: flex-start;
-// }
-
 .about-ext-family-members {
   display: flex;
   flex-flow: column wrap;
   height: 100%;
   width: 100%;
-  @media (max-width: $about-single-column-break) {
-    padding: 0 3%;
+  @media (min-width: $about-single-column-break + 1) {
+    padding: 0 0 0 10%;
   }
 }
 
@@ -71,6 +50,7 @@
   line-height: px2lh(18, 60);
 
   @media (max-width: $about-single-column-break) {
+    margin-bottom: 4%;
     overflow-wrap: break-word;
     word-wrap: break-word;
 

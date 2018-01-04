@@ -13,7 +13,7 @@
       <span class="about-ext-family-title">Project Coordinator</span>
     </li>
     <li class="about-ext-family-container">
-      <h3 class="about-ext-family-name">PHILIP GROCHER</h3>
+      <h3 class="about-ext-family-name">PHILIP GROCER</h3>
       <span class="about-ext-family-title">Project Manager</span>
     </li>
     <li class="about-ext-family-container">
@@ -58,7 +58,7 @@
     </li>
     <li class="about-ext-family-container">
       <h3 class="about-ext-family-name">TRAVIS TURNER</h3>
-      <span class="about-ext-family-title">Designer</span>
+      <span class="about-ext-family-title">Project Coordinator</span>
     </li>
     <li class="about-ext-family-container">
       <h3 class="about-ext-family-name">RYAN TYNI</h3>
