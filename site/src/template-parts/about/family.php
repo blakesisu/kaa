@@ -14,8 +14,8 @@
       <!-- Text Block TODO: check landing for layout inspiration on text blocks-->
       <div class="about-family-person">
         <div class="about-text-flex-column">
-          <span class="about-family-headline">ELEVATING DESIGN THROUGH LEADERSHIP</span>
-          <div class="about-text-block__dash-left"></div>
+          <h2 class="about-family-headline">ELEVATING DESIGN THROUGH LEADERSHIP</h2>
+          <div class="about-family__dash"></div>
         </div>
       </div>
 
@@ -34,10 +34,8 @@
           </picture>
           <div class="about-family-background"></div>
           <div class="about-family-description">
-            <div class="about-family-info">
-              <h3 class="about-family-name">GRANT KIRKPATRICK</h3>
-              <span class="about-family-title">Founding Partner</span>
-            </div>
+            <h3 class="about-family-name">GRANT KIRKPATRICK</h3>
+            <p class="about-family-title">Founding Partner</p>
           </div>
         </a>
       </div>
@@ -57,10 +55,8 @@
           </picture>
           <div class="about-family-background"></div>
           <div class="about-family-description">
-            <div class="about-family-info">
-              <h3 class="about-family-name">DUAN TRAN</h3>
-              <span class="about-family-title">Partner</span>
-            </div>
+            <h3 class="about-family-name">DUAN TRAN</h3>
+            <p class="about-family-title">Partner</p>
           </div>
         </a>
       </div>
@@ -78,10 +74,8 @@
           </picture>
           <div class="about-family-background"></div>
           <div class="about-family-description">
-            <div class="about-family-info">
-              <h3 class="about-family-name">PATTI BAKER</h3>
-              <span class="about-family-title">Principal</span>
-            </div>
+            <h3 class="about-family-name">PATTI BAKER</h3>
+            <p class="about-family-title">Principal</p>
           </div>
         </a>
       </div>
@@ -99,10 +93,8 @@
           </picture>
           <div class="about-family-background"></div>
           <div class="about-family-description">
-            <div class="about-family-info">
-              <h3 class="about-family-name">STEVE STRAUGHAN</h3>
-              <span class="about-family-title">Design Coordinator</span>
-            </div>
+            <h3 class="about-family-name">STEVE STRAUGHAN</h3>
+            <p class="about-family-title">Design Coordinator</p>
           </div>
         </a>
       </div>
@@ -120,10 +112,8 @@
           </picture>
           <div class="about-family-background"></div>
           <div class="about-family-description">
-            <div class="about-family-info">
-              <h3 class="about-family-name">LISA COPELAND</h3>
-              <span class="about-family-title">CFO</span>
-            </div>
+            <h3 class="about-family-name">LISA COPELAND</h3>
+            <p class="about-family-title">CFO</p>
           </div>
         </a>
       </div>
@@ -141,10 +131,8 @@
           </picture>
           <div class="about-family-background"></div>
           <div class="about-family-description">
-            <div class="about-family-info">
-              <h3 class="about-family-name">MICHAEL MCGOWAN</h3>
-              <span class="about-family-title">Landscape Studio Director</span>
-            </div>
+            <h3 class="about-family-name">MICHAEL MCGOWAN</h3>
+            <p class="about-family-title">Landscape Studio Director</p>
           </div>
         </a>
       </div>
@@ -162,10 +150,8 @@
           </picture>
           <div class="about-family-background"></div>
           <div class="about-family-description">
-            <div class="about-family-info">
-              <h3 class="about-family-name">MEGHAN BECKMANN</h3>
-              <span class="about-family-title">Project Manager</span>
-            </div>
+            <h3 class="about-family-name">MEGHAN BECKMANN</h3>
+            <p class="about-family-title">Project Manager</p>
           </div>
         </a>
       </div>
@@ -183,10 +169,8 @@
           </picture>
           <div class="about-family-background"></div>
           <div class="about-family-description">
-            <div class="about-family-info">
-              <h3 class="about-family-name">TODD PAOLILLO</h3>
-              <span class="about-family-title">Sr. Project Manager</span>
-            </div>
+            <h3 class="about-family-name">TODD PAOLILLO</h3>
+            <p class="about-family-title">Sr. Project Manager</p>
           </div>
         </a>
       </div>
