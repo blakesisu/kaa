@@ -27,15 +27,6 @@
   }
 }
 
-.about-right-container-title {
-  text-align: left;
-  margin-bottom: 9%;
-  @media (max-width: $about-single-column-break) {
-    text-align: center;
-    margin: 5% 0;
-  }
-}
-
 .about-contact-text-block {
   display: flex;
   flex-flow: column;
