@@ -53,7 +53,7 @@
   font-size: 22px;
   font-size: px2vw(22, $designLarge);
   letter-spacing: ps2em(300);
-  line-height: px2lh(22, 60);
+  line-height: px2lh(22, 30);
 
   @media (max-width: $mid-break) {
     font-size: 15.652px;
