@@ -3,39 +3,31 @@
 // containers
 .about-ext-family {
   width: 100%;
-  height: 30vw;
   padding: 4% 0;
-  @media (min-width: $about-single-column-break + 1) {
-  }
+
   @media (max-width: $about-single-column-break) {
-    height: 213vw;
-    padding: 9% 4% 6% 4%;
+    padding: 8% 4.5% 6%;
+  }
+}
+
+.about-ext-family-members {
+  width: 100%;
+  columns: 2;
+
+  @media (min-width: $about-single-column-break + 1) {
+    padding: 0 0 0 8.5%;
+    columns: 4;
   }
 }
 
 .about-ext-family-container {
+  break-inside: avoid;
+
   @media (min-width: $about-single-column-break + 1) {
-    height: 24%;
-    width: 24%;
+    padding: 0 0 6%;
   }
   @media (max-width: $about-single-column-break) {
-    width: 50%;
-    height: 12%;
-    padding: 0 2%;
-  }
-
-  display: flex;
-  flex-direction: column;
-  align-self: flex-start;
-}
-
-.about-ext-family-members {
-  display: flex;
-  flex-flow: column wrap;
-  height: 100%;
-  width: 100%;
-  @media (min-width: $about-single-column-break + 1) {
-    padding: 0 0 0 10%;
+    padding: 0 2% 14.5%;
   }
 }
 
@@ -46,11 +38,11 @@
 
   font-size: 18px;
   font-size: px2vw(18, $designLarge);
-  letter-spacing: ps2em(260);
+  letter-spacing: ps2em(300);
   line-height: px2lh(18, 60);
 
   @media (max-width: $about-single-column-break) {
-    margin-bottom: 4%;
+    margin-bottom: 6%;
     overflow-wrap: break-word;
     word-wrap: break-word;
 

@@ -9,23 +9,10 @@
 .about-text-flex-column {
   display: flex;
   flex-direction: column;
-}
+  padding: 0 14%;
 
-.about-text-1 {
-  font-size: 30px;
-  font-size: 1.7vw;
-  font-family: $light;
-  color: $lightBrown;
-  line-height: 1.6;
-  overflow-wrap: break-word;
-  padding: 0 13%;
   @media (max-width: $about-single-column-break) {
-    font-size: 40px;
-    font-size: 5vw;
-    margin: 9% auto;
-    width: 94%;
-    line-height: 1.8;
-    padding: 0 0;
+    padding: 0 2%;
   }
 }
 
@@ -36,225 +23,18 @@
   font-size: px2vw(30, $designLarge);
   letter-spacing: ps2em(0);
   line-height: px2lh(30, 50);
-  // margin: 5.7vw auto;
-  margin: 4.7vw auto 6.7vw auto;
+  margin: 4.7vw auto 7vw auto;
   width: 67%;
   @media (max-width: $about-break) {
-    letter-spacing: .01em;
     width: 66%;
   }
   @media (max-width: $about-single-column-break) {
     margin: 0% auto;
-    padding: 8% 2%;
+    padding: 9% 5% 14.5%;
     font-size: 20px;
     font-size: px2vw(20, $designSmall);
     letter-spacing: ps2em(0);
     line-height: px2lh(40, 65);
     width: 100%;
-  }
-}
-
-.about-text-3 {
-  font-family: $regular;
-  color: $brown;
-  font-size: 24px;
-  font-size: 1.3vw;
-  padding: 0 15%;
-  line-height: 1.8;
-  @media (max-width: $about-single-column-break) {
-    margin: 0% auto;
-    padding: 8% 4%;
-    font-size: 35px;
-    font-size: 4.5vw;
-    line-height: 1.8;
-    width: 98%;
-  }
-}
-
-.about-text-5 {
-  font-family: $regular;
-  font-size: 24px;
-  font-size: 1.3vw;
-  line-height: 1.95;
-  padding: 0 11%;
-  @media (max-width: $about-single-column-break) {
-    margin: 0% auto;
-    padding: 8% 4%;
-    font-size: 35px;
-    font-size: 4.5vw;
-    line-height: 1.8;
-    width: 99%;
-  }
-}
-
-.about-text-block__header {
-  font-family: $bold;
-  font-size: 3.8vw;
-  text-transform: uppercase;
-  color: $lightBrown;
-  letter-spacing: ps2em(250);
-  @media (max-width: $about-single-column-break) {
-    font-size: 8.5vw;
-    text-align: center;
-    letter-spacing: .27em;
-    line-height: 43px;
-  }
-}
-
-.about-text-block__header-content {
-  text-align: center;
-  margin-bottom: 2%;
-  @media (min-width: $about-single-column-break + 1) {
-    position: relative;
-    width: 100%;
-    height: 5%;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 0 12% 0 14%;
-    // margin-bottom: 2%;
-  }
-}
-
-.about-text-mini__header {
-  font-family: $bold;
-  font-size: 30px;
-  font-size: 1.8vw;
-  @media (min-width: $about-break) {
-    font-size: 30px;
-  }
-  text-transform: uppercase;
-  color: #615954;
-  letter-spacing: ps2em(300);
-  @media (max-width: $about-break) {
-    font-size: 20.5px;
-    letter-spacing: 7.172px;
-  }
-  @media (max-width: $about-single-column-break) {
-    font-size: 40px;
-    font-size: 5vw;
-    letter-spacing: .35em;
-  }
-}
-
-.about-header-7 {
-  @extend .about-text-block__header-content;
-  margin-bottom: 3%;
-  @media (max-width: $about-single-column-break) {
-    margin-bottom: 8%;
-  }
-
-  & > * {
-    @media (min-width: $about-single-column-break + 1) {
-      margin-right: 2%;
-    }
-  }
-
-}
-
-.about-left-container-title ,
-.about-right-container-title {
-  @media (min-width: $about-single-column-break + 1) {
-    margin-bottom: 2%;
-  }
-}
-
-.about-left-container-title {
-  @media (max-width: $about-single-column-break) {
-    text-align: center;
-    margin-bottom: 5%;
-  }
-}
-
-.about-right-container-title {
-
-  @media (max-width: $about-single-column-break) {
-    text-align: center;
-    margin-top: 3%;
-  }
-}
-
-.about-text-block__dash-center {
-  @include dash;
-  display: block;
-  margin: 0 auto;
-}
-
-.about-text-block__dash-left {
-  @include dash;
-  display: block;
-  align-self: flex-start;
-}
-
-.about-text-block__dash-right {
-  @include dash;
-  display: block;
-  align-self: flex-end;
-}
-.about-text-block__description-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 60%;
-  padding: 8% 0;
-}
-.about-text-block__content {
-  @media (min-width: $about-single-column-break + 1) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 0 12% 0 14%;
-    text-align: center;
-    margin-bottom: 2%;
-  }
-}
-
-// make text scale up on larger screens based on viewport
-// ------------------------------------------------------------------------------------------------- //
-  // text block
-  // ----------------------------------------- //
-.about-text-block__description {
-  @media (min-width: $about-break) {
-    font-size: 0.952vw;
-  }
-}
-
-// Make text blocks height based on content
-// ------------------------------------------------------------------------------------------------- //
-@media (max-width: $about-text-break) {
-  .about-text-block__content {
-    position: relative;
-    height: auto;
-    display: block;
-  }
-  .about-text-block__description-container {
-    display: block;
-    min-height: 0;
-    padding: 8% 0 15%;
-  }
-}
-
-// single column
-// ------------------------------------------------------------------------------------------------- //
-@media (max-width: $about-single-column-break) {
-  // text block
-  // ----------------------------------------- //
-  .about-text-block__content {
-    position: relative;
-    padding: 8% 9.4%;
-  }
-  .about-text-block__dash {
-    @include dash-small;
-    display: block;
-    margin: 0 auto;
-    // margin-bottom: 7%;
-  }
-  .about-text-block__description {
-    font-size: 15px;
-    line-height: 1.7;
-    letter-spacing: 0.005em;
   }
 }

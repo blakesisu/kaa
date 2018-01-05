@@ -1,86 +1,54 @@
 // section class .about-join
 
-// containers
-.about-join-details {
 
-  display: flex;
-  flex-flow: column;
-  align-items: left;
-
-  & > * {
-    margin: 5% 0;
-    @media (max-width: $about-single-column-break) {
-      margin: 3% 0;
-    }
-  }
-  @media (max-width: $about-single-column-break) {
-    align-items: center;
-    margin-bottom: 5%;
-  }
-}
 
 // texts
 .about-join-text-block {
   display: flex;
   flex-flow: column;
   align-self: center;
-  padding: 2% 7%;
-
-  .about-right-container-title {
-    margin-bottom: 15%;
-    @media (max-width: $about-single-column-break) {
-      margin-bottom: 10%;
-    }
-  }
+  padding: 2% 6% 2% 7%;
 
   @media (max-width: $about-single-column-break) {
     display: flex;
     text-align: center;
     flex-flow: column;
-    padding: 0% 3%;
-    .about-right-container-title {
-      text-align: center;
-      margin: 10% 0;
-    }
+    padding: 8.5% 3%;
   }
 }
 
-.about-join-message,
-.about-join-button {
-  color: #ab9e95;
-}
-.about-join-button {
-  @include button;
-  font-family: $medium;
-  font-size: 15px;
-  font-size: px2vw(15, $designLarge);
-  letter-spacing: ps2em(200);
-  line-height: px2lh(15, 60);
-  padding: 0 25px;
-
-  @media (max-width: $about-break) {
-    font-size: px2vw(12, $designLarge);
-    line-height: px2lh(10, 50);
-  }
+.about-join-title {
+  @include about-mini-header;
+  margin-bottom: 15%;
 
   @media (max-width: $about-single-column-break) {
-    padding: 9px 27px;
-    font-size: 12px;
-    font-size: px2vw(12, $designSmall);
-    letter-spacing: ps2em(200);
-    line-height: px2lh(12, 30);
+    @include about-mini-header--small;
+    margin-bottom: 7%;
   }
 }
+
 .about-join-message {
   font-family: $regular;
-  font-size: 30px;
+  color: #ab9e95;
 
   font-size: px2vw(30, $designLarge);
-  letter-spacing: ps2em(10);
-  line-height: px2lh(30, 50);
+  letter-spacing: ps2em(0 );
+  line-height: px2lh(30, 51);
+
+  margin-bottom: 8%;
+
   @media (max-width: $about-single-column-break) {
     font-size: px2vw(20, $designSmall);
-    letter-spacing: ps2em(10);
+    // letter-spacing: ps2em(10);
     line-height: px2lh(20, 30);
   }
 }
+
+.about-join-button {
+  @include button;
+
+  @media (max-width: $about-single-column-break) {
+    @include button--small;
+  }
+}
+

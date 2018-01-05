@@ -1,14 +1,51 @@
 // section class .about-values
 
-// text
+// headline
+// ----------------------------------------- //
 .about-value-headline {
+  @include about-mini-header;
   text-align: center;
-  margin-bottom: 6%;
+  margin-bottom: 4.8%;
+
   @media (max-width: $about-single-column-break) {
-    margin-bottom: 10%;
+    @include about-mini-header--small;
+    margin-bottom: 8%;
   }
 }
 
+// value container
+// ----------------------------------------- //
+.about-value {
+
+  // alternate alignement of odd blocks
+  @media (min-width: $about-single-column-break + 1) {
+    &:nth-child(odd) {
+      text-align: right;
+
+      .about-value-header {
+        margin-right: -2%;
+      }
+      .about-value-text-column {
+        align-items: flex-end;
+      }
+    }
+  }
+}
+
+// column
+// ----------------------------------------- //
+.about-value-text-column {
+  display: flex;
+  flex-direction: column;
+  padding: 2% 14.6%;
+
+  @media (max-width: $about-single-column-break) {
+    padding: 7.8% 5%;
+  }
+}
+
+// header
+// ----------------------------------------- //
 .about-value-header {
   font-size: 50px;
   font-size: px2vw(50, $designLarge);
@@ -17,16 +54,30 @@
   font-family: $bold;
   color: $lightBrown;
   overflow-wrap: break-word;
-  padding: 0 15%;
+  margin-bottom: 5%;
+
   @media (max-width: $about-single-column-break) {
     font-size: 25px;
     font-size: px2vw(25, $designSmall);
     letter-spacing: ps2em(300);
-    line-height: px2lh(25, 40);
-    padding: 0 5%;
+    line-height: px2lh(25, 35);
+    margin-bottom: 4%;
   }
 }
 
+// dash
+// ----------------------------------------- //
+.about-text-block__dash {
+  @include dash;
+  margin-bottom: 6%;
+
+  @media (max-width: $about-single-column-break) {
+    @include dash-small;
+  }
+}
+
+// content
+// ----------------------------------------- //
 .about-value-content {
   font-size: 18px;
   font-size: px2vw(18, $designLarge);
@@ -36,66 +87,14 @@
   color: $brown;
   overflow-wrap: break-word;
   width: 85%;
-  padding: 0 15%;
+
   @media (max-width: $about-single-column-break) {
     font-size: 15px;
     font-size: px2vw(15, $designSmall);
     letter-spacing: ps2em(10);
     line-height: px2lh(15, 25);
     width: 100%;
-    padding: 0 5%;
   }
 }
 
-.about-value-text-column {
-  display: flex;
-  flex-direction: column;
-  & > * {
-    margin: 2% 0;
-  }
-  & > .about-text-block__dash-left {
-    margin-left: 15%;
-    @media (max-width: $about-single-column-break) {
-      margin-left: 5%;
-      width: 7vw;
-      height: 1.59vw;
-    }
-  }
-  & > .about-text-block__dash-right {
-    margin-right: 15%;
-    @media (max-width: $about-single-column-break) {
-      align-self: flex-start;
-      margin-left: 5%;
-      width: 7vw;
-      height: 1.59vw;
-    }
-  }
-}
-
-.about-value {
-
-  @media (max-width: $about-single-column-break) {
-    .about-horizontal {
-      margin: 5% 0;
-    }
-  }
-
-  @media (min-width: $about-single-column-break + 1) {
-    &:nth-child(odd) {
-      text-align: right;
-
-      .about-value-header {
-        padding: 0 13% 0 8%;
-      }
-      .about-value-content {
-        padding: 0 0 0 18%;
-      }
-    }
-
-    &:nth-child(even) {
-      text-align: left;
-
-    }
-  }
-}
 

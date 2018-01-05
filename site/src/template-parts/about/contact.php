@@ -3,9 +3,7 @@
     <!-- Image Block -->
   <div class='about-asym-container'>
     <div class="about-asym-longright-left about-asym-short contact-item1">
-      <div class="about-right-container-title">
-        <span class="about-text-mini__header">CONTACT US</span>
-      </div>
+      <h1 class="about-contact-header">CONTACT US</h1>
 
       <div class="about-contact-details about-contact-text-block">
         <ul class="about-contact-endpoints">
