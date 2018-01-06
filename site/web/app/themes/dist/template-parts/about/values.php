@@ -2,9 +2,7 @@
 
     <!-- Text Block -->
     <div class="about-header-container item1">
-      <div class="about-value-headline">
-        <h1 class="about-text-mini__header">VALUES OVER RULES</h1>
-      </div>
+      <h1 class="about-value-headline">Values over rules</h1>
     </div>
 
     <!-- Image/Text Block -->
@@ -21,9 +19,9 @@
         <!-- Text Block TODO: check landing for layout inspiration on text blocks-->
         <div class="about-horizontal item2">
           <div class="about-value-text-column">
-            <span class="about-value-header">ARCHITECTURAL INTERGRITY &amp; AUTHENTICITY</span>
-            <div class="about-text-block__dash-left"></div>
-            <span class="about-value-content">Morbi in sem quis dui placerat ornare, pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu cras neque id cursus faucibus consequat.</span>
+            <h2 class="about-value-header">ARCHITECTURAL INTEGRITY &amp; AUTHENTICITY</h2>
+            <div class="about-text-block__dash"></div>
+            <p class="about-value-content">Morbi in sem quis dui placerat ornare, pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu cras neque id cursus faucibus consequat.</p>
           </div>
         </div>
 
@@ -43,9 +41,9 @@
         <!-- Text Block TODO: check landing for layout inspiration on text blocks-->
         <div class="about-horizontal item1">
           <div class="about-value-text-column">
-            <span class="about-value-header">EMBRACING DIFFERENT VOICES</span>
-            <div class="about-text-block__dash-right"></div>
-            <span class="about-value-content">Phasellus ultrices nulla ques nibh. Quisque a lectus. Donectsum consectetuer ligula vulputate sem tristique cursus. nam nullants quam, gravida non, comodo a, sodales sit amet, nisi.</span>
+            <h2 class="about-value-header">EMBRACING DIFFERENT VOICES</h2>
+            <div class="about-text-block__dash"></div>
+            <p class="about-value-content">Phasellus ultrices nulla ques nibh. Quisque a lectus. Donectsum consectetuer ligula vulputate sem tristique cursus. nam nullants quam, gravida non, comodo a, sodales sit amet, nisi.</p>
           </div>
         </div>
 
@@ -64,9 +62,9 @@
         <!-- Text Block TODO: check landing for layout inspiration on text blocks-->
         <div class="about-horizontal item2">
           <div class="about-value-text-column">
-            <span class="about-value-header">WORK HARD, PLAY HARDER</span>
-            <div class="about-text-block__dash-left"></div>
-            <span class="about-value-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quesque volutpat mattis eros. Nullam malesuada era ut turpis. Suspendisse urna nibh, viverra non, semper suscipit.</span>
+            <h2 class="about-value-header">WORK HARD, PLAY HARDER<h2>
+            <div class="about-text-block__dash"></div>
+            <p class="about-value-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quesque volutpat mattis eros. Nullam malesuada era ut turpis. Suspendisse urna nibh, viverra non, semper suscipit.</p>
           </div>
         </div>
       </div>

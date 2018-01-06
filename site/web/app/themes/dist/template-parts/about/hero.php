@@ -9,13 +9,7 @@
 
     <!-- Text Block -->
     <div class="about-project-hero__block">
-      <span class="about-project-hero__text about-desktop">ONE OF A KIND HOMES,</span>
-      <span class="about-project-hero__text about-desktop">ONE OF A KIND TEAM.</span>
-
-      <span class="about-project-hero__text about-mobile">ONE OF A </span>
-      <span class="about-project-hero__text about-mobile">KIND HOMES,</span>
-      <span class="about-project-hero__text about-mobile">ONE OF A </span>
-      <span class="about-project-hero__text about-mobile">KIND TEAM.</span>
+      <h1 class="about-project-hero__text">One of a kind homes,<br>one of a kind team.</h1>
     </div>
   </div>
 
