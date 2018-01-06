@@ -15,5 +15,6 @@ get_header(); ?>
 <?php include("template-parts/about/join.php"); ?>
 <?php include("template-parts/about/contact.php"); ?>
 <?php include("template-parts/about/goodbye-hero.php"); ?>
+<?php include("template-parts/about/bio-overlay.php"); ?>
 
 <?php get_footer(); ?>

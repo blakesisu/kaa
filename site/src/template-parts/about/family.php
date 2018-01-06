@@ -18,9 +18,9 @@
       </div>
 
       <div class="about-family-person">
-        <a href="#" class="about-family-link">
+        <div class="about-family-link">
           <div class="about-family-copy">
-            <div class="about-family-bio">
+            <div class="about-family-bio" data-popup-open="kirkpatrick">
               <p class="about-family-bio-text">VIEW BIO</p>
             </div>
           </div>
@@ -35,13 +35,13 @@
             <h3 class="about-family-name">GRANT KIRKPATRICK</h3>
             <p class="about-family-title">Founding Partner</p>
           </div>
-        </a>
+        </div>
       </div>
       <div class="about-family-person">
-        <a href="#" class="about-family-link">
+        <div class="about-family-link">
           <div class="about-family-copy">
             <div class="about-family-copy">
-              <div class="about-family-bio">
+              <div class="about-family-bio" data-popup-open="tran">
                 <p class="about-family-bio-text">VIEW BIO</p>
               </div>
             </div>
@@ -56,12 +56,12 @@
             <h3 class="about-family-name">DUAN TRAN</h3>
             <p class="about-family-title">Partner</p>
           </div>
-        </a>
+        </div>
       </div>
       <div class="about-family-person">
-        <a href="#" class="about-family-link">
+        <div class="about-family-link">
           <div class="about-family-copy">
-            <div class="about-family-bio">
+            <div class="about-family-bio" data-popup-open="baker">
               <p class="about-family-bio-text">VIEW BIO</p>
             </div>
           </div>
@@ -75,12 +75,12 @@
             <h3 class="about-family-name">PATTI BAKER</h3>
             <p class="about-family-title">Principal</p>
           </div>
-        </a>
+        </div>
       </div>
       <div class="about-family-person">
-        <a href="#" class="about-family-link">
+        <div class="about-family-link">
           <div class="about-family-copy">
-            <div class="about-family-bio">
+            <div class="about-family-bio" data-popup-open="straughan">
               <p class="about-family-bio-text">VIEW BIO</p>
             </div>
           </div>
@@ -94,12 +94,12 @@
             <h3 class="about-family-name">STEVE STRAUGHAN</h3>
             <p class="about-family-title">Design Coordinator</p>
           </div>
-        </a>
+        </div>
       </div>
       <div class="about-family-person">
-        <a href="#" class="about-family-link">
+        <div class="about-family-link">
           <div class="about-family-copy">
-            <div class="about-family-bio">
+            <div class="about-family-bio" data-popup-open="copeland">
               <p class="about-family-bio-text">VIEW BIO</p>
             </div>
           </div>
@@ -113,12 +113,12 @@
             <h3 class="about-family-name">LISA COPELAND</h3>
             <p class="about-family-title">CFO</p>
           </div>
-        </a>
+        </div>
       </div>
       <div class="about-family-person">
-        <a href="#" class="about-family-link">
+        <div class="about-family-link">
           <div class="about-family-copy">
-            <div class="about-family-bio">
+            <div class="about-family-bio" data-popup-open="mcgowan">
               <p class="about-family-bio-text">VIEW BIO</p>
             </div>
           </div>
@@ -132,12 +132,12 @@
             <h3 class="about-family-name">MICHAEL MCGOWAN</h3>
             <p class="about-family-title">Landscape Studio Director</p>
           </div>
-        </a>
+        </div>
       </div>
       <div class="about-family-person">
-        <a href="#" class="about-family-link">
+        <div class="about-family-link">
           <div class="about-family-copy">
-            <div class="about-family-bio">
+            <div class="about-family-bio" data-popup-open="beckmann">
               <p class="about-family-bio-text">VIEW BIO</p>
             </div>
           </div>
@@ -151,12 +151,12 @@
             <h3 class="about-family-name">MEGHAN BECKMANN</h3>
             <p class="about-family-title">Project Manager</p>
           </div>
-        </a>
+        </div>
       </div>
       <div class="about-family-person">
-        <a href="#" class="about-family-link">
+        <div class="about-family-link">
           <div class="about-family-copy">
-            <div class="about-family-bio">
+            <div class="about-family-bio" data-popup-open="paolillo">
               <p class="about-family-bio-text">VIEW BIO</p>
             </div>
           </div>
@@ -170,7 +170,7 @@
             <h3 class="about-family-name">TODD PAOLILLO</h3>
             <p class="about-family-title">Sr. Project Manager</p>
           </div>
-        </a>
+        </div>
       </div>
 
     </div>
