@@ -145,7 +145,7 @@ Duan is a member of the American Institute of Architects (AIA) and is a licensed
 
 <section class="popup about-bio-overlay" data-popup="beckmann">
   <div class="popup-inner about-inline">
-    <div class="about-bio-overlay__left about-horizontal mbeckmann background-img background-right">
+    <div class="about-bio-overlay__left about-horizontal mbeckmann background-img background-left">
       <!-- <picture class="about&#45;image&#45;block__picture"> -->
       <!--   <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/MBeckmann.tif" media="(max&#45;width: 700px)"> -->
       <!--   <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/MBeckmann.tif"> -->
