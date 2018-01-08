@@ -9,7 +9,6 @@ const BioModal = function (el) {
 
   $link.on('click', (e) => {
     const targetedPopup = $bio.attr('data-popup-open');
-    console.log('open sesame see popup', targetedPopup);
     $(`[data-popup="${targetedPopup}"]`).fadeIn(350);
     $('.about-family').css('pointer-events', 'none');
 
@@ -18,7 +17,6 @@ const BioModal = function (el) {
 
 
   $('[data-popup-close]').on('click', function(e) {
-    console.log('close the sesame');
     const targetedPopup = $(this).attr('data-popup-close');
     $(`[data-popup="${targetedPopup}"]`).fadeOut(350);
     $('.about-family').css('pointer-events', '');

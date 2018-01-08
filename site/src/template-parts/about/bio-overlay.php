@@ -1,11 +1,11 @@
 <section class="popup about-bio-overlay" data-popup="kirkpatrick">
   <div class="popup-inner about-inline">
-    <div class="about-bio-overlay__left about-horizontal">
-      <picture class="about-image-block__picture">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/GKirkpatrick.JPG" media="(max-width: 700px)">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/GKirkpatrick.JPG">
-        <img class="about-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/bio/GKirkpatrick.JPG" alt="">
-      </picture>
+    <div class="about-bio-overlay__left about-horizontal gkirkpatrick background-img background-left">
+      <!-- <picture class="about&#45;image&#45;block__picture"> -->
+      <!--   <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/GKirkpatrick.JPG" media="(max&#45;width: 700px)"> -->
+      <!--   <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/GKirkpatrick.JPG"> -->
+      <!--   <img class="about&#45;image&#45;block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/bio/GKirkpatrick.JPG" alt=""> -->
+      <!-- </picture> -->
     </div>
     <div class="about-bio-overlay__right about-horizontal">
       <div class="about-value-text-column">
@@ -23,12 +23,12 @@
 
 <section class="popup about-bio-overlay" data-popup="tran">
   <div class="popup-inner about-inline">
-    <div class="about-bio-overlay__left about-horizontal">
-      <picture class="about-image-block__picture">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/DTran.JPG" media="(max-width: 700px)">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/DTran.JPG">
-        <img class="about-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/bio/DTran.JPG" alt="">
-      </picture>
+    <div class="about-bio-overlay__left about-horizontal dtran background-img background-left">
+      <!-- <picture class="about&#45;image&#45;block__picture"> -->
+      <!--   <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/DTran.JPG" media="(max&#45;width: 700px)"> -->
+      <!--   <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/DTran.JPG"> -->
+      <!--   <img class="about&#45;image&#45;block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/bio/DTran.JPG" alt=""> -->
+      <!-- </picture> -->
     </div>
     <div class="about-bio-overlay__right about-horizontal">
       <div class="about-value-text-column">
@@ -42,7 +42,7 @@
 Drawn to and fundamentally inspired by Southern California's vibrant lifestyle and culture, Duan's design approach seeks to infuse this influence with an inherent optismism through fun, warm, and contextually relevant design.
 <br>
 <br>
-Duan is amember of the American Institute of Architects (AIA) and is a licensed Architect in the states of Nevada and Hawaii. He is certified by the national Council of Architectural Registration Boards (NCARB). He is also a member fo the University of Southern California's Architechtural Guild and the Los Angeles Conservancy.
+Duan is a member of the American Institute of Architects (AIA) and is a licensed Architect in the states of Nevada and Hawaii. He is certified by the national Council of Architectural Registration Boards (NCARB). He is also a member fo the University of Southern California's Architechtural Guild and the Los Angeles Conservancy.
 </p>
         </h2>
       </div>
@@ -53,12 +53,12 @@ Duan is amember of the American Institute of Architects (AIA) and is a licensed 
 
 <section class="popup about-bio-overlay" data-popup="baker">
   <div class="popup-inner about-inline">
-    <div class="about-bio-overlay__left about-horizontal">
-      <picture class="about-image-block__picture">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/PBaker.JPG" media="(max-width: 700px)">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/PBaker.JPG">
-        <img class="about-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/bio/PBaker.JPG" alt="">
-      </picture>
+    <div class="about-bio-overlay__left about-horizontal pbaker background-img background-left">
+      <!-- <picture class="about&#45;image&#45;block__picture"> -->
+      <!--   <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/PBaker.JPG" media="(max&#45;width: 700px)"> -->
+      <!--   <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/PBaker.JPG"> -->
+      <!--   <img class="about&#45;image&#45;block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/bio/PBaker.JPG" alt=""> -->
+      <!-- </picture> -->
     </div>
     <div class="about-bio-overlay__right about-horizontal">
       <div class="about-value-text-column">
@@ -76,12 +76,12 @@ Duan is amember of the American Institute of Architects (AIA) and is a licensed 
 
 <section class="popup about-bio-overlay" data-popup="straughan">
   <div class="popup-inner about-inline">
-    <div class="about-bio-overlay__left about-horizontal">
-      <picture class="about-image-block__picture">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/SStraughan.JPG" media="(max-width: 700px)">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/SStraughan.JPG">
-        <img class="about-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/bio/SStraughan.JPG" alt="">
-      </picture>
+    <div class="about-bio-overlay__left about-horizontal sstraughan background-img background-left">
+      <!-- <picture class="about&#45;image&#45;block__picture"> -->
+      <!--   <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/SStraughan.JPG" media="(max&#45;width: 700px)"> -->
+      <!--   <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/SStraughan.JPG"> -->
+      <!--   <img class="about&#45;image&#45;block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/bio/SStraughan.JPG" alt=""> -->
+      <!-- </picture> -->
     </div>
     <div class="about-bio-overlay__right about-horizontal">
       <div class="about-value-text-column">
@@ -99,12 +99,12 @@ Duan is amember of the American Institute of Architects (AIA) and is a licensed 
 
 <section class="popup about-bio-overlay" data-popup="copeland">
   <div class="popup-inner about-inline">
-    <div class="about-bio-overlay__left about-horizontal">
-      <picture class="about-image-block__picture">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/LCopeland.JPG" media="(max-width: 700px)">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/LCopeland.JPG">
-        <img class="about-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/bio/LCopeland.JPG" alt="">
-      </picture>
+    <div class="about-bio-overlay__left about-horizontal lcopeland background-img background-right">
+      <!-- <picture class="about&#45;image&#45;block__picture"> -->
+      <!--   <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/LCopeland.JPG" media="(max&#45;width: 700px)"> -->
+      <!--   <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/LCopeland.JPG"> -->
+      <!--   <img class="about&#45;image&#45;block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/bio/LCopeland.JPG" alt=""> -->
+      <!-- </picture> -->
     </div>
     <div class="about-bio-overlay__right about-horizontal">
       <div class="about-value-text-column">
@@ -122,12 +122,12 @@ Duan is amember of the American Institute of Architects (AIA) and is a licensed 
 
 <section class="popup about-bio-overlay" data-popup="mcgowan">
   <div class="popup-inner about-inline">
-    <div class="about-bio-overlay__left about-horizontal">
-      <picture class="about-image-block__picture">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/MMcgowan.JPG" media="(max-width: 700px)">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/MMcgowan.JPG">
-        <img class="about-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/bio/MMcgowan.JPG" alt="">
-      </picture>
+    <div class="about-bio-overlay__left about-horizontal mmcgowan background-img background-right">
+      <!-- <picture class="about&#45;image&#45;block__picture"> -->
+      <!--   <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/MMcgowan.JPG" media="(max&#45;width: 700px)"> -->
+      <!--   <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/MMcgowan.JPG"> -->
+      <!--   <img class="about&#45;image&#45;block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/bio/MMcgowan.JPG" alt=""> -->
+      <!-- </picture> -->
     </div>
     <div class="about-bio-overlay__right about-horizontal">
       <div class="about-value-text-column">
@@ -145,12 +145,12 @@ Duan is amember of the American Institute of Architects (AIA) and is a licensed 
 
 <section class="popup about-bio-overlay" data-popup="beckmann">
   <div class="popup-inner about-inline">
-    <div class="about-bio-overlay__left about-horizontal">
-      <picture class="about-image-block__picture">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/MBeckmann.tif" media="(max-width: 700px)">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/MBeckmann.tif">
-        <img class="about-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/bio/MBeckmann.tif" alt="">
-      </picture>
+    <div class="about-bio-overlay__left about-horizontal mbeckmann background-img background-right">
+      <!-- <picture class="about&#45;image&#45;block__picture"> -->
+      <!--   <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/MBeckmann.tif" media="(max&#45;width: 700px)"> -->
+      <!--   <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/MBeckmann.tif"> -->
+      <!--   <img class="about&#45;image&#45;block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/bio/MBeckmann.tif" alt=""> -->
+      <!-- </picture> -->
     </div>
     <div class="about-bio-overlay__right about-horizontal">
       <div class="about-value-text-column">
@@ -168,12 +168,12 @@ Duan is amember of the American Institute of Architects (AIA) and is a licensed 
 
 <section class="popup about-bio-overlay" data-popup="paolillo">
   <div class="popup-inner about-inline">
-    <div class="about-bio-overlay__left about-horizontal">
-      <picture class="about-image-block__picture">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/TPaolillo.JPG" media="(max-width: 700px)">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/TPaolillo.JPG">
-        <img class="about-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/bio/TPaolillo.JPG" alt="">
-      </picture>
+    <div class="about-bio-overlay__left about-horizontal tpaolillo background-img background-right">
+      <!-- <picture class="about&#45;image&#45;block__picture"> -->
+      <!--   <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/TPaolillo.JPG" media="(max&#45;width: 700px)"> -->
+      <!--   <source srcset="<?php bloginfo('template_url'); ?>/images/about/bio/TPaolillo.JPG"> -->
+      <!--   <img class="about&#45;image&#45;block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/bio/TPaolillo.JPG" alt=""> -->
+      <!-- </picture> -->
     </div>
     <div class="about-bio-overlay__right about-horizontal">
       <div class="about-value-text-column">
