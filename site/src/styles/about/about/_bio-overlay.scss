@@ -42,7 +42,7 @@
   justify-content: center;
   .about-bio-title,
   .about-bio-header {
-    margin-bottom: 1vw;
+    margin-bottom: 1.3vw;
   }
 
 
@@ -65,34 +65,33 @@
 
 .about-bio-header {
   @extend .about-value-header;
+  margin: 0;
   font-size: px2vw(67, $designLarge);
 
   // @media (max-width: $about-break) {
   // }
   @media (max-width: $about-single-column-break) {
-    margin-bottom: 0;
     font-size: px2vw(32, $designSmall);
   }
 }
 
 .about-bio-title {
   @extend .about-join-title;
-  margin-bottom: 5%;
+  margin: 0;
   @media (max-width: $about-break) {
     font-size: 21.36px;
   }
   @media (max-width: $about-single-column-break) {
-    margin-bottom: 0;
     font-size: px2vw(14, $designSmall);
   }
 }
 
 .about-bio-dash {
   @extend .about-text-block__dash;
+  margin: 0;
 
   @media (max-width: $about-single-column-break) {
     align-self: center;
-    margin-bottom: 0;
   }
 }
 
@@ -180,8 +179,7 @@
 }
 .about-bio-text-column {
   @extend .about-value-text-column;
-  padding: 0 14.6%;
-  // height: 80vh;
+  padding: 0% 14%;
   height: 90%;
   overflow: auto;
 
