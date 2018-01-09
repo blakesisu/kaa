@@ -21,7 +21,9 @@
         </div>
       </div>
     </div>
-    <a class="popup-close" data-popup-close="kirkpatrick" href="#">x</a>
+    <a class="popup-close" data-popup-close="kirkpatrick" href="#">
+        <?php include(__DIR__ ."/../svgs/close.svg"); ?>
+    </a>
   </div>
 </section>
 
@@ -63,7 +65,9 @@
         </div>
       </div>
     </div>
-    <a class="popup-close" data-popup-close="tran" href="#">x</a>
+    <a class="popup-close" data-popup-close="tran" href="#">
+        <?php include(__DIR__ ."/../svgs/close.svg"); ?>
+    </a>
   </div>
 </section>
 
@@ -85,7 +89,9 @@
         </div>
       </div>
     </div>
-    <a class="popup-close" data-popup-close="baker" href="#">x</a>
+    <a class="popup-close" data-popup-close="baker" href="#">
+        <?php include(__DIR__ ."/../svgs/close.svg"); ?>
+    </a>
   </div>
 </section>
 
@@ -107,7 +113,9 @@
         </div>
       </div>
     </div>
-    <a class="popup-close" data-popup-close="straughan" href="#">x</a>
+    <a class="popup-close" data-popup-close="straughan" href="#">
+        <?php include(__DIR__ ."/../svgs/close.svg"); ?>
+    </a>
   </div>
 </section>
 
@@ -129,7 +137,9 @@
         </div>
       </div>
     </div>
-    <a class="popup-close" data-popup-close="copeland" href="#">x</a>
+    <a class="popup-close" data-popup-close="copeland" href="#">
+        <?php include(__DIR__ ."/../svgs/close.svg"); ?>
+    </a>
   </div>
 </section>
 
@@ -151,7 +161,9 @@
         </div>
       </div>
     </div>
-    <a class="popup-close" data-popup-close="mcgowan" href="#">x</a>
+    <a class="popup-close" data-popup-close="mcgowan" href="#">
+        <?php include(__DIR__ ."/../svgs/close.svg"); ?>
+    </a>
   </div>
 </section>
 
@@ -173,7 +185,9 @@
         </div>
       </div>
     </div>
-    <a class="popup-close" data-popup-close="beckmann" href="#">x</a>
+    <a class="popup-close" data-popup-close="beckmann" href="#">
+        <?php include(__DIR__ ."/../svgs/close.svg"); ?>
+    </a>
   </div>
 </section>
 
@@ -195,6 +209,8 @@
         </div>
       </div>
     </div>
-    <a class="popup-close" data-popup-close="paolillo" href="#">x</a>
+    <a class="popup-close" data-popup-close="paolillo" href="#">
+        <?php include(__DIR__ ."/../svgs/close.svg"); ?>
+    </a>
   </div>
 </section>

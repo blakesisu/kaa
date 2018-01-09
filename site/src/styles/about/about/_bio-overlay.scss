@@ -40,27 +40,31 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  @media (min-width: $about-single-column-break + 1) {
-    padding: 0 7%;
-  }
 
   .about-bio-header {
     @extend .about-value-header;
-    font-size: px2vw(70, $designLarge);
+    font-size: px2vw(60, $designLarge);
 
+    // @media (max-width: $about-break) {
+    // }
     @media (max-width: $about-single-column-break) {
       margin-bottom: 0;
       font-size: px2vw(32, $designSmall);
     }
   }
+
   .about-bio-title {
     @extend .about-join-title;
     margin-bottom: 5%;
+    @media (max-width: $about-break) {
+      font-size: 21.36px;
+    }
     @media (max-width: $about-single-column-break) {
       margin-bottom: 0;
       font-size: px2vw(14, $designSmall);
     }
   }
+
   .about-bio-dash {
     @extend .about-text-block__dash;
 
@@ -69,13 +73,17 @@
       margin-bottom: 0;
     }
   }
+
+  @media (min-width: $about-single-column-break + 1) {
+    padding: 0 7%;
+  }
+
   @media (max-width: $about-single-column-break) {
-    display: flex;
-    flex-direction: column;
     justify-content: flex-end;
     text-align: center;
     width: 100%;
-    height: 55%;
+    // height: 55%;
+    height: 80vw;
     order: 1;
     .about-bio-title,
     .about-bio-header {
@@ -89,7 +97,8 @@
   height: 70%;
   @media (max-width: $about-single-column-break) {
     width: 100%;
-    height: 50%;
+    // height: 50%;
+    height: 36%;
     order: 3;
   }
 }
@@ -106,21 +115,7 @@
   position:absolute;
   top:20px;
   right:20px;
-  font-family:$regular;
-  font-size:2vw;
-  text-align:center;
-  color:rgba(0,0,0,0.8);
-
-  @media (max-width: $about-single-column-break) {
-    color:#fff;
-  }
 }
-
-// .popup-close:hover {
-//   -webkit-transform:translate(50%, -50%) rotate(180deg);
-//   transform:translate(50%, -50%) rotate(180deg);
-//   text-decoration:none;
-// }
 
 .gkirkpatrick {
   background: url(../images/about/bio/GKirkpatrick.JPG) no-repeat center center;
@@ -169,28 +164,38 @@
 }
 
 .about-bio-content {
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .about-bio-bio {
   @extend .about-value-content;
+  @media (max-width: $about-break) {
+    font-size: 12.82px;
+  }
 }
 .about-bio-text-column {
   @extend .about-value-text-column;
   padding: 0 14.6%;
-  height: 80vh;
-  overflow: hidden;
+  // height: 80vh;
+  height: 90%;
+  overflow: auto;
 
   @media (max-width: $about-single-column-break) {
-  padding: 5%;
+    padding: 5%;
     height: 100%;
   }
 }
 .about-bio-articles-header {
   @extend .about-ext-family-name;
+  @media (max-width: $about-break) {
+    font-size: 12.82px;
+  }
 }
 .about-bio-article-title {
   @extend .about-value-content;
   color: $orange;
+  @media (max-width: $about-break) {
+    font-size: 12.82px;
+  }
 }
 
 @media (max-width: $about-single-column-break) {
