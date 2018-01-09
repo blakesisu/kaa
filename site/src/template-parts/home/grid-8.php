@@ -14,7 +14,7 @@
         <picture class="hm-project-block__picture">
           <source srcset="<?php bloginfo('template_url'); ?>/images/home/grid-8/project-sml.jpg" media="(max-width: 700px)">
           <source srcset="<?php bloginfo('template_url'); ?>/images/home/grid-8/project-lrg.jpg">
-          <img class="hm-project-block__img" srcset="<?php bloginfo('template_url'); ?>/images/home/grid-8/project-lrg.jpg" alt="">
+          <img class="hm-grid__img hm-project-block__img" srcset="<?php bloginfo('template_url'); ?>/images/home/grid-8/project-lrg.jpg" alt="">
         </picture>
       </a>
     </div>
@@ -38,7 +38,7 @@
       <picture class="hm-image-block__picture">
         <source srcset="<?php bloginfo('template_url'); ?>/images/home/grid-8/square-sml.jpg" media="(max-width: 700px)">
         <source srcset="<?php bloginfo('template_url'); ?>/images/home/grid-8/square-lrg.jpg">
-        <img class="hm-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/home/grid-8/square-lrg.jpg" alt="">
+        <img class="hm-grid__img hm-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/home/grid-8/square-lrg.jpg" alt="">
       </picture>
     </div>
 

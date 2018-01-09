@@ -12,9 +12,9 @@
         </div>
         <p class="hm-project-block__more">More <?php include(__DIR__ ."/../svgs/chevron-right.svg"); ?></p>
         <picture class="hm-project-block__picture">
-          <source srcset="<?php bloginfo('template_url'); ?>/images/home/grid-1/monaco-gym-and-spa-sml.jpg" media="(max-width: 700px)">
-          <source srcset="<?php bloginfo('template_url'); ?>/images/home/grid-1/monaco-gym-and-spa-lrg.jpg">
-          <img class="hm-project-block__img" srcset="<?php bloginfo('template_url'); ?>/images/home/grid-1/monaco-gym-and-spa-lrg.jpg" alt="">
+          <source srcset="<?php bloginfo('template_url'); ?>/images/home/grid-1/project-sml.jpg" media="(max-width: 700px)">
+          <source srcset="<?php bloginfo('template_url'); ?>/images/home/grid-1/project-lrg.jpg">
+          <img class="hm-grid__img hm-project-block__img" srcset="<?php bloginfo('template_url'); ?>/images/home/grid-1/project-lrg.jpg" alt="">
         </picture>
       </a>
     </div>
@@ -22,9 +22,9 @@
     <!-- Image Block -->
     <div class="hm-image-block hm-grid__item hm-grid__item--horizontal">
       <picture class="hm-image-block__picture">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/home/grid-1/stone-sml.jpg" media="(max-width: 700px)">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/home/grid-1/stone-lrg.jpg">
-        <img class="hm-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/home/grid-1/stone-lrg.jpg" alt="">
+        <source srcset="<?php bloginfo('template_url'); ?>/images/home/grid-1/horizontal-sml.jpg" media="(max-width: 700px)">
+        <source srcset="<?php bloginfo('template_url'); ?>/images/home/grid-1/horizontal-lrg.jpg">
+        <img class="hm-grid__img hm-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/home/grid-1/horizontal-lrg.jpg" alt="">
       </picture>
     </div>
 
@@ -45,9 +45,9 @@
     <!-- Image Block -->
     <div class="hm-image-block hm-grid__item hm-grid__item--vertical">
       <picture class="hm-image-block__picture">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/home/grid-1/waterfall-sml.jpg" media="(max-width: 700px)">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/home/grid-1/waterfall-lrg.jpg">
-        <img class="hm-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/home/grid-1/waterfall-lrg.jpg" alt="">
+        <source srcset="<?php bloginfo('template_url'); ?>/images/home/grid-1/vertical-sml.jpg" media="(max-width: 700px)">
+        <source srcset="<?php bloginfo('template_url'); ?>/images/home/grid-1/vertical-lrg.jpg">
+        <img class="hm-grid__img hm-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/home/grid-1/vertical-lrg.jpg" alt="">
       </picture>
     </div>
 
