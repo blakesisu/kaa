@@ -201,9 +201,3 @@
     font-size: 12.82px;
   }
 }
-
-@media (max-width: $about-single-column-break) {
-    ::-webkit-scrollbar {
-      display: none;
-    }
-}
