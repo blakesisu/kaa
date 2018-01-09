@@ -239,4 +239,14 @@
       width: 25px;
     }
   }
+
+
+  // Header on home page
+  // ----------------------------------------- //
+  .home {
+    .site-header {
+      position: static;
+      margin-bottom: 0;
+    }
+  }
 }
