@@ -63,7 +63,7 @@ const Grid = function (el, index) {
         duration: $window.height() + $el.outerHeight()
       })
         .setTween(slowTimeline)
-        .addIndicators({ name: `project ${index}` })
+        // .addIndicators({ name: `project ${index}` })
         .addTo(scrollController);
     }
   }

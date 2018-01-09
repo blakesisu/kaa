@@ -10,7 +10,7 @@
   // grid
   .hm-grid {
     position: relative;
-    background-color: $lightBrown;
+    // background-color: $lightBrown;sss
   }
 
   // content
@@ -55,21 +55,21 @@
     padding-top: 84.375%;
 
     .hm-grid__item--square-lrg {
-      width: 66.7%;
-      height: 66.7%;
+      width: 66.6667%;
+      height: 66.6667%;
     }
     .hm-grid__item--text,
     .hm-grid__item--square {
-      width: 33.3%;
-      height: 33.3%;
+      width: 33.3334%;
+      height: 33.3334%;
     }
     .hm-grid__item--horizontal {
-      width: 66.7%;
-      height: 33.3%;
+      width: 66.6667%;
+      height: 33.3334%;
     }
     .hm-grid__item--vertical {
-      width: 33.3%;
-      height: 66.7%;
+      width: 33.3334%;
+      height: 66.6667%;
     }
   }
 
@@ -79,20 +79,20 @@
     padding-top: 56.25%;
 
     .hm-grid__item--square-lrg {
-      width: 66.7%;
+      width: 66.6667%;
       height: 100%;
     }
     .hm-grid__item--text,
     .hm-grid__item--square {
-      width: 33.3%;
+      width: 33.3334%;
       height: 50%;
     }
     .hm-grid__item--horizontal {
-      width: 66.7%;
+      width: 66.6667%;
       height: 50%;
     }
     .hm-grid__item--vertical {
-      width: 33.3%;
+      width: 33.3334%;
       height: 100%;
     }
   }
