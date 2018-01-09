@@ -41,6 +41,11 @@
   letter-spacing: ps2em(300);
   line-height: px2lh(18, 60);
 
+  @media (max-width: $about-break) {
+    font-size: 12.82px;
+    line-height: px2lh(12, 20);
+  }
+
   @media (max-width: $about-single-column-break) {
     margin-bottom: 6%;
     overflow-wrap: break-word;
@@ -61,6 +66,12 @@
   font-size: px2vw(18, $designLarge);
   letter-spacing: ps2em(10);
   line-height: px2lh(18, 20);
+
+  @media (max-width: $about-break) {
+    font-size: 12.82px;
+    line-height: px2lh(12, 20);
+  }
+
   @media (max-width: $about-single-column-break) {
     overflow-wrap: break-word;
     word-wrap: break-word;

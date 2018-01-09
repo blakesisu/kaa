@@ -9,6 +9,10 @@
   align-self: center;
   padding: 2% 6% 2% 7%;
 
+  @media (max-width: $about-text-break) {
+    padding: 2%;
+  }
+
   @media (max-width: $about-single-column-break) {
     display: flex;
     text-align: center;
@@ -20,6 +24,13 @@
 .about-join-title {
   @include about-mini-header;
   margin-bottom: 15%;
+
+  @media (max-width: $about-break) {
+    font-size: 21.34px;
+  }
+  @media (max-width: $about-text-break) {
+    margin-bottom: 5%;
+  }
 
   @media (max-width: $about-single-column-break) {
     @include about-mini-header--small;
@@ -37,6 +48,10 @@
 
   margin-bottom: 8%;
 
+  @media (max-width: $about-break) {
+    font-size: 14px;
+  }
+
   @media (max-width: $about-single-column-break) {
     font-size: px2vw(20, $designSmall);
     // letter-spacing: ps2em(10);
@@ -46,6 +61,11 @@
 
 .about-join-button {
   @include button;
+
+  @media (max-width: $about-break) {
+    letter-spacing: 0;
+    padding: 13px 18px;
+  }
 
   @media (max-width: $about-single-column-break) {
     @include button--small;

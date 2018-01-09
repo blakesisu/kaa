@@ -7,6 +7,10 @@
   text-align: center;
   margin-bottom: 4.8%;
 
+  @media (max-width: $about-break) {
+    font-size: 21.33px;
+  }
+
   @media (max-width: $about-single-column-break) {
     @include about-mini-header--small;
     margin-bottom: 8%;
@@ -39,6 +43,11 @@
   flex-direction: column;
   padding: 2% 14.6%;
 
+  @media (max-width: $about-break) {
+    padding: 2% 10%;
+    // margin-bottom: 3%;
+  }
+
   @media (max-width: $about-single-column-break) {
     padding: 7.8% 5%;
   }
@@ -56,6 +65,10 @@
   overflow-wrap: break-word;
   margin-bottom: 5%;
 
+  @media (max-width: $about-break) {
+    margin-bottom: 3%;
+  }
+
   @media (max-width: $about-single-column-break) {
     font-size: 25px;
     font-size: px2vw(25, $designSmall);
@@ -69,7 +82,11 @@
 // ----------------------------------------- //
 .about-text-block__dash {
   @include dash;
-  margin-bottom: 6%;
+  margin-bottom: 5%;
+
+  @media (max-width: $about-break) {
+    margin-bottom: 3%;
+  }
 
   @media (max-width: $about-single-column-break) {
     @include dash-small;
@@ -88,6 +105,13 @@
   overflow-wrap: break-word;
   width: 85%;
 
+  @media (max-width: $about-break) {
+    font-size: 12.82px;
+  }
+
+  @media (max-width: $about-text-break) {
+    font-size: 11px;
+  }
   @media (max-width: $about-single-column-break) {
     font-size: 15px;
     font-size: px2vw(15, $designSmall);
