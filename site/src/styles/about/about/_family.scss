@@ -39,6 +39,10 @@
       transform: translateY(8px);
       transition: opacity 0.3s $easeInOutQuad,
                   transform 0.3s $easeInOutQuad;
+      @media (max-width: $about-break) {
+        width: 135px;
+        height: 49px;
+      }
     }
     .about-family-bio-text {
       font-family: $regular;
@@ -48,6 +52,9 @@
       color: #fff;
       letter-spacing: ps2em(10);
       line-height: px2lh(24, 35);
+      @media (max-width: $about-break) {
+        font-size: 17px;
+      }
     }
 
     // copy:hover
