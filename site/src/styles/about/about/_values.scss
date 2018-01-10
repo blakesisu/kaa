@@ -20,31 +20,77 @@
 // value container
 // ----------------------------------------- //
 .about-value {
+  display: flex;
 
   // alternate alignement of odd blocks
   @media (min-width: $about-single-column-break + 1) {
     &:nth-child(odd) {
       text-align: right;
 
-      .about-value-header {
+      .about-value__img-column {
+        order: 2;
+      }
+
+      .about-value__header {
         margin-right: -2%;
       }
-      .about-value-text-column {
+      .about-value__text-wrapper {
         align-items: flex-end;
       }
     }
   }
+
+  @media (max-width: $about-single-column-break) {
+    flex-direction: column;
+  }
 }
 
-// column
+// image column
 // ----------------------------------------- //
-.about-value-text-column {
+.about-value__img-column {
+  position: relative;
+  flex: 0 0 50%;
+  width: 50%;
+  overflow: hidden;
+
+  @media (max-width: $about-single-column-break) {
+    flex: 0 0 100%;
+    width: 100%
+  }
+}
+.about-value__img-wrapper {
+  padding: 28.125%;
+}
+.about-value__picture {
+  display: block;
+}
+.about-value__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+// text column
+// ----------------------------------------- //
+.about-value__text-column {
+  flex: 0 0 50%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: $about-single-column-break) {
+    flex: 0 0 100%;
+    width: 100%
+  }
+}
+.about-value__text-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 2% 14.6%;
+  padding: 6% 14.6%;
 
   @media (max-width: $about-break) {
-    padding: 2% 10%;
+    padding: 6% 10%;
     // margin-bottom: 3%;
   }
 
@@ -55,7 +101,7 @@
 
 // header
 // ----------------------------------------- //
-.about-value-header {
+.about-value__header {
   font-size: 50px;
   font-size: px2vw(50, $designLarge);
   letter-spacing: ps2em(300);
@@ -80,7 +126,7 @@
 
 // dash
 // ----------------------------------------- //
-.about-text-block__dash {
+.about-value__dash {
   @include dash;
   margin-bottom: 5%;
 
@@ -93,9 +139,9 @@
   }
 }
 
-// content
+// description
 // ----------------------------------------- //
-.about-value-content {
+.about-value__description {
   font-size: 18px;
   font-size: px2vw(18, $designLarge);
   letter-spacing: ps2em(10);
@@ -109,9 +155,9 @@
     font-size: 12.82px;
   }
 
-  @media (max-width: $about-text-break) {
-    font-size: 11px;
-  }
+  // @media (max-width: $about-text-break) {
+  //   font-size: 11px;
+  // }
   @media (max-width: $about-single-column-break) {
     font-size: 15px;
     font-size: px2vw(15, $designSmall);
