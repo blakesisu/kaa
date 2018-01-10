@@ -9,8 +9,7 @@ const BioModal = function (el) {
 
   $link.on('click', (e) => {
     const targetedPopup = $bio.attr('data-popup-open');
-    $(`[data-popup="${targetedPopup}"]`).fadeIn(350);
-    $('.about-family').css('pointer-events', 'none');
+    $(`[data-popup="${targetedPopup}"]`).fadeIn(300);
 
     e.preventDefault();
   })
@@ -18,8 +17,7 @@ const BioModal = function (el) {
 
   $('[data-popup-close]').on('click', function(e) {
     const targetedPopup = $(this).attr('data-popup-close');
-    $(`[data-popup="${targetedPopup}"]`).fadeOut(350);
-    $('.about-family').css('pointer-events', '');
+    $(`[data-popup="${targetedPopup}"]`).fadeOut(300);
 
     e.preventDefault();
   })

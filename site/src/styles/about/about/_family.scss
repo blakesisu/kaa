@@ -25,7 +25,7 @@
       flex-direction: column;
       justify-content: center;
       text-align: center;
-      transition: background-color 0.3s $easeInOutQuad;
+      // transition: background-color 0.2s $easeInOutQuad;
     }
     .about-family-bio {
       display: flex;
@@ -36,9 +36,9 @@
       align-items: center;
       justify-content: center;
       opacity: 0;
-      transform: translateY(8px);
-      transition: opacity 0.3s $easeInOutQuad,
-                  transform 0.3s $easeInOutQuad;
+      // transform: translateY(8px);
+      // transition: opacity 0.2s $easeInOutQuad,
+      //             transform 0.2s $easeInOutQuad;
       @media (max-width: $about-break) {
         width: 135px;
         height: 49px;
@@ -69,7 +69,7 @@
       .about-family-background,
       .about-family-description {
         opacity: 0.1;
-        transition: opacity 0.3s $easeInOutQuad,
+        transition: opacity 0.2s $easeInOutQuad,
       }
     }
 
