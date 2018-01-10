@@ -25,10 +25,14 @@
   line-height: px2lh(30, 50);
   margin: 4.7vw auto 7vw auto;
   width: 67%;
+
   @media (max-width: $about-break) {
-    width: 66%;
+    width: auto;
+    max-width: 982px;
+    padding: 0 40px;
     font-size: 21.29px;
   }
+
   @media (max-width: $about-single-column-break) {
     margin: 0% auto;
     padding: 9% 5% 14.5%;
