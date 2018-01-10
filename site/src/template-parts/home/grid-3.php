@@ -1,10 +1,31 @@
+<?php
+  $str = "Weave";
+  $newstr = "";
+  $notintag = true;
+
+  for ($i = 0; $i < strlen($str); $i++) {
+    if (substr($str,$i,1) == "<") {
+      $notintag = false;
+    }
+    if (($notintag) and (substr($str,$i,1) != " ")) {
+      $newstr .= "<span>" . substr($str,$i,1) . "</span>";
+    } else {
+      $newstr .= substr($str,$i,1);
+    }
+
+    if (substr($str,$i,1) == ">") {
+      $notintag = true;
+    }
+  }
+?>
+
 <section class="hm-grid hm-grid--3 hm-grid--3-high">
   <div class="hm-grid__content">
 
     <!-- Text Block -->
     <div class="hm-text-block hm-grid__item hm-grid__item--text">
       <div class="hm-text-block__content">
-        <h1 class="hm-text-block__header">Weave</h1>
+        <h1 class="hm-text-block__header"><?php echo $newstr; ?></h1>
         <div class="hm-text-block__dash"></div>
         <div class="hm-text-block__description-container">
           <p class="hm-text-block__description">Seamlessly connecting indoor and outdoor living to deepen a homeowner’s love of nature. Instead of putting windows in our walls, our walls are windows. And doors, for that matter. <a class="hm-text-block__inline-cta" href="#">Explore More</a></p>

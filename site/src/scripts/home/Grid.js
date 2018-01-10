@@ -25,7 +25,6 @@ const Grid = function (el, index) {
   const $verticalImg = $el.find('.hm-grid__item--vertical .hm-image-block__picture');
   const $horizontalImg = $el.find('.hm-grid__item--horizontal .hm-image-block__picture');
   const $squareImg = $el.find('.hm-grid__item--square .hm-image-block__picture');
-  const imageScenes = [];
   let parallaxScene;
 
   function init() {
@@ -71,26 +70,53 @@ const Grid = function (el, index) {
   function createFadeScenes() {
     // If not on a touch device
     if (!Modernizr.touchevents) {
-      // Fade image in as they become visible on the screen
       // For each grid item
       $gridItems.each((i) => {
         const $item = $($gridItems[i]);
         const $img = $item.find('.hm-grid__img');
+        const $textContent = $item.find('.hm-text-block__content');
 
         // If it has an image
         if ($img.length > 0) {
           // Create a new scene that fades the image in when it becomes visible
-          imageScenes.push(
-            new ScrollMagic.Scene({
-              triggerElement: $item,
-              triggerHook: 'onEnter',
-              offset: 200,
-              reverse: false
-            })
-              .setTween(TweenMax.fromTo($img, 1, { opacity: '0' }, { opacity: '1' }))
-              // .addIndicators({ name: `image ${i}` })
-              .addTo(scrollController)
-          );
+          new ScrollMagic.Scene({
+            triggerElement: $item,
+            triggerHook: 'onEnter',
+            offset: 200,
+            reverse: false
+          })
+            .setTween(TweenMax.fromTo($img, 1, { opacity: '0' }, { opacity: '1' }))
+            // .addIndicators({ name: `image ${i}` })
+            .addTo(scrollController)
+        }
+
+        // If it has a text content
+        if ($textContent.length > 0) {
+          const $header = $textContent.find('.hm-text-block__header');
+          const $dash = $textContent.find('.hm-text-block__dash');
+          const $description = $textContent.find('.hm-text-block__description');
+          const headerTimeline = new TimelineMax();
+
+          // Add each span to the timeline
+          $header.find('span').each((j, span) => {
+            headerTimeline.fromTo(span, 0.3, { opacity: '0' }, { opacity: '1' }, j * 0.1);
+          });
+
+          // Add the description and dash to the timeline
+          headerTimeline
+            .fromTo($description, 1.5, { opacity: '0' }, { opacity: '1' }, '0')
+            .fromTo($dash, 0.2, { width: '0', opacity: '0' }, { width: $dash.width(), opacity: 1, clearProps: 'all' }, '-=1');
+
+          // Start the timeline when the text scrolls into view
+          new ScrollMagic.Scene({
+            triggerElement: $item,
+            triggerHook: 'onEnter',
+            offset: 200,
+            reverse: false
+          })
+            .setTween(headerTimeline)
+            // .addIndicators({ name: 'text timeline' })
+            .addTo(scrollController)
         }
       });
     }
