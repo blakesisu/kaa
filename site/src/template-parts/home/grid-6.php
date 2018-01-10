@@ -1,3 +1,24 @@
+<?php
+  $str = "Craft";
+  $newstr = "";
+  $notintag = true;
+
+  for ($i = 0; $i < strlen($str); $i++) {
+    if (substr($str,$i,1) == "<") {
+      $notintag = false;
+    }
+    if (($notintag) and (substr($str,$i,1) != " ")) {
+      $newstr .= "<span>" . substr($str,$i,1) . "</span>";
+    } else {
+      $newstr .= substr($str,$i,1);
+    }
+
+    if (substr($str,$i,1) == ">") {
+      $notintag = true;
+    }
+  }
+?>
+
 <section class="hm-grid hm-grid--6 hm-grid--3-high">
   <div class="hm-grid__content">
 
@@ -13,7 +34,7 @@
     <!-- Text Block -->
     <div class="hm-text-block hm-grid__item hm-grid__item--text">
       <div class="hm-text-block__content">
-        <h1 class="hm-text-block__header">Craft</h1>
+        <h1 class="hm-text-block__header"><?php echo $newstr; ?></h1>
         <div class="hm-text-block__dash"></div>
         <div class="hm-text-block__description-container">
           <p class="hm-text-block__description">Our senses recognize one-of-a-kind objects, architectural elements and the care that went into making them. These handmade elements in our homes ground us as they balance the equal and opposite desire for our spirits to soar. <a class="hm-text-block__inline-cta" href="#">Dive into our process</a></p>

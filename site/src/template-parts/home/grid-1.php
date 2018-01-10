@@ -1,3 +1,24 @@
+<?php
+  $str = "Reveal";
+  $newstr = "";
+  $notintag = true;
+
+  for ($i = 0; $i < strlen($str); $i++) {
+    if (substr($str,$i,1) == "<") {
+      $notintag = false;
+    }
+    if (($notintag) and (substr($str,$i,1) != " ")) {
+      $newstr .= "<span>" . substr($str,$i,1) . "</span>";
+    } else {
+      $newstr .= substr($str,$i,1);
+    }
+
+    if (substr($str,$i,1) == ">") {
+      $notintag = true;
+    }
+  }
+?>
+
 <section class="hm-grid hm-grid--1 hm-grid--3-high">
   <div class="hm-grid__content">
 
@@ -31,7 +52,7 @@
     <!-- Text Block -->
     <div class="hm-text-block hm-grid__item hm-grid__item--text">
       <div class="hm-text-block__content">
-        <h1 class="hm-text-block__header">Reveal</h1>
+        <h1 class="hm-text-block__header"><?php echo $newstr; ?></h1>
         <div class="hm-text-block__dash"></div>
         <div class="hm-text-block__description-container">
           <p class="hm-text-block__description">Exposing the elements that support a home and form its structure communicates ‘this place is real’ and reminds us of the endless combinations of textures and materials found in nature. <a class="hm-text-block__inline-cta" href="#">See How</a></p>
