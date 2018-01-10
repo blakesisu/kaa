@@ -118,6 +118,37 @@ const Grid = function (el, index) {
             // .addIndicators({ name: 'text timeline' })
             .addTo(scrollController)
         }
+
+        // If it has a text content
+        if ($textContent.length > 0) {
+          const $header = $textContent.find('.hm-text-block__header');
+          const $dash = $textContent.find('.hm-text-block__dash');
+          const $description = $textContent.find('.hm-text-block__description');
+          const headerTimeline = new TimelineMax();
+
+          // Add each span to the timeline
+          $header.find('span').each((j, span) => {
+            headerTimeline.fromTo(span, 0.3, { opacity: '0' }, { opacity: '1' }, j * 0.1);
+          });
+
+          // Add the description and dash to the timeline
+          headerTimeline
+            .fromTo($description, 1.5, { opacity: '0' }, { opacity: '1' }, '0')
+            .fromTo($dash, 0.2, { width: '0', opacity: '0' }, { width: $dash.width(), opacity: 1, clearProps: 'all' }, '-=1');
+
+          // Start the timeline when the text scrolls into view
+          imageScenes.push(
+            new ScrollMagic.Scene({
+              triggerElement: $item,
+              triggerHook: 'onEnter',
+              offset: 200,
+              reverse: false
+            })
+              .setTween(headerTimeline)
+              // .addIndicators({ name: 'text timeline' })
+              .addTo(scrollController)
+          );
+        }
       });
     }
   }
