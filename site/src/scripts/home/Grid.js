@@ -137,17 +137,15 @@ const Grid = function (el, index) {
             .fromTo($dash, 0.2, { width: '0', opacity: '0' }, { width: $dash.width(), opacity: 1, clearProps: 'all' }, '-=1');
 
           // Start the timeline when the text scrolls into view
-          imageScenes.push(
-            new ScrollMagic.Scene({
-              triggerElement: $item,
-              triggerHook: 'onEnter',
-              offset: 200,
-              reverse: false
-            })
-              .setTween(headerTimeline)
-              // .addIndicators({ name: 'text timeline' })
-              .addTo(scrollController)
-          );
+          new ScrollMagic.Scene({
+            triggerElement: $item,
+            triggerHook: 'onEnter',
+            offset: 200,
+            reverse: false
+          })
+            .setTween(headerTimeline)
+            // .addIndicators({ name: 'text timeline' })
+            .addTo(scrollController)
         }
       });
     }
