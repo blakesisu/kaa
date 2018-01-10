@@ -35,6 +35,10 @@
     height: 100%;
   }
 
+  .hm-grid__picture {
+    will-change: transform;
+  }
+
   // For testing
   // .hm-grid__item--square-lrg {
   //   background-color: antiquewhite;

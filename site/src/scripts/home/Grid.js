@@ -7,7 +7,7 @@ import { GLOBAL_CHANNEL } from '../constants/Constants';
 
 // scrolling
 import ScrollMagic from 'ScrollMagic';
-import TimelineMax from 'TimelineMax';
+import TimelineLite from 'TimelineLite';
 import TweenMax from 'TweenMax';
 import Easing from 'Easing';
 import scrollController from './ScrollController';
@@ -46,7 +46,7 @@ const Grid = function (el, index) {
     // If not on a touch device and screen is wider than the mobile view
     if (!Modernizr.touchevents && $window.width() > mobileBreak) {
       // Animated timeline that moves images at different speeds
-      const slowTimeline = new TimelineMax()
+      const slowTimeline = new TimelineLite()
         .add([
           TweenMax.fromTo($projectImgSquare, 1, { y: '-20%' }, { y: '20%', ease: Easing.Linear.easeNone }),
           TweenMax.fromTo($verticalImg, 1, { y: '-10%' }, { y: '10%', ease: Easing.Linear.easeNone }),
@@ -95,7 +95,7 @@ const Grid = function (el, index) {
           const $header = $textContent.find('.hm-text-block__header');
           const $dash = $textContent.find('.hm-text-block__dash');
           const $description = $textContent.find('.hm-text-block__description');
-          const headerTimeline = new TimelineMax();
+          const headerTimeline = new TimelineLite();
 
           // Add each span to the timeline
           $header.find('span').each((j, span) => {
@@ -124,7 +124,7 @@ const Grid = function (el, index) {
           const $header = $textContent.find('.hm-text-block__header');
           const $dash = $textContent.find('.hm-text-block__dash');
           const $description = $textContent.find('.hm-text-block__description');
-          const headerTimeline = new TimelineMax();
+          const headerTimeline = new TimelineLite();
 
           // Add each span to the timeline
           $header.find('span').each((j, span) => {
