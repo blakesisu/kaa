@@ -2,8 +2,7 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url(../images/home/hero-lrg.jpg) no-repeat center center;
-  background-size: cover;
+  overflow: hidden;
 }
 
 // scroll
@@ -28,6 +27,26 @@
   display: block;
   letter-spacing: ps2em(150);
   -webkit-font-smoothing: auto;
+}
+
+// image
+// ----------------------------------------- //
+.hm-hero__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/home/hero-lrg.jpg) no-repeat center center;
+  background-size: cover;
+  opacity: 0;
+  transform: scale(1.08);
+  transition: all 1.5s $easeOutQuad;
+
+  &.is-loaded {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 // larger screens
