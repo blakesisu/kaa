@@ -15,10 +15,10 @@ wordpress_sites:
     multisite:
       enabled: false
     ssl:
-      enabled: true
+      enabled: false
       provider: letsencrypt
     cache:
-      enabled: true
+      enabled: false
     htpasswd:
       - name: sisu
         password: K@@!
