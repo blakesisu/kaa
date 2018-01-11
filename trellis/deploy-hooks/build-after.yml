@@ -9,7 +9,7 @@
 # ---
 - name: Install npm dependencies
   command: yarn build
-  # connection: local
+  connection: local
   args:
     chdir: "{{ project_local_path }}/web/app/themes/dist"
 #
