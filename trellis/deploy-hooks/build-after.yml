@@ -19,7 +19,8 @@
 #     chdir: "{{ deploy_helper.new_release_path }}/web/app/themes/dist"
 #
 - name: Compile assets for production
-  command: yarn run build:production
+  # command: yarn run build:production
+  command: yarn build
   connection: local
   args:
     chdir: "{{ project_local_path }}/web/app/themes/dist"
