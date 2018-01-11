@@ -26,7 +26,7 @@
 
 - name: Copy production assets
   synchronize:
-    src: "{{ project_local_path }}/web/app/themes/dist/dist"
+    src: "{{ project_local_path }}/web/app/themes/dist"
     dest: "{{ deploy_helper.new_release_path }}/web/app/themes/dist"
     group: no
     owner: no
