@@ -12,7 +12,10 @@
 @import "about/ext-family";
 @import "about/connect";
 @import "about/goodbye-hero";
-@import "about/bio-overlay";
+// @import "about/bio-overlay";
+.about-bio-overlay {
+  display: none;
+}
 
 // no glob line-height for about page
 body {
