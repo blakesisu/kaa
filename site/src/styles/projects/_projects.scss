@@ -101,8 +101,13 @@
 }
 .proj-project__img {
   width: 100%;
-  transition: 0.3s ease;
-  &:hover {
-    transform: scale(1.2);
+  transition: 0.5s $easeOutQuad;
+
+  .proj-project__dual &:hover {
+    transform: scale(1.08);
+  }
+
+  .proj-project__tri &:hover {
+    transform: scale(1.1);
   }
 }
