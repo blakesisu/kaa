@@ -11,10 +11,10 @@
           </p>
         </div>
         <p class="hm-project-block__more">More <?php include(__DIR__ ."/../svgs/chevron-right.svg"); ?></p>
-        <picture class="hm-project-block__picture">
-          <source srcset="<?php bloginfo('template_url'); ?>/images/home/grid-2/tower-grove-drive-sml.jpg" media="(max-width: 700px)">
-          <source srcset="<?php bloginfo('template_url'); ?>/images/home/grid-2/tower-grove-drive-lrg.jpg">
-          <img class="hm-project-block__img" srcset="<?php bloginfo('template_url'); ?>/images/home/grid-2/tower-grove-drive-lrg.jpg" alt="">
+        <picture class="hm-grid__picture hm-project-block__picture">
+          <source srcset="<?php bloginfo('template_url'); ?>/images/home/grid-2/project-sml.jpg" media="(max-width: 700px)">
+          <source srcset="<?php bloginfo('template_url'); ?>/images/home/grid-2/project-lrg.jpg">
+          <img class="hm-grid__img hm-project-block__img" srcset="<?php bloginfo('template_url'); ?>/images/home/grid-2/project-lrg.jpg" alt="">
         </picture>
       </a>
     </div>
