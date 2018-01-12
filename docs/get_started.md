@@ -8,6 +8,7 @@ How to configure everything for local development.
 1. [Vagrant](https://www.vagrantup.com/downloads.html) >= 1.8.5
 1. [vagrant-bindfs](https://github.com/gael-ian/vagrant-bindfs#installation) >= 0.3.1 (Windows users may skip this if not using vagrant-winnfsd for folder sync)
 1. [vagrant-hostmanager](https://github.com/smdahlen/vagrant-hostmanager#installation)
+1. [vagrant-triggers](https://github.com/emyl/vagrant-triggers)
 1. [Ansible](http://docs.ansible.com/ansible/intro_installation.html#latest-releases-via-pip) >= 2.4 ([except for Windows users](https://roots.io/trellis/docs/windows/))
 1. Ansible Galaxy roles: run `ansible-galaxy install -r requirements.yml` in your local trellis directory
 1. [WordPress Command Line](http://wp-cli.org/#installing)
