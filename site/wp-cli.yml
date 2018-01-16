@@ -8,3 +8,6 @@ path: web/wp
 
 @dev:
   ssh: vagrant@kaa.local/srv/www/kaa/current
+
+@stage:
+  ssh: web@165.227.56.50/srv/www/kaa/current
