@@ -29,15 +29,12 @@ if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
   wp "@$TO" db reset --yes &&
   wp "@$FROM" db export -> $FROM-backup.sql
   wp "@$TO" core install --url=$TOSITE --title=kaa --admin_user=admin --admin_email=blake@sisumedia.com --admin_password=guts02 &&
-  # wp "@$FROM" db export $FROM-backup.sql &&
   wp "@$TO" theme install dist --activate
 
   if $(wp "@$FROM" core is-installed --network); then
     wp "@$FROM" search-replace --url=$FROMSITE $FROMSITE $TOSITE --skip-columns=guid --network --export | wp "@$TO" db import -
-    # wp "@$FROM" search-replace --url=$FROMSITE $FROMSITE $TOSITE --skip-columns=guid --network --export | wp "@$TO" db import $FROM-backup.sql
   else
     wp "@$FROM" search-replace --url=$FROMSITE $FROMSITE $TOSITE --skip-columns=guid --export | wp "@$TO" db import -
-    # wp "@$FROM" search-replace --url=$FROMSITE $FROMSITE $TOSITE --skip-columns=guid --export | wp "@$TO" db import $FROM-backup.sql
   fi
 
 fi
