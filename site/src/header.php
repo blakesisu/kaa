@@ -13,7 +13,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
 
-  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/css/styles.css'; ?>">
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/css/styles.css?v=1.0.1'; ?>">
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.0-beta1/picturefill.min.js"></script>

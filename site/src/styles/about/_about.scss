@@ -1,0 +1,111 @@
+// about blocks
+@import "about/image-block";
+@import "about/text-block";
+@import "about/project-block";
+
+// about sections
+@import "about/hello-hero";
+@import "about/welcome";
+@import "about/values";
+@import "about/vision";
+@import "about/family";
+@import "about/ext-family";
+@import "about/connect";
+@import "about/goodbye-hero";
+// @import "about/bio-overlay";
+.about-bio-overlay {
+  display: none;
+}
+
+// no glob line-height for about page
+body.page-template-about {
+  line-height: 0;
+}
+
+// grid Styles
+// min-width since the mobile styles are so different it was easier to not have to override anything
+// ------------------------------------------------------------------------------------------------- //
+.item1 {
+  order: 1;
+}
+
+.item2 {
+  order: 2;
+}
+
+.about-asym-longleft-left {
+  width: 66.7%;
+  height: 100%;
+
+  @media (max-width: $about-single-column-break) {
+    // height: 91vw;
+    width: 100%;
+    // margin-bottom: 23%;
+  }
+}
+
+.about-asym-longleft-right {
+  width: 33.3%;
+  height: 100%;
+  @media (max-width: $about-single-column-break) {
+    width: 100%;
+    // height: 91vw;
+  }
+}
+
+.about-asym-longright-left {
+  width: 33.3%;
+  height: 100%;
+  @media (max-width: $about-single-column-break) {
+    width: 100%;
+  }
+}
+
+.about-asym-longright-right {
+  width: 66.7%;
+
+  @media (max-width: $about-single-column-break) {
+    width: 100%;
+  }
+}
+
+
+@media (min-width: $about-single-column-break + 1) {
+  // grid
+  .about-grid {
+    position: relative;
+  }
+
+  .about-inline {
+    @extend .about-grid;
+    display: inline-flex;
+  }
+
+  // content
+  .about-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .about-item {
+    position: relative;
+    overflow: hidden;
+  }
+  .about-item--full {
+    width: 100%;
+    height: 100%;
+  }
+
+  .about-horizontal {
+    // display: inherit;
+    // flex-direction: row;
+    flex: 1 1 0;
+    // height: auto;
+    // align-items: center;
+  }
+}

@@ -1,0 +1,246 @@
+// section class .about-family
+
+@media (min-width: $about-single-column-break + 1) {
+  .about-family-link {
+    // position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  // only show text overlay on non-touch devices
+  // ----------------------------------------- //
+  .no-touchevents {
+    // copy
+    .about-family-copy {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 5;
+      background-color: rgba(97, 89, 84, 0.0);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      // transition: background-color 0.2s $easeInOutQuad;
+    }
+    .about-family-bio {
+      display: flex;
+      border: 1px solid #fff;
+      width: 30%;
+      height: 13%;
+      align-self: center;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      // transform: translateY(8px);
+      // transition: opacity 0.2s $easeInOutQuad,
+      //             transform 0.2s $easeInOutQuad;
+      @media (max-width: $about-break) {
+        width: 135px;
+        height: 49px;
+      }
+    }
+    .about-family-bio-text {
+      font-family: $regular;
+      font-size: 24px;
+      font-size: px2vw(24, $designLarge);
+      text-transform: uppercase;
+      color: #fff;
+      letter-spacing: ps2em(10);
+      line-height: px2lh(24, 35);
+      @media (max-width: $about-break) {
+        font-size: 17px;
+      }
+    }
+
+    // copy:hover
+    .about-family-link:hover {
+      .about-family-copy {
+        background-color: rgba(190, 109, 62, 0.9);
+      }
+      .about-family-bio {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .about-family-background,
+      .about-family-description {
+        opacity: 0.1;
+        transition: opacity 0.2s $easeInOutQuad,
+      }
+    }
+
+    // more
+    .about-project-block__more {
+      display: none;
+    }
+  }
+}
+
+// containers
+.about-family-main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-flow: row wrap;
+  // justify-content: center;
+}
+
+.about-family-background {
+  background-color: rgba(97, 89, 84, 0.75);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  // color: #fff;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // text-align: center;
+}
+
+.about-family-person {
+  width: 33.333%;
+  position: relative;
+
+  @media (max-width: $about-single-column-break) {
+    width: 50%;
+  }
+
+  // first text box before bio pics
+  &:nth-child(1) {
+    display: flex;
+
+    .about-text-flex-column {
+      justify-content: center;
+    }
+
+    @media (max-width: $about-single-column-break) {
+      width: 100%;
+    }
+  }
+}
+
+.about-family-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 0 6.5% 14%;
+
+  @media (max-width: $about-single-column-break) {
+    padding: 0 0 7% 10%;
+  }
+}
+
+// texts
+.about-family-name {
+  font-family: $bold;
+  font-size: 30px;
+
+  font-size: px2vw(30, $designLarge);
+  letter-spacing: ps2em(300);
+  line-height: px2lh(30, 40);
+
+  text-transform: uppercase;
+  color: #fff;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  @media (max-width: $about-break) {
+    font-size: 20px;
+  }
+
+  @media (max-width: $about-single-column-break) {
+    font-size: 15px;
+    font-size: px2vw(15, $designSmall);
+    letter-spacing: ps2em(300);
+    line-height: px2lh(15, 22);
+    margin-bottom: 1%;
+  }
+}
+.about-family-title {
+  font-family: $regular;
+
+  font-size: 24px;
+  font-size: px2vw(24, $designLarge);
+  letter-spacing: ps2em(10);
+  line-height: px2lh(24, 35);
+  color: #fff;
+  text-align: left;
+
+  @media (max-width: $about-break) {
+    font-size: 17.06px;
+  }
+  @media (max-width: $about-single-column-break) {
+    font-size: px2vw(14, $designSmall);
+    letter-spacing: ps2em(10);
+    line-height: px2lh(14, 22);
+  }
+}
+
+.about-family-headline {
+  font-size: 50px;
+  font-size: px2vw(50, $designLarge);
+  letter-spacing: ps2em(320);
+  line-height: px2lh(50, 70);
+
+  font-family: $bold;
+  color: $lightBrown;
+  line-height: 1.4;
+  letter-spacing: .8vw;
+  overflow-wrap: break-word;
+  margin-bottom: 7%;
+
+  @media (max-width: $about-single-column-break) {
+    text-align: center;
+    font-size: px2vw(25, $designSmall);
+    letter-spacing: ps2em(300);
+    line-height: px2lh(25, 35);
+    padding: 0 3%;
+    margin-bottom: 4%;
+  }
+}
+
+.about-family__dash {
+  @include dash;
+
+  @media (max-width: $about-single-column-break) {
+    @include dash-small;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: $about-single-column-break) {
+  .about-family {
+    margin-top: 15%;
+  }
+  .about-family-copy {
+    display: none;
+  }
+}
+
+.about-family-header {
+  @include about-mini-header;
+  text-align: center;
+  margin-bottom: 4.8%;
+
+  @media (max-width: $about-break) {
+    font-size: 21.33px;
+  }
+
+  @media (max-width: $about-single-column-break) {
+    @include about-mini-header--small;
+    margin-bottom: 7.6%;
+  }
+}
