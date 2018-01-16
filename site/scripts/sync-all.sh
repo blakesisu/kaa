@@ -3,11 +3,11 @@
 DEVDIR="web/app/uploads/"
 DEVSITE="kaa.local"
 
-PRODDIR="root@138.197.199.171:/srv/www/kaa/current/web/app/uploads/"
+PRODDIR="web@138.197.199.171:/srv/www/kaa/current/web/app/uploads/"
 PRODSITE="138.197.199.171"
 
-# STAGDIR="web@staging.example.com:/srv/www/example.com/current/web/app/uploads/"
-# STAGSITE="staging.example.com"
+STAGDIR="web@165.227.56.50:/srv/www/example.com/current/web/app/uploads/"
+STAGSITE="165.227.56.50"
 
 FROM=$1
 TO=$2
