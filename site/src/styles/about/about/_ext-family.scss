@@ -1,0 +1,84 @@
+// section class .about-ext-family
+
+// containers
+.about-ext-family {
+  width: 100%;
+  padding: 4% 0;
+
+  @media (max-width: $about-single-column-break) {
+    padding: 8% 4.5% 6%;
+  }
+}
+
+.about-ext-family-members {
+  width: 100%;
+  columns: 2;
+
+  @media (min-width: $about-single-column-break + 1) {
+    padding: 0 0 0 8.5%;
+    columns: 4;
+  }
+}
+
+.about-ext-family-container {
+  break-inside: avoid;
+
+  @media (min-width: $about-single-column-break + 1) {
+    padding: 0 0 6%;
+  }
+  @media (max-width: $about-single-column-break) {
+    padding: 0 2% 14.5%;
+  }
+}
+
+// texts
+.about-ext-family-name {
+  font-family: $bold;
+  color: $lightBrown;
+
+  font-size: 18px;
+  font-size: px2vw(18, $designLarge);
+  letter-spacing: ps2em(300);
+  line-height: px2lh(18, 60);
+
+  @media (max-width: $about-break) {
+    font-size: 12.82px;
+    line-height: px2lh(12, 20);
+  }
+
+  @media (max-width: $about-single-column-break) {
+    margin-bottom: 6%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    font-size: 14px;
+    font-size: px2vw(14, $designSmall);
+    letter-spacing: ps2em(260);
+    line-height: px2lh(14, 22);
+  }
+}
+
+.about-ext-family-title {
+  font-family: $regular;
+  color: $brown;
+
+  font-size: 18px;
+  font-size: px2vw(18, $designLarge);
+  letter-spacing: ps2em(10);
+  line-height: px2lh(18, 20);
+
+  @media (max-width: $about-break) {
+    font-size: 12.82px;
+    line-height: px2lh(12, 20);
+  }
+
+  @media (max-width: $about-single-column-break) {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    font-size: 14px;
+    font-size: px2vw(14, $designSmall);
+    letter-spacing: ps2em(10);
+    line-height: px2lh(14, 22);
+  }
+}

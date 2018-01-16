@@ -1,0 +1,113 @@
+// headers
+// ----------------------------------------- //
+.proj-projects__header {
+  font-family: $regular;
+  font-size: 3.8vw;
+  text-transform: uppercase;
+  color: $lightBrown;
+  letter-spacing: ps2em(250);
+  text-align: center;
+  margin-bottom: 2vw;
+  line-height: 1;
+  padding: 0 20px;
+  @media (max-width: $single-column-break) {
+    font-size: px2vw(32.5, $designSmall);
+    text-align: center;
+    letter-spacing: .27em;
+    letter-spacing: ps2em(300);
+    line-height: px2lh(32.5, 42.5);
+    margin-bottom: 3.8vw;
+    padding: 0 10px;
+  }
+}
+
+.proj-projects__dash {
+  @include dash;
+  display: block;
+  margin: 0 auto;
+
+  @media (max-width: $single-column-break) {
+    @include dash-small;
+    display: block;
+  }
+}
+
+.proj-project__description {
+  padding: 0 0 3% 4%;
+  height: 6vw;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: $text-break) {
+    height: 12vw;
+  }
+  @media (max-width: $single-column-break) {
+    height: 19vw;
+  }
+}
+
+.proj-text-mini__header {
+  font-family: $medium;
+  color: $lightBrown;
+
+  font-size: 22px;
+  font-size: px2vw(22, $designLarge);
+  letter-spacing: ps2em(300);
+  line-height: px2lh(22, 30);
+
+  @media (max-width: $mid-break) {
+    font-size: 15.652px;
+    letter-spacing: 4.69561px;
+    line-height: px2lh(15, 25);
+  }
+
+  @media (max-width: $single-column-break) {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    font-size: 14px;
+    font-size: px2vw(14, $designSmall);
+    letter-spacing: ps2em(260);
+    line-height: px2lh(14, 22);
+  }
+}
+
+// projects
+// ----------------------------------------- //
+.proj__dual-projects, .proj__tri-projects {
+  display: flex;
+
+  @media (max-width: $single-column-break) {
+    flex-direction: column;
+  }
+}
+.proj-projects__project {
+}
+.proj-project__dual {
+  flex: 1 1 50%;
+  position: relative;
+}
+.proj-project__tri {
+  flex: 1 1 33.333%;
+  position: relative;
+}
+
+// image
+// ----------------------------------------- //
+.proj-project__picture {
+  display: block;
+  line-height: 0;
+  overflow: hidden;
+}
+.proj-project__img {
+  width: 100%;
+  transition: 0.5s $easeOutQuad;
+
+  .proj-project__dual &:hover {
+    transform: scale(1.08);
+  }
+
+  .proj-project__tri &:hover {
+    transform: scale(1.1);
+  }
+}

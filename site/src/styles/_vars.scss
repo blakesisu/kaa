@@ -50,14 +50,25 @@ $designLarge: 1920;
 $designMedium: 1366;
 $designSmall: 375;
 
+// Page screen sizes
+$single-column-break: 700px;
+$mid-break: 1367px;
+$text-break: 1010px;
+
 // Home Page
 // ------------------------------------------------------------------------------------------------- //
 $hm-grid-single-column-break: 700px;
 $hm-grid-break: 1367px;
-$hm-grid-text-break: 1010px;
+$hm-grid-text-break: 1040px;
 
 // Details Page
 // ------------------------------------------------------------------------------------------------- //
 $details-grid-single-column-break: 700px;
 $details-grid-break: 1367px;
 $details-grid-text-break: 1010px;
+
+// About Page
+// ------------------------------------------------------------------------------------------------- //
+$about-single-column-break: 700px;
+$about-break: 1367px;
+$about-text-break: 1010px;
