@@ -9,10 +9,17 @@ PRODSITE="138.197.199.171"
 STAGDIR="web@165.227.56.50:/srv/www/example.com/current/web/app/uploads/"
 STAGSITE="165.227.56.50"
 
-FROM=$1
-TO=$2
+if [ $# -eq 0 ]; then
+  read -r -p "Which database do you want to reset? [dev/stage/prod] " DB_RESP
+  read -r -p "Which database do you want to sync from? [dev/stage/prod] " SYNC_RESP
+  TO=$DB_RESP
+  FROM=$SYNC_RESP
+else
+  TO=$2
+  FROM=$1
+fi
 
-case "$1-$2" in
+case "$TO-$FROM" in
   dev-prod) DIR="up";  FROMSITE=$DEVSITE;  FROMDIR=$DEVDIR;  TOSITE=$PRODSITE; TODIR=$PRODDIR; ;;
   dev-stage)    DIR="up"   FROMSITE=$DEVSITE;  FROMDIR=$DEVDIR;  TOSITE=$STAGSITE; TODIR=$STAGDIR; ;;
   prod-dev) DIR="down" FROMSITE=$PRODSITE; FROMDIR=$PRODDIR; TOSITE=$DEVSITE;  TODIR=$DEVDIR; ;;
@@ -23,7 +30,7 @@ esac
 read -r -p "Reset the $TO database and sync $DIR from $FROM? [y/N] " response
 read -r -p "Sync the uploads folder? [y/N] " uploads
 
-cd ../ &&
+# cd ../ &&
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
   wp "@$TO" db export $TO-backup.sql &&
   wp "@$TO" db reset --yes &&
