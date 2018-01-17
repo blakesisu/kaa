@@ -1,10 +1,14 @@
 path: web/wp
 
 @prod:
+  # kaampy-prod-test
   # root
   # ssh: root@138.197.199.171/srv/www/kaa/current
   # user: web
-  ssh: web@138.197.199.171/srv/www/kaa/current
+  # ssh: web@138.197.199.171/srv/www/kaa/current
+
+  # ubuntu-kaa-prod-v2
+  ssh: web@104.236.139.224/srv/www/kaa/current
 
 @dev:
   ssh: vagrant@kaa.local/srv/www/kaa/current

@@ -5,13 +5,13 @@
 wordpress_sites:
   kaa:
     site_hosts:
-      - canonical: 138.197.199.171
+      - canonical: 104.236.139.224
         # redirects:
         #   - www.example.com
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:blakesisu/kaa.git # replace with your Git repo URL
     repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
-    branch: develop-dummy_production
+    branch: develop-for_consideration
     multisite:
       enabled: false
     ssl:

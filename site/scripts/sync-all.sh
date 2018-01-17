@@ -4,7 +4,8 @@ DEVDIR="web/app/uploads/"
 DEVSITE="kaa.local"
 
 PRODDIR="web@138.197.199.171:/srv/www/kaa/current/web/app/uploads/"
-PRODSITE="138.197.199.171"
+# PRODSITE="138.197.199.171"
+PRODSITE="104.236.139.224"
 
 STAGDIR="web@165.227.56.50:/srv/www/example.com/current/web/app/uploads/"
 STAGSITE="165.227.56.50"
