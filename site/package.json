@@ -6,7 +6,7 @@
   "scripts": {
     "build": "rm -rf ./web/app/themes/dist/* && cross-env NODE_ENV=production gulp build",
     "dev": "rm -rf ./web/app/themes/dist/* && yarn build-db && gulp dev",
-    "build-db": "bash ./scripts/sync-all.sh",
+    "build-db": "bash ./scripts/backup-or-sync.sh",
     "build-all": "yarn build-db && yarn build",
     "lint": "eslint src"
   },

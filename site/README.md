@@ -58,7 +58,7 @@ Use this repo as a starting point for your next custom WordPress theme.
 | `yarn dev` | - Build WP database, then begin Transpile CSS and Javascript and move static files to the `site/web/app/themes/dist` folder |
 | `yarn build` | Use Gulp to build static output to the `site/web/app/themes/dist` folder |
 | `yarn lint` | Lint code using ESLint |
-| `yarn build-db` | Build WordPress database and sync |
+| `yarn build-db` | Build WordPress database from backup or sync from existing |
 | `yarn build-all` | Build WordPress database, sync, then build static output with gulp |
 
 ## Project Structure

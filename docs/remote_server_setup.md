@@ -18,6 +18,25 @@ Confirm that you can SSH into the server
 ssh root@<server-ip-address>
 ```
 
+
+**Revised:** There seems to be an authentication issue if developer's ssh-agent isn't started and aware of developer's key. The agent by default doesn't start on boot, so if coming from a reboot, cold start, or just starting the project, do the following ([reference](https://stackoverflow.com/questions/17846529/could-not-open-a-connection-to-your-authentication-agent)):
+
+```
+ssh-add -l
+<if you see message 'Could not open a connection to your authentication agent.' continue with directions.>
+
+eval $(ssh-agent)
+
+<if MacOS/OSX>
+ssh-add -K path/to/.ssh/id_rsa
+
+<Linux>
+ssh-add -k path/to/.ssh/id_rsa
+
+<enter passphrase if prompted>
+```
+
+
 **Note:** If you get an error about `Incorrect sudo password` you will need to add  an `admin` user ([reference](https://discourse.roots.io/t/sudoer-password-to-set-up-remote-server/5995)).
 
 ```
