@@ -2,8 +2,6 @@ path: web/wp
 
 @prod:
   # kaampy-prod-test
-  # root
-  # ssh: root@138.197.199.171/srv/www/kaa/current
   # user: web
   # ssh: web@138.197.199.171/srv/www/kaa/current
 
