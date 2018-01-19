@@ -37,7 +37,7 @@ ssh-add -k path/to/.ssh/id_rsa
 ```
 
 
-**Note:** If you get an error about `Incorrect sudo password` you will need to add  an `admin` user ([reference](https://discourse.roots.io/t/sudoer-password-to-set-up-remote-server/5995)).
+**Note:** ( NB: This step shouldn't be necessary if prior code snippet worked correctly. ) If you get an error about `Incorrect sudo password` you will need to add  an `admin` user ([reference](https://discourse.roots.io/t/sudoer-password-to-set-up-remote-server/5995)).
 
 ```
 # adduser admin --ingroup sudo
