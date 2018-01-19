@@ -8,16 +8,8 @@ DEVSITE="kaa.local"
 PRODDIR="web@104.236.139.224:/srv/www/kaa/current/web/app/uploads/"
 PRODSITE="104.236.139.224"
 
-STAGDIR="web@165.227.56.50:/srv/www/example.com/current/web/app/uploads/"
+STAGDIR="web@165.227.56.50:/srv/www/kaa/current/web/app/uploads/"
 STAGSITE="165.227.56.50"
-
-# Backup check
-read -r -p "Build from backup database? [y/N] " BACKUP_RESP
-
-if [[ "$BACKUP_RESP" =~ ^([yY][eE][sS]|[yY])$ ]]; then
-  source ./scripts/wp-start-backup.sh
-  exit 0
-fi
 
 if [ $# -eq 0 ]; then
   read -r -p "Which database do you want to reset? [dev/stage/prod] " DB_RESP
