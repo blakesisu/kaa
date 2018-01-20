@@ -1,9 +1,9 @@
 <section class="about-grid about-family">
 
     <!-- Text Block -->
-    <div class="about-header-container">
-      <h1 class="about-family-header">OUR FAMILY</h1>
-    </div>
+    <!-- <div class="about&#45;header&#45;container"> -->
+    <!--   <h1 class="about&#45;family&#45;header">OUR FAMILY</h1> -->
+    <!-- </div> -->
 
     <!-- Image/Text Block -->
     <div class="about-family-main">
@@ -92,7 +92,7 @@
           <div class="about-family-background"></div>
           <div class="about-family-description">
             <h3 class="about-family-name">STEVE STRAUGHAN</h3>
-            <p class="about-family-title">Design Coordinator</p>
+            <p class="about-family-title">Senior Associate</p>
           </div>
         </div>
       </div>
@@ -111,7 +111,7 @@
           <div class="about-family-background"></div>
           <div class="about-family-description">
             <h3 class="about-family-name">LISA COPELAND</h3>
-            <p class="about-family-title">CFO</p>
+            <p class="about-family-title">Senior Associate</p>
           </div>
         </div>
       </div>
@@ -130,7 +130,7 @@
           <div class="about-family-background"></div>
           <div class="about-family-description">
             <h3 class="about-family-name">MICHAEL MCGOWAN</h3>
-            <p class="about-family-title">Landscape Studio Director</p>
+            <p class="about-family-title">Associate</p>
           </div>
         </div>
       </div>
@@ -149,29 +149,37 @@
           <div class="about-family-background"></div>
           <div class="about-family-description">
             <h3 class="about-family-name">MEGHAN BECKMANN</h3>
-            <p class="about-family-title">Project Manager</p>
+            <p class="about-family-title">Associate</p>
           </div>
         </div>
       </div>
+
       <div class="about-family-person">
-        <div class="about-family-link">
-          <div class="about-family-copy">
-            <div class="about-family-bio" data-popup-open="paolillo">
-              <p class="about-family-bio-text">VIEW BIO</p>
-            </div>
-          </div>
-          <picture class="about-image-block__picture">
-            <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-todd-sm.jpg" media="(max-width: 700px)">
-            <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-todd-lg.jpg">
-            <img class="about-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/family/family-leader-todd-lg.jpg" alt="">
-          </picture>
-          <div class="about-family-background"></div>
-          <div class="about-family-description">
-            <h3 class="about-family-name">TODD PAOLILLO</h3>
-            <p class="about-family-title">Sr. Project Manager</p>
-          </div>
-        </div>
+        <!-- <div class="about&#45;text&#45;flex&#45;column"> -->
+        <!--   <h2 class="about&#45;family&#45;headline">ELEVATING DESIGN THROUGH LEADERSHIP</h2> -->
+        <!--   <div class="about&#45;family__dash"></div> -->
+        <!-- </div> -->
       </div>
+
+      <!-- <div class="about&#45;family&#45;person"> -->
+      <!--   <div class="about&#45;family&#45;link"> -->
+      <!--     <div class="about&#45;family&#45;copy"> -->
+      <!--       <div class="about&#45;family&#45;bio" data&#45;popup&#45;open="paolillo"> -->
+      <!--         <p class="about&#45;family&#45;bio&#45;text">VIEW BIO</p> -->
+      <!--       </div> -->
+      <!--     </div> -->
+      <!--     <picture class="about&#45;image&#45;block__picture"> -->
+      <!--       <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family&#45;leader&#45;todd&#45;sm.jpg" media="(max&#45;width: 700px)"> -->
+      <!--       <source srcset="<?php bloginfo('template_url'); ?>/images/about/family/family&#45;leader&#45;todd&#45;lg.jpg"> -->
+      <!--       <img class="about&#45;image&#45;block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/family/family&#45;leader&#45;todd&#45;lg.jpg" alt=""> -->
+      <!--     </picture> -->
+      <!--     <div class="about&#45;family&#45;background"></div> -->
+      <!--     <div class="about&#45;family&#45;description"> -->
+      <!--       <h3 class="about&#45;family&#45;name">TODD PAOLILLO</h3> -->
+      <!--       <p class="about&#45;family&#45;title">Sr. Project Manager</p> -->
+      <!--     </div> -->
+      <!--   </div> -->
+      <!-- </div> -->
 
     </div>
 </section>

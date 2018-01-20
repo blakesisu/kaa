@@ -1,4 +1,8 @@
-<section class="about-inline about-ext-family">
+<section class="about-grid about-ext-family">
+  <div class="about-header-container">
+    <h1 class="about-family-header">OUR FAMILY</h1>
+  </div>
+
   <ul class="about-ext-family-members">
     <li class="about-ext-family-container">
       <h3 class="about-ext-family-name">BRADLEY COOPER</h3>
@@ -9,12 +13,20 @@
       <span class="about-ext-family-title">Office Manager</span>
     </li>
     <li class="about-ext-family-container">
-      <h3 class="about-ext-family-name">WALTER GARCIA</h3>
-      <span class="about-ext-family-title">Project Coordinator</span>
+      <h3 class="about-ext-family-name">TODD PAOLILLO</h3>
+      <span class="about-ext-family-title">Sr. Project Manager</span>
     </li>
+    <!-- <li class="about&#45;ext&#45;family&#45;container"> -->
+    <!--   <h3 class="about&#45;ext&#45;family&#45;name">WALTER GARCIA</h3> -->
+    <!--   <span class="about&#45;ext&#45;family&#45;title">Project Coordinator</span> -->
+    <!-- </li> -->
     <li class="about-ext-family-container">
       <h3 class="about-ext-family-name">PHILIP GROCHER</h3>
       <span class="about-ext-family-title">Project Manager</span>
+    </li>
+    <li class="about-ext-family-container">
+      <h3 class="about-ext-family-name">MONICA HEIMAN</h3>
+      <span class="about-ext-family-title">Project Coordinator</span>
     </li>
     <li class="about-ext-family-container">
       <h3 class="about-ext-family-name">AGNIESZKA HOPKINS</h3>
