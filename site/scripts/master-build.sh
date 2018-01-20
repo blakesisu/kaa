@@ -10,7 +10,7 @@ if [[ "$BACKUP_RESP" =~ ^([yY][eE][sS]|[yY])$ ]]; then
 fi
 
 read -r -p "Sync from another database? [y/N] (Default: no)" SYNC_RESP
-SYNC_RESP=${BACKUP_RESP:-no}
+SYNC_RESP=${SYNC_RESP:-no}
 
 if [[ "$SYNC_RESP" =~ ^([yY][eE][sS]|[yY])$ ]]; then
   source ./scripts/sync-machines.sh
