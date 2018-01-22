@@ -3,11 +3,11 @@
     <!-- Image Block -->
     <div class="press-column-item">
       <div class="press-img-wrapper">
-        <!-- <picture class="press&#45;picture"> -->
-        <!--   <source srcset="<?php bloginfo('template_url'); ?>/images/press/mobile/Book.png" media="(max&#45;width: 700px)"> -->
-        <!--   <source srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/Book.jpg"> -->
-        <!--   <img class="press&#45;book&#45;img" srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/Book.jpg" alt=""> -->
-        <!-- </picture> -->
+        <picture class="press-picture">
+          <source srcset="<?php bloginfo('template_url'); ?>/images/press/mobile/Book-sm.jpg" media="(max-width: 700px)">
+          <source srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/Book.jpg">
+          <img class="press-book-img" srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/Book.jpg" alt="">
+        </picture>
       </div>
     </div>
 
