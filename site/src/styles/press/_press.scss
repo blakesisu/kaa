@@ -1,0 +1,104 @@
+// press blocks
+@import "press/image-block";
+@import "press/text-block";
+@import "press/project-block";
+
+// press sections
+@import "press/section1";
+
+.press-bio-overlay {
+  display: none;
+}
+
+// no glob line-height for press page
+body.page-template-press {
+  line-height: 0;
+}
+
+// grid Styles
+// min-width since the mobile styles are so different it was easier to not have to override anything
+// ------------------------------------------------------------------------------------------------- //
+.item1 {
+  order: 1;
+}
+
+.item2 {
+  order: 2;
+}
+
+.press-asym-longleft-left {
+  width: 66.7%;
+  height: 100%;
+
+  @media (max-width: $press-single-column-break) {
+    // height: 91vw;
+    width: 100%;
+    // margin-bottom: 23%;
+  }
+}
+
+.press-asym-longleft-right {
+  width: 33.3%;
+  height: 100%;
+  @media (max-width: $press-single-column-break) {
+    width: 100%;
+    // height: 91vw;
+  }
+}
+
+.press-asym-longright-left {
+  width: 33.3%;
+  height: 100%;
+  @media (max-width: $press-single-column-break) {
+    width: 100%;
+  }
+}
+
+.press-asym-longright-right {
+  width: 66.7%;
+
+  @media (max-width: $press-single-column-break) {
+    width: 100%;
+  }
+}
+
+
+@media (min-width: $press-single-column-break + 1) {
+  // grid
+  .press-grid {
+    position: relative;
+  }
+
+  .press-inline {
+    @extend .press-grid;
+    display: inline-flex;
+  }
+
+  // content
+  .press-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .press-item {
+    position: relative;
+    overflow: hidden;
+  }
+  .press-item--full {
+    width: 100%;
+    height: 100%;
+  }
+
+  .press-horizontal {
+    // display: inherit;
+    // flex-direction: row;
+    flex: 1 1 0;
+    // height: auto;
+    // align-items: center;
+  }
+}

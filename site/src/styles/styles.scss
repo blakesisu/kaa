@@ -32,6 +32,10 @@
 // projects
 @import 'projects/projects';
 
+// press
+@import 'press/mixins';
+@import 'press/press';
+
 html,
 body {
   height: 100%;
