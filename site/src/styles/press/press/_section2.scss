@@ -1,0 +1,38 @@
+// .press-article-description {
+//   height: 6vw;
+//   display: flex;
+//   align-items: center;
+// }
+
+.press-trip-container {
+  display: flex;
+
+  @media (max-width: $single-column-break) {
+    flex-direction: column;
+  }
+}
+
+.press-trip-item {
+  flex: 1 1 33.333%;
+  position: relative;
+}
+
+// image
+// ----------------------------------------- //
+.press-picture-section2 {
+  display: block;
+  line-height: 0;
+  overflow: hidden;
+}
+.press-img-section2 {
+  width: 100%;
+  // transition: 0.5s $easeOutQuad;
+  //
+  // .proj-project__dual &:hover {
+  //   transform: scale(1.08);
+  // }
+  //
+  // .proj-project__tri &:hover {
+  //   transform: scale(1.1);
+  // }
+}

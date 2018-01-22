@@ -1,7 +1,6 @@
 // section class .press-section1
 
 .press-flex-container {
-  height: 60vh;
   display: flex;
   width: 100%;
 
@@ -14,7 +13,7 @@
   position: relative;
   flex: 0 0 50%;
   width: 50%;
-  overflow: hidden;
+  // overflow: hidden;
 
   @media (max-width: $press-single-column-break) {
     flex: 0 0 100%;
@@ -47,26 +46,23 @@
 }
 
 .press-img-wrapper {
-  background: url(../images/press/desktop/Book.jpg) no-repeat center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  transform: scale(1.45);
-  display: flex;
-  justify-content: center;
+  position: relative;
   width: 100%;
-  height: 100%;
-  overflow: hidden;
 
-  // .press-book-img {
-  //   max-width: 100%;
-  //   height: 100%;
-  //   transform: scale(1.3);
-  //
-  //   @media (max-width: $about-single-column-break) {
-  //     width: 100%;
-  //     height: 25vh;
-  //   }
-  // }
+  picture {
+    width: 100%;
+    height: auto;
+  }
+
+  .press-book-img {
+    width: 100%;
+    height: auto;
+
+    @media (max-width: $about-single-column-break) {
+      width: 100%;
+      height: 25vh;
+    }
+  }
 }
 
 .press-text-wrapper {
