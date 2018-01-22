@@ -41,9 +41,9 @@ Check out [this blog post](https://roots.io/using-composer-with-wordpress/) for 
 
 ### How to add a plugin
 
-To add a plugin, add it under the `require` directive in `site/composer.json` or use `composer require <namespace>/<packagename>` from the command line inside the `site` directory. If it's from WordPress Packagist then the namespace is always `wpackagist-plugin`.
+To add a plugin, add it under the `require` directive in `site/composer.json` or use `composer require <namespace>/<packagename>:<version>` from the command line inside the `site` directory. If it's from WordPress Packagist then the namespace is always `wpackagist-plugin`. The version is not always required.
 
-Example: `"wpackagist-plugin/akismet": "dev-trunk"`
+Example: `"wpackagist-plugin/akismet": "dev-trunk"` in the `composer.json` or `composer require wpackagist-plugin/akismet:dev-trunk` from the command line
 
 Whenever you add a new plugin or update the WP version, run `composer install && composer update` from inside the `site` directory to install your new packages.
 
