@@ -1,0 +1,13 @@
+@mixin about-mini-header {
+  font-family: $bold;
+  font-size: px2vw(30, $designLarge);
+  text-transform: uppercase;
+  color: #615954;
+  letter-spacing: ps2em(300);
+  line-height: 1.2;
+}
+
+@mixin about-mini-header--small {
+  font-size: 5vw;
+  letter-spacing: .35em;
+}

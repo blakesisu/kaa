@@ -16,3 +16,9 @@ $window.on('resize', throttle(() => {
     height: $window.height()
   });
 }, 300));
+
+// Publish the first time the page loads
+channel.publish('window.resize', {
+  width: $window.width(),
+  height: $window.height()
+});

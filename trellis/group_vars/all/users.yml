@@ -9,12 +9,14 @@ users:
     keys:
       - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
       - https://github.com/stevenwaller.keys
+      - https://github.com/blakesisu.keys
   - name: "{{ admin_user }}"
     groups:
       - sudo
     keys:
       - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
       - https://github.com/stevenwaller.keys
+      - https://github.com/blakesisu.keys
 
 web_user: web
 web_group: www-data

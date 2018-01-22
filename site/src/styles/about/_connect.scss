@@ -1,0 +1,155 @@
+.about-connect {
+
+}
+
+.about-connect__section {
+  display: flex;
+
+  @media (max-width: $about-single-column-break) {
+    flex-direction: column;
+
+    .about-connect__image-column {
+      order: 1;
+    }
+    .about-connect__text-column {
+      order: 2;
+    }
+  }
+}
+
+// image column
+// ----------------------------------------- //
+.about-connect__image-column {
+  position: relative;
+  flex: 1 1 auto;
+  overflow: hidden;
+
+  @media (max-width: $about-single-column-break) {
+    width: 100%;
+    flex-basis: auto;
+  }
+}
+.about-connect__picture {
+  display: block;
+  padding-top: 42.220484754%;
+
+  @media (max-width: $about-single-column-break) {
+    padding: 0;
+  }
+}
+.about-connect__img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+
+  @media (max-width: $about-single-column-break) {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+}
+
+// text-column
+// ----------------------------------------- //
+.about-connect__text-column {
+  flex: 0 0 33.333%;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  // make text block fixed width
+  @media (max-width: 1060px) {
+    flex-basis: 352px;
+  }
+
+  @media (max-width: $about-single-column-break) {
+    flex-basis: auto;
+  }
+}
+.about-connect__text-wrapper {
+  padding: 10% 16%;
+
+  @media (max-width: $about-single-column-break) {
+    text-align: center;
+    padding: 9% 4%;
+  }
+}
+
+// header
+.about-connect__header {
+  @include about-mini-header;
+  margin-bottom: 14%;
+
+  @media (max-width: $about-break) {
+    font-size: 21.34px;
+  }
+
+  @media (max-width: $about-single-column-break) {
+    @include about-mini-header--small;
+    margin-bottom: 7%;
+  }
+}
+
+// details
+.about-connect__wysiwyg {
+  font-size: 18px;
+  font-size: px2vw(18, $designLarge);
+  letter-spacing: ps2em(10);
+  line-height: px2lh(18, 35);
+
+  @media (max-width: $about-break) {
+    font-size: 12.83px;
+  }
+
+  @media (max-width: $about-single-column-break) {
+    display: flex;
+    flex-flow: column;
+    padding: 0% 3%;
+    font-size: 15px;
+    font-size: px2vw(15, $designSmall);
+    letter-spacing: ps2em(10);
+    line-height: px2lh(15, 25);
+  }
+
+  a {
+    color: $orange;
+  }
+}
+
+// message
+.about-connect__message {
+  font-family: $regular;
+  color: #ab9e95;
+
+  font-size: px2vw(30, $designLarge);
+  letter-spacing: ps2em(0 );
+  line-height: px2lh(30, 51);
+
+  margin-bottom: 8%;
+
+  @media (max-width: $about-break) {
+    font-size: 14px;
+  }
+
+  @media (max-width: $about-single-column-break) {
+    font-size: px2vw(20, $designSmall);
+    // letter-spacing: ps2em(10);
+    line-height: px2lh(20, 30);
+  }
+}
+
+// button
+.about-connect__button {
+  @include button-lrg;
+
+  @media (max-width: $about-break) {
+    @include button;
+  }
+
+  @media (max-width: $about-single-column-break) {
+    @include button--small;
+  }
+}

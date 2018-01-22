@@ -31,6 +31,16 @@ Vagrant.configure('2') do |config|
   # https://github.com/mitchellh/vagrant/issues/1673#issuecomment-28288042
   config.ssh.shell = %{bash -c 'BASH_ENV=/etc/profile exec bash'}
 
+  # after :up trigger
+  if Vagrant.has_plugin? 'vagrant-triggers'
+    config.trigger.after :up do
+      info "Building dist folder..."
+      run "bash ./bin/threadSite.sh"
+    end
+  else
+    fail_with_message "vagrant-triggers missing, please install the plugin with this command:\nvagrant plugin install vagrant-triggers"
+  end
+
   # Required for NFS to work
   if vconfig.fetch('vagrant_ip') == 'dhcp'
     config.vm.network :private_network, type: 'dhcp', hostsupdater: 'skip'
@@ -80,12 +90,26 @@ Vagrant.configure('2') do |config|
     if !Vagrant.has_plugin? 'vagrant-bindfs'
       fail_with_message "vagrant-bindfs missing, please install the plugin with this command:\nvagrant plugin install vagrant-bindfs"
     else
+
       trellis_config.wordpress_sites.each_pair do |name, site|
-        config.vm.synced_folder local_site_path(site), nfs_path(name), type: 'nfs'
+        if Vagrant::Util::Platform.linux? then
+          # no nfs linux
+          config.vm.synced_folder local_site_path(site), nfs_path(name)
+          # nfs4 version
+          # config.vm.synced_folder local_site_path(site), nfs_path(name), type: 'nfs', nfs_version: 4, nfs_udp: false
+        else
+          config.vm.synced_folder local_site_path(site), nfs_path(name), type: 'nfs'
+        end
         config.bindfs.bind_folder nfs_path(name), remote_site_path(name, site), u: 'vagrant', g: 'www-data', o: 'nonempty'
       end
 
-      config.vm.synced_folder ANSIBLE_PATH, '/ansible-nfs', type: 'nfs'
+      if Vagrant::Util::Platform.linux? then
+        # config.vm.synced_folder ANSIBLE_PATH, '/ansible-nfs', type: 'nfs', nfs_version: 4, nfs_udp: false
+        config.vm.synced_folder ANSIBLE_PATH, '/ansible-nfs'
+      else
+        config.vm.synced_folder ANSIBLE_PATH, '/ansible-nfs', type: 'nfs'
+      end
+
       config.bindfs.bind_folder '/ansible-nfs', ANSIBLE_PATH_ON_VM, o: 'nonempty', p: '0644,a+D'
       config.bindfs.bind_folder bin_path, bin_path, perms: '0755'
     end

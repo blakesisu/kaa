@@ -101,7 +101,12 @@ export default {
       'jquery',
       'jquery.easing',
       'modernizr',
-      'postal'
+      'postal',
+      'ScrollMagic',
+      'TweenMax',
+      'jquery.ScrollMagic',
+      'animation.gsap',
+      'debug.addIndicators'
     ]
   },
 
@@ -142,9 +147,36 @@ export default {
       postal: isProd ?
         path.resolve('node_modules', 'postal/lib/postal.lodash.min.js') :
         path.resolve('node_modules', 'postal/lib/postal.lodash.js'),
+      ScrollMagic: isProd ?
+        path.resolve('node_modules', 'scrollmagic/scrollmagic/minified/ScrollMagic.min.js') :
+        path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'),
+      'animation.gsap': isProd ?
+        path.resolve('node_modules', 'scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js') :
+        path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'),
+      'debug.addIndicators': isProd ?
+        path.resolve('node_modules', 'scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js') :
+        path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js'),
+      'jquery.ScrollMagic': isProd ?
+        path.resolve('node_modules', 'scrollmagic/scrollmagic/minified/plugins/jquery.ScrollMagic.min.js') :
+        path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/jquery.ScrollMagic.js'),
+      TweenLite: isProd ?
+        path.resolve('node_modules', 'gsap/src/minified/TweenLite.min.js') :
+        path.resolve('node_modules', 'gsap/src/uncompressed/TweenLite.js'),
+      TweenMax: isProd ?
+        path.resolve('node_modules', 'gsap/src/minified/TweenMax.min.js') :
+        path.resolve('node_modules', 'gsap/src/uncompressed/TweenMax.js'),
+      TimelineLite: isProd ?
+        path.resolve('node_modules', 'gsap/src/minified/TimelineLite.min.js') :
+        path.resolve('node_modules', 'gsap/src/uncompressed/TimelineLite.js'),
+      TimelineMax: isProd ?
+        path.resolve('node_modules', 'gsap/src/minified/TimelineMax.min.js') :
+        path.resolve('node_modules', 'gsap/src/uncompressed/TimelineMax.js'),
+      CSSRulePlugin: isProd ?
+        path.resolve('node_modules', 'gsap/src/minified/plugins/CSSRulePlugin.min.js') :
+        path.resolve('node_modules', 'gsap/src/uncompressed/plugins/CSSRulePlugin.js'),
       Easing: isProd ?
         path.resolve('node_modules', 'gsap/src/minified/easing/EasePack.min.js') :
-        path.resolve('node_modules', 'gsap/src/uncompressed/easing/EasePack.js')
+        path.resolve('node_modules', 'gsap/src/uncompressed/easing/EasePack.js'),
     }
   },
 

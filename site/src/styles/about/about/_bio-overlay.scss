@@ -1,0 +1,203 @@
+// section class .about-bio-overlay
+
+/* Outer */
+.about-bio-overlay {
+  width:100%;
+  height:100%;
+  display:none;
+  position:fixed;
+  top:0px;
+  left:0px;
+  background:rgba(0,0,0,0.75);
+  z-index: 2000;
+  // overflow-y: auto;
+}
+
+/* Inner */
+.popup-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (max-width: $about-single-column-break) {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+}
+
+.about-bio-overlay__left {
+  @media (max-width: $about-single-column-break) {
+    height: 90vw;
+    order: 2;
+  }
+}
+
+.about-bio-header-section {
+  width: 50%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .about-bio-title,
+  .about-bio-header {
+    margin-bottom: 1.3vw;
+  }
+
+
+  @media (min-width: $about-single-column-break + 1) {
+    padding: 0 7%;
+  }
+
+  @media (max-width: $about-single-column-break) {
+    justify-content: flex-end;
+    text-align: center;
+    width: 100%;
+    height: 20vh;
+    order: 1;
+    .about-bio-title,
+    .about-bio-header {
+      margin-bottom: calc(22.5px - 2vw);
+    }
+  }
+}
+
+.about-bio-header {
+  @extend .about-value-header;
+  margin: 0;
+  font-size: px2vw(67, $designLarge);
+
+  // @media (max-width: $about-break) {
+  // }
+  @media (max-width: $about-single-column-break) {
+    font-size: px2vw(32, $designSmall);
+  }
+}
+
+.about-bio-title {
+  @extend .about-join-title;
+  margin: 0;
+  @media (max-width: $about-break) {
+    font-size: 21.36px;
+  }
+  @media (max-width: $about-single-column-break) {
+    font-size: px2vw(14, $designSmall);
+  }
+}
+
+.about-bio-dash {
+  @extend .about-text-block__dash;
+  margin: 0;
+
+  @media (max-width: $about-single-column-break) {
+    align-self: center;
+  }
+}
+
+.about-bio-overlay__right {
+  width: 50%;
+  height: 70%;
+  @media (max-width: $about-single-column-break) {
+    width: 100%;
+    height: 55vh;
+    order: 3;
+  }
+}
+
+.about-bio-header-section,
+.about-bio-overlay__left,
+.about-bio-overlay__right {
+  background:#fff;
+}
+
+
+/* Close Button */
+.popup-close {
+  position:absolute;
+  top:20px;
+  right:20px;
+}
+
+.gkirkpatrick {
+  background: url(../images/about/bio/GKirkpatrick.JPG) no-repeat center center;
+}
+.dtran {
+  background: url(../images/about/bio/DTran.JPG) no-repeat center center;
+}
+.pbaker {
+  background: url(../images/about/bio/PBaker.JPG) no-repeat center center;
+}
+.sstraughan {
+  background: url(../images/about/bio/SStraughan.JPG) no-repeat center center;
+}
+.lcopeland {
+  background: url(../images/about/bio/LCopeland.JPG) no-repeat center center;
+}
+.mmcgowan {
+  background: url(../images/about/bio/MMcgowan.JPG) no-repeat center center;
+}
+.mbeckmann {
+  background: url(../images/about/bio/MBeckmann.JPG) no-repeat center center;
+}
+.tpaolillo {
+  background: url(../images/about/bio/TPaolillo.JPG) no-repeat center center;
+}
+
+.background-left {
+  background-position: 67% 50%;
+  @media (max-width: $about-single-column-break) {
+    background-position: 100% 50%;
+  }
+}
+.background-right {
+  background-position: 30% 50%;
+  @media (max-width: $about-single-column-break) {
+    background-position: 0% 50%;
+  }
+}
+.background-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 100%;
+
+  @media (max-width: $about-single-column-break) {
+    width: 100%;
+    height: 25vh;
+  }
+}
+
+.about-bio-content {
+  overflow-y: auto;
+}
+.about-bio-bio {
+  @extend .about-value-content;
+  @media (max-width: $about-break) {
+    font-size: 12.82px;
+  }
+}
+.about-bio-text-column {
+  @extend .about-value-text-column;
+  padding: 0% 14%;
+  height: 90%;
+  overflow: auto;
+
+  @media (max-width: $about-single-column-break) {
+    padding: 5%;
+    height: 100%;
+  }
+}
+.about-bio-articles-header {
+  @extend .about-ext-family-name;
+  @media (max-width: $about-break) {
+    font-size: 12.82px;
+  }
+}
+.about-bio-article-title {
+  @extend .about-value-content;
+  color: $orange;
+  @media (max-width: $about-break) {
+    font-size: 12.82px;
+  }
+}

@@ -1,0 +1,202 @@
+@media (min-width: $about-single-column-break + 1) {
+  .about-project-block {
+
+  }
+
+  // link
+  .about-project-block__link {
+    position: relative;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+    // height: 100%;
+  }
+
+  // only show text overlay on non-touch devices
+  // ----------------------------------------- //
+  .no-touchevents {
+    // copy
+    .about-project-block__copy {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 5;
+      background-color: rgba(97, 89, 84, 0.0);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      transition: background-color 0.3s $easeInOutQuad;
+    }
+    .about-project-block__header {
+      font-family: $bold;
+      font-size: 21px;
+      text-transform: uppercase;
+      color: #fff;
+      letter-spacing: ps2em(315);
+      margin-bottom: 25px;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.3s $easeInOutQuad,
+                  transform 0.3s $easeInOutQuad;
+    }
+    .about-project-block__cta {
+      opacity: 0;
+      transition: opacity 0.3s $easeInOutQuad;
+    }
+    .about-project-block__cta-btn {
+      @include button;
+    }
+
+    // copy:hover
+    .about-project-block__link:hover {
+      .about-project-block__copy {
+        background-color: rgba(255, 168, 56, 0.9);
+      }
+      .about-project-block__header {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .about-project-block__cta {
+        opacity: 1;
+      }
+    }
+
+    // more
+    .about-project-block__more {
+      display: none;
+    }
+  }
+
+  // show "more" button on touch devices
+  // ----------------------------------------- //
+  .touchevents {
+    // copy
+    .about-project-block__copy {
+      display: none;
+    }
+
+    // more
+    .about-project-block__more {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 5;
+      font-family: $medium;
+      color: #fff;
+      font-size: 12.5px;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      background-color: rgba(97, 89, 84, 0.9);
+      padding: 17px 20px 17px;
+      svg {
+        fill: #fff;
+        margin-left: 3px;
+      }
+    }
+  }
+
+  // picture
+  .about-project-block__picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    line-height: 0;
+    font-size: 0;
+  }
+  .about-project-block__img {
+    width: 100%;
+  }
+}
+
+// make text scale up on larger screens based on viewport
+// ------------------------------------------------------------------------------------------------- //
+@media (min-width: $about-break) {
+  // only show text overlay on non-touch devices
+  // ----------------------------------------- //
+  .no-touchevents {
+    // copy
+    .about-project-block__header {
+      font-size: 1.54vw;
+      margin-bottom: 2.75%;
+    }
+    .about-project-block__cta-btn {
+      @include button-lrg;
+    }
+  }
+
+  // show "more" button on touch devices
+  // ----------------------------------------- //
+  .touchevents {
+    // copy
+    .about-project-block__copy {
+      display: none;
+    }
+
+    // more
+    .about-project-block__more {
+      font-size: 0.915vw;
+      padding: 1.87% 2.2%;
+      svg {
+        margin-left: 0.25em;
+        width: 0.38em;
+        height: auto;
+      }
+    }
+  }
+}
+
+// single column
+// ------------------------------------------------------------------------------------------------- //
+@media (max-width: $about-single-column-break) {
+  .about-project-block {
+    position: relative;
+    line-height: 0;
+    font-size: 0;
+  }
+
+  // link
+  .about-project-block__link {
+
+  }
+
+  // copy
+  .about-project-block__copy {
+    display: none;
+  }
+
+  // more
+  .about-project-block__more {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+    font-family: $medium;
+    color: #fff;
+    font-size: 12.5px;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    background-color: rgba(97, 89, 84, 0.9);
+    padding: 17px 20px 17px;
+    svg {
+      fill: #fff;
+      margin-left: 3px;
+    }
+  }
+
+  // picture
+  .about-project-block__picture {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+  .about-project-block__img {
+    width: 100%;
+  }
+}
