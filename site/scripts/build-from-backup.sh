@@ -1,11 +1,5 @@
 #!/bin/bash
 
-initWP() {
-  echo "Installing core and theme..."
-  wp "@$MACHINE" db reset --yes
-  wp "@$MACHINE" core install --url=$SITE --title=$TITLE --admin_user=$USER --admin_email=$EMAIL --admin_password=$PASSWORD
-  wp "@$MACHINE" theme install $THEME --activate
-}
 
 echo "Defaults are mapped for development machine"
 
@@ -17,6 +11,7 @@ if $(wp "@$MACHINE" core is-installed); then
 else
   echo "wp core not installed"
   read -r -p "Sync from another machine? (default: no): " SYNC
+  SYNC=${SYNC:-no}
 
   if [[ "$SYNC" =~ ^([yY][eE][sS]|[yY])$ ]]; then
     source ./scripts/sync-machines.sh
@@ -32,7 +27,7 @@ read -r -p "Enter password (default: guts02): " PASSWORD
 read -r -p "Enter theme (default: dist): " THEME
 read -r -p "Enter SQL backup file (default: ./dev-backup.sql): " SQL_BACKUP
 
-SYNC=${SYNC:-no}
+RESP=${RESP:-yes}
 MACHINE=${MACHINE:-dev}
 USER=${USER:-admin}
 EMAIL=${EMAIL:-unclesisu@sisumedia.com}
@@ -43,6 +38,14 @@ TITLE=${TITLE:-kaa}
 SQL_BACKUP=${SQL_BACKUP:-./$MACHINE-backup.sql}
 NOW=`date +"%m_%d_%Y"`
 
+# install routine
+initWP() {
+  echo "Installing core and theme..."
+  wp "@$MACHINE" db reset --yes
+  wp "@$MACHINE" core install --url=$SITE --title=$TITLE --admin_user=$USER --admin_email=$EMAIL --admin_password=$PASSWORD
+  wp "@$MACHINE" theme install $THEME --activate
+}
+
 # Create timestamp backup
 if [[ "$RESP" =~ ^([yY][eE][sS]|[yY])$ ]]; then
   wp "@$MACHINE" db export $MACHINE-backup_$NOW.sql
@@ -50,7 +53,7 @@ if [[ "$RESP" =~ ^([yY][eE][sS]|[yY])$ ]]; then
 fi
 
 # REMOTE
-if [ $MACHINE="prod" ] || [ $MACHINE="stag" ]; then
+if [ $MACHINE = "prod" ] || [ $MACHINE = "stag" ]; then
   echo "check sql backup $SQL_BACKUP"
   ssh "web@$SITE" "test -e /srv/www/kaa/current/$SQL_BACKUP"
   if [ $? -eq 0 ]; then
