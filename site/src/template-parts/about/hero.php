@@ -8,9 +8,9 @@
     </picture>
 
     <!-- Text Block -->
-    <div class="about-project-hero__block">
-      <h1 class="about-project-hero__text">One of a kind homes,<br>one of a kind team.</h1>
-    </div>
+    <!-- <div class="about&#45;project&#45;hero__block"> -->
+    <!--   <h1 class="about&#45;project&#45;hero__text">One of a kind homes,<br>one of a kind team.</h1> -->
+    <!-- </div> -->
   </div>
 
 </section>
