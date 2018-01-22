@@ -1,0 +1,10 @@
+// section class .about-vision
+
+.about-vision {
+  @media(max-width: $about-single-column-break) {
+    background-color: rgba(97, 89, 84, 0.75);
+    & > .about-text-single-blurb {
+      color: #fff;
+    }
+  }
+}
