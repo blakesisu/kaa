@@ -6,7 +6,7 @@
  */
 get_header(); ?>
 
-<?php include("template-parts/press/section1.php"); ?>
-<?php include("template-parts/press/section2.php"); ?>
+<?php include("template-parts/press/feature.php"); ?>
+<?php include("template-parts/press/news.php"); ?>
 
 <?php get_footer(); ?>
