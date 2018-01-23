@@ -1,0 +1,48 @@
+.press-media {
+  height: 30vw;
+  width: 100%;
+  background: linear-gradient(180deg, $brown 50%, #ffffff 50%);
+}
+
+.press-media-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+  height: 20%;
+  align-items: center;
+}
+
+.press-media-headline {
+  font-family: $bold;
+  width: 30%;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.press-media-dropdown {
+  font-family: $regular;
+  width: 20%;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.press-media-nav-arrows {
+  width: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.press-media-mags {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.press-media-mag-item {
+  display: flex;
+  flex-direction: column;
+}
