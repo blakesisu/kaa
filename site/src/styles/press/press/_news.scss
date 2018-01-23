@@ -6,12 +6,22 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  & > * {
+    color: #000000;
+    text-decoration: none;
+    &:hover {
+      color: $orange;
+    }
+  }
 }
 
 .press-news-next {
   svg {
     height: auto;
     width: 11px;
+    &:hover {
+      fill: $orange;
+    }
   }
 }
 
@@ -20,18 +30,21 @@
   height: auto;
 }
 .press-news-article-date {
-  font-family: $regular;
+  color: $brown;
+  font-family: $demiBold;
   font-size: px2vw(15, $designLarge);
   line-height: px2lh(15, 40);
   letter-spacing: ps2em(3);
 }
 .press-news-article-title {
   font-family: $demiBold;
+  color: $lightBrown;
   font-size: px2vw(24, $designLarge);
   line-height: px2lh(24, 39);
   letter-spacing: ps2em(0);
 }
 .press-news-article-content {
+  color: #000000;
   font-family: $regular;
   font-size: px2vw(18, $designLarge);
   line-height: px2lh(18, 35);
