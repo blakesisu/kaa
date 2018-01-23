@@ -1,4 +1,4 @@
-<section class="press-section1">
+<section class="press-section press-feature">
   <div class="press-flex-container">
     <!-- Image Block -->
     <div class="press-column-item">
