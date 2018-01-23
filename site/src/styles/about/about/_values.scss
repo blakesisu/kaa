@@ -110,6 +110,7 @@
   color: $lightBrown;
   overflow-wrap: break-word;
   margin-bottom: 5%;
+  text-transform: uppercase;
 
   @media (max-width: $about-break) {
     margin-bottom: 3%;
@@ -150,6 +151,10 @@
   color: $brown;
   overflow-wrap: break-word;
   width: 85%;
+
+  p {
+
+  }
 
   @media (max-width: $about-break) {
     font-size: 12.82px;

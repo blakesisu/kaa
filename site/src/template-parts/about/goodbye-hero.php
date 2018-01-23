@@ -1,11 +1,10 @@
 <section class="about-grid about-goodbye-hero">
-  <!-- Image Block (Background image) -->
   <div class="about-hero">
+    <?php $image = get_field('about_outro_image'); ?>
     <picture class="about-image-block__picture">
-      <source srcset="<?php bloginfo('template_url'); ?>/images/about/goodbye-hero/fork-sm.jpg" media="(max-width: 700px)">
-      <source srcset="<?php bloginfo('template_url'); ?>/images/about/goodbye-hero/fork-lg.jpg">
-      <img class="about-image-block__img" srcset="<?php bloginfo('template_url'); ?>/images/about/goodbye-hero/fork-lg.jpg" alt="">
+      <source srcset="<?php echo $image['mobile']; ?>" media="(max-width: 700px)">
+      <source srcset="<?php echo $image['desktop']; ?>">
+      <img class="about-image-block__img" srcset="<?php echo $image['desktop']; ?>" alt="">
     </picture>
   </div>
-
 </section>

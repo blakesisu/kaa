@@ -3,18 +3,20 @@
   <section class="about-connect__section">
 
     <div class='about-connect__image-column'>
+      <?php $joinImage = get_field('about_join_image'); ?>
       <picture class="about-connect__picture">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/about/join/join-us-sm.jpg" media="(max-width: 700px)">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/about/join/join-us-lg.jpg">
-        <img class="about-connect__img" srcset="<?php bloginfo('template_url'); ?>/images/about/join/join-us-lg.jpg" alt="">
+        <source srcset="<?php echo $joinImage['mobile']; ?>" media="(max-width: 700px)">
+        <source srcset="<?php echo $joinImage['desktop']; ?>">
+        <img class="about-connect__img" srcset="<?php echo $joinImage['desktop']; ?>" alt="">
       </picture>
     </div>
 
     <div class="about-connect__text-column">
       <div class="about-connect__text-wrapper">
-        <h1 class="about-connect__header">JOIN US</h1>
-        <h2 class="about-connect__message">Nuture your craft and be inspired. Help us design the California dream.</h2>
-        <button class="about-connect__button">SEE CAREER OPPORTUNITIES</button>
+        <h1 class="about-connect__header"><?php the_field('about_join_header'); ?></h1>
+        <h2 class="about-connect__message"><?php the_field('about_join_copy'); ?></h2>
+        <?php $joinBtn = get_field('about_join_button'); ?>
+        <a class="about-connect__button" href="<?php echo $joinBtn['link']; ?>"><?php echo $joinBtn['label']; ?></a>
       </div>
     </div>
 
@@ -25,29 +27,19 @@
 
     <div class="about-connect__text-column">
       <div class="about-connect__text-wrapper">
-        <h1 class="about-connect__header">CONTACT US</h1>
+        <h1 class="about-connect__header"><?php the_field('about_contact_header'); ?></h1>
         <div class="about-connect__wysiwyg">
-          <ul>
-            <li>310.821.1400</li>
-            <li>info@kaadesigngroup.com</li>
-          </ul>
-          <br>
-          <ul>
-            <li>KAA Design</li>
-            <li>4201 Redwood Avenue</li>
-            <li>Los Angeles, CA 90066</li>
-          </ul>
-          <br>
-          <a href="#"><span>Get Directions</span></a>
+          <?php the_field('about_contact_copy'); ?>
         </div>
       </div>
     </div>
 
     <div class="about-connect__image-column">
+      <?php $contactImage = get_field('about_contact_image'); ?>
       <picture class="about-connect__picture">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/about/contact/map-sm.jpg" media="(max-width: 700px)">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/about/contact/map-lg.jpg">
-        <img class="about-connect__img" srcset="<?php bloginfo('template_url'); ?>/images/about/contact/map-lg.jpg" alt="">
+        <source srcset="<?php echo $contactImage['mobile']; ?>" media="(max-width: 700px)">
+        <source srcset="<?php echo $contactImage['desktop']; ?>">
+        <img class="about-connect__img" srcset="<?php echo $contactImage['desktop']; ?>" alt="">
       </picture>
     </div>
 
