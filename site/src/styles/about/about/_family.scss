@@ -25,36 +25,27 @@
       flex-direction: column;
       justify-content: center;
       text-align: center;
-      // transition: background-color 0.2s $easeInOutQuad;
     }
     .about-family-bio {
       display: flex;
       border: 1px solid #fff;
-      // width: 30%;
       width: 24%;
       height: 11%;
       align-self: center;
       align-items: center;
       justify-content: center;
       opacity: 0;
-      // transform: translateY(8px);
-      // transition: opacity 0.2s $easeInOutQuad,
-      //             transform 0.2s $easeInOutQuad;
       @media (max-width: $about-break) {
         width: 135px;
         height: 49px;
       }
     }
     .about-family-bio-text {
-      // font-family: $regular;
-      // font-size: 24px;
-      // font-size: px2vw(24, $designLarge);
       font-family: $medium;
       font-size: 16px;
       font-size: px2vw(16, $designLarge);
       text-transform: uppercase;
       color: #fff;
-      // letter-spacing: ps2em(10);
       letter-spacing: ps2em(200);
       line-height: px2lh(24, 35);
       @media (max-width: $about-break) {
@@ -103,11 +94,6 @@
   width: 100%;
   height: 100%;
   z-index: 5;
-  // color: #fff;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // text-align: center;
 }
 
 .about-family-person {
@@ -130,6 +116,18 @@
       width: 100%;
     }
   }
+}
+
+.about-family-link {
+  display: block;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.3s ease,
+              transform 0.3s ease;
+}
+.about-family-link.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .about-family-description {

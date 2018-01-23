@@ -1,203 +1,373 @@
-// section class .about-bio-overlay
-
-/* Outer */
-.about-bio-overlay {
-  width:100%;
-  height:100%;
-  display:none;
-  position:fixed;
-  top:0px;
-  left:0px;
-  background:rgba(0,0,0,0.75);
-  z-index: 2000;
-  // overflow-y: auto;
-}
-
-/* Inner */
-.popup-inner {
+.ab-bio {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  background-color: $white;
+  z-index: 9999;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  line-height: 1.2;
+  visibility: hidden;
 
-  @media (max-width: $about-single-column-break) {
-    flex-wrap: nowrap;
-    justify-content: center;
+  &.is-open {
+    visibility: visible;
+  }
+
+  // Mobile
+  @media (max-width: 700px) {
+    display: block;
+    overflow: auto;
   }
 }
 
-.about-bio-overlay__left {
-  @media (max-width: $about-single-column-break) {
-    height: 90vw;
-    order: 2;
-  }
-}
-
-.about-bio-header-section {
-  width: 50%;
-  height: 30%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  .about-bio-title,
-  .about-bio-header {
-    margin-bottom: 1.3vw;
+// Close btn
+// ----------------------------------------- //
+.ab-bio__close-btn {
+  position: absolute;
+  top: px2vw(40, $designLarge);
+  right: px2vw(45, $designLarge);
+  svg {
+    width: px2vw(19, $designLarge);
+    height: px2vw(19, $designLarge);
+    fill: $brown;
   }
 
-
-  @media (min-width: $about-single-column-break + 1) {
-    padding: 0 7%;
+  // Fixed size on large screens
+  @media (min-width: 1920px) {
+    top: 40px;
+    right: 45px;
+    svg {
+      width: 19px;
+      height: 19px;
+    }
   }
 
-  @media (max-width: $about-single-column-break) {
-    justify-content: flex-end;
-    text-align: center;
-    width: 100%;
-    height: 20vh;
-    order: 1;
-    .about-bio-title,
-    .about-bio-header {
-      margin-bottom: calc(22.5px - 2vw);
+  // Fixed size on medium screens
+  @media (max-width: 1366px) {
+    top: 28.458px;
+    right: 32.016px;
+    svg {
+      width: 13.516px;
+      height: 13.516px;
+    }
+  }
+
+  // Mobile
+  @media (max-width: 700px) {
+    top: 20px;
+    right: 20px;
+    svg {
+      width: 22px;
+      height: 22px;
     }
   }
 }
 
-.about-bio-header {
-  @extend .about-value-header;
-  margin: 0;
-  font-size: px2vw(67, $designLarge);
+// Header
+// ----------------------------------------- //
+.ab-bio__header {
 
-  // @media (max-width: $about-break) {
-  // }
-  @media (max-width: $about-single-column-break) {
-    font-size: px2vw(32, $designSmall);
+}
+.ab-bio__header--mobile {
+  display: none;
+}
+
+// Mobile
+@media (max-width: 700px) {
+  .ab-bio__header--mobile {
+    display: block;
+    text-align: center;
+    padding-top: 60px;
+  }
+  .ab-bio__header--desktop {
+    display: none;
   }
 }
 
-.about-bio-title {
-  @extend .about-join-title;
-  margin: 0;
-  @media (max-width: $about-break) {
-    font-size: 21.36px;
+.ab-bio__name {
+  text-transform: uppercase;
+  font-family: $bold;
+  color: $lightBrown;
+  font-size: px2vw(70, $designLarge);
+  letter-spacing: ps2em(290);
+  margin-left: -0.4%;
+  margin-bottom: 1%;
+
+  // Fixed size on large screens
+  @media (min-width: 1920px) {
+    font-size: 70px;
+    margin-left: -2.500px;
+    margin-bottom: 6.250px;
   }
-  @media (max-width: $about-single-column-break) {
-    font-size: px2vw(14, $designSmall);
+
+  // Fixed size on medium screens
+  @media (max-width: 1366px) {
+    font-size: 49.802px;
+    margin-left: -1.781px;
+    margin-bottom: 4.453px;
   }
-}
 
-.about-bio-dash {
-  @extend .about-text-block__dash;
-  margin: 0;
-
-  @media (max-width: $about-single-column-break) {
-    align-self: center;
-  }
-}
-
-.about-bio-overlay__right {
-  width: 50%;
-  height: 70%;
-  @media (max-width: $about-single-column-break) {
-    width: 100%;
-    height: 55vh;
-    order: 3;
-  }
-}
-
-.about-bio-header-section,
-.about-bio-overlay__left,
-.about-bio-overlay__right {
-  background:#fff;
-}
-
-
-/* Close Button */
-.popup-close {
-  position:absolute;
-  top:20px;
-  right:20px;
-}
-
-.gkirkpatrick {
-  background: url(../images/about/bio/GKirkpatrick.JPG) no-repeat center center;
-}
-.dtran {
-  background: url(../images/about/bio/DTran.JPG) no-repeat center center;
-}
-.pbaker {
-  background: url(../images/about/bio/PBaker.JPG) no-repeat center center;
-}
-.sstraughan {
-  background: url(../images/about/bio/SStraughan.JPG) no-repeat center center;
-}
-.lcopeland {
-  background: url(../images/about/bio/LCopeland.JPG) no-repeat center center;
-}
-.mmcgowan {
-  background: url(../images/about/bio/MMcgowan.JPG) no-repeat center center;
-}
-.mbeckmann {
-  background: url(../images/about/bio/MBeckmann.JPG) no-repeat center center;
-}
-.tpaolillo {
-  background: url(../images/about/bio/TPaolillo.JPG) no-repeat center center;
-}
-
-.background-left {
-  background-position: 67% 50%;
-  @media (max-width: $about-single-column-break) {
-    background-position: 100% 50%;
+  // Mobile
+  @media (max-width: 700px) {
+    font-size: 32.5px;
+    margin-left: 0;
+    margin-bottom: 7px;
+    text-align: center;
   }
 }
-.background-right {
-  background-position: 30% 50%;
-  @media (max-width: $about-single-column-break) {
-    background-position: 0% 50%;
+.ab-bio__title {
+  color: $brown;
+  text-transform: uppercase;
+  font-family: $bold;
+  font-size: px2vw(30, $designLarge);
+  letter-spacing: ps2em(300);
+  margin-bottom: px2vw(30, $designLarge);
+
+  // Fixed size on large screens
+  @media (min-width: 1920px) {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  // Fixed size on medium screens
+  @media (max-width: 1366px) {
+    font-size: 21.3438px;
+    margin-bottom: 21.344px;
+  }
+
+  // Mobile
+  @media (max-width: 700px) {
+    font-size: 15px;
+    margin-bottom: 15px;
+    text-align: center;
   }
 }
-.background-img {
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 50%;
+.ab-bio__dash {
+  @include dash;
+  margin-bottom: px2vw(40, $designLarge);
+
+  // Fixed size on large screens
+  @media (min-width: 1920px) {
+    margin-bottom: 40px;
+  }
+
+  // Fixed size on medium screens
+  @media (max-width: 1366px) {
+    margin-bottom: 28.458px;
+  }
+
+  // Mobile
+  @media (max-width: 700px) {
+    @include dash-small;
+    margin-bottom: 0;
+    line-height: 0;
+  }
+}
+
+// Image
+// ----------------------------------------- //
+.ab-bio__image-container {
+  flex: 0 0 50%;
+  overflow: hidden;
+  position: relative;
+
+  // Mobile
+  @media (max-width: 700px) {
+    flex: none;
+    margin-top: -5px;
+  }
+}
+.ab-bio__picture {
+
+}
+.ab-bio__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
+  object-fit: cover;
 
-  @media (max-width: $about-single-column-break) {
+  // Mobile
+  @media (max-width: 700px) {
+    object-fit: none;
+    position: static;
     width: 100%;
-    height: 25vh;
+    height: auto;
   }
 }
 
-.about-bio-content {
-  overflow-y: auto;
-}
-.about-bio-bio {
-  @extend .about-value-content;
-  @media (max-width: $about-break) {
-    font-size: 12.82px;
+// Text
+// ----------------------------------------- //
+.ab-bio__text-container {
+  flex: 0 0 50%;
+  padding: 4% 10.2% 4% 7.2%;
+  display: flex;
+  flex-direction: column;
+
+  // Mobile
+  @media (max-width: 700px) {
+    display: block;
+    padding: 28px 20px;
   }
 }
-.about-bio-text-column {
-  @extend .about-value-text-column;
-  padding: 0% 14%;
-  height: 90%;
+.ab-bio__scroller {
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.ab-bio__copy {
+  font-size: px2vw(18, $designLarge);
+  line-height: px2lh(18, 35);
+  letter-spacing: ps2em(10);
+  margin-bottom: 8%;
 
-  @media (max-width: $about-single-column-break) {
-    padding: 5%;
-    height: 100%;
+  p {
+    margin-bottom: 5.5%;
+  }
+
+  // Fixed size on large screens
+  @media (min-width: 1920px) {
+    font-size: 18px;
+    margin-bottom: 50.063px;
+    p {
+      margin-bottom: 34.422px;
+    }
+  }
+
+  // Fixed size on medium screens
+  @media (max-width: 1366px) {
+    font-size: 12.8062px;
+    margin-bottom: 35.625px;
+    p {
+      margin-bottom: 24.484px;
+    }
+  }
+
+  // Mobile
+  @media (max-width: 700px) {
+    font-size: 17px;
+    line-height: px2lh(17, 29.6);
+    letter-spacing: 0;
   }
 }
-.about-bio-articles-header {
-  @extend .about-ext-family-name;
-  @media (max-width: $about-break) {
-    font-size: 12.82px;
+
+// Articles
+// ----------------------------------------- //
+.ab-bio__articles {
+
+}
+.ab-bio__articles-header {
+  text-transform: uppercase;
+  color: $lightBrown;
+  font-family: $bold;
+  font-size: px2vw(18, $designLarge);
+  margin-bottom: px2vw(16, $designLarge);
+  letter-spacing: ps2em(300);
+
+  // Fixed size on large screens
+  @media (min-width: 1920px) {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  // Fixed size on medium screens
+  @media (max-width: 1366px) {
+    font-size: 12.8062px;
+    margin-bottom: 11.383px;
+  }
+
+  // Mobile
+  @media (max-width: 700px) {
+    font-size: 14px;
+    margin-bottom: 18px;
+    letter-spacing: ps2em(260);
   }
 }
-.about-bio-article-title {
-  @extend .about-value-content;
-  color: $orange;
-  @media (max-width: $about-break) {
-    font-size: 12.82px;
+
+// Article
+// ----------------------------------------- //
+.ab-bio__article {
+  margin-bottom: px2vw(20, $designLarge);
+
+  // Fixed size on large screens
+  @media (min-width: 1920px) {
+    margin-bottom: 20px;
+  }
+
+  // Fixed size on medium screens
+  @media (max-width: 1366px) {
+    margin-bottom: 14.229px;
+  }
+}
+
+// Header
+.ab-bio__article-header {
+  font-size: px2vw(18, $designLarge);
+  line-height: px2lh(18, 35);
+  letter-spacing: ps2em(10);
+  margin-bottom: px2vw(2, $designLarge);
+  a {
+    color: $orange;
+  }
+  svg {
+    fill: $orange;
+    width: px2vw(7, $designLarge);
+    height: auto;
+    margin-left: px2vw(14, $designLarge);
+  }
+
+  // Fixed size on large screens
+  @media (min-width: 1920px) {
+    font-size: 18px;
+    margin-bottom: 2px;
+    svg {
+      width: 7px;
+      margin-left: 14px;
+    }
+  }
+
+  // Fixed size on medium screens
+  @media (max-width: 1366px) {
+    font-size: 12.8062px;
+    margin-bottom: 1.423px;
+    svg {
+      width: 4.969px;
+      margin-left: 9.960px;
+    }
+  }
+
+  // Fixed size on medium screens
+  @media (max-width: 700px) {
+    font-size: 17px;
+    line-height: px2lh(17, 29.6);
+    letter-spacing: 0;
+    margin-bottom: 1.423px;
+    svg {
+      width: 5px;
+      margin-left: 9.960px;
+    }
+  }
+}
+.ab-bio__article-description {
+  font-size: px2vw(18, $designLarge);
+  line-height: px2lh(18, 35);
+  letter-spacing: ps2em(10);
+
+  // Fixed size on large screens
+  @media (min-width: 1920px) {
+    font-size: 18px;
+  }
+
+  // Fixed size on medium screens
+  @media (max-width: 1366px) {
+    font-size: 12.8062px;
+  }
+
+  // Mobile
+  @media (max-width: 700px) {
+    font-size: 17px;
+    line-height: px2lh(17, 29.6);
+    letter-spacing: 0;
   }
 }

@@ -16,9 +16,9 @@
           ?>
 
           <div class="about-family-person">
-            <div class="about-family-link">
+            <a class="about-family-link" href="#<?php the_ID(); ?>">
               <div class="about-family-copy">
-                <div class="about-family-bio" data-popup-open="kirkpatrick">
+                <div class="about-family-bio">
                   <p class="about-family-bio-text">View Bio</p>
                 </div>
               </div>
@@ -33,7 +33,7 @@
                 <h3 class="about-family-name"><?php the_title(); ?></h3>
                 <p class="about-family-title"><?php the_field('leader_title'); ?></p>
               </div>
-            </div>
+            </a>
           </div>
           <?php wp_reset_postdata(); ?>
         <?php endwhile; ?>
