@@ -1,39 +1,54 @@
-// section class .about-ext-family
+// section class .press-awards
+
+.press-awards-header {
+  @include about-mini-header;
+  text-align: center;
+  margin-bottom: 4.8%;
+
+  @media (max-width: $about-break) {
+    font-size: 21.33px;
+  }
+
+  @media (max-width: $about-single-column-break) {
+    @include about-mini-header--small;
+    margin-bottom: 7.6%;
+  }
+}
 
 // containers
-.about-ext-family {
+.press-awards {
   width: 100%;
   // padding: 4% 0;
   padding: 3% 0;
 
-  @media (max-width: $about-single-column-break) {
+  @media (max-width: $press-single-column-break) {
     padding: 8% 4.5% 6%;
   }
 }
 
-.about-ext-family-members {
+.press-awards-members {
   width: 100%;
   columns: 2;
 
-  @media (min-width: $about-single-column-break + 1) {
+  @media (min-width: $press-single-column-break + 1) {
     padding: 0 0 0 8.5%;
     columns: 4;
   }
 }
 
-.about-ext-family-container {
+.press-awards-container {
   break-inside: avoid;
 
-  @media (min-width: $about-single-column-break + 1) {
+  @media (min-width: $press-single-column-break + 1) {
     padding: 0 0 6%;
   }
-  @media (max-width: $about-single-column-break) {
+  @media (max-width: $press-single-column-break) {
     padding: 0 2% 14.5%;
   }
 }
 
 // texts
-.about-ext-family-name {
+.press-awards-name {
   font-family: $bold;
   color: $lightBrown;
 
@@ -42,12 +57,12 @@
   letter-spacing: ps2em(300);
   line-height: px2lh(18, 60);
 
-  @media (max-width: $about-break) {
+  @media (max-width: $press-break) {
     font-size: 12.82px;
     line-height: px2lh(12, 20);
   }
 
-  @media (max-width: $about-single-column-break) {
+  @media (max-width: $press-single-column-break) {
     margin-bottom: 6%;
     overflow-wrap: break-word;
     word-wrap: break-word;
@@ -59,7 +74,7 @@
   }
 }
 
-.about-ext-family-title {
+.press-awards-title {
   font-family: $regular;
   color: $brown;
 
@@ -68,12 +83,12 @@
   letter-spacing: ps2em(10);
   line-height: px2lh(18, 20);
 
-  @media (max-width: $about-break) {
+  @media (max-width: $press-break) {
     font-size: 12.82px;
     line-height: px2lh(12, 20);
   }
 
-  @media (max-width: $about-single-column-break) {
+  @media (max-width: $press-single-column-break) {
     overflow-wrap: break-word;
     word-wrap: break-word;
 
