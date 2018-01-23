@@ -100,6 +100,14 @@
   letter-spacing: ps2em(10);
   line-height: px2lh(18, 35);
 
+  ul,
+  ol,
+  p {
+    &:not(:last-child) {
+      margin-bottom: 6%;
+    }
+  }
+
   @media (max-width: $about-break) {
     font-size: 12.83px;
   }
