@@ -24,10 +24,10 @@
         <source srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/digs-mag.jpg">
         <img class="press-img" srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/digs-mag.jpg" alt="exhibit">
       </picture>
-      <div class="press-article-description">
-        <h3 class="press-article-date">Dec 4, 2017</h3>
-        <h3 class="press-article-title">Ipsum Stuff</h3>
-        <p class="press-article-content">About that ipsum stuff...</p>
+      <div class="press-media-article">
+        <h3 class="press-media-article-date">Dec 4, 2017</h3>
+        <h3 class="press-media-article-title">Ipsum Stuff</h3>
+        <p class="press-media-article-content">About that ipsum stuff...</p>
       </div>
       <div class="press-media-actions">
         <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> PDF</div>
@@ -41,10 +41,10 @@
         <source srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/living-mag.jpg">
         <img class="press-img" srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/exhibit.jpg" alt="exhibit">
       </picture>
-      <div class="press-article-description">
-        <h3 class="press-article-date">Dec 4, 2017</h3>
-        <h3 class="press-article-title">Ipsum Stuff</h3>
-        <p class="press-article-content">About that ipsum stuff...</p>
+      <div class="press-media-article">
+        <h3 class="press-media-article-date">Dec 4, 2017</h3>
+        <h3 class="press-media-article-title">Ipsum Stuff</h3>
+        <p class="press-media-article-content">About that ipsum stuff...</p>
       </div>
       <div class="press-media-actions">
         <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> PDF</div>
@@ -58,10 +58,10 @@
         <source srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/coastal-mag.jpg">
         <img class="press-img" srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/coastal-mag.jpg" alt="exhibit">
       </picture>
-      <div class="press-article-description">
-        <h3 class="press-article-date">Dec 4, 2017</h3>
-        <h3 class="press-article-title">Ipsum Stuff</h3>
-        <p class="press-article-content">About that ipsum stuff...</p>
+      <div class="press-media-article">
+        <h3 class="press-media-article-date">Dec 4, 2017</h3>
+        <h3 class="press-media-article-title">Ipsum Stuff</h3>
+        <p class="press-media-article-content">About that ipsum stuff...</p>
       </div>
       <div class="press-media-actions">
         <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> PDF</div>
@@ -75,10 +75,10 @@
         <source srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/ocean-mag.jpg">
         <img class="press-img" srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/ocean-mag.jpg" alt="exhibit">
       </picture>
-      <div class="press-article-description">
-        <h3 class="press-article-date">Dec 4, 2017</h3>
-        <h3 class="press-article-title">Ipsum Stuff</h3>
-        <p class="press-article-content">About that ipsum stuff...</p>
+      <div class="press-media-article">
+        <h3 class="press-media-article-date">Dec 4, 2017</h3>
+        <h3 class="press-media-article-title">Ipsum Stuff</h3>
+        <p class="press-media-article-content">About that ipsum stuff...</p>
       </div>
       <div class="press-media-actions">
         <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> PDF</div>
@@ -92,10 +92,10 @@
         <source srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/luxe-mag.jpg">
         <img class="press-img" srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/luxe-mag.jpg" alt="exhibit">
       </picture>
-      <div class="press-article-description">
-        <h3 class="press-article-date">Dec 4, 2017</h3>
-        <h3 class="press-article-title">Ipsum Stuff</h3>
-        <p class="press-article-content">About that ipsum stuff...</p>
+      <div class="press-media-article">
+        <h3 class="press-media-article-date">Dec 4, 2017</h3>
+        <h3 class="press-media-article-title">Ipsum Stuff</h3>
+        <p class="press-media-article-content">About that ipsum stuff...</p>
       </div>
       <div class="press-media-actions">
         <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> PDF</div>
@@ -109,10 +109,10 @@
         <source srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/sunset-mag.jpg">
         <img class="press-img" srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/sunset-mag.jpg" alt="exhibit">
       </picture>
-      <div class="press-article-description">
-        <h3 class="press-article-date">Dec 4, 2017</h3>
-        <h3 class="press-article-title">Ipsum Stuff</h3>
-        <p class="press-article-content">About that ipsum stuff...</p>
+      <div class="press-media-article">
+        <h3 class="press-media-article-date">Dec 4, 2017</h3>
+        <h3 class="press-media-article-title">Ipsum Stuff</h3>
+        <p class="press-media-article-content">About that ipsum stuff...</p>
       </div>
       <div class="press-media-actions">
         <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> <span>PDF</span></div>

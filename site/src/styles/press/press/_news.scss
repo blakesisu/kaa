@@ -13,5 +13,30 @@
     height: auto;
     width: 11px;
   }
-
 }
+
+.press-news-article {
+  @extend .press-article-description;
+  height: auto;
+}
+.press-news-article-date {
+  font-family: $regular;
+  font-size: px2vw(15, $designLarge);
+  line-height: px2lh(15, 40);
+  letter-spacing: ps2em(3);
+}
+.press-news-article-title {
+  font-family: $demiBold;
+  font-size: px2vw(24, $designLarge);
+  line-height: px2lh(24, 39);
+  letter-spacing: ps2em(0);
+}
+.press-news-article-content {
+  font-family: $regular;
+  font-size: px2vw(18, $designLarge);
+  line-height: px2lh(18, 35);
+  letter-spacing: ps2em(0);
+}
+
+
+

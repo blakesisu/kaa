@@ -48,6 +48,28 @@
   flex-direction: column;
 }
 
+.press-media-article {
+  @extend .press-article-description;
+  height: 6vw;
+}
+.press-media-article-date {
+  font-family: $regular;
+  font-size: px2vw(15, $designLarge);
+  line-height: px2lh(15, 80);
+  letter-spacing: ps2em(3);
+}
+.press-media-article-title {
+  font-family: $demiBold;
+  font-size: px2vw(24, $designLarge);
+  line-height: px2lh(24, 39);
+  letter-spacing: ps2em(0);
+}
+.press-media-article-content {
+  font-family: $regular;
+  font-size: px2vw(18, $designLarge);
+  line-height: px2lh(18, 35);
+  letter-spacing: ps2em(0);
+}
 
 .press-media-actions {
   width: 100%;
