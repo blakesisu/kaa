@@ -72,6 +72,7 @@ web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
 web/app/themes/dist
+web/app/ai1wm-backups
 
 
 
