@@ -65,7 +65,8 @@
     "roots/wp-password-bcrypt": "1.0.0",
     "wp-sync-db/wp-sync-db": "*",
     "wp-sync-db/wp-sync-db-media-files": "*",
-    "wpackagist-plugin/custom-post-type-ui": "^1.5"
+    "wpackagist-plugin/custom-post-type-ui": "^1.5",
+    "wpackagist-plugin/all-in-one-wp-migration": "^6.62"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2"
