@@ -12,11 +12,15 @@
     </div>
 
     <!-- Text Block TODO: check landing for layout inspiration on text blocks-->
-    <div class="press-column-item">
-      <div class="press-text-wrapper press-text-section1">
-        <h2 class="press-text-header">CALIFORNIA CONTEMPORARY:</h2>
-        <h2 class="press-text-header">A Book Over 30 Years in the Making</h2>
-        <p class="press-text-description">Explore the houses of founder Grant C. Kirkpatrick and KAA Design, and our love for nature, design and storytelling.</p>
+    <div class="press-column-item press-text-feature">
+      <div class="press-text-wrapper">
+        <div class="press-text-header">
+          <h2>CALIFORNIA CONTEMPORARY:</h2>
+          <h2>A Book Over 30 Years in the Making</h2>
+        </div>
+        <div class="press-text-description">
+          <p>Explore the houses of founder Grant C. Kirkpatrick and KAA Design, and our love for nature, design and storytelling.</p>
+        </div>
         <button class="press-read-button">READ MORE</button>
       </div>
     </div>
