@@ -9,10 +9,10 @@
     <div class="press-media-nav-arrows">
       <!-- TODO: obtain correct chevrons from psd -->
       <a href="#" class="press-media-next">
-          <?php include(__DIR__ ."/../svgs/chevron-right.svg"); ?>
+        <?php include(__DIR__ ."/../svgs/left-chev.svg"); ?>
       </a>
       <a href="#" class="press-media-back">
-          <?php include(__DIR__ ."/../svgs/chevron-right.svg"); ?>
+        <?php include(__DIR__ ."/../svgs/right-chev.svg"); ?>
       </a>
     </div>
   </div>
@@ -29,8 +29,8 @@
         <h3 class="press-article-title">Ipsum Stuff</h3>
         <p class="press-article-content">About that ipsum stuff...</p>
       </div>
-      <div class="press-news-actions">
-        <div class="press-media-pdf">PDF</div>
+      <div class="press-media-actions">
+        <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> PDF</div>
         <div class="press-media-read">READ</div>
       </div>
     </div>
@@ -46,8 +46,8 @@
         <h3 class="press-article-title">Ipsum Stuff</h3>
         <p class="press-article-content">About that ipsum stuff...</p>
       </div>
-      <div class="press-news-actions">
-        <div class="press-media-pdf">PDF</div>
+      <div class="press-media-actions">
+        <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> PDF</div>
         <div class="press-media-read">READ</div>
       </div>
     </div>
@@ -63,8 +63,8 @@
         <h3 class="press-article-title">Ipsum Stuff</h3>
         <p class="press-article-content">About that ipsum stuff...</p>
       </div>
-      <div class="press-news-actions">
-        <div class="press-media-pdf">PDF</div>
+      <div class="press-media-actions">
+        <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> PDF</div>
         <div class="press-media-read">READ</div>
       </div>
     </div>
@@ -80,8 +80,8 @@
         <h3 class="press-article-title">Ipsum Stuff</h3>
         <p class="press-article-content">About that ipsum stuff...</p>
       </div>
-      <div class="press-news-actions">
-        <div class="press-media-pdf">PDF</div>
+      <div class="press-media-actions">
+        <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> PDF</div>
         <div class="press-media-read">READ</div>
       </div>
     </div>
@@ -97,8 +97,8 @@
         <h3 class="press-article-title">Ipsum Stuff</h3>
         <p class="press-article-content">About that ipsum stuff...</p>
       </div>
-      <div class="press-news-actions">
-        <div class="press-media-pdf">PDF</div>
+      <div class="press-media-actions">
+        <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> PDF</div>
         <div class="press-media-read">READ</div>
       </div>
     </div>
@@ -114,9 +114,9 @@
         <h3 class="press-article-title">Ipsum Stuff</h3>
         <p class="press-article-content">About that ipsum stuff...</p>
       </div>
-      <div class="press-news-actions">
-        <div class="press-media-pdf">PDF</div>
-        <div class="press-media-read">READ</div>
+      <div class="press-media-actions">
+        <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> <span>PDF</span></div>
+        <div class="press-media-read"><span>READ</span></div>
       </div>
     </div>
 
