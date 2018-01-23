@@ -4,7 +4,7 @@
 echo "Defaults are mapped for development machine"
 
 read -r -p "Backup current database? [y/N] (default: yes): " RESP
-read -r -p "Enter machine [prod/stag/dev] (default: dev): " MACHINE
+read -r -p "Enter machine [prod/stage/dev] (default: dev): " MACHINE
 
 if $(wp "@$MACHINE" core is-installed); then
   echo "wp core installed"
@@ -53,7 +53,7 @@ if [[ "$RESP" =~ ^([yY][eE][sS]|[yY])$ ]]; then
 fi
 
 # REMOTE
-if [ $MACHINE = "prod" ] || [ $MACHINE = "stag" ]; then
+if [ $MACHINE = "prod" ] || [ $MACHINE = "stage" ]; then
   echo "check sql backup $SQL_BACKUP"
   ssh "web@$SITE" "test -e /srv/www/kaa/current/$SQL_BACKUP"
   if [ $? -eq 0 ]; then
