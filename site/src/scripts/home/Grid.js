@@ -48,11 +48,11 @@ const Grid = function (el, index) {
       // Animated timeline that moves images at different speeds
       const slowTimeline = new TimelineLite()
         .add([
-          TweenMax.fromTo($projectImgSquare, 1, { y: '-20%' }, { y: '20%', ease: Easing.Linear.easeNone }),
+          // TweenMax.fromTo($projectImgSquare, 1, { y: '-20%' }, { y: '20%', ease: Easing.Linear.easeNone }),
           TweenMax.fromTo($verticalImg, 1, { y: '-10%' }, { y: '10%', ease: Easing.Linear.easeNone }),
           TweenMax.fromTo($horizontalImg, 1, { y: '8%' }, { y: '-8%', ease: Easing.Linear.easeNone }),
           TweenMax.fromTo($squareImg, 1, { y: '10%' }, { y: '-10%', ease: Easing.Linear.easeNone }),
-          TweenMax.fromTo($projectImgFull, 1, { y: '-10%' }, { y: '10%', ease: Easing.Linear.easeNone })
+          // TweenMax.fromTo($projectImgFull, 1, { y: '-3%' }, { y: '3%', ease: Easing.Linear.easeNone })
         ]);
 
       // Tie timeline to scrolling
@@ -87,35 +87,6 @@ const Grid = function (el, index) {
           })
             .setTween(TweenMax.fromTo($img, 1, { opacity: '0' }, { opacity: '1' }))
             // .addIndicators({ name: `image ${i}` })
-            .addTo(scrollController)
-        }
-
-        // If it has a text content
-        if ($textContent.length > 0) {
-          const $header = $textContent.find('.hm-text-block__header');
-          const $dash = $textContent.find('.hm-text-block__dash');
-          const $description = $textContent.find('.hm-text-block__description');
-          const headerTimeline = new TimelineLite();
-
-          // Add each span to the timeline
-          $header.find('span').each((j, span) => {
-            headerTimeline.fromTo(span, 0.3, { opacity: '0' }, { opacity: '1' }, j * 0.1);
-          });
-
-          // Add the description and dash to the timeline
-          headerTimeline
-            .fromTo($description, 1.5, { opacity: '0' }, { opacity: '1' }, '0')
-            .fromTo($dash, 0.2, { width: '0', opacity: '0' }, { width: $dash.width(), opacity: 1, clearProps: 'all' }, '-=1');
-
-          // Start the timeline when the text scrolls into view
-          new ScrollMagic.Scene({
-            triggerElement: $item,
-            triggerHook: 'onEnter',
-            offset: 200,
-            reverse: false
-          })
-            .setTween(headerTimeline)
-            // .addIndicators({ name: 'text timeline' })
             .addTo(scrollController)
         }
 
