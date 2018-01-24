@@ -10,7 +10,6 @@
   // grid
   .hm-grid {
     position: relative;
-    // background-color: $lightBrown;sss
   }
 
   // content
@@ -38,20 +37,6 @@
   .hm-grid__picture {
     will-change: transform;
   }
-
-  // For testing
-  // .hm-grid__item--square-lrg {
-  //   background-color: antiquewhite;
-  // }
-  // .hm-grid__item--square {
-  //   background-color: yellowgreen;
-  // }
-  // .hm-grid__item--horizontal {
-  //   background-color: blue;
-  // }
-  // .hm-grid__item--vertical {
-  //   background-color: purple;
-  // }
 
   // three blocks high
   // ----------------------------------------- //
@@ -100,6 +85,113 @@
       height: 100%;
     }
   }
+
+  // 3 High - Text top right
+  // ----------------------------------------- //
+  // Default nothing to change
+  .hm-grid--3-high.is-topright {
+
+  }
+
+  // 3 High - Text top left
+  // ----------------------------------------- //
+  .hm-grid--3-high.is-topleft {
+    .hm-grid__item--text {
+      order: 1;
+    }
+    .hm-grid__item--vertical {
+      order: 2;
+    }
+    .hm-grid__item--square-lrg {
+      order: 3;
+    }
+    .hm-grid__item--horizontal {
+      order: 4;
+    }
+  }
+
+  // 3 High - Text bottom right
+  // ----------------------------------------- //
+  .hm-grid--3-high.is-bottomright {
+    .hm-grid__item--horizontal {
+      order: 1;
+    }
+    .hm-grid__item--square-lrg {
+      order: 2;
+    }
+    .hm-grid__item--vertical {
+      order: 3;
+    }
+    .hm-grid__item--text {
+      order: 4;
+    }
+  }
+
+  // 3 High - Text bottom left
+  // ----------------------------------------- //
+  .hm-grid--3-high.is-bottomleft {
+    .hm-grid__item--vertical {
+      order: 1;
+    }
+    .hm-grid__item--text {
+      order: 2;
+    }
+    .hm-grid__item--square-lrg {
+      order: 3;
+    }
+    .hm-grid__item--horizontal {
+      order: 4;
+    }
+  }
+
+  // 2 High - Text Top Right
+  // ----------------------------------------- //
+  // Default
+  .hm-grid--2-high.is-topright {
+
+  }
+
+  // 2 High - Text Top Right
+  // ----------------------------------------- //
+  .hm-grid--2-high.is-topleft {
+    .hm-grid__item--text {
+      order: 1;
+    }
+    .hm-grid__item--square {
+      order: 2;
+    }
+    .hm-grid__item--square-lrg {
+      order: 3;
+    }
+  }
+
+  // 2 High - Text Bottom Right
+  // ----------------------------------------- //
+  .hm-grid--2-high.is-bottomright {
+    .hm-grid__item--square-lrg {
+      order: 1;
+    }
+    .hm-grid__item--square {
+      order: 2;
+    }
+    .hm-grid__item--text {
+      order: 3;
+    }
+  }
+
+  // 2 High - Text Bottom Left
+  // ----------------------------------------- //
+  .hm-grid--2-high.is-bottomleft {
+    .hm-grid__item--square {
+      order: 1;
+    }
+    .hm-grid__item--text {
+      order: 2;
+    }
+    .hm-grid__item--square-lrg {
+      order: 3;
+    }
+  }
 }
 
 // Make text blocks height based on content
@@ -129,9 +221,9 @@
     flex-direction: column;
   }
 
-  // layout one
+  // 3 High - Text top right
   // ----------------------------------------- //
-  .hm-grid--1 {
+  .hm-grid--3-high.is-topright {
     .hm-grid__item--square-lrg {
       order: 1;
     }
@@ -146,9 +238,9 @@
     }
   }
 
-  // layout three
+  // 3 High - Text top left
   // ----------------------------------------- //
-  .hm-grid--3 {
+  .hm-grid--3-high.is-topleft {
     .hm-grid__item--text {
       order: 1;
     }
@@ -163,9 +255,46 @@
     }
   }
 
-  // layout four
+  // 3 High - Text bottom right
   // ----------------------------------------- //
-  .hm-grid--4 {
+  .hm-grid--3-high.is-bottomright {
+    .hm-grid__item--horizontal {
+      order: 1;
+    }
+    .hm-grid__item--vertical {
+      order: 2;
+    }
+    .hm-grid__item--text {
+      order: 3;
+    }
+    .hm-grid__item--square-lrg {
+      order: 4;
+    }
+  }
+
+  // 3 High - Text bottom left
+  // ----------------------------------------- //
+  .hm-grid--3-high.is-bottomleft {
+    .hm-grid__item--square-lrg {
+      order: 1;
+    }
+    .hm-grid__item--vertical {
+      order: 2;
+    }
+    .hm-grid__item--text {
+      order: 3;
+    }
+    .hm-grid__item--horizontal {
+      order: 4;
+    }
+  }
+
+  // 2 High - Text Top Right
+  // ----------------------------------------- //
+  .hm-grid--2-high.is-topleft,
+  .hm-grid--2-high.is-topright,
+  .hm-grid--2-high.is-bottomright,
+  .hm-grid--2-high.is-bototmleft {
     .hm-grid__item--square-lrg {
       order: 1;
     }
@@ -174,40 +303,6 @@
     }
     .hm-grid__item--square {
       order: 3;
-    }
-  }
-
-  // layout five
-  // ----------------------------------------- //
-  .hm-grid--5 {
-    .hm-grid__item--horizontal {
-      order: 1;
-    }
-    .hm-grid__item--vertical {
-      order: 2;
-    }
-    .hm-grid__item--text {
-      order: 3;
-    }
-    .hm-grid__item--square-lrg {
-      order: 4;
-    }
-  }
-
-  // layout six
-  // ----------------------------------------- //
-  .hm-grid--6 {
-    .hm-grid__item--square-lrg {
-      order: 1;
-    }
-    .hm-grid__item--vertical {
-      order: 2;
-    }
-    .hm-grid__item--text {
-      order: 3;
-    }
-    .hm-grid__item--horizontal {
-      order: 4;
     }
   }
 }
