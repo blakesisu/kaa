@@ -98,7 +98,7 @@
         <img class="press-news-img" srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/wrapup.jpg" alt="wrapup">
       </picture>
       <div class="press-news-article">
-        <h3 class="press-news-article-date">Dec 23, 2016</h3>
+        <h3 class="press-news-article-date">DEC 23, 2016</h3>
         <h3 class="press-news-article-title">Event Wrap-Up: 2016 Art Exhibit & Sale</h3>
         <p class="press-news-article-content">The 2016 Art Exhibit and Sale was a huge success and we are proud to report that this year's event raised over $35,000 for artworxLA.</p>
       </div>
@@ -119,17 +119,18 @@
   </div>
 
   <div class="press-news-paginator">
-    <a href="#"><h2>1</h2></a>
-    <a href="#"><h2>2</h2></a>
-    <a href="#"><h2>3</h2></a>
-    <a href="#"><h2>4</h2></a>
-    <a href="#"><h2>5</h2></a>
-    <a href="#"><h2>6</h2></a>
-    <a href="#"><h2>7</h2></a>
-    <a href="#"><h2>8</h2></a>
-    <a href="#"><h2>9</h2></a>
-    <a href="#"><h2>10...</h2></a>
-
+    <div class="press-news-pages">
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+      <a href="#">6</a>
+      <a href="#">7</a>
+      <a href="#">8</a>
+      <a href="#">9</a>
+      <a href="#">10</a>
+    </div>
     <a href="#" class="press-news-next">
         <?php include(__DIR__ ."/../svgs/chevron-right.svg"); ?>
     </a>
