@@ -7,12 +7,19 @@
 }
 .hm-instagram__item {
   flex: 1 1 16.666666667%;
+  overflow: hidden;
 }
 .hm-instagram__link {
   position: relative;
   display: block;
   padding-top: 100%;
   overflow: hidden;
+  transform: scale(1);
+  transition: 0.5s $easeOutQuad;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 .hm-instagram__img {
   position: absolute;
