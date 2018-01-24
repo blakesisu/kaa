@@ -6,3 +6,4 @@ import './common/site-header';
 import './home/home';
 import './details/details';
 import './about/about';
+import './press/press';
