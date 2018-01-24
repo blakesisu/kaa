@@ -44,7 +44,6 @@
   <div class="press-media-mags">
     <div class="press-media-mag-item">
       <picture class="press-picture">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/digs-mag.jpg" media="(max-width: 700px)">
         <source srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/digs-mag.jpg">
         <img class="press-img" srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/digs-mag.jpg" alt="exhibit">
       </picture>
@@ -55,13 +54,11 @@
       </div>
       <div class="press-media-actions">
         <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> <span>PDF</span></div>
-        <!-- <div class="press&#45;media&#45;read">READ</div> -->
       </div>
     </div>
 
     <div class="press-media-mag-item">
       <picture class="press-picture">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/living-mag.jpg" media="(max-width: 700px)">
         <source srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/living-mag.jpg">
         <img class="press-img" srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/exhibit.jpg" alt="exhibit">
       </picture>
@@ -72,13 +69,11 @@
       </div>
       <div class="press-media-actions">
         <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> <span>PDF</span></div>
-        <!-- <div class="press&#45;media&#45;read">READ</div> -->
       </div>
     </div>
 
     <div class="press-media-mag-item">
       <picture class="press-picture">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/coastal-mag.jpg" media="(max-width: 700px)">
         <source srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/coastal-mag.jpg">
         <img class="press-img" srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/coastal-mag.jpg" alt="exhibit">
       </picture>
@@ -88,13 +83,11 @@
       </div>
       <div class="press-media-actions">
         <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> <span>PDF</span></div>
-        <!-- <div class="press&#45;media&#45;read">READ</div> -->
       </div>
     </div>
 
     <div class="press-media-mag-item">
       <picture class="press-picture">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/ocean-mag.jpg" media="(max-width: 700px)">
         <source srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/ocean-mag.jpg">
         <img class="press-img" srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/ocean-mag.jpg" alt="exhibit">
       </picture>
@@ -105,13 +98,12 @@
       </div>
       <div class="press-media-actions">
         <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> <span>PDF</span></div>
-        <div class="press-media-read">READ</div>
+        <div class="press-media-read"><span>READ</span></div>
       </div>
     </div>
 
     <div class="press-media-mag-item">
       <picture class="press-picture">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/luxe-mag.jpg" media="(max-width: 700px)">
         <source srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/luxe-mag.jpg">
         <img class="press-img" srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/luxe-mag.jpg" alt="exhibit">
       </picture>
@@ -122,13 +114,11 @@
       </div>
       <div class="press-media-actions">
         <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> <span>PDF</span></div>
-        <!-- <div class="press&#45;media&#45;read">READ</div> -->
       </div>
     </div>
 
     <div class="press-media-mag-item">
       <picture class="press-picture">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/sunset-mag.jpg" media="(max-width: 700px)">
         <source srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/sunset-mag.jpg">
         <img class="press-img" srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/sunset-mag.jpg" alt="exhibit">
       </picture>
@@ -139,7 +129,6 @@
       </div>
       <div class="press-media-actions">
         <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> <span>PDF</span></div>
-        <!-- <div class="press&#45;media&#45;read"><span>READ</span></div> -->
       </div>
     </div>
 
