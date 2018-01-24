@@ -49,13 +49,13 @@
         <img class="press-img" srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/digs-mag.jpg" alt="exhibit">
       </picture>
       <div class="press-media-article">
-        <h3 class="press-media-article-date">Dec 4, 2017</h3>
-        <h3 class="press-media-article-title">Ipsum Stuff</h3>
-        <p class="press-media-article-content">About that ipsum stuff...</p>
+        <h3 class="press-media-article-date">DEC 2017</h3>
+        <h3 class="press-media-article-title">South Bay DIGS</h3>
+        <p class="press-media-article-content">Featuring Tower Grove Drive</p>
       </div>
       <div class="press-media-actions">
-        <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> PDF</div>
-        <div class="press-media-read">READ</div>
+        <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> <span>PDF</span></div>
+        <!-- <div class="press&#45;media&#45;read">READ</div> -->
       </div>
     </div>
 
@@ -66,13 +66,13 @@
         <img class="press-img" srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/exhibit.jpg" alt="exhibit">
       </picture>
       <div class="press-media-article">
-        <h3 class="press-media-article-date">Dec 4, 2017</h3>
-        <h3 class="press-media-article-title">Ipsum Stuff</h3>
-        <p class="press-media-article-content">About that ipsum stuff...</p>
+        <h3 class="press-media-article-date">DEC 2017</h3>
+        <h3 class="press-media-article-title">LIVING | Brazil</h3>
+        <p class="press-media-article-content">Featuring Tower Grove Drive</p>
       </div>
       <div class="press-media-actions">
-        <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> PDF</div>
-        <div class="press-media-read">READ</div>
+        <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> <span>PDF</span></div>
+        <!-- <div class="press&#45;media&#45;read">READ</div> -->
       </div>
     </div>
 
@@ -83,13 +83,12 @@
         <img class="press-img" srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/coastal-mag.jpg" alt="exhibit">
       </picture>
       <div class="press-media-article">
-        <h3 class="press-media-article-date">Dec 4, 2017</h3>
-        <h3 class="press-media-article-title">Ipsum Stuff</h3>
-        <p class="press-media-article-content">About that ipsum stuff...</p>
+        <h3 class="press-media-article-date">OCT 2017</h3>
+        <h3 class="press-media-article-title">Coastal Living</h3>
       </div>
       <div class="press-media-actions">
-        <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> PDF</div>
-        <div class="press-media-read">READ</div>
+        <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> <span>PDF</span></div>
+        <!-- <div class="press&#45;media&#45;read">READ</div> -->
       </div>
     </div>
 
@@ -100,12 +99,12 @@
         <img class="press-img" srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/ocean-mag.jpg" alt="exhibit">
       </picture>
       <div class="press-media-article">
-        <h3 class="press-media-article-date">Dec 4, 2017</h3>
-        <h3 class="press-media-article-title">Ipsum Stuff</h3>
-        <p class="press-media-article-content">About that ipsum stuff...</p>
+        <h3 class="press-media-article-date">AUG/SEP 2017</h3>
+        <h3 class="press-media-article-title">Ocean Home</h3>
+        <p class="press-media-article-content">Featuring 3rd Street & The Strand Residence</p>
       </div>
       <div class="press-media-actions">
-        <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> PDF</div>
+        <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> <span>PDF</span></div>
         <div class="press-media-read">READ</div>
       </div>
     </div>
@@ -117,13 +116,13 @@
         <img class="press-img" srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/luxe-mag.jpg" alt="exhibit">
       </picture>
       <div class="press-media-article">
-        <h3 class="press-media-article-date">Dec 4, 2017</h3>
-        <h3 class="press-media-article-title">Ipsum Stuff</h3>
-        <p class="press-media-article-content">About that ipsum stuff...</p>
+        <h3 class="press-media-article-date">MAY 2017</h3>
+        <h3 class="press-media-article-title">LUXE Interiors + Design</h3>
+        <p class="press-media-article-content">Featuring Tower Grove Drive</p>
       </div>
       <div class="press-media-actions">
-        <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> PDF</div>
-        <div class="press-media-read">READ</div>
+        <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> <span>PDF</span></div>
+        <!-- <div class="press&#45;media&#45;read">READ</div> -->
       </div>
     </div>
 
@@ -134,13 +133,13 @@
         <img class="press-img" srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/sunset-mag.jpg" alt="exhibit">
       </picture>
       <div class="press-media-article">
-        <h3 class="press-media-article-date">Dec 4, 2017</h3>
-        <h3 class="press-media-article-title">Ipsum Stuff</h3>
-        <p class="press-media-article-content">About that ipsum stuff...</p>
+        <h3 class="press-media-article-date">MAR 2017</h3>
+        <h3 class="press-media-article-title">Sunset</h3>
+        <p class="press-media-article-content">Featuring Split Rock Ranch</p>
       </div>
       <div class="press-media-actions">
         <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> <span>PDF</span></div>
-        <div class="press-media-read"><span>READ</span></div>
+        <!-- <div class="press&#45;media&#45;read"><span>READ</span></div> -->
       </div>
     </div>
 

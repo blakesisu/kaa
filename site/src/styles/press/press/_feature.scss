@@ -31,12 +31,12 @@
 .press-text-wrapper {
   display: flex;
   flex-direction: column;
-  width: 67%;
-  height: 60%;
+  width: 69%;
+  height: 58%;
   justify-content: flex-end;
   align-items: flex-start;
   & > * {
-    margin: 3% 0;
+    margin: 2% 0;
   }
 
   .press-text-header,
@@ -62,6 +62,7 @@
 
 .press-read-button {
   @include button-lrg;
+  padding: 18px 26px;
 
   @media (max-width: $about-break) {
     @include button;

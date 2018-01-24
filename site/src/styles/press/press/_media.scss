@@ -1,7 +1,7 @@
 .press-media {
-  height: 35vw;
+  height: 50vw;
   width: 100%;
-  background: linear-gradient(180deg, $brown 50%, #ffffff 50%);
+  background: linear-gradient(180deg, $brown 37%, #ffffff 37%);
 }
 
 .press-media-header {
@@ -25,7 +25,7 @@
 
   font-size: px2vw(30, $designLarge);
   line-height: px2lh(30, 40);
-  letter-spacing: ps2em(200);
+  letter-spacing: ps2em(300);
 }
 
 .press-media-dynamos {
@@ -40,12 +40,12 @@
   position: relative;
   display: inline-block;
   font-family: $medium;
-  width: 60%;
+  width: 57%;
   // flex-direction: column;
   // justify-content: flex-end;
   .press-media-dropdown-header {
     border: 1px solid $lightBrown;
-    padding: 0 5%;
+    padding: 0 7%;
     height: 20%;
     display: flex;
     flex-direction: row;
@@ -74,7 +74,7 @@
     z-index: 2000;
     width: 100%;
     height: 300px;
-    padding-left: 5%;
+    padding-left: 7%;
     overflow: auto;
     .press-media-dropdown-list {
       display: flex;
@@ -108,38 +108,45 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  // justify-content: space-evenly;
   align-items: baseline;
 }
 
 .press-media-mag-item {
   display: flex;
   flex-direction: column;
+  margin: 0 2%;
 }
 
 .press-media-article {
   @extend .press-article-description;
-  // height: 6vw;
-  height: auto;
+  height: 9vw;
+  // justify-content: space-between;
+  // line-height: 1;
+  // height: auto;
+  // padding-left: 5%;
+  & > * {
+    margin: 2% 0;
+  }
 }
 .press-media-article-date {
   color: $brown;
   font-family: $demiBold;
   font-size: px2vw(15, $designLarge);
   line-height: px2lh(15, 40);
-  letter-spacing: ps2em(3);
+  letter-spacing: ps2em(200);
 }
 .press-media-article-title {
   color: $lightBrown;
-  font-family: $demiBoldItalic;
+  font-family: $mediumItalic;
   font-size: px2vw(24, $designLarge);
-  line-height: px2lh(24, 39);
+  line-height: px2lh(24, 40);
   letter-spacing: ps2em(0);
 }
 .press-media-article-content {
   font-family: $regular;
   font-size: px2vw(18, $designLarge);
-  line-height: px2lh(18, 35);
+  line-height: px2lh(18, 25);
   letter-spacing: ps2em(0);
 }
 
@@ -148,13 +155,25 @@
   height: auto;
   display: flex;
   flex-direction: row;
-  // align-items: center;
+  // align-items: flex-start;
+  // justify-content: space-evenly;
 
   .press-media-pdf,
   .press-media-read {
     @include button--small;
+    padding: 13px 32px;
     display: flex;
     align-items: center;
-    // justify-content: space-between;
+    // justify-content: space-evenly;
+    span {
+      font-family: $regular;
+      font-size: px2vw(15, $designLarge);
+      // line-height: px2lh(18, 25);
+      letter-spacing: ps2em(200);
+    }
+  }
+
+  .press-media-pdf {
+    margin-right: 5%;
   }
 }
