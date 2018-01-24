@@ -2,7 +2,7 @@ import $ from 'jquery';
 import './instagram';
 import Grid from './Grid';
 
-if ($('body').hasClass('home')) {
+if ($('body').hasClass('page-template-home')) {
   const grids = [];
   const $heroImg = $('.hm-hero__img');
 

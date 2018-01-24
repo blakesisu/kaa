@@ -191,7 +191,7 @@
 // ----------------------------------------- //
 // Absolute position site header on pages with hero images
 @media (min-width: $hm-grid-single-column-break + 1) {
-  .home {
+  .page-template-home {
     .site-header {
       background-color: transparent;
     }
@@ -238,14 +238,14 @@
 }
 
 @media (max-width: $hm-grid-single-column-break) {
-  .home,
+  .page-template-home,
   .page-template-about {
     .site-header {
       margin-bottom: 0;
     }
   }
 
-  .home {
+  .page-template-home {
     .site-header__tagline--large {
       display: block;
     }
