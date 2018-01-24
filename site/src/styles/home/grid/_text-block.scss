@@ -41,6 +41,10 @@
     font-family: $medium;
     font-size: 11px;
     letter-spacing: ps2em(200);
+
+    &:hover {
+      color: $brown;
+    }
   }
   .hm-text-block__cta {
     display: none;

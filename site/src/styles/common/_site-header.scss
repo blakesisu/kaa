@@ -32,12 +32,17 @@
 .site-header__brand-link {
   display: flex;
   align-items: flex-start;
+  transition: opacity 0.2s ease;
 
   svg {
     fill: $white;
     // width: px2vw(130, $designLarge);
     width: px2vw(85, $designLarge);
     height: auto;
+  }
+
+  &:hover {
+    opacity: 0.85;
   }
 
   // fixed size on medium screens
@@ -122,12 +127,17 @@
   align-items: center;
   margin: 2.2vw 0 0 0;
   -webkit-font-smoothing: auto;
+  transition: opacity 0.2s ease;
 
   svg {
     fill: $white;
     margin-left: 0.5vw;
     width: px2vw(32, $designLarge);
     height: auto;
+  }
+
+  &:hover {
+    opacity: 0.7;
   }
 
   // fixed size on medium screens
@@ -160,11 +170,16 @@
 // ----------------------------------------- //
 .site-header__menu-btn {
   margin: 2.3vw 2.1vw 0 2.1vw;
+  transition: opacity 0.2s ease;
 
   svg {
     fill: $white;
     width: px2vw(25, $designLarge);
     height: auto;
+  }
+
+  &:hover {
+    opacity: 0.7;
   }
 
   // fixed size on medium screens

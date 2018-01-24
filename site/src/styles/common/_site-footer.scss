@@ -42,6 +42,10 @@
 }
 .site-footer__text-link {
   color: $white;
+  transition: color 0.2s ease;
+  &:hover {
+    color: $lightBrown;
+  }
 }
 
 // links
@@ -66,6 +70,10 @@
   text-transform: uppercase;
   letter-spacing: ps2em(200);
   color: $white;
+  transition: color 0.2s ease;
+  &:hover {
+    color: $lightBrown;
+  }
 }
 
 // social
@@ -77,8 +85,15 @@
 .site-footer__social-item {
   margin-left: px2vw(30, $designLarge);
   svg {
+    transition: color 0.2s ease;
     fill: $white;
     height: auto;
+  }
+
+  &:hover {
+    svg {
+      fill: $lightBrown;
+    }
   }
 }
 .site-footer__social-item--pinterest svg {

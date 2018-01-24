@@ -38,11 +38,16 @@
   position: absolute;
   top: px2vw(42, $designLarge);
   right: px2vw(42, $designLarge);
+  transition: opacity 0.2s ease;
 
   svg {
     fill: $brown;
     width: px2vw(19, $designLarge);
     height: px2vw(19, $designLarge);
+  }
+
+  &:hover {
+    opacity: 0.7;
   }
 
   // fixed size on large screens

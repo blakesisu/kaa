@@ -19,12 +19,13 @@
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: 5;
+      z-index: 10;
       background-color: rgba(97, 89, 84, 0.0);
       display: flex;
       flex-direction: column;
       justify-content: center;
       text-align: center;
+      transition: background-color 0.3s ease;
     }
     .about-family-bio {
       display: flex;
@@ -35,6 +36,15 @@
       align-items: center;
       justify-content: center;
       opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+      color: $white;
+
+      &:hover {
+        background-color: $white;
+        color: $orange;
+      }
+
       @media (max-width: $about-break) {
         width: 135px;
         height: 49px;
@@ -45,9 +55,9 @@
       font-size: 16px;
       font-size: px2vw(16, $designLarge);
       text-transform: uppercase;
-      color: #fff;
       letter-spacing: ps2em(200);
       line-height: px2lh(24, 35);
+
       @media (max-width: $about-break) {
         font-size: 11.38px;
       }
@@ -61,11 +71,6 @@
       .about-family-bio {
         opacity: 1;
         transform: translateY(0);
-      }
-      .about-family-background,
-      .about-family-description {
-        opacity: 0.1;
-        transition: opacity 0.2s $easeInOutQuad,
       }
     }
 
