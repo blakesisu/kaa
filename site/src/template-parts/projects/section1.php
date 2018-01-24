@@ -1,8 +1,5 @@
 <section class="proj-section1">
   <div class="proj-projects__dual-container">
-    <h1 class="proj-projects__header">Projects</h1>
-    <div class="proj-projects__dash"></div>
-
     <div class="proj__dual-projects">
       <a href="#" class="proj-projects__project proj-project__dual">
         <picture class="proj-project__picture">

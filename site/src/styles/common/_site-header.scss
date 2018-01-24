@@ -1,6 +1,13 @@
 // scale based on screen width
 // ------------------------------------------------------------------------------------------------- //
 .site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: rgba(97, 89, 84, 0.35);
+  padding-bottom: px2vw(8, $designLarge);
   // mobile
   @media (max-width: $hm-grid-single-column-break) {
     background-color: $white;
@@ -27,15 +34,17 @@
   align-items: flex-start;
 
   svg {
-    fill: $orange;
-    width: px2vw(130, $designLarge);
+    fill: $white;
+    // width: px2vw(130, $designLarge);
+    width: px2vw(85, $designLarge);
     height: auto;
   }
 
   // fixed size on medium screens
   @media (max-width: $hm-grid-break) {
     svg {
-      width: 92.484px;
+      // width: 92.484px;
+      width: 60.469px;
     }
   }
 
@@ -51,9 +60,6 @@
 // tagline
 // ----------------------------------------- //
 .site-header__tagline {
-
-}
-.site-header__tagline--large {
   font-size: px2vw(14, $designLarge);
   color: $white;
   font-family: $bold;
@@ -78,8 +84,24 @@
     margin: 11px 0 0 16px;
   }
 }
-.site-header__tagline--small {
-  display: none;
+
+// page title
+// ----------------------------------------- //
+.site-header__page-title {
+  font-size: px2vw(30, $designLarge);
+  text-transform: uppercase;
+  color: $white;
+  font-family: $bold;
+  letter-spacing: ps2em(300);
+  line-height: 1;
+  margin-right: auto;
+  padding: px2vw(41, $designLarge) 0 0 px2vw(47, $designLarge);
+
+  // fixed size on medium screens
+  @media (max-width: $hm-grid-break) {
+    font-size: 21.3438px;
+    padding: 29.170px 0 0 33.439px;
+  }
 }
 
 // utility links
@@ -92,17 +114,17 @@
 // book cta
 // ----------------------------------------- //
 .site-header__book-cta {
-  color: $brown;
+  color: $white;
   font-size: px2vw(10, $designLarge);
   text-transform: uppercase;
   letter-spacing: ps2em(160);
   display: flex;
   align-items: center;
-  margin: 2vw 0 0 0;
+  margin: 2.2vw 0 0 0;
   -webkit-font-smoothing: auto;
 
   svg {
-    fill: $brown;
+    fill: $white;
     margin-left: 0.5vw;
     width: px2vw(32, $designLarge);
     height: auto;
@@ -111,7 +133,7 @@
   // fixed size on medium screens
   @media (max-width: $hm-grid-break) {
     font-size: 7.11px;
-    margin: 27.32px 0 0 0;
+    margin: 30.052px 0 0 0;
 
     svg {
       margin-left: 6.83px;
@@ -137,17 +159,17 @@
 // menu btn
 // ----------------------------------------- //
 .site-header__menu-btn {
-  margin: 2.15vw 2.1vw 0 2.1vw;
+  margin: 2.3vw 2.1vw 0 2.1vw;
 
   svg {
-    fill: $brown;
+    fill: $white;
     width: px2vw(25, $designLarge);
     height: auto;
   }
 
   // fixed size on medium screens
   @media (max-width: $hm-grid-break) {
-    margin: 29.369px 28.686px 0 28.686px;
+    margin: 31.418px 28.686px 0 28.686px;
 
     svg {
       width: 17.781px;
@@ -169,26 +191,33 @@
 // ----------------------------------------- //
 // Absolute position site header on pages with hero images
 @media (min-width: $hm-grid-single-column-break + 1) {
-  .home,
-  .page-template-about {
+  .home {
     .site-header {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 999;
+      background-color: transparent;
     }
 
     // logo
     .site-header__brand-link {
       svg {
-        fill: $white;
+        width: px2vw(130, $designLarge);
+      }
+
+      // fixed size on medium screens
+      @media (max-width: $hm-grid-break) {
+        svg {
+          width: 92.484px;
+        }
       }
     }
 
     // tagline
     .site-header__tagline--large {
       display: block;
+    }
+
+    // page title
+    .site-header__page-title {
+      display: none;
     }
 
     // cta
