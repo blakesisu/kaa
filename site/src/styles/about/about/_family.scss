@@ -121,9 +121,9 @@
 .about-family-link {
   display: block;
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.3s ease,
-              transform 0.3s ease;
+  transform: translateY(100px);
+  transition: opacity 0.4s $easeOutQuart,
+              transform 0.4s $easeOutQuart;
 }
 .about-family-link.is-visible {
   opacity: 1;
