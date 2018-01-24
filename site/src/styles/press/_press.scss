@@ -103,10 +103,8 @@ body.page-template-press {
 
 .press-article-description {
   display: flex;
-  justify-content: space-evenly;
+  // justify-content: space-evenly;
   flex-direction: column;
-  // align-items: center;
-  padding: 0 5%;
 }
 
 .press-trip-container {
@@ -121,9 +119,9 @@ body.page-template-press {
 .press-trip-item {
   flex: 1 1 33.333%;
   position: relative;
-  margin: 2% 0;
   height: auto;
 }
+
 
 .press-img {
   width: 100%;
