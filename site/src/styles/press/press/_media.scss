@@ -13,22 +13,69 @@
   align-items: center;
 }
 
+.press-media-header-placeholder {
+  width: 33.333%;
+}
+
 .press-media-headline {
   font-family: $bold;
-  width: 30%;
+  width: 33.333%;
   text-transform: uppercase;
   color: #ffffff;
+
+  font-size: px2vw(30, $designLarge);
+  line-height: px2lh(30, 40);
+  letter-spacing: ps2em(200);
+}
+
+.press-media-dynamos {
+  display: flex;
+  flex-direction: row;
+  width: 33.333%;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .press-media-dropdown {
-  font-family: $regular;
-  width: 20%;
-  text-transform: uppercase;
-  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  font-family: $medium;
+  width: 60%;
+  justify-content: flex-end;
+  border: 1px solid $lightBrown;
+  .press-media-dropdown-header {
+    padding: 0 5%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      color: #ffffff;
+      text-transform: uppercase;
+      font-size: px2vw(15, $designLarge);
+      line-height: px2lh(15, 40);
+      letter-spacing: ps2em(200);
+    }
+    svg {
+      width: 6px;
+      height: auto;
+      transform: rotate(90deg);
+    }
+  }
+
+  .press-media-dropdown-container {
+    display: none;
+    z-index: 2000;
+    width: 100%;
+    height: 80%;
+  }
+
 }
 
 .press-media-nav-arrows {
-  width: 10%;
+  width: 20%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -50,16 +97,19 @@
 
 .press-media-article {
   @extend .press-article-description;
-  height: 6vw;
+  // height: 6vw;
+  height: auto;
 }
 .press-media-article-date {
-  font-family: $regular;
+  color: $brown;
+  font-family: $demiBold;
   font-size: px2vw(15, $designLarge);
-  line-height: px2lh(15, 80);
+  line-height: px2lh(15, 40);
   letter-spacing: ps2em(3);
 }
 .press-media-article-title {
-  font-family: $demiBold;
+  color: $lightBrown;
+  font-family: $demiBoldItalic;
   font-size: px2vw(24, $designLarge);
   line-height: px2lh(24, 39);
   letter-spacing: ps2em(0);
