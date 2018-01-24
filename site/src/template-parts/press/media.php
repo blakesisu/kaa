@@ -1,19 +1,43 @@
 <section class="press-section press-media">
   <div class="press-media-header">
+    <div class="press-media-header-placeholder"></div>
     <div class="press-media-headline">
       <h1>KAA DESIGN IN THE MEDIA</h1>
     </div>
-    <div class="press-media-dropdown">
-      <p>ALL PUBLICATIONS</p>
-    </div>
-    <div class="press-media-nav-arrows">
-      <!-- TODO: obtain correct chevrons from psd -->
-      <a href="#" class="press-media-next">
-        <?php include(__DIR__ ."/../svgs/left-chev.svg"); ?>
-      </a>
-      <a href="#" class="press-media-back">
-        <?php include(__DIR__ ."/../svgs/right-chev.svg"); ?>
-      </a>
+    <div class="press-media-dynamos">
+      <div class="press-media-dropdown">
+        <!-- dropdown header -->
+        <div class="press-media-dropdown-header">
+          <p>ALL PUBLICATIONS</p>
+          <!-- TODO: give me a down chevron! -->
+          <?php include(__DIR__ ."/../svgs/right-chev.svg"); ?>
+        </div>
+        <!-- dropdown options -->
+        <div class="press-media-dropdown-container">
+          <ul class="press-media-dropdown-list">
+            <li>test</li>
+            <li>testr</li>
+            <li>testrr</li>
+            <li>testrrr</li>
+            <li>testrrrr</li>
+            <li>testrrrrrr</li>
+            <li>testrrrrrrr</li>
+            <li>testrrrrrrrr</li>
+            <li>testrrrrrrrrr</li>
+            <li>testrrrrrrrrrr</li>
+            <li>testrrrrrrrrrrr</li>
+          </ul>
+        </div>
+      </div>
+      <div class="press-media-nav-arrows">
+        <!-- TODO: obtain correct chevrons from psd -->
+        <a href="#" class="press-media-next">
+          <?php include(__DIR__ ."/../svgs/left-chev.svg"); ?>
+        </a>
+        <a href="#" class="press-media-back">
+          <?php include(__DIR__ ."/../svgs/right-chev.svg"); ?>
+        </a>
+      </div>
     </div>
   </div>
 
