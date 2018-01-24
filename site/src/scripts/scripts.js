@@ -7,3 +7,4 @@ import './common/site-nav';
 import './home/home';
 import './details/details';
 import './about/about';
+import './press/press';

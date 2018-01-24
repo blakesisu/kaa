@@ -15,17 +15,17 @@
         <!-- dropdown options -->
         <div class="press-media-dropdown-container">
           <ul class="press-media-dropdown-list">
-            <li>test</li>
-            <li>testr</li>
-            <li>testrr</li>
-            <li>testrrr</li>
-            <li>testrrrr</li>
-            <li>testrrrrrr</li>
-            <li>testrrrrrrr</li>
-            <li>testrrrrrrrr</li>
-            <li>testrrrrrrrrr</li>
-            <li>testrrrrrrrrrr</li>
-            <li>testrrrrrrrrrrr</li>
+            <li class="press-media-all-pubs">ALL PUBLICATIONS</li>
+            <li class="press-media-digs-mag">Digs</li>
+            <li class="press-media-living-mag">Living</li>
+            <li class="press-media-coastal-mag">Coastal Living</li>
+            <li class="press-media-ocean-mag">Ocean Home</li>
+            <li class="press-media-luxe-mag">luxe.</li>
+            <li class="press-media-derp-mag">Derp</li>
+            <li class="press-media-test-mag">Test</li>
+            <li class="press-media-nonce-mag">Nonce</li>
+            <li class="press-media-none-mag">None</li>
+            <li class="press-media-psuedo-mag">Pseudo</li>
           </ul>
         </div>
       </div>
