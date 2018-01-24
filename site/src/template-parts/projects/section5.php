@@ -1,7 +1,7 @@
 <section class="proj-section5">
   <div class="proj-projects__dual-container">
     <div class="proj__dual-projects">
-      <a href="#" class="proj-projects__project proj-project__dual">
+      <a href="/project-example" class="proj-projects__project proj-project__dual">
         <picture class="proj-project__picture">
           <source srcset="<?php bloginfo('template_url'); ?>/images/projects/mobile/34th-sm.jpg" media="(max-width: 700px)">
           <source srcset="<?php bloginfo('template_url'); ?>/images/projects/desktop/34th-lg.jpg">
@@ -12,7 +12,7 @@
         </div>
       </a>
 
-      <a href="#" class="proj-projects__project proj-project__dual">
+      <a href="/project-example" class="proj-projects__project proj-project__dual">
         <picture class="proj-project__picture">
           <source srcset="<?php bloginfo('template_url'); ?>/images/projects/desktop/trophyhills-lg.jpg" media="(max-width: 700px)">
           <source srcset="<?php bloginfo('template_url'); ?>/images/projects/desktop/trophyhills-lg.jpg">

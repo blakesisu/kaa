@@ -2,7 +2,7 @@
   <div class="proj-projects__tri-container">
 
     <div class="proj__tri-projects">
-      <a href="#" class="proj-projects__project proj-project__tri">
+      <a href="/project-example" class="proj-projects__project proj-project__tri">
         <picture class="proj-project__picture">
           <source srcset="<?php bloginfo('template_url'); ?>/images/projects/mobile/sanremo-sm.jpg" media="(max-width: 700px)">
           <source srcset="<?php bloginfo('template_url'); ?>/images/projects/desktop/sanremo-lg.jpg">
@@ -13,7 +13,7 @@
         </div>
       </a>
 
-      <a href="#" class="proj-projects__project proj-project__tri">
+      <a href="/project-example" class="proj-projects__project proj-project__tri">
         <picture class="proj-project__picture">
           <source srcset="<?php bloginfo('template_url'); ?>/images/projects/mobile/6thStreet-sm.jpg" media="(max-width: 700px)">
           <source srcset="<?php bloginfo('template_url'); ?>/images/projects/desktop/6thStreet-lg.jpg">
@@ -24,7 +24,7 @@
         </div>
       </a>
 
-      <a href="#" class="proj-projects__project proj-project__tri">
+      <a href="/project-example" class="proj-projects__project proj-project__tri">
         <picture class="proj-project__picture">
           <source srcset="<?php bloginfo('template_url'); ?>/images/projects/mobile/beverlyhills-sm.jpg" media="(max-width: 700px)">
           <source srcset="<?php bloginfo('template_url'); ?>/images/projects/desktop/beverlyhills-lg.jpg">
