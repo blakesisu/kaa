@@ -1,3 +1,4 @@
+<?php if( have_rows('project_details_repeater') ): ?>
 <section class="pd-details-and-contact">
   <div class="pd-details-and-contact__container">
 
@@ -5,57 +6,31 @@
     <div class='pd-details'>
       <h2 class="pd-details__header">Project Details</h2>
       <div class="pd-details__categories">
-        <div class="pd-details__category">
-          <h3 class="pd-details__category-header">Project</h3>
-          <p class="pd-details__item pd-details__item--caps">Tower Grove Drive</p>
-        </div>
-        <div class="pd-details__category">
-          <h3 class="pd-details__category-header">Location</h3>
-          <p class="pd-details__item">Santa Monica CA</p>
-        </div>
-        <div class="pd-details__category">
-          <h3 class="pd-details__category-header">Status</h3>
-          <p class="pd-details__item">Complete</p>
-        </div>
-        <div class="pd-details__category">
-          <h3 class="pd-details__category-header">KAA Services</h3>
-          <ul class="pd-details__list">
-            <li class="pd-details__item">Architecture</li>
-            <li class="pd-details__item">Landscape Architecture</li>
-          </ul>
-        </div>
-        <div class="pd-details__category">
-          <h3 class="pd-details__category-header">Collaborators</h3>
-          <ul class="pd-details__list">
-            <li class="pd-details__item">
-              <a class="pd-details__link" href="#">Tim Clark</a>
-            </li>
-            <li class="pd-details__item">
-              <a class="pd-details__link" href="#">EPT Design</a>
-            </li>
-            <li class="pd-details__item">
-              <a class="pd-details__link" href="#">Jim Davis Development</a>
-            </li>
-            <li class="pd-details__item">
-              <a class="pd-details__link" href="#">The Ruzika Company</a>
-            </li>
-          </ul>
-        </div>
-        <div class="pd-details__category">
-          <h3 class="pd-details__category-header">Publications</h3>
-          <ul class="pd-details__list">
-            <li class="pd-details__item">
-              <a class="pd-details__link" href="#">LUXE Interiors + Design</a>
-            </li>
-          </ul>
-        </div>
-        <div class="pd-details__category">
-          <h3 class="pd-details__category-header">Photography</h3>
-          <ul class="pd-details__list">
-            <li class="pd-details__item">Manolo Langis</li>
-            <li class="pd-details__item">Roger Davies</li>
-          </ul>
-        </div>
+        <?php while ( have_rows('project_details_repeater') ) : the_row(); ?>
+          <?php
+            $label = get_sub_field('project_details_label');
+          ?>
+          <div class="pd-details__category">
+            <?php if ($label) : ?>
+              <h3 class="pd-details__category-header"><?php echo $label; ?></h3>
+            <?php endif; ?>
+            <?php if( have_rows('project_details_repeater_repeater') ): ?>
+              <?php while ( have_rows('project_details_repeater_repeater') ) : the_row(); ?>
+                <?php
+                  $text = get_sub_field('project_details_text');
+                  $link = get_sub_field('project_details_link');
+                ?>
+                <?php if ($link) : ?>
+                  <p class="pd-details__item">
+                    <a class="pd-details__link" href="<?php echo $link; ?>"><?php echo $text; ?></a>
+                  </p>
+                <?php else : ?>
+                  <p class="pd-details__item"><?php echo $text; ?></p>
+                <?php endif; ?>
+              <?php endwhile; ?>
+            <?php endif; ?>
+          </div>
+        <?php endwhile; ?>
       </div>
     </div>
 
@@ -75,3 +50,4 @@
 
   </div>
 </section>
+<?php endif; ?>

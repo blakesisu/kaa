@@ -33,8 +33,12 @@
 // full layout
 // ----------------------------------------- //
 .pd-grid--full {
-  .pd-grid__block--text p {
+  .pd-grid__block-text-container {
     padding: 7vw 18.2vw;
+
+    p:not(:first-child) {
+      margin-top: 2vw;
+    }
   }
 
   // mobile
@@ -42,8 +46,12 @@
     .pd-grid__block {
       flex-basis: 100%;
     }
-    .pd-grid__block--text p {
+    .pd-grid__block-text-container {
       padding: 9vw 5.5vw;
+
+      p:not(:first-child) {
+        margin-top: 4vw;
+      }
     }
   }
 }
@@ -54,8 +62,12 @@
   .pd-grid__block {
     flex: 1 1 50%;
   }
-  .pd-grid__block--text p {
+  .pd-grid__block-text-container {
     padding: 6vw 7.6vw;
+
+    p:not(:first-child) {
+      margin-top: 1vw;
+    }
   }
 
   // mobile
@@ -63,8 +75,12 @@
     .pd-grid__block {
       flex-basis: 100%;
     }
-    .pd-grid__block--text p {
+    .pd-grid__block-text-container {
       padding: 9vw 5.5vw;
+
+      p:not(:first-child) {
+        margin-top: 4vw;
+      }
     }
   }
 }
@@ -87,8 +103,12 @@
     .pd-grid__block {
       flex-basis: 100%;
     }
-    .pd-grid__block--text p {
+    .pd-grid__block-text-container {
       padding: 9vw 5.5vw;
+
+      p:not(:first-child) {
+        margin-top: 4vw;
+      }
     }
   }
 }
