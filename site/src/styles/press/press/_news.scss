@@ -1,6 +1,10 @@
 .press-news-container {
   @extend .press-trip-container;
   margin: 4% 0 0 0;
+
+  @media (max-width: $press-break) {
+    margin: 10% 0 0 0;
+  }
 }
 
 .press-news-item {
@@ -47,6 +51,10 @@
       color: $orange;
     }
 
+    @media (max-width: $press-break) {
+      font-size: 12.81px;
+    }
+
     @media (max-width: $press-single-column-break) {
       font-size: px2vw(15, $designSmall);
       line-height: px2lh(15, 40);
@@ -81,6 +89,10 @@
   line-height: px2lh(15, 80);
   letter-spacing: ps2em(200);
 
+  @media (max-width: $press-break) {
+    font-size: 10.67px;
+  }
+
   @media (max-width: $press-single-column-break) {
     font-size: px2vw(12.5, $designSmall);
     line-height: px2lh(12.5, 40);
@@ -94,6 +106,10 @@
   line-height: px2lh(24, 40);
   letter-spacing: ps2em(0);
 
+  @media (max-width: $press-break) {
+    font-size: 17.05px;
+  }
+
   @media (max-width: $press-single-column-break) {
     font-size: px2vw(20, $designSmall);
     line-height: px2lh(20, 30);
@@ -106,6 +122,10 @@
   font-size: px2vw(18, $designLarge);
   line-height: px2lh(18, 35);
   letter-spacing: ps2em(0);
+
+  @media (max-width: $press-break) {
+    font-size: 12.80px;
+  }
 
   @media (max-width: $press-single-column-break) {
     font-size: px2vw(15, $designSmall);

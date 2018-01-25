@@ -37,6 +37,11 @@
   line-height: px2lh(30, 40);
   letter-spacing: ps2em(300);
 
+  @media (max-width: $press-break) {
+    text-align: center;
+    font-size: 21.34px;
+  }
+
   @media (max-width: $press-single-column-break) {
     padding: 10% 0;
     text-align: center;
@@ -67,21 +72,31 @@
   display: inline-block;
   font-family: $medium;
   width: 57%;
+
+  @media (max-width: $press-break) {
+    width: 256.85px;
+  }
   @media (max-width: $press-single-column-break) {
     width: 95%;
   }
 
   .press-media-dropdown-header {
-    border: 1px solid $lightBrown;
-    padding: 0 7%;
-    height: 20%;
-    @media (max-width: $press-single-column-break) {
-      height: 9vw;
-    }
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    border: 1px solid $lightBrown;
+    padding: 0 7%;
+    height: 20%;
+
+    @media (max-width: $press-break) {
+      padding: 0 17.96px;
+      height: 30px;
+    }
+
+    @media (max-width: $press-single-column-break) {
+      height: 9vw;
+    }
 
     p {
       color: #ffffff;
@@ -89,6 +104,10 @@
       font-size: px2vw(15, $designLarge);
       line-height: px2lh(15, 40);
       letter-spacing: ps2em(200);
+
+      @media (max-width: $press-break) {
+        font-size: 10.67px;
+      }
 
       @media (max-width: $press-single-column-break) {
         font-size: px2vw(12.5, $designSmall);
@@ -171,6 +190,10 @@
   @extend .press-article-description;
   height: 9vw;
 
+  @media (max-width: $press-break) {
+    height: 122.93px;
+  }
+
   @media (max-width: $press-single-column-break) {
     height: 43vw;
     width: 50vw;
@@ -186,6 +209,10 @@
   line-height: px2lh(15, 40);
   letter-spacing: ps2em(200);
 
+  @media (max-width: $press-break) {
+    font-size: 10.67px;
+  }
+
   @media (max-width: $press-single-column-break) {
     font-size: px2vw(12.5, $designSmall);
     line-height: px2lh(12.5, 40);
@@ -199,6 +226,10 @@
   line-height: px2lh(24, 40);
   letter-spacing: ps2em(0);
 
+  @media (max-width: $press-break) {
+    font-size: 17.07px;
+  }
+
   @media (max-width: $press-single-column-break) {
     font-size: px2vw(20, $designSmall);
     line-height: px2lh(20, 30);
@@ -210,6 +241,10 @@
   font-size: px2vw(18, $designLarge);
   line-height: px2lh(18, 25);
   letter-spacing: ps2em(0);
+
+  @media (max-width: $press-break) {
+    font-size: 12.80px;
+  }
 
   @media (max-width: $press-single-column-break) {
     font-size: px2vw(15, $designSmall);
@@ -230,6 +265,7 @@
     padding: 13px 32px;
     display: flex;
     align-items: center;
+
     @media (max-width: $press-single-column-break) {
       padding: 10px 15px;
     }
@@ -237,6 +273,10 @@
       font-family: $regular;
       font-size: px2vw(15, $designLarge);
       letter-spacing: ps2em(200);
+
+      @media (max-width: $press-break) {
+        font-size: 10.67px;
+      }
 
       @media (max-width: $press-single-column-break) {
         font-size: px2vw(12.5, $designSmall);
