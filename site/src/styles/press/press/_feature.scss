@@ -31,10 +31,15 @@
 .press-text-wrapper {
   display: flex;
   flex-direction: column;
-  width: 69%;
-  height: 58%;
+  width: 35vw;
+  height: 18vw;
   justify-content: flex-end;
   align-items: flex-start;
+
+  @media (max-width: $press-text-break) {
+    width: 45vw;
+    height: 20vw;
+  }
 
   @media (max-width: $press-single-column-break) {
     width: 95%;
@@ -58,6 +63,12 @@
     font-size: px2vw(37, $designLarge);
     line-height: px2lh(37, 52);
     letter-spacing: ps2em(1);
+
+    // @media (max-width: $press-break) {
+    //   font-size: 26.34px;
+    //   line-height: 37px;
+    //   letter-spacing: 0.026;
+    // }
     @media (max-width: $press-single-column-break) {
       font-size: px2vw(22.5, $designSmall);
       line-height: px2lh(22.5, 32.5);
@@ -69,6 +80,11 @@
     font-size: px2vw(18, $designLarge);
     line-height: px2lh(18, 35);
     letter-spacing: ps2em(0);
+
+    @media (max-width: $press-break) {
+      font-size: 12.79px;
+      // line-height: 37px;
+    }
     @media (max-width: $press-single-column-break) {
       font-size: px2vw(15, $designSmall);
       line-height: px2lh(15, 25);
@@ -78,16 +94,17 @@
 }
 
 .press-read-button {
-  @media (min-width: $about-single-column-break + 1) {
+  @media (min-width: $press-single-column-break + 1) {
     @include button-lrg;
     padding: 18px 26px;
   }
 
-  @media (max-width: $about-break) {
+  @media (max-width: $press-break) {
+    line-height: 0;
     @include button;
   }
 
-  @media (max-width: $about-single-column-break) {
+  @media (max-width: $press-single-column-break) {
     @include button--small;
   }
 }

@@ -28,10 +28,9 @@
 .press-awards-members {
   width: 100%;
   columns: 2;
-  padding-left: 5%;
 
   @media (min-width: $press-single-column-break + 1) {
-    // padding: 0 0 0 8.5%;
+    padding-left: 5%;
     columns: 4;
   }
 }
@@ -42,16 +41,18 @@
   @media (min-width: $press-single-column-break + 1) {
     padding: 0 35% 6% 0;
   }
+
+  @media (max-width: $press-break) {
+    padding: 0 11% 6% 0;
+  }
   @media (max-width: $press-single-column-break) {
-    padding: 0 2% 14.5%;
+    padding: 0 0 14.5%;
   }
 
   .press-awards-container-header {
-    // padding: 10%;
     margin-bottom: 6%;
   }
   .press-awards-content {
-    // padding: 0 10% 0 0;
   }
 }
 
@@ -67,7 +68,7 @@
 
   @media (max-width: $press-break) {
     font-size: 12.82px;
-    line-height: px2lh(12, 20);
+    // line-height: px2lh(12, 20);
   }
 
   @media (max-width: $press-single-column-break) {
@@ -93,7 +94,7 @@
 
   @media (max-width: $press-break) {
     font-size: 12.82px;
-    line-height: px2lh(12, 20);
+    // line-height: px2lh(12, 20);
   }
 
   @media (max-width: $press-single-column-break) {
