@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta charset="<?php bloginfo( 'charset' ); ?>">
-  <title><?php bloginfo('name'); ?>: <?php wp_title(); ?></title>
+  <title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
   <meta name="robots" content="index, follow">
   <meta name="description" content="">
   <meta name="keywords" content="">
