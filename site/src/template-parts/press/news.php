@@ -9,7 +9,7 @@
       <div class="press-news-article">
         <h3 class="press-news-article-date">DEC 14, 2017</h3>
         <h3 class="press-news-article-title">Congratulations John Margolis</h3>
-        <p class="press-news-article-content">Congratulations to our very own John Margolis as the newly elected Vice-President of the ICAA Southern California Chapter Board!</p>
+        <p class="press-news-article-content">Congratulations to our very own <span class="press-highlight">John Margolis</span> as the newly elected Vice-President of the <span class="press-highlight">ICAA Southern California</span> Chapter Board!</p>
       </div>
     </a>
 
@@ -74,7 +74,7 @@
       <div class="press-news-article">
         <h3 class="press-news-article-date">FEB 22, 2017</h3>
         <h3 class="press-news-article-title">Emerald Bay Residence Featured on ArchitecturalDigest.com</h3>
-        <p class="press-news-article-content">We're proud to have stunning oceanside residence, Emerald Bay, make Architectural Digest's list "12 California Homes Designed for Indoor-Outdoor Living".</p>
+        <p class="press-news-article-content">We're proud to have stunning oceanside residence, <span class="press-highlight">Emerald Bay</span>, make Architectural Digest's list "12 California Homes Designed for Indoor-Outdoor Living".</p>
       </div>
     </a>
 
@@ -100,7 +100,7 @@
       <div class="press-news-article">
         <h3 class="press-news-article-date">DEC 23, 2016</h3>
         <h3 class="press-news-article-title">Event Wrap-Up: 2016 Art Exhibit & Sale</h3>
-        <p class="press-news-article-content">The 2016 Art Exhibit and Sale was a huge success and we are proud to report that this year's event raised over $35,000 for artworxLA.</p>
+        <p class="press-news-article-content">The 2016 Art Exhibit and Sale was a huge success and we are proud to report that this year's event raised over $35,000 for <span class="press-highlight">artworxLA</span>.</p>
       </div>
     </a>
 
