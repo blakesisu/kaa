@@ -1,10 +1,23 @@
 <?php
 /**
  * details page template
- * Template Name: Project Details
- * parts directory: template-parts/details
  */
 get_header(); ?>
+
+<?php
+  $hero = get_field('project_detail_hero');
+?>
+<?php if ($hero['desktop']) : ?>
+<section class="pd-grid pd-grid--full">
+  <div class="pd-grid__block pd-grid__block--image">
+    <picture class="pd-grid__picture">
+      <source srcset="<?php echo $hero['mobile']; ?>" media="(max-width: 700px)">
+      <source srcset="<?php echo $hero['desktop']; ?>">
+      <img class="pd-grid__img" srcset="<?php echo $hero['desktop']; ?>" alt="">
+    </picture>
+  </div>
+</section>
+<? endif; ?>
 
 <?php if( have_rows('project_rows') ): ?>
   <?php while ( have_rows('project_rows') ) : the_row(); ?>

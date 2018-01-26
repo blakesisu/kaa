@@ -7,10 +7,10 @@
       <a href="/" class="site-nav__link is-current">Home</a>
     </li>
     <li class="site-nav__item">
-      <a href="/projects-example" class="site-nav__link">Projects</a>
+      <a href="/projects" class="site-nav__link">Projects</a>
     </li>
     <li class="site-nav__item">
-      <a href="/news" class="site-nav__link">News</a>
+      <a href="E" class="site-nav__link">Press</a>
     </li>
     <li class="site-nav__item">
       <a href="/about" class="site-nav__link">About</a>

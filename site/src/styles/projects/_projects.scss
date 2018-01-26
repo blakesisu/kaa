@@ -49,6 +49,7 @@
 .proj-text-mini__header {
   font-family: $bold;
   color: $lightBrown;
+  text-transform: uppercase;
 
   font-size: 22px;
   font-size: px2vw(22, $designLarge);
@@ -74,8 +75,11 @@
 
 // projects
 // ----------------------------------------- //
-.proj__dual-projects, .proj__tri-projects {
+.proj,
+.proj__dual-projects,
+.proj__tri-projects {
   display: flex;
+  flex-wrap: wrap;
 
   @media (max-width: $single-column-break) {
     flex-direction: column;
@@ -84,11 +88,11 @@
 .proj-projects__project {
 }
 .proj-project__dual {
-  flex: 1 1 50%;
+  flex: 0 0 50%;
   position: relative;
 }
 .proj-project__tri {
-  flex: 1 1 33.333%;
+  flex: 0 0 33.333%;
   position: relative;
 }
 
