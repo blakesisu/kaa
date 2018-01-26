@@ -1,58 +1,39 @@
 import $ from 'jquery';
-import slick from 'slick-carousel';
+import Swiper from 'swiper';
 
-const Carousel = function (slider, previous, next) {
-  const $slider = $(slider);
+const Carousel = function (el) {
+  // const $container = $('.swiper-container');
+  const $container = $(el);
 
-  // Create slick carousel
-  $slider.on('init beforeChange', () => {
-    $('.slick-list').css({
-      'width': '100%',
-      // '-webkit-transform': 'translate3d(0, 0, 0)'
-    });
-    $('.slick-track').css({
-      'display': 'flex',
-      'width': '100%',
-      // 'flex-direction': 'row',
-      'align-items': 'baseline',
-      // 'overflow': 'hidden',
-      // '-webkit-transform': 'translate3d(0, 0, 0)'
-    });
-    $('.slick-slide').css({
-      'padding': '0 20px',
-      'width': '240px',
-    });
-  })
-
-  $slider.slick({
-    arrows: false,
-    infinite: false,
+  const swiper = new Swiper($container, {
+    grabCursor: true,
+    loop: true,
+    spaceBetween: 60,
     initialSlide: 3,
-    prevArrow: previous,
-    nextArrow: next,
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    // variableWidth: true,
-    responsive: [
-      {
-        breakpoint: 1366,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          // variableWidth: true,
-        }
+    // slidesPerView: 6,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    breakpoints: {
+      // when window width is <= 1366px
+      1366: {
+        // slidesPerView: 4,
+        spaceBetween: 40
       },
-      {
-        breakpoint: 750,
-        settings: {
-          mobileFirst: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          // variableWidth: true,
-          centerMode: true,
-        }
-      }
-    ]
+      1000: {
+        // slidesPerView: 3,
+        spaceBetween: 60
+      },
+      // when window width is <= 750px
+      750: {
+        // slidesPerView: 2,
+        spaceBetween: 30
+      },
+      // when window width is <= 480px
+      // 480: {
+      //   slidesPerView: 2,
+      //   spaceBetween: 50
+      // },
+    }
   });
 };
 

@@ -9,6 +9,6 @@ if ($('body').hasClass('page-template-press')) {
   });
 
   // Create carousel
-  const magCarousel = new Carousel('.press-media-mags', '.press-media-back', '.press-media-next');
+  const magCarousel = new Carousel('.press-media-mags');
 }
 

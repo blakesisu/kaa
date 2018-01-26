@@ -105,7 +105,7 @@ export default {
       'ScrollMagic',
       'TweenMax',
       'jquery.ScrollMagic',
-      'slickcarousel',
+      'swiper',
       'animation.gsap',
       'debug.addIndicators'
     ]
@@ -145,9 +145,9 @@ export default {
 
     alias: {
       modernizr$: path.resolve(__dirname, '.modernizrrc'),
-      slickcarousel: isProd ?
-        path.resolve('node_modules', 'slick-carousel/slick/slick.min.js') :
-        path.resolve('node_modules', 'slick-carousel/slick/slick.js'),
+      swiper: isProd ?
+        path.resolve('node_modules', 'swiper/dist/js/swiper.min.js') :
+        path.resolve('node_modules', 'swiper/dist/js/swiper.js'),
       postal: isProd ?
         path.resolve('node_modules', 'postal/lib/postal.lodash.min.js') :
         path.resolve('node_modules', 'postal/lib/postal.lodash.js'),
