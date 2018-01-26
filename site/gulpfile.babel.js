@@ -9,7 +9,7 @@ import sourcemaps from 'gulp-sourcemaps';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 
-// import BrowserSync from 'browser-sync';
+import BrowserSync from 'browser-sync';
 import runSequence from 'run-sequence';
 
 import webpack from 'webpack';
@@ -98,14 +98,15 @@ gulp.task('static', () => (
 // Watch for changes
 gulp.task('dev', ['static', 'styles', 'scripts'], () => {
   // Start BrowserSync
-  // browserSync.init({
-  //   files: ['src/**/*.php', '*.php'],
-  //   proxy: 'http://kaa.dev',
-  //   snippetOptions: {
-  //     whitelist: ['/wp-admin/admin-ajax.php'],
-  //     blacklist: ['/wp-admin/**']
-  //   }
-  // });
+  BrowserSync.init({
+    files: ['src/**/*.php', '*.php'],
+    proxy: 'http://kaa.local',
+    snippetOptions: {
+      whitelist: ['/wp-admin/admin-ajax.php'],
+      blacklist: ['/wp-admin/**']
+    },
+    ghostMode: false
+  });
   // Watch for changes and run matching task
   gulp.watch(['src/*.html', 'src/markup/**/*.*'], ['html']);
   gulp.watch('src/scripts/**/*.js', ['scripts']);
