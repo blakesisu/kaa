@@ -1,47 +1,14 @@
 import $ from 'jquery';
 import slick from 'slick-carousel';
 
-const Carousel = function (slider) {
+const Carousel = function (slider, previous, next) {
   const $slider = $(slider);
 
   // Create slick carousel
-  $slider.slick({
-    accessibility: true,
-    arrows: true,
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    centerMode: true,
-    focusOnSelect: true,
-    // fade: this.isTransitionTypeFade(),
-    // autoplaySpeed: this.getSlideInterval(),
-    // speed: this.getSpeedValue(),
-    responsive: [
-      {
-        breakpoint: 1366,
-        settings: {
-          // speed: this.getSpeedValue(),
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          centerMode: true,
-        }
-      },
-      {
-        breakpoint: 750,
-        settings: {
-          mobileFirst: true,
-          infinite: true,
-          // speed: this.getSpeedValue(),
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: true,
-        }
-      }
-    ]
-  });
-
-  $slider.on('beforeChange', () => {
+  $slider.on('init beforeChange', () => {
     $('.slick-list').css({
-      'width': '100%'
+      'width': '100%',
+      // '-webkit-transform': 'translate3d(0, 0, 0)'
     });
     $('.slick-track').css({
       'display': 'flex',
@@ -49,11 +16,45 @@ const Carousel = function (slider) {
       'flex-direction': 'row',
       'align-items': 'baseline',
       'overflow': 'hidden',
+      // '-webkit-transform': 'translate3d(0, 0, 0)'
     });
-
+    $('.slick-slide').css({
+      'padding': '0 20px',
+      'width': '240px',
+    });
   })
 
-  $slider.slick('refresh');
+  $slider.slick({
+    arrows: false,
+    infinite: false,
+    initialSlide: 3,
+    prevArrow: previous,
+    nextArrow: next,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    lazyLoad: 'onDemand',
+    // variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 1366,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          // variableWidth: true,
+        }
+      },
+      {
+        breakpoint: 750,
+        settings: {
+          mobileFirst: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          // variableWidth: true,
+          centerMode: true,
+        }
+      }
+    ]
+  });
 };
 
 export default Carousel;

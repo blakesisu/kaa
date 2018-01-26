@@ -31,12 +31,12 @@
       </div>
       <div class="press-media-nav-arrows">
         <!-- TODO: obtain correct chevrons from psd -->
-        <a href="#" class="press-media-next">
-          <?php include(__DIR__ ."/../svgs/left-chev.svg"); ?>
-        </a>
-        <a href="#" class="press-media-back">
-          <?php include(__DIR__ ."/../svgs/right-chev.svg"); ?>
-        </a>
+        <span class="press-media-next">
+            <?php include(__DIR__ ."/../svgs/left-chev.svg"); ?>
+        </span>
+        <span class="press-media-back">
+            <?php include(__DIR__ ."/../svgs/right-chev.svg"); ?>
+        </span>
       </div>
     </div>
   </div>
