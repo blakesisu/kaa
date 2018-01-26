@@ -25,7 +25,8 @@
   align-items: center;
 
   @media (max-width: $press-single-column-break) {
-    width: 40%;
+    width: 65%;
+    margin: 0 auto 10% auto;
   }
 
   .press-news-pages {
@@ -59,6 +60,7 @@
       font-size: px2vw(15, $designSmall);
       line-height: px2lh(15, 40);
       letter-spacing: ps2em(200);
+      margin: 0 2vw;
     }
   }
 }
