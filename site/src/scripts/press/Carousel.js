@@ -13,9 +13,9 @@ const Carousel = function (slider, previous, next) {
     $('.slick-track').css({
       'display': 'flex',
       'width': '100%',
-      'flex-direction': 'row',
+      // 'flex-direction': 'row',
       'align-items': 'baseline',
-      'overflow': 'hidden',
+      // 'overflow': 'hidden',
       // '-webkit-transform': 'translate3d(0, 0, 0)'
     });
     $('.slick-slide').css({
@@ -32,7 +32,6 @@ const Carousel = function (slider, previous, next) {
     nextArrow: next,
     slidesToShow: 6,
     slidesToScroll: 1,
-    lazyLoad: 'onDemand',
     // variableWidth: true,
     responsive: [
       {
