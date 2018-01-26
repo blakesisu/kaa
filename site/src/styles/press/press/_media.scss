@@ -167,10 +167,6 @@
 // magazines
 .press-media-mags {
   width: 100%;
-  // display: flex;
-  // flex-direction: row;
-  // align-items: baseline;
-  // overflow: hidden;
   @media (max-width: $press-single-column-break) {
     height: 70%;
   }
@@ -180,10 +176,10 @@
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  margin: 0 1.4vw;
-  @media (max-width: $press-single-column-break) {
-    margin: 0 6%;
-  }
+  // margin: 0 1.4vw;
+  // @media (max-width: $press-single-column-break) {
+  //   margin: 0 6%;
+  // }
 }
 
 .press-picture {
@@ -196,7 +192,6 @@
 .press-media-article {
   @extend .press-article-description;
   height: 9vw;
-  // width: 20vw;
 
   @media (max-width: $press-break) {
     height: 122.93px;
@@ -297,3 +292,4 @@
     margin-right: 5%;
   }
 }
+
