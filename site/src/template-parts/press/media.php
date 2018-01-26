@@ -21,20 +21,20 @@
             <li class="press-media-coastal-mag">Coastal Living</li>
             <li class="press-media-ocean-mag">Ocean Home</li>
             <li class="press-media-luxe-mag">luxe.</li>
-            <li class="press-media-derp-mag">Derp</li>
-            <li class="press-media-test-mag">Test</li>
-            <li class="press-media-nonce-mag">Nonce</li>
-            <li class="press-media-none-mag">None</li>
-            <li class="press-media-psuedo-mag">Pseudo</li>
+            <li class="press-media-tester1-mag">tester1</li>
+            <li class="press-media-tester2-mag">tester2</li>
+            <li class="press-media-tester3-mag">tester3</li>
+            <li class="press-media-tester4-mag">tester4</li>
+            <li class="press-media-tester5-mag">tester5</li>
           </ul>
         </div>
       </div>
       <div class="press-media-nav-arrows">
         <!-- TODO: obtain correct chevrons from psd -->
-        <span class="press-media-next">
+        <span class="press-media-back">
             <?php include(__DIR__ ."/../svgs/left-chev.svg"); ?>
         </span>
-        <span class="press-media-back">
+        <span class="press-media-next">
             <?php include(__DIR__ ."/../svgs/right-chev.svg"); ?>
         </span>
       </div>
@@ -51,7 +51,7 @@
         <div class="press-media-article">
           <h3 class="press-media-article-date">DEC 2017</h3>
           <h3 class="press-media-article-title">South Bay DIGS</h3>
-          <p class="press-media-article-content">Featuring Tower Grove Drive</p>
+          <p class="press-media-article-content">Featuring <span class="press-highlight">Tower Grove Drive</span></p>
         </div>
         <div class="press-media-actions">
           <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> <span>PDF</span></div>
@@ -66,7 +66,7 @@
         <div class="press-media-article">
           <h3 class="press-media-article-date">DEC 2017</h3>
           <h3 class="press-media-article-title">LIVING | Brazil</h3>
-          <p class="press-media-article-content">Featuring Tower Grove Drive</p>
+          <p class="press-media-article-content">Featuring <span class="press-highlight">Tower Grove Drive</span></p>
         </div>
         <div class="press-media-actions">
           <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> <span>PDF</span></div>
@@ -95,7 +95,7 @@
         <div class="press-media-article">
           <h3 class="press-media-article-date">AUG/SEP 2017</h3>
           <h3 class="press-media-article-title">Ocean Home</h3>
-          <p class="press-media-article-content">Featuring 3rd Street & The Strand Residence</p>
+          <p class="press-media-article-content">Featuring <span class="press-highlight">3rd Street & The Strand Residence</span></p>
         </div>
         <div class="press-media-actions">
           <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> <span>PDF</span></div>
@@ -111,7 +111,7 @@
         <div class="press-media-article">
           <h3 class="press-media-article-date">MAY 2017</h3>
           <h3 class="press-media-article-title">LUXE Interiors + Design</h3>
-          <p class="press-media-article-content">Featuring Tower Grove Drive</p>
+          <p class="press-media-article-content">Featuring <span class="press-highlight">Tower Grove Drive</span></p>
         </div>
         <div class="press-media-actions">
           <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> <span>PDF</span></div>
@@ -126,7 +126,7 @@
         <div class="press-media-article">
           <h3 class="press-media-article-date">MAR 2017</h3>
           <h3 class="press-media-article-title">Sunset</h3>
-          <p class="press-media-article-content">Featuring Split Rock Ranch</p>
+          <p class="press-media-article-content">Featuring <span class="press-highlight">Split Rock Ranch</span></p>
         </div>
         <div class="press-media-actions">
           <div class="press-media-pdf"><?php include(__DIR__ ."/../svgs/down-chev.svg"); ?> <span>PDF</span></div>
