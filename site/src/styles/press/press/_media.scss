@@ -167,17 +167,27 @@
 // magazines
 .press-media-mags {
   width: 100%;
+  overflow: hidden;
+  // padding: 0 2vw;
   @media (max-width: $press-single-column-break) {
     height: 70%;
   }
 }
 
+.press-media-mags-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
 .press-media-mag-item {
+  width: auto;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  // margin: 0 1.4vw;
-  // @media (max-width: $press-single-column-break) {
+  // margin: 0 2vw;
+  // @media (max-width: $press-single-column-break - 220) {
   //   margin: 0 6%;
   // }
 }
@@ -186,7 +196,6 @@
   img {
     height: auto;
     width: auto;
-    // width: 240px;
   }
 }
 
@@ -293,18 +302,3 @@
     margin-right: 5%;
   }
 }
-
-// .slick-list {
-//   width: 100% !important;
-// }
-//
-// .slick-track {
-//   display: flex !important;
-//   width: 100% !important;
-//   align-items: baseline !important;
-// }
-//
-// .slick-slide {
-//   padding: 0 20px !important;
-//   width: 240px !important;
-// }
