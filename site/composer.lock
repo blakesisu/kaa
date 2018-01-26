@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b4e6c243931fdce6418c2da001598034",
+    "content-hash": "bc6beffb84fa4a5b5eeb9dd507ec94f5",
     "packages": [
         {
             "name": "composer/installers",
@@ -424,26 +424,6 @@
                 "shasum": null
             },
             "type": "wordpress-plugin"
-        },
-        {
-            "name": "wpackagist-plugin/admin-menu-editor",
-            "version": "1.8.1",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/admin-menu-editor/",
-                "reference": "tags/1.8.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/admin-menu-editor.1.8.1.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/admin-menu-editor/"
         },
         {
             "name": "wpackagist-plugin/all-in-one-wp-migration",
