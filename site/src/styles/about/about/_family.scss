@@ -235,6 +235,13 @@
   .about-family {
     margin-top: 15%;
   }
+  // .about-family-copy {
+  //   display: none;
+  // }
+}
+
+// only hide copy overlay on touch devices
+.touchevents {
   .about-family-copy {
     display: none;
   }
