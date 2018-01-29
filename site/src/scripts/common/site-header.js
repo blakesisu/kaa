@@ -1,44 +1,74 @@
 import $ from 'jquery';
 
-const $menuBtn = $('.site-header__menu-btn');
-const $siteNav = $('.site-nav');
-const $closeBtn = $siteNav.find('.site-nav__close');
-const $navLinks = $siteNav.find('.site-nav__link');
-const $utilities = $siteNav.find('.site-nav__utilities');
+const $dropDown = $('.header-drop-down');
+const $btn = $dropDown.find('.header-drop-down__btn');
+const $list = $dropDown.find('.header-drop-down__list');
+const $items = $dropDown.find('.header-drop-down__item');
+let isOpen = false;
 
-const openNav = function () {
-  $siteNav.addClass('is-open');
+const openDropDown = function () {
+  isOpen = true;
 
+  // Get the list's current height
+  // The list is absolutely positioned off the left of the screen
+  const newHeight = $list.height();
+
+  // Set the height to zero
+  $list.css('height', 0);
+
+  // Move the list into view
+  $list.addClass('is-open');
+
+  // Turn the arrow 180 deg
+  $btn.addClass('is-open');
+
+  // Animate the list open
+  $list.css('height', 0).animate({
+    height: newHeight
+  }, 500, 'easeInOutCubic', () => {
+    // Remove inline styles so things work responsively
+    $list.attr('style', '');
+  });
+
+  // Animate the list items
   setTimeout(() => {
-    $utilities.addClass('is-open');
-    $navLinks.each((i, el) => {
+    $items.each((i, el) => {
       setTimeout(() => {
         $(el).addClass('is-visible');
-      }, i * 100);
+      }, i * 80);
     });
-  }, 600);
+  }, 100);
 };
 
-const closeNav = function () {
-  // reverse the links
-  $($siteNav.find('.site-nav__link').get().reverse()).each((i, el) => {
+const closeDropDown = function () {
+  isOpen = false;
+
+  // Turn the arrow 180 deg
+  $btn.removeClass('is-open');
+
+  // reverse the links using reverse loop
+  $($dropDown.find('.header-drop-down__item').get().reverse()).each((i, el) => {
     setTimeout(() => {
       $(el).removeClass('is-visible');
     }, i * 100);
   });
 
   setTimeout(() => {
-    $siteNav.removeClass('is-open');
-    $utilities.removeClass('is-open');
-  }, 100 * $navLinks.length);
+    $list.animate({
+      height: 0
+    }, 500, 'easeInOutCubic', () => {
+      // Remove class and inline styles so things work responsively
+      $list.removeClass('is-open').attr('style', '');
+    });
+  }, 100);
 };
 
-$menuBtn.click((e) => {
+$btn.on('click', (e) => {
   e.preventDefault();
-  openNav();
+  if (isOpen) {
+    closeDropDown();
+  } else {
+    openDropDown();
+  }
 });
 
-$closeBtn.click((e) => {
-  e.preventDefault();
-  closeNav();
-});

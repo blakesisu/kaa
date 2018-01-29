@@ -138,20 +138,44 @@
     height: auto;
     top: px2vw(-5, $designLarge);
     left: px2vw(-2, $designLarge);
+    transition: transform 0.4s ease;
   }
 
   &:hover {
     opacity: 0.7;
   }
+
+  &.is-open {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
 }
 
 .header-drop-down__list {
+  position: absolute;
+  overflow: hidden;
+  left: -999px;
 
+  &.is-open {
+    position: static;
+    left: 0;
+  }
 }
 
 .header-drop-down__item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.3s ease,
+              transform 0.3s ease;
+
   &:first-child {
     margin-top: px2vw(28, $designLarge);
+  }
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
