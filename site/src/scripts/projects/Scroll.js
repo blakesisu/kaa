@@ -3,7 +3,7 @@ import postal from 'postal';
 import Window from '../common/window';
 import { GLOBAL_CHANNEL } from '../constants/Constants';
 
-const Leader = function (el) {
+const Scroll = function (el) {
   const $el = $(el);
   const id = $el.attr('href').replace('#', '');
   const globalChannel = postal.channel(GLOBAL_CHANNEL);
@@ -26,11 +26,11 @@ const Leader = function (el) {
   };
 
   // On link click
-  // $el.click((e) => {
-  //   e.preventDefault();
-  //   // Publish the id
-  //   globalChannel.publish('modal.open', id);
-  // });
+  $el.click((e) => {
+    e.preventDefault();
+    // Publish the id
+    globalChannel.publish('modal.open', id);
+  });
 
   // Listen for window resize
   globalChannel.subscribe('window.resize', () => {
@@ -46,4 +46,4 @@ const Leader = function (el) {
   checkSizeAndPosition();
 };
 
-export default Leader;
+export default Scroll;
