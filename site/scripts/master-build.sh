@@ -1,4 +1,5 @@
 #!/bin/bash
+source .env
 
 # Backup check
 read -r -p "Build from backup database? [y/N] (Default: no)" BACKUP_RESP

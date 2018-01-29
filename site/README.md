@@ -48,9 +48,10 @@ Use this repo as a starting point for your next custom WordPress theme.
 1. Install [Yarn](https://yarnpkg.com/) globally if you don't have it already
 1. Using terminal change directories to the project root `cd /path/to/your-project/site`
 1. Install dependencies by running `yarn`
+1. Ensure that your wp-cli aliases (`wp-cli.yml`) are correctly set
 1. Run any of the available commands found below
 
-## Commands
+## Yarn Commands
 
 | Command | Description |
 |---------|-------------|
@@ -58,8 +59,19 @@ Use this repo as a starting point for your next custom WordPress theme.
 | `yarn dev` | - Build WP database, then begin Transpile CSS and Javascript and move static files to the `site/web/app/themes/dist` folder |
 | `yarn build` | Use Gulp to build static output to the `site/web/app/themes/dist` folder |
 | `yarn lint` | Lint code using ESLint |
-| `yarn build-db` | Build WordPress database from backup or sync from existing |
+| `yarn backup-db <alias>` | Backup WordPress database that corresponds with wp-cli alias, named as `<alias>-backup_<timestamp>.sql` with the timestamp produced in script (mo_day_year_hour_min_sec) |
+| `yarn build-db` | Build WordPress database from backup from database file or sync with remote database |
 | `yarn build-all` | Build WordPress database, sync, then build static output with gulp |
+
+## WP-CLI Commands
+
+| Command | Description |
+|---------|-------------|
+| `wp @<alias> db import <db name>` | Import from named database in site root |
+| `wp @<alias> db import -` | Import database from stdout |
+| `wp @<alias> db export <db name>` | Export database as named to site root |
+| `wp @<alias> db export - > <db name>` | Export database as named (and to stdout) to site root |
+| `wp @<alias> db reset --yes` | reset database |
 
 ## Project Structure
 

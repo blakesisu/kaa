@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source .env
+
 echo "BEWARE: Defaults are mapped for development machine"
 
 # Machine input
@@ -7,8 +9,8 @@ read -r -p "Enter machine [prod/stage/dev] (default: dev): " MACHINE
 # Machine default
 MACHINE=${MACHINE:-dev}
 
-# store current time
-NOW=`date +"%m_%d_%Y"`
+# current timestamp
+NOW=`date +"%m_%d_%Y_%H_%M_%S"`
 
 # Cases
 if $(wp "@$MACHINE" core is-installed); then
@@ -61,12 +63,13 @@ initWP() {
   echo "Installing core and theme..."
   wp "@$MACHINE" db reset --yes
   if [[ "$INSTALLED" = true ]]; then
-    read -r -p "WordPress already installed, reinitialize? (Default: false): " REINIT
-    REINIT=${REINIT:-false}
+    read -r -p "WordPress already installed, reinitialize? (Default: no): " REINIT
+    REINIT=${REINIT:-no}
 
-    if [[ "$REINIT" = true ]]; then
+    if [[ "$REINIT" =~ ^([yY][eE][sS]|[yY])$ ]]; then
       wp "@$MACHINE" core install --url=$SITE --title=$TITLE --admin_user=$USER --admin_email=$EMAIL --admin_password=$PASSWORD
       wp "@$MACHINE" theme install $THEME --activate
+      wp "@$MACHINE" plugin activate --all
     fi
   fi
 }
@@ -76,6 +79,10 @@ if [ -f $SQL_BACKUP ] && [ $SQL_BACKUP != "$MACHINE-backup_$NOW.sql" ]; then
   initWP
   echo "WordPress initialized."
   echo "Importing database backup..."
+
+  # if [ $MACHINE = "prod" ] || [ $MACHINE = "stage" ]; then
+  #   rsync -az --progress $SQL_BACKUP
+  # fi
   wp "@$MACHINE" db import $SQL_BACKUP
 else
   read -r -p "Distinct database backup not found! Continue with WordPress initialization? (default: no): " WORD_INIT

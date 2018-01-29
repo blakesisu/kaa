@@ -1,5 +1,11 @@
 #!/bin/bash
 
+source .env
+
+# current timestamp
+NOW=`date +"%m_%d_%Y_%H_%M_%S"`
+echo $WP_PROD
+
 DEVDIR="web/app/uploads/"
 DEVSITE="dev.kaadesigngroup.com"
 
@@ -35,11 +41,12 @@ read -r -p "Sync the uploads folder? [y/N] " uploads
 
 # cd ../ &&
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
-  wp "@$TO" db export $TO-backup.sql &&
+  wp "@$TO" db export $TO-backup_$NOW.sql &&
   wp "@$TO" db reset --yes &&
-  wp "@$FROM" db export - > $FROM-backup.sql
+  wp "@$FROM" db export - > $FROM-backup_$NOW.sql
   wp "@$TO" core install --url=$TOSITE --title=kaa --admin_user=admin --admin_email=blake@sisumedia.com --admin_password=guts02 &&
   wp "@$TO" theme install dist --activate
+  wp "@$TO" plugin activate --all
 
   if $(wp "@$FROM" core is-installed --network); then
     wp "@$FROM" search-replace --url=$FROMSITE $FROMSITE $TOSITE --skip-columns=guid --network --export | wp "@$TO" db import -
