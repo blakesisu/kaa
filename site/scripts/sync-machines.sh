@@ -5,6 +5,7 @@ DEVSITE="dev.kaadesigngroup.com"
 
 # PRODDIR="web@138.197.199.171:/srv/www/kaa/current/web/app/uploads/"
 # PRODSITE="138.197.199.171"
+
 PRODDIR="web@104.236.139.224:/srv/www/kaa/current/web/app/uploads/"
 PRODSITE="104.236.139.224"
 
@@ -29,14 +30,14 @@ case "$TO-$FROM" in
   *) echo "usage: $0 dev prod | dev stage | prod dev | prod stage" && exit 1 ;;
 esac
 
-read -r -p "Reset the $TO database and sync $DIR from $FROM? [y/N] " response
+read -r -p "Reset the $TO database and sync from $FROM? [y/N] " response
 read -r -p "Sync the uploads folder? [y/N] " uploads
 
 # cd ../ &&
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
   wp "@$TO" db export $TO-backup.sql &&
   wp "@$TO" db reset --yes &&
-  wp "@$FROM" db export -> $FROM-backup.sql
+  wp "@$FROM" db export - > $FROM-backup.sql
   wp "@$TO" core install --url=$TOSITE --title=kaa --admin_user=admin --admin_email=blake@sisumedia.com --admin_password=guts02 &&
   wp "@$TO" theme install dist --activate
 

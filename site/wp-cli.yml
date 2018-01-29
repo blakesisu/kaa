@@ -13,3 +13,8 @@ path: web/wp
 
 @stage:
   ssh: web@165.227.56.50/srv/www/kaa/current
+
+@all:
+  - @dev
+  - @prod
+  - @stage
