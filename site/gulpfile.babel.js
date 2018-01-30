@@ -15,7 +15,7 @@ import runSequence from 'run-sequence';
 import webpack from 'webpack';
 import webpackConfig from './webpack.conf';
 
-// const browserSync = BrowserSync.create();
+const browserSync = BrowserSync.create();
 
 // location of static files to copy over
 // everything but markup, scripts, and styles directories
@@ -43,7 +43,7 @@ gulp.task('styles', () => (
     // output files
     .pipe(gulp.dest('./web/app/themes/dist/css'))
     // update browserSync
-    // .pipe(browserSync.stream())
+    .pipe(browserSync.stream())
 ));
 
 // Scripts
@@ -64,7 +64,7 @@ gulp.task('scripts', (callback) => {
     }));
 
     // reload browserSync
-    // browserSync.reload();
+    browserSync.reload();
 
     callback();
   });
@@ -78,7 +78,7 @@ gulp.task('static', () => (
     // output files
     .pipe(gulp.dest('./web/app/themes/dist'))
     // update browserSync
-    // .pipe(browserSync.stream())
+    .pipe(browserSync.stream())
 ));
 
 // Bust Cache
@@ -98,7 +98,7 @@ gulp.task('static', () => (
 // Watch for changes
 gulp.task('dev', ['static', 'styles', 'scripts'], () => {
   // Start BrowserSync
-  BrowserSync.init({
+  browserSync.init({
     files: ['src/**/*.php', '*.php'],
     proxy: 'http://kaa.local',
     snippetOptions: {
