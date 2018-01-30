@@ -1,21 +1,21 @@
 import gulp from 'gulp';
 import gutil from 'gulp-util';
-import fileinclude from 'gulp-file-include';
+// import fileinclude from 'gulp-file-include';
 import plumber from 'gulp-plumber';
 import notify from 'gulp-notify';
-import cacheBuster from 'gulp-cache-bust';
+// import cacheBuster from 'gulp-cache-bust';
 import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 
-// import BrowserSync from 'browser-sync';
+import BrowserSync from 'browser-sync';
 import runSequence from 'run-sequence';
 
 import webpack from 'webpack';
 import webpackConfig from './webpack.conf';
 
-// const browserSync = BrowserSync.create();
+const browserSync = BrowserSync.create();
 
 // location of static files to copy over
 // everything but markup, scripts, and styles directories
@@ -43,7 +43,7 @@ gulp.task('styles', () => (
     // output files
     .pipe(gulp.dest('./web/app/themes/dist/css'))
     // update browserSync
-    // .pipe(browserSync.stream())
+    .pipe(browserSync.stream())
 ));
 
 // Scripts
@@ -64,7 +64,7 @@ gulp.task('scripts', (callback) => {
     }));
 
     // reload browserSync
-    // browserSync.reload();
+    browserSync.reload();
 
     callback();
   });
@@ -78,7 +78,7 @@ gulp.task('static', () => (
     // output files
     .pipe(gulp.dest('./web/app/themes/dist'))
     // update browserSync
-    // .pipe(browserSync.stream())
+    .pipe(browserSync.stream())
 ));
 
 // Bust Cache
@@ -98,14 +98,15 @@ gulp.task('static', () => (
 // Watch for changes
 gulp.task('dev', ['static', 'styles', 'scripts'], () => {
   // Start BrowserSync
-  // browserSync.init({
-  //   files: ['src/**/*.php', '*.php'],
-  //   proxy: 'http://kaa.dev',
-  //   snippetOptions: {
-  //     whitelist: ['/wp-admin/admin-ajax.php'],
-  //     blacklist: ['/wp-admin/**']
-  //   }
-  // });
+  browserSync.init({
+    files: ['src/**/*.php', '*.php'],
+    proxy: 'http://dev.kaadesigngroup.com',
+    snippetOptions: {
+      whitelist: ['/wp-admin/admin-ajax.php'],
+      blacklist: ['/wp-admin/**']
+    },
+    ghostMode: false
+  });
   // Watch for changes and run matching task
   gulp.watch(['src/*.html', 'src/markup/**/*.*'], ['html']);
   gulp.watch('src/scripts/**/*.js', ['scripts']);
