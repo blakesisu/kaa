@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DEVDIR="web/app/uploads/"
-DEVSITE="kaa.local"
+DEVSITE="dev.kaadesigngroup.com"
 
 # PRODDIR="web@138.197.199.171:/srv/www/kaa/current/web/app/uploads/"
 # PRODSITE="138.197.199.171"

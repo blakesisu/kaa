@@ -19,7 +19,7 @@ else
   fi
 fi
 
-read -r -p "Enter site (enter ip or domain, default: kaa.local): " SITE
+read -r -p "Enter site (enter ip or domain, default: dev.kaadesigngroup.com): " SITE
 read -r -p "Enter title (default: kaa): " TITLE
 read -r -p "Enter user name (default: admin): " USER
 read -r -p "Enter email (default: unclesisu@sisumedia): " EMAIL
@@ -33,7 +33,7 @@ USER=${USER:-admin}
 EMAIL=${EMAIL:-unclesisu@sisumedia.com}
 PASSWORD=${PASSWORD:-guts02}
 THEME=${THEME:-dist}
-SITE=${SITE:-kaa.local}
+SITE=${SITE:-dev.kaadesigngroup.com}
 TITLE=${TITLE:-kaa}
 SQL_BACKUP=${SQL_BACKUP:-./$MACHINE-backup.sql}
 NOW=`date +"%m_%d_%Y"`
