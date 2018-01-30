@@ -15,13 +15,12 @@
     <div class="press-column-item press-text-feature">
       <div class="press-text-wrapper">
         <div class="press-text-header">
-          <h2>CALIFORNIA CONTEMPORARY:</h2>
-          <h2>A Book Over 30 Years in the Making</h2>
+          <h2>CALIFORNIA CONTEMPORARY: A Book Over 30 Years in the Making</h2>
         </div>
         <div class="press-text-description">
           <p>Explore the houses of founder Grant C. Kirkpatrick and KAA Design, and our love for nature, design and storytelling.</p>
         </div>
-        <button class="press-read-button">READ MORE</button>
+        <a href="#" class="press-read-button">READ MORE</a>
       </div>
     </div>
   </div>
