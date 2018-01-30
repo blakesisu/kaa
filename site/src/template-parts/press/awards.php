@@ -10,7 +10,7 @@
       </div>
       <div class="press-awards-content">
         <p class="press-awards-title">Citation Award for<br>Excellence in Design /<br>
-        <span class="press-highlight">Balance Hill</span></p>
+        <a href="#" class="press-highlight">Balance Hill</a></p>
       </div>
     </li>
     <li class="press-awards-container">
@@ -50,7 +50,7 @@
         <h3 class="press-awards-name">AIA | SOUTH BAY DESIGN AWARDS</h3>
       </div>
       <div class="press-awards-content">
-        <p class="press-awards-title">Honor Award for<br>Excellence in Design /<br> <span class="press-highlight">Monaco Gym & Spa</span></p>
+        <p class="press-awards-title">Honor Award for<br>Excellence in Design /<br> <a href="#" class="press-highlight">Monaco Gym & Spa</a></p>
       </div>
     </li>
     <li class="press-awards-container">
@@ -59,7 +59,7 @@
       </div>
       <div class="press-awards-content">
         <p class="press-awards-title">Merit Award for<br>Excellence in Design /<br>
-        <span class="press-highlight">6th Street</span></p>
+        <a href="#" class="press-highlight">6th Street</a></p>
       </div>
     </li>
     <li class="press-awards-container">
@@ -99,7 +99,7 @@
         <h3 class="press-awards-name">AIA | SOUTH BAY DESIGN AWARDS</h3>
       </div>
       <div class="press-awards-content">
-        <p class="press-awards-title">Citation Award for<br>Excellence in Design /<br><span class="press-highlight">3rd Street</span></p>
+        <p class="press-awards-title">Citation Award for<br>Excellence in Design /<br><a href="#" class="press-highlight">3rd Street</a></p>
       </div>
     </li>
     <li class="press-awards-container">
@@ -141,7 +141,7 @@
       <div class="press-awards-content">
         <p class="press-awards-title">Citation Award for<br>Excellence in Design /<br>
         Hermosa Beach Cottage<br>
-        <span class="press-highlight">Monterey Boulevard</span></p>
+        <a href="#" class="press-highlight">Monterey Boulevard</a></p>
       </div>
     </li>
     <li class="press-awards-container">
