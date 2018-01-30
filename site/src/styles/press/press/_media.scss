@@ -106,7 +106,7 @@
       color: #ffffff;
       text-transform: uppercase;
       font-size: px2vw(15, $designLarge);
-      line-height: px2lh(15, 40);
+      // line-height: px2lh(15, 40);
       letter-spacing: ps2em(200);
 
       @media (max-width: $press-break) {
@@ -115,7 +115,7 @@
 
       @media (max-width: $press-single-column-break) {
         font-size: px2vw(12.5, $designSmall);
-        line-height: px2lh(12.5, 40);
+        // line-height: px2lh(12.5, 40);
         letter-spacing: ps2em(200);
       }
     }
