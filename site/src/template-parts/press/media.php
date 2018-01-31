@@ -15,17 +15,17 @@
         <!-- dropdown options -->
         <div class="press-media-dropdown-container">
           <ul class="press-media-dropdown-list">
-            <li><button class="press-media-all-pubs">ALL PUBLICATIONS</button></li>
-            <li><button class="press-media-digs-mag">Digs</button></li>
-            <li><button class="press-media-living-mag">Living</button></li>
-            <li><button class="press-media-coastal-mag">Coastal Living</button></li>
-            <li><button class="press-media-ocean-mag">Ocean Home</button></li>
-            <li><button class="press-media-luxe-mag">luxe.</button></li>
-            <li><button class="press-media-tester1-mag">tester1</button></li>
-            <li><button class="press-media-tester2-mag">tester2</button></li>
-            <li><button class="press-media-tester3-mag">tester3</button></li>
-            <li><button class="press-media-tester4-mag">tester4</button></li>
-            <li><button class="press-media-tester5-mag">tester5</button></li>
+            <li><button class="press-media-mag-filter" data-mag="all">ALL PUBLICATIONS</button></li>
+            <li><button class="press-media-mag-filter" data-mag="digs">Digs</button></li>
+            <li><button class="press-media-mag-filter" data-mag="living">Living</button></li>
+            <li><button class="press-media-mag-filter" data-mag="coastal">Coastal Living</button></li>
+            <li><button class="press-media-mag-filter" data-mag="ocean">Ocean Home</button></li>
+            <li><button class="press-media-mag-filter" data-mag="luxe">luxe.</button></li>
+            <li><button class="press-media-mag-filter" data-mag="sunset">Sunset</button></li>
+            <li><button class="press-media-mag-filter" data-mag="tester2">tester2</button></li>
+            <li><button class="press-media-mag-filter" data-mag="tester3">tester3</button></li>
+            <li><button class="press-media-mag-filter" data-mag="tester4">tester4</button></li>
+            <li><button class="press-media-mag-filter" data-mag="tester5">tester5</button></li>
           </ul>
         </div>
       </div>
@@ -44,7 +44,7 @@
   <div class="press-media-mags swiper-container">
     <ul class="press-media-mags-wrapper swiper-wrapper">
 
-      <li class="press-media-mag-item swiper-slide">
+      <li class="press-media-mag-item swiper-slide" data-magitem="digs">
         <div class="press-media-mag-content">
           <picture class="press-picture">
             <source srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/digs-mag.jpg">
@@ -61,7 +61,7 @@
         </div>
       </li>
 
-      <li class="press-media-mag-item swiper-slide">
+      <li class="press-media-mag-item swiper-slide" data-magitem="living">
         <div class="press-media-mag-content">
           <picture class="press-picture">
             <source srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/living-mag.jpg">
@@ -78,7 +78,7 @@
         </div>
       </li>
 
-      <li class="press-media-mag-item swiper-slide">
+      <li class="press-media-mag-item swiper-slide" data-magitem="coastal">
         <div class="press-media-mag-content">
           <picture class="press-picture">
             <source srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/coastal-mag.jpg">
@@ -94,7 +94,7 @@
         </div>
       </li>
 
-      <li class="press-media-mag-item swiper-slide">
+      <li class="press-media-mag-item swiper-slide" data-magitem="ocean">
         <div class="press-media-mag-content">
           <picture class="press-picture">
             <source srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/ocean-mag.jpg">
@@ -112,7 +112,7 @@
         </div>
       </li>
 
-      <li class="press-media-mag-item swiper-slide">
+      <li class="press-media-mag-item swiper-slide" data-magitem="luxe">
         <div class="press-media-mag-content">
           <picture class="press-picture">
             <source srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/luxe-mag.jpg">
@@ -129,7 +129,7 @@
         </div>
       </li>
 
-      <li class="press-media-mag-item swiper-slide">
+      <li class="press-media-mag-item swiper-slide" data-magitem="sunset">
         <div class="press-media-mag-content">
           <picture class="press-picture">
             <source srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/sunset-mag.jpg">

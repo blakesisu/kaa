@@ -106,11 +106,12 @@
       color: #ffffff;
       text-transform: uppercase;
       font-size: px2vw(15, $designLarge);
-      // line-height: px2lh(15, 40);
+      line-height: px2lh(15, 40);
       letter-spacing: ps2em(200);
 
       @media (max-width: $press-break) {
         font-size: 10.67px;
+        line-height: 0;
       }
 
       @media (max-width: $press-single-column-break) {
@@ -325,3 +326,7 @@
   }
 }
 
+.swiper-hidden-slide {
+  display: none !important;
+  // float: left;
+}
