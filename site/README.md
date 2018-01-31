@@ -48,7 +48,7 @@ Use this repo as a starting point for your next custom WordPress theme.
 1. Install [Yarn](https://yarnpkg.com/) globally if you don't have it already
 1. Using terminal change directories to the project root `cd /path/to/your-project/site`
 1. Install dependencies by running `yarn`
-1. Ensure that your wp-cli aliases (`wp-cli.yml`) are correctly set
+1. Ensure that your wp-cli aliases (`wp-cli.yml`) are correctly set [Awesome Instructions](https://roots.io/leveraging-wp-cli-aliases-in-your-wordpress-development-workflow/)
 1. Follow directions in remote server setup if coordinating with remote entities
 1. Run any of the available commands found below
 
