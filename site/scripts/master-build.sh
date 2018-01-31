@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Backup check
-read -r -p "Build from backup database? [y/N] (Default: no)" BACKUP_RESP
+read -r -p "Build from backup database? [y/N]" BACKUP_RESP
 BACKUP_RESP=${BACKUP_RESP:-no}
 
 if [[ "$BACKUP_RESP" =~ ^([yY][eE][sS]|[yY])$ ]]; then
@@ -10,7 +10,7 @@ if [[ "$BACKUP_RESP" =~ ^([yY][eE][sS]|[yY])$ ]]; then
 fi
 
 # Sync check
-read -r -p "Sync from another database? [y/N] (Default: no)" SYNC_RESP
+read -r -p "Sync from another database? [y/N]" SYNC_RESP
 SYNC_RESP=${SYNC_RESP:-no}
 
 if [[ "$SYNC_RESP" =~ ^([yY][eE][sS]|[yY])$ ]]; then
@@ -19,7 +19,7 @@ if [[ "$SYNC_RESP" =~ ^([yY][eE][sS]|[yY])$ ]]; then
 fi
 
 # Upload check
-read -r -p "Sync from another database? [y/N] (Default: no)" UPLOAD_RESP
+read -r -p "Upload assets to a remote server? [y/N]" UPLOAD_RESP
 UPLOAD_RESP=${UPLOAD_RESP:-no}
 
 if [[ "$UPLOAD_RESP" =~ ^([yY][eE][sS]|[yY])$ ]]; then
