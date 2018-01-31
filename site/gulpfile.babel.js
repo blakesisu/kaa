@@ -1,9 +1,9 @@
 import gulp from 'gulp';
 import gutil from 'gulp-util';
-import fileinclude from 'gulp-file-include';
+// import fileinclude from 'gulp-file-include';
 import plumber from 'gulp-plumber';
 import notify from 'gulp-notify';
-import cacheBuster from 'gulp-cache-bust';
+// import cacheBuster from 'gulp-cache-bust';
 import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 import postcss from 'gulp-postcss';
@@ -100,7 +100,7 @@ gulp.task('dev', ['static', 'styles', 'scripts'], () => {
   // Start BrowserSync
   browserSync.init({
     files: ['src/**/*.php', '*.php'],
-    proxy: 'http://kaa.local',
+    proxy: 'http://dev.kaadesigngroup.com',
     snippetOptions: {
       whitelist: ['/wp-admin/admin-ajax.php'],
       blacklist: ['/wp-admin/**']

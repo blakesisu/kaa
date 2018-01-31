@@ -12,7 +12,32 @@
         </span>
       </a>
     </h2>
-    <?php if( $pageTemplate ): ?>
+    <?php if(is_archive('projects')): ?>
+      <?php
+        $taxonomy = get_taxonomy( 'project_category' );
+        $terms = get_terms([
+          'taxonomy' => 'project_category',
+          'hide_empty' => false,
+        ]);
+        $currentTerm = single_term_title("", false);
+      ?>
+      <div class="header-drop-down">
+        <button class="header-drop-down__btn">
+          <?php if (is_tax( 'project_category' )) { echo single_term_title(); } else { echo post_type_archive_title(); } ?>
+          <?php include(__DIR__ ."/../svgs/dropdown-down.svg"); ?>
+        </button>
+        <ul class="header-drop-down__list">
+          <li class="header-drop-down__item <?php if (is_tax( 'project_category' ) === false) { echo 'is-current'; } ?>">
+            <a href="/projects" class="header-drop-down__link">All</a>
+          </li>
+          <?php foreach ( $terms as $term) : ?>
+            <li class="header-drop-down__item <?php if ($term->name == $currentTerm) { echo 'is-current'; } ?>">
+              <a href="<?php echo get_term_link($term); ?>" class="header-drop-down__link"><?php echo $term->name; ?></a>
+            </li>
+          <?php endforeach; ?>
+        </ul>
+      </div>
+    <?php else: ?>
       <h1 class="site-header__page-title"><?php echo get_the_title(); ?></h1>
     <?php endif; ?>
 

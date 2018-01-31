@@ -1,8 +1,6 @@
 <?php
 /**
- * projects page template
- * Template Name: projects
- * parts directory: template-parts/projects
+ * projects detail page template
  */
 get_header(); ?>
 

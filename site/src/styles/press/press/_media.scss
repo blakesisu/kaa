@@ -111,11 +111,12 @@
 
       @media (max-width: $press-break) {
         font-size: 10.67px;
+        line-height: 0;
       }
 
       @media (max-width: $press-single-column-break) {
         font-size: px2vw(12.5, $designSmall);
-        line-height: px2lh(12.5, 40);
+        // line-height: px2lh(12.5, 40);
         letter-spacing: ps2em(200);
       }
     }
@@ -174,35 +175,35 @@
 
 // magazines
 .press-media-mags {
-  width: 100%;
   overflow: hidden;
-  @media (max-width: $press-single-column-break) {
-    height: 70%;
-  }
 }
 
 .press-media-mags-wrapper {
-  width: 100%;
   display: flex;
-  flex-direction: row;
-  align-items: baseline;
 }
 
 .press-media-mag-item {
-  width: auto;
-  max-width: 240px;
+  width: 100%;
+  display: flex;
+}
+
+.press-media-mag-content {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  flex-shrink: 0;
   @media (max-width: $press-single-column-break - 220) {
     max-width: 160px;
   }
 }
 
 .press-picture {
+  height: 315px;
+  @media (max-width: $press-single-column-break - 220) {
+    height: 210px;
+  }
+  display: flex;
+  align-items: flex-end;
   img {
-    height: auto;
-    // width: auto;
     width: 240px;
     @media (max-width: $press-single-column-break - 220) {
       width: 160px;
@@ -210,25 +211,12 @@
   }
 }
 
+.press-media-mag-content .press-media-article {
+  flex: 1 0 auto;
+}
 .press-media-article {
   @extend .press-article-description;
-  height: 9vw;
-
-  @media (max-width: $press-break) {
-    height: 123.93px;
-  }
-
-  @media (max-width: $press-single-column-break) {
-    height: 43vw;
-  }
-  @media (max-width: $press-single-column-break - 220) {
-    height: 36vw;
-  }
-  @media (min-width: $press-single-column-break + 1) {
-    & > * {
-      margin: 2% 0;
-    }
-  }
+  margin: 5% 0;
 }
 .press-media-article-date {
   color: $brown;
@@ -287,7 +275,8 @@
 
 .press-media-actions {
   width: 100%;
-  height: auto;
+  // height: auto;
+  // height: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -337,3 +326,7 @@
   }
 }
 
+.swiper-hidden-slide {
+  display: none !important;
+  // float: left;
+}
