@@ -1,10 +1,7 @@
 #!/bin/bash
 
-source .env
-
 # current timestamp
 NOW=`date +"%m_%d_%Y_%H_%M_%S"`
-echo $WP_PROD
 
 DEVDIR="web/app/uploads/"
 DEVSITE="dev.kaadesigngroup.com"

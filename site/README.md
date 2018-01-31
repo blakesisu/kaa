@@ -49,6 +49,7 @@ Use this repo as a starting point for your next custom WordPress theme.
 1. Using terminal change directories to the project root `cd /path/to/your-project/site`
 1. Install dependencies by running `yarn`
 1. Ensure that your wp-cli aliases (`wp-cli.yml`) are correctly set
+1. Follow directions in remote server setup if coordinating with remote entities
 1. Run any of the available commands found below
 
 ## Yarn Commands
@@ -63,7 +64,7 @@ Use this repo as a starting point for your next custom WordPress theme.
 | `yarn build-db` | Build WordPress database from backup from database file or sync with remote database |
 | `yarn build-all` | Build WordPress database, sync, then build static output with gulp |
 
-## WP-CLI Commands
+## CLI Commands
 
 | Command | Description |
 |---------|-------------|
@@ -72,6 +73,7 @@ Use this repo as a starting point for your next custom WordPress theme.
 | `wp @<alias> db export <db name>` | Export database as named to site root |
 | `wp @<alias> db export - > <db name>` | Export database as named (and to stdout) to site root |
 | `wp @<alias> db reset --yes` | reset database |
+| ` rsync -avz web/app/uploads web@<site name/ip>:/srv/www/kaa/current/web/app ` | manually upload assets to server |
 
 ## Project Structure
 

@@ -1,7 +1,4 @@
 #!/bin/bash
-
-source .env
-
 echo "BEWARE: Defaults are mapped for development machine"
 
 # Machine input
@@ -20,14 +17,14 @@ if $(wp "@$MACHINE" core is-installed); then
   INSTALLED=true
 else
   echo "wp core not installed"
-  read -r -p "Sync from another machine? (default: no): " SYNC
+  read -r -p "Sync from another machine? [y/N]: " SYNC
   SYNC=${SYNC:-no}
 
   if [[ "$SYNC" =~ ^([yY][eE][sS]|[yY])$ ]]; then
     source ./scripts/sync-machines.sh
     exit 0
   else
-    read -r -p "Continue building WordPress? (default: no): " BUILD_CONFIRM
+    read -r -p "Continue building WordPress? [y/N]: " BUILD_CONFIRM
     BUILD_CONFIRM=${BUILD_CONFIRM:-no}
     if [[ "$BUILD_CONFIRM" =~ ^([yY][eE][sS]|[yY])$ ]]; then
       echo "Continuing build process..."
@@ -63,7 +60,7 @@ initWP() {
   echo "Installing core and theme..."
   wp "@$MACHINE" db reset --yes
   if [[ "$INSTALLED" = true ]]; then
-    read -r -p "WordPress already installed, reinitialize? (Default: no): " REINIT
+    read -r -p "WordPress already installed, reinitialize? [y/N]: " REINIT
     REINIT=${REINIT:-no}
 
     if [[ "$REINIT" =~ ^([yY][eE][sS]|[yY])$ ]]; then
@@ -80,12 +77,19 @@ if [ -f $SQL_BACKUP ] && [ $SQL_BACKUP != "$MACHINE-backup_$NOW.sql" ]; then
   echo "WordPress initialized."
   echo "Importing database backup..."
 
-  # if [ $MACHINE = "prod" ] || [ $MACHINE = "stage" ]; then
-  #   rsync -az --progress $SQL_BACKUP
-  # fi
+  if [ $MACHINE = "prod" ] || [ $MACHINE = "stage" ]; then
+    # PRODDIR="web@104.236.139.224:/srv/www/kaa/current
+    rsync -az --progress $SQL_BACKUP web@$SITE:/srv/www/kaa/current
+
+    read -r -p "Sync the uploads folder? [y/N] " uploads
+    uploads=${uploads:-no}
+    if [[ "$uploads" =~ ^([yY][eE][sS]|[yY])$ ]]; then
+      rsync -az --progress web/app/uploads web@$SITE:/srv/www/kaa/current/web/app
+    fi
+  fi
   wp "@$MACHINE" db import $SQL_BACKUP
 else
-  read -r -p "Distinct database backup not found! Continue with WordPress initialization? (default: no): " WORD_INIT
+  read -r -p "Distinct database backup not found! Continue with WordPress initialization? [y/N]: " WORD_INIT
   WORD_INIT=${WORD_INIT:-no}
   if [[ "$WORD_INIT" =~ ^([yY][eE][sS]|[yY])$ ]]; then
     initWP
