@@ -7,8 +7,8 @@
         'post_type' => 'press',
         'paged' => $paged,
         // default should be 10... we think
-        // 'posts_per_page' => 10,
-        'posts_per_page' => 6,
+        'posts_per_page' => 10,
+        // 'posts_per_page' => 6,
         'order' => 'DESC'
       ));
 
