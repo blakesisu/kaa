@@ -2,7 +2,8 @@ import $ from 'jquery';
 import Carousel from './Carousel';
 
 
-if ($('body').hasClass('page-template-press')) {
+if ($('body').hasClass('page-template-press') ||
+  $('body').hasClass('post-type-archive-press')) {
   // Enable dropdown
   $('.press-media-dropdown').on('click', () => {
     $('.press-media-dropdown-container').toggle();

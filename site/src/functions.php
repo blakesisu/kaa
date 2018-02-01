@@ -26,7 +26,6 @@ if (!function_exists('pagination_bar')) :
               'format' => 'page/%#%',
               'current' => $current_page,
               'total' => $total_pages,
-              // 'next_text' => ('>>'),
               'next_text' => ('... <svg id="R_arrow" data-name="R arrow" xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22">
               <defs>
               <style>

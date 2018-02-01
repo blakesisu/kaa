@@ -16,8 +16,6 @@
       <div class="proj">
         <?php while (have_posts()) :
             the_post();
-            wp_link_pages();
-
 
             $image = get_field('press_article_image');
             $date = get_the_date();
