@@ -398,13 +398,11 @@
   }
 }
 @media (min-width: $hm-grid-single-column-break + 1) {
-  // .page-template-home {
-  //   .site-header {
-  //     background-color: transparent;
-  //   }
-  .site-header {
-    background: none;
-  }
+  .page-template-home {
+
+    .site-header {
+      background: none;
+    }
 
     // logo
     .site-header__brand-link {
@@ -444,7 +442,7 @@
   //       fill: $white;
   //     }
   //   }
-  // }
+  }
 }
 
 @media (max-width: $hm-grid-single-column-break) {
