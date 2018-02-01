@@ -10,7 +10,7 @@
       <a href="/projects" class="site-nav__link">Projects</a>
     </li>
     <li class="site-nav__item">
-      <a href="E" class="site-nav__link">Press</a>
+      <a href="/press-example" class="site-nav__link">Press</a>
     </li>
     <li class="site-nav__item">
       <a href="/about" class="site-nav__link">About</a>
