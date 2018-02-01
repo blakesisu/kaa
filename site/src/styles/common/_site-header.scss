@@ -402,20 +402,23 @@
   //   .site-header {
   //     background-color: transparent;
   //   }
+  .site-header {
+    background: none;
+  }
 
-  //   // logo
-  //   .site-header__brand-link {
-  //     svg {
-  //       width: px2vw(130, $designLarge);
-  //     }
+    // logo
+    .site-header__brand-link {
+      svg {
+        width: px2vw(130, $designLarge);
+      }
 
-  //     // fixed size on medium screens
-  //     @media (max-width: $hm-grid-break) {
-  //       svg {
-  //         width: 92.484px;
-  //       }
-  //     }
-  //   }
+      // fixed size on medium screens
+      @media (max-width: $hm-grid-break) {
+        svg {
+          width: 92.484px;
+        }
+      }
+    }
 
   //   // tagline
   //   .site-header__tagline {
