@@ -49,12 +49,19 @@
     }
     .hm-project-block__cta-btn {
       @include button;
+      border-color: $white;
+      color: $white;
+
+      &:hover {
+        background-color: $white;
+        color: $brown;
+      }
     }
 
     // copy:hover
     .hm-project-block__link:hover {
       .hm-project-block__copy {
-        background-color: rgba(97, 89, 84, 0.9);
+        background-color: rgba(97, 89, 84, 0.5);
       }
       .hm-project-block__header {
         opacity: 1;
