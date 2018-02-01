@@ -23,8 +23,10 @@
       ?>
       <div class="header-drop-down">
         <button class="header-drop-down__btn">
-          <?php if (is_tax( 'project_category' )) { echo single_term_title(); } else { echo post_type_archive_title(); } ?>
-          <?php include(__DIR__ ."/../svgs/dropdown-down.svg"); ?>
+          <span>
+            <?php if (is_tax( 'project_category' )) { echo single_term_title(); } else { echo post_type_archive_title(); } ?>
+            <?php include(__DIR__ ."/../svgs/dropdown-down.svg"); ?>
+          </span>
         </button>
         <ul class="header-drop-down__list">
           <li class="header-drop-down__item <?php if (is_tax( 'project_category' ) === false) { echo 'is-current'; } ?>">

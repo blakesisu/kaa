@@ -61,6 +61,17 @@
     }
   }
 
+  // fixed size on medium screens
+  @media (max-width: 1366px) {
+    top: 29.881px;
+    right: 29.881px;
+
+    svg {
+      width: 13.516px;
+      height: 13.516px;
+    }
+  }
+
   // Mobile
   @media (max-width: 700px) {
     top: 30px;
