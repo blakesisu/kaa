@@ -9,6 +9,24 @@ function admin_style()
 
 add_action('admin_enqueue_scripts', 'admin_style');
 
+// limit posts per type
+add_action('pre_get_posts', 'be_change_event_posts_per_page');
+/**
+ * Change Posts Per Page for Event Archive
+ *
+ * @author Bill Erickson
+ * @link http://www.billerickson.net/customize-the-wordpress-query/
+ * @param object $query data
+ *
+ */
+function be_change_event_posts_per_page($query)
+{
+    if ($query->is_main_query() && is_post_type_archive('press')) {
+        // default should be 9
+        $query->set('posts_per_page', '3');
+    }
+}
+
 
 if (!function_exists('pagination_bar')) :
 
