@@ -30,13 +30,28 @@
   }
 
   .press-news-pages {
-    display: inline-block;
+    // display: inline-block;
+    display: flex;
     width: 100%;
     height: 100%;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     margin-right: 5px;
+
+    .next.page-numbers {
+      display: flex;
+      align-items: center;
+      // svg {
+      #L_arrow, #R_arrow {
+        height: auto;
+        width: 11px;
+        fill: $brown;
+        &:hover {
+          fill: $orange;
+        }
+      }
+    }
   }
 
   .press-news-pages > * {
@@ -138,7 +153,8 @@
     line-height: px2lh(15, 25);
     letter-spacing: ps2em(0);
   }
+
+  a {
+    color: $orange;
+  }
 }
-
-
-
