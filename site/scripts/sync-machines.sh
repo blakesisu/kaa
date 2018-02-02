@@ -3,16 +3,16 @@
 # current timestamp
 NOW=`date +"%m_%d_%Y_%H_%M_%S"`
 
-DEVDIR="web/app/uploads/"
+DEVDIR="web/app/"
 DEVSITE="dev.kaadesigngroup.com"
 
-# PRODDIR="web@138.197.199.171:/srv/www/kaa/current/web/app/uploads/"
-# PRODSITE="138.197.199.171"
+# REMOTEDEVDIR="web@107.170.244.77:/srv/www/kaa/current/web/app/"
+# REMOTEDEVSITE="107.170.244.77"
 
-PRODDIR="web@104.236.139.224:/srv/www/kaa/current/web/app/uploads/"
+PRODDIR="web@104.236.139.224:/srv/www/kaa/current/web/app/"
 PRODSITE="104.236.139.224"
 
-STAGDIR="web@165.227.56.50:/srv/www/kaa/current/web/app/uploads/"
+STAGDIR="web@165.227.56.50:/srv/www/kaa/current/web/app/"
 STAGSITE="165.227.56.50"
 
 if [ $# -eq 0 ]; then
@@ -54,5 +54,5 @@ if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
 fi
 
 if [[ "$uploads" =~ ^([yY][eE][sS]|[yY])$ ]]; then
-  rsync -az --progress "$FROMDIR" "$TODIR"
+  rsync -az --progress "$FROMDIR/uploads" "$TODIR"
 fi
