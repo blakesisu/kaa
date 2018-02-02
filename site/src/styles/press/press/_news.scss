@@ -2,7 +2,7 @@
   @extend .press-trip-container;
   margin: 4% 0 0 0;
 
-  @media (max-width: $press-break) {
+  @media (max-width: $press-single-column-break) {
     margin: 10% 0 0 0;
   }
 }

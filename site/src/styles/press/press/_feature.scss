@@ -36,9 +36,8 @@
   justify-content: flex-end;
   align-items: flex-start;
 
-  @media (max-width: $press-text-break) {
-    width: 45vw;
-    height: 20vw;
+  @media (max-width: 890px) {
+    height: 29vw;
   }
 
   @media (max-width: $press-single-column-break) {
@@ -64,11 +63,16 @@
     line-height: px2lh(37, 52);
     letter-spacing: ps2em(1);
 
-    // @media (max-width: $press-break) {
-    //   font-size: 26.34px;
-    //   line-height: 37px;
-    //   letter-spacing: 0.026;
-    // }
+    @media (max-width: $press-break) {
+      font-size: 26.34px;
+      line-height: 37px;
+      letter-spacing: 0.026;
+    }
+    @media (max-width: $press-text-break) {
+      font-size: 19.50px;
+      line-height: 27.40px;
+      letter-spacing: 0.019;
+    }
     @media (max-width: $press-single-column-break) {
       // font-size: px2vw(22.5, $designSmall);
       font-size: px2vw(22, $designSmall);
