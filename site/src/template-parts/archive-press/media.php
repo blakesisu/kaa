@@ -32,8 +32,9 @@
                 the_post();
 
                 $title = get_the_title();
-                $filter = get_field('magazine_filter'); ?>
-                <li><button class="press-media-mag-filter" data-mag="<?php echo $filter; ?>"><?php echo $title; ?></button></li>
+                $filter = explode(' ', get_field('magazine_filter'));
+              ?>
+                <li><button class="press-media-mag-filter" data-mag="<?php echo $filter[0]; ?>"><?php echo $title; ?></button></li>
             <?php endwhile; ?>
           <?php endif; ?>
           </ul>
