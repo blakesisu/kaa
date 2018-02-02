@@ -3,17 +3,17 @@
 # current timestamp
 NOW=`date +"%m_%d_%Y_%H_%M_%S"`
 
-DEVDIR="web/app/"
+DEVDIR="web/app"
 DEVSITE="dev.kaadesigngroup.com"
 
 REDEVSITE="107.170.244.77"
-REDEVDIR="web@107.170.244.77:/srv/www/kaa/current/web/app/"
+REDEVDIR="web@107.170.244.77:/srv/www/kaa/current/web/app"
 
 PRODSITE="104.236.139.224"
-PRODDIR="web@104.236.139.224:/srv/www/kaa/current/web/app/"
+PRODDIR="web@104.236.139.224:/srv/www/kaa/current/web/app"
 
 STAGESITE="165.227.56.50"
-STAGEDIR="web@165.227.56.50:/srv/www/kaa/current/web/app/"
+STAGEDIR="web@165.227.56.50:/srv/www/kaa/current/web/app"
 
 if [ $# -eq 0 ]; then
   read -r -p "Which database do you want to reset? [dev/stage/prod/redev] " DB_RESP
@@ -58,21 +58,17 @@ if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
   # else
   #   wp "@$FROM" search-replace --url=$FROMSITE $FROMSITE $TOSITE --skip-columns=guid --export | wp "@$TO" db import -
   # fi
-  if [ $FROM != "dev" ] && [ $TO != "dev" ]; then
-    cat $FROM-backup_$NOW.sql | wp "@$TO" db import -
-  else
-    wp "@$TO" db import -
-  fi
 
+  cat $FROM-backup_$NOW.sql | wp "@$TO" db import -
 fi
 
 if [[ "$uploads" =~ ^([yY][eE][sS]|[yY])$ ]]; then
   if [ $FROM != "dev" ] && [ $TO != "dev" ]; then
     mkdir "./temp-uploads"
-    rsync -az --progress "$FROMDIR/uploads" "./temp-uploads"
-    rsync -az --progress "./temp-uploads" "$TODIR"
+    rsync -avz --progress "$FROMDIR/uploads" "./temp-uploads"
+    rsync -avz --progress "./temp-uploads" "$TODIR"
     rm -rf "./temp-uploads"
   else
-    rsync -az --progress "$FROMDIR/uploads" "$TODIR"
+    rsync -avz --progress "$FROMDIR/uploads" "$TODIR"
   fi
 fi
