@@ -39,6 +39,10 @@
     text-overflow: ellipsis;
     margin-right: 5px;
 
+    .page-numbers.current {
+      color: $orange;
+    }
+
     .next.page-numbers {
       display: flex;
       align-items: center;
