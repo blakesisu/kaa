@@ -64,7 +64,7 @@ gulp.task('scripts', (callback) => {
     }));
 
     // reload browserSync
-    browserSync.reload();
+    // browserSync.reload();
 
     callback();
   });
@@ -78,7 +78,7 @@ gulp.task('static', () => (
     // output files
     .pipe(gulp.dest('./web/app/themes/dist'))
     // update browserSync
-    .pipe(browserSync.stream())
+    // .pipe(browserSync.stream())
 ));
 
 // Bust Cache
