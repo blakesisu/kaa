@@ -3,7 +3,6 @@
  * press page template
  * Template Name: press
  * parts directory: template-parts/archive-press
- * <?php include("template-parts/archive-press/feature.php"); ?>
  */
 get_header(); ?>
 

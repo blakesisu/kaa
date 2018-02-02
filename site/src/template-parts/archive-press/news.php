@@ -5,30 +5,25 @@
   <div class="press-news-container">
     <?php
       $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+        $article_query = new WP_Query(
+            array(
+              'post_type' => 'press',
+              'paged' => $paged,
+              'posts_per_page' => 3,
+              'order' => 'DESC',
+              'meta_key' => 'press_article_feature',
+              'meta_compare' => 'NOT EXISTS'
+            )
+        );
 
-      $article_query = new WP_Query(
-        array(
-          'post_type' => 'press',
-          'paged' => $paged,
-          'posts_per_page' => 8,
-          'order' => 'DESC',
-          'meta_key' => 'press_article_feature',
-          'meta_compare' => 'NOT EXISTS'
-        )
-      );
+        $posts = $article_query->posts;
+        // var_dump($posts);
 
-      $posts = $article_query->posts;
-
-      if ($posts): ?>
-
-        <div class="proj">
-          <?php foreach($posts as $post):
-
-            setup_postdata($post) ?>
-
-          <?php
-            // if( !get_field('press_article_feature')):
-
+        if ($posts) : ?>
+          <div class="proj">
+            <?php foreach ($posts as $post) :
+                setup_postdata($post) ?>
+            <?php
             $image = get_field('press_article_image');
             $date = get_the_date();
             $title = get_the_title();
@@ -48,7 +43,7 @@
               <div class="press-news-article-content"><?php echo $content; ?></div>
             </div>
           </div>
-          <?php endforeach; ?>
+            <?php endforeach; ?>
       </div>
     </div>
 
@@ -59,6 +54,6 @@
         ?>
       </div>
     </div>
-  <?php wp_reset_postdata(); ?>
-  <?php endif; ?>
+    <?php wp_reset_postdata(); ?>
+        <?php endif; ?>
 </section>
