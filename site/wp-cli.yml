@@ -14,7 +14,7 @@ path: web/wp
 @stage:
   ssh: web@165.227.56.50/srv/www/kaa/current
 
-@remotedev:
+@redev:
   ssh: web@107.170.244.77/srv/www/kaa/current
 
 @all:

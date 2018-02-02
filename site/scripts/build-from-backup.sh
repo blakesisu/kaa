@@ -2,7 +2,7 @@
 echo "BEWARE: Defaults are mapped for development machine"
 
 # Machine input
-read -r -p "Enter machine [prod/stage/dev] (default: dev): " MACHINE
+read -r -p "Enter machine [prod/stage/dev/redev] (default: dev): " MACHINE
 # Machine default
 MACHINE=${MACHINE:-dev}
 
@@ -77,9 +77,7 @@ if [ -f $SQL_BACKUP ] && [ $SQL_BACKUP != "$MACHINE-backup_$NOW.sql" ]; then
   echo "WordPress initialized."
   echo "Importing database backup..."
 
-  if [ $MACHINE = "prod" ] || [ $MACHINE = "stage" ]; then
-    # PRODDIR="web@104.236.139.224:/srv/www/kaa/current
-    rsync -az --progress $SQL_BACKUP web@$SITE:/srv/www/kaa/current
+  if [ $MACHINE = "prod" ] || [ $MACHINE = "stage" ] || [ $MACHINE = "redev" ]; then
 
     read -r -p "Sync the uploads folder? [y/N] " uploads
     uploads=${uploads:-no}
@@ -87,7 +85,9 @@ if [ -f $SQL_BACKUP ] && [ $SQL_BACKUP != "$MACHINE-backup_$NOW.sql" ]; then
       rsync -az --progress web/app/uploads web@$SITE:/srv/www/kaa/current/web/app
     fi
   fi
-  wp "@$MACHINE" db import $SQL_BACKUP
+  # rsync -az --progress $SQL_BACKUP web@$SITE:/srv/www/kaa/current
+  # wp "@$MACHINE" db import $SQL_BACKUP
+  cat $SQL_BACKUP | wp "@$MACHINE" db import -
 else
   read -r -p "Distinct database backup not found! Continue with WordPress initialization? [y/N]: " WORD_INIT
   WORD_INIT=${WORD_INIT:-no}

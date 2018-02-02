@@ -24,7 +24,7 @@ UPLOAD_RESP=${UPLOAD_RESP:-no}
 
 if [[ "$UPLOAD_RESP" =~ ^([yY][eE][sS]|[yY])$ ]]; then
   echo "use rsync command!"
-  # source ./scripts/sync-machines.sh
+  # source ./scripts/upload-assets.sh
   exit 0
 fi
 

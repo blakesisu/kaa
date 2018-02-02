@@ -6,8 +6,8 @@ NOW=`date +"%m_%d_%Y_%H_%M_%S"`
 DEVDIR="web/app/"
 DEVSITE="dev.kaadesigngroup.com"
 
-REMOTEDEVSITE="107.170.244.77"
-REMOTEDEVDIR="web@107.170.244.77:/srv/www/kaa/current/web/app/"
+REDEVSITE="107.170.244.77"
+REDEVDIR="web@107.170.244.77:/srv/www/kaa/current/web/app/"
 
 PRODSITE="104.236.139.224"
 PRODDIR="web@104.236.139.224:/srv/www/kaa/current/web/app/"
@@ -16,8 +16,8 @@ STAGESITE="165.227.56.50"
 STAGEDIR="web@165.227.56.50:/srv/www/kaa/current/web/app/"
 
 if [ $# -eq 0 ]; then
-  read -r -p "Which database do you want to reset? [dev/stage/prod/remotedev] " DB_RESP
-  read -r -p "Which database do you want to sync from? [dev/stage/prod/remotedev] " SYNC_RESP
+  read -r -p "Which database do you want to reset? [dev/stage/prod/redev] " DB_RESP
+  read -r -p "Which database do you want to sync from? [dev/stage/prod/redev] " SYNC_RESP
   TO=$DB_RESP
   FROM=$SYNC_RESP
 else
@@ -32,13 +32,13 @@ case "$TO-$FROM" in
   stage-dev)    DIR="down" FROMSITE=$STAGESITE; FROMDIR=$STAGEDIR; TOSITE=$DEVSITE;  TODIR=$DEVDIR; ;;
 
   # New to try to work with remote dev
-  remotedev-dev)    DIR="down" FROMSITE=$REMOTEDEVSITE; FROMDIR=$REMOTEDEVDIR; TOSITE=$DEVSITE;  TODIR=$DEVDIR; ;;
-  dev-remotedev)    DIR="down" FROMSITE=$DEVSITE; FROMDIR=$DEVDIR; TOSITE=$REMOTEDEVSITE;  TODIR=$REMOTEDEVDIR; ;;
+  redev-dev)    DIR="down" FROMSITE=$REDEVSITE; FROMDIR=$REDEVDIR; TOSITE=$DEVSITE;  TODIR=$DEVDIR; ;;
+  dev-redev)    DIR="down" FROMSITE=$DEVSITE; FROMDIR=$DEVDIR; TOSITE=$REDEVSITE;  TODIR=$REDEVDIR; ;;
 
-  remotedev-prod)    DIR="down" FROMSITE=$REMOTEDEVSITE; FROMDIR=$REMOTEDEVDIR; TOSITE=$PRODSITE;  TODIR=$PRODDIR; ;;
-  prod-remotedev)    DIR="down" FROMSITE=$PRODSITE; FROMDIR=$PRODDIR; TOSITE=$REMOTEDEVSITE;  TODIR=$REMOTEDEVDIR; ;;
+  redev-prod)    DIR="down" FROMSITE=$REDEVSITE; FROMDIR=$REDEVDIR; TOSITE=$PRODSITE;  TODIR=$PRODDIR; ;;
+  prod-redev)    DIR="down" FROMSITE=$PRODSITE; FROMDIR=$PRODDIR; TOSITE=$REDEVSITE;  TODIR=$REDEVDIR; ;;
 
-  *) echo "usage: $0 dev prod | dev stage | prod dev | prod stage | dev remotedev | remotedev dev | remotedev prod | prod remotedev" && exit 1 ;;
+  *) echo "usage: $0 dev prod | dev stage | prod dev | prod stage | dev redev | redev dev | redev prod | prod redev" && exit 1 ;;
 esac
 
 read -r -p "Reset the $TO database and sync from $FROM? [y/N] " response
@@ -53,14 +53,26 @@ if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
   wp "@$TO" theme install dist --activate
   wp "@$TO" plugin activate --all
 
-  if $(wp "@$FROM" core is-installed --network); then
-    wp "@$FROM" search-replace --url=$FROMSITE $FROMSITE $TOSITE --skip-columns=guid --network --export | wp "@$TO" db import -
+  # if $(wp "@$FROM" core is-installed --network); then
+  #   wp "@$FROM" search-replace --url=$FROMSITE $FROMSITE $TOSITE --skip-columns=guid --network --export | wp "@$TO" db import -
+  # else
+  #   wp "@$FROM" search-replace --url=$FROMSITE $FROMSITE $TOSITE --skip-columns=guid --export | wp "@$TO" db import -
+  # fi
+  if [ $FROM != "dev" ] && [ $TO != "dev" ]; then
+    cat $FROM-backup_$NOW.sql | wp "@$TO" db import -
   else
-    wp "@$FROM" search-replace --url=$FROMSITE $FROMSITE $TOSITE --skip-columns=guid --export | wp "@$TO" db import -
+    wp "@$TO" db import -
   fi
 
 fi
 
 if [[ "$uploads" =~ ^([yY][eE][sS]|[yY])$ ]]; then
-  rsync -az --progress "$FROMDIR/uploads" "$TODIR"
+  if [ $FROM != "dev" ] && [ $TO != "dev" ]; then
+    mkdir "./temp-uploads"
+    rsync -az --progress "$FROMDIR/uploads" "./temp-uploads"
+    rsync -az --progress "./temp-uploads" "$TODIR"
+    rm -rf "./temp-uploads"
+  else
+    rsync -az --progress "$FROMDIR/uploads" "$TODIR"
+  fi
 fi
