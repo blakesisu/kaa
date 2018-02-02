@@ -21,12 +21,11 @@ add_action('pre_get_posts', 'be_change_event_posts_per_page');
  */
 function be_change_event_posts_per_page($query)
 {
-    if ($query->is_main_query() && is_post_type_archive('press')) {
+    if ($query->is_main_query() && !is_admin() && is_post_type_archive('press')) {
         // default should be 9
-        $query->set('posts_per_page', '3');
+        $query->set('posts_per_page', '8');
     }
 }
-
 
 if (!function_exists('pagination_bar')) :
 
@@ -34,7 +33,11 @@ if (!function_exists('pagination_bar')) :
     {
         global $wp_query;
 
-        $total_pages = $wp_query->max_num_pages;
+        // $total_pages = $wp_query->max_num_pages;
+
+        $set_pages =  ceil($wp_query->found_posts  / $wp_query->max_num_pages);
+        $adjusted_found =  $wp_query->found_posts - 1;
+        $total_pages = ceil($adjusted_found / $set_pages);
 
         if ($total_pages > 1) {
             $current_page = max(1, get_query_var('paged'));
