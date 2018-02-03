@@ -3,17 +3,17 @@
 # current timestamp
 NOW=`date +"%m_%d_%Y_%H_%M_%S"`
 
-DEVDIR="web/app"
+DEVDIR="web/app/uploads/"
 DEVSITE="dev.kaadesigngroup.com"
 
 REDEVSITE="107.170.244.77"
-REDEVDIR="web@107.170.244.77:/srv/www/kaa/current/web/app"
+REDEVDIR="web@107.170.244.77:/srv/www/kaa/current/web/app/uploads/"
 
 PRODSITE="104.236.139.224"
-PRODDIR="web@104.236.139.224:/srv/www/kaa/current/web/app"
+PRODDIR="web@104.236.139.224:/srv/www/kaa/current/web/app/uploads/"
 
 STAGESITE="165.227.56.50"
-STAGEDIR="web@165.227.56.50:/srv/www/kaa/current/web/app"
+STAGEDIR="web@165.227.56.50:/srv/www/kaa/current/web/app/uploads/"
 
 if [ $# -eq 0 ]; then
   read -r -p "Which database do you want to reset? [dev/stage/prod/redev] " DB_RESP
@@ -65,10 +65,10 @@ fi
 if [[ "$uploads" =~ ^([yY][eE][sS]|[yY])$ ]]; then
   if [ $FROM != "dev" ] && [ $TO != "dev" ]; then
     mkdir "./temp-uploads"
-    rsync -avz --progress "$FROMDIR/uploads" "./temp-uploads"
-    rsync -avz --progress "./temp-uploads" "$TODIR"
+    rsync -avz --progress "$FROMDIR" "./temp-uploads/"
+    rsync -avz --progress "./temp-uploads/" "$TODIR"
     rm -rf "./temp-uploads"
   else
-    rsync -avz --progress "$FROMDIR/uploads" "$TODIR"
+    rsync -avz --progress "$FROMDIR" "$TODIR"
   fi
 fi

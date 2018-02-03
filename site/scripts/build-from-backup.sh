@@ -82,7 +82,7 @@ if [ -f $SQL_BACKUP ] && [ $SQL_BACKUP != "$MACHINE-backup_$NOW.sql" ]; then
     read -r -p "Sync the uploads folder? [y/N] " uploads
     uploads=${uploads:-no}
     if [[ "$uploads" =~ ^([yY][eE][sS]|[yY])$ ]]; then
-      rsync -az --progress web/app/uploads web@$SITE:/srv/www/kaa/current/web/app
+      rsync -az --progress web/app/uploads/ web@$SITE:/srv/www/kaa/current/web/app/uploads/
     fi
   fi
   # rsync -az --progress $SQL_BACKUP web@$SITE:/srv/www/kaa/current
