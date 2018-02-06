@@ -54,7 +54,7 @@ if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
 fi
 
 if [[ "$uploads" =~ ^([yY][eE][sS]|[yY])$ ]]; then
-  # ssh -tt web@$TOSITE 'rm -rf /srv/www/kaa/current/web/app/uploads/*'
+  ssh -tt web@$TOSITE 'rm -rf /srv/www/kaa/current/web/app/uploads/*'
   if [ $FROM != "dev" ] && [ $TO != "dev" ]; then
     mkdir "./temp-uploads"
     rsync -avz --progress "$FROMDIR" "./temp-uploads/"
