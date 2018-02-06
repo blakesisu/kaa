@@ -2,7 +2,7 @@
 echo "BEWARE: Defaults are mapped for development machine"
 
 # Machine input
-read -r -p "Enter machine [prod/stage/dev/redev] (default: dev): " MACHINE
+read -r -p "Enter machine [prod/stage/dev] (default: dev): " MACHINE
 # Machine default
 MACHINE=${MACHINE:-dev}
 
@@ -77,7 +77,7 @@ if [ -f $SQL_BACKUP ] && [ $SQL_BACKUP != "$MACHINE-backup_$NOW.sql" ]; then
   echo "WordPress initialized."
   echo "Importing database backup..."
 
-  if [ $MACHINE = "prod" ] || [ $MACHINE = "stage" ] || [ $MACHINE = "redev" ]; then
+  if [ $MACHINE = "prod" ] || [ $MACHINE = "stage" ]; then
 
     read -r -p "Sync the uploads folder? [y/N] " uploads
     uploads=${uploads:-no}
