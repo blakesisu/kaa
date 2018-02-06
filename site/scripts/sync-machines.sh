@@ -27,7 +27,9 @@ case "$TO-$FROM" in
   dev-stage)    DIR="up"   FROMSITE=$DEVSITE;  FROMDIR=$DEVDIR;  TOSITE=$STAGESITE; TODIR=$STAGEDIR; ;;
   prod-dev) DIR="down" FROMSITE=$PRODSITE; FROMDIR=$PRODDIR; TOSITE=$DEVSITE;  TODIR=$DEVDIR; ;;
   stage-dev)    DIR="down" FROMSITE=$STAGESITE; FROMDIR=$STAGEDIR; TOSITE=$DEVSITE;  TODIR=$DEVDIR; ;;
-  *) echo "usage: $0 dev prod | dev stage | prod dev | prod stage" && exit 1 ;;
+  stage-prod)    DIR="down" FROMSITE=$STAGESITE; FROMDIR=$STAGEDIR; TOSITE=$PRODSITE;  TODIR=$PRODDIR; ;;
+  prod-stage)    DIR="down" FROMSITE=$PRODSITE; FROMDIR=$PRODDIR; TOSITE=$STAGESITE;  TODIR=$STAGEDIR; ;;
+  *) echo "usage: $0 dev prod | dev stage | prod dev | prod stage | stage prod" && exit 1 ;;
 esac
 
 read -r -p "Reset the $TO database and sync from $FROM? [y/N] " response
