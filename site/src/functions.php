@@ -23,7 +23,7 @@ function be_change_event_posts_per_page($query)
 {
     if ($query->is_main_query() && !is_admin() && is_post_type_archive('press')) {
         // default should be 9
-        $query->set('posts_per_page', 3);
+        $query->set('posts_per_page', 9);
     }
 }
 

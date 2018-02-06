@@ -9,7 +9,7 @@
             array(
               'post_type' => 'press',
               'paged' => $paged,
-              'posts_per_page' => 3,
+              'posts_per_page' => 9,
               'order' => 'DESC',
               'meta_key' => 'press_article_feature',
               'meta_compare' => 'NOT EXISTS'
