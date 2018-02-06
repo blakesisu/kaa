@@ -13,22 +13,22 @@ STAGESITE="165.227.56.50"
 STAGEDIR="web@165.227.56.50:/srv/www/kaa/current/web/app/uploads/"
 
 if [ $# -eq 0 ]; then
-  read -r -p "Which database do you want to reset? [dev/stage/prod] " DB_RESP
-  read -r -p "Which database do you want to sync from? [dev/stage/prod] " SYNC_RESP
-  TO=$DB_RESP
-  FROM=$SYNC_RESP
+  read -r -p "Which database do you want to reset? [dev/stage/prod] " PULLER
+  read -r -p "Which database do you want to sync from? [dev/stage/prod] " PUSHER
+  TO=$PULLER
+  FROM=$PUSHER
 else
   TO=$2
   FROM=$1
 fi
 
 case "$TO-$FROM" in
-  dev-prod) DIR="up";  FROMSITE=$DEVSITE;  FROMDIR=$DEVDIR;  TOSITE=$PRODSITE; TODIR=$PRODDIR; ;;
-  dev-stage)    DIR="up"   FROMSITE=$DEVSITE;  FROMDIR=$DEVDIR;  TOSITE=$STAGESITE; TODIR=$STAGEDIR; ;;
-  prod-dev) DIR="down" FROMSITE=$PRODSITE; FROMDIR=$PRODDIR; TOSITE=$DEVSITE;  TODIR=$DEVDIR; ;;
-  stage-dev)    DIR="down" FROMSITE=$STAGESITE; FROMDIR=$STAGEDIR; TOSITE=$DEVSITE;  TODIR=$DEVDIR; ;;
-  stage-prod)    DIR="down" FROMSITE=$STAGESITE; FROMDIR=$STAGEDIR; TOSITE=$PRODSITE;  TODIR=$PRODDIR; ;;
-  prod-stage)    DIR="down" FROMSITE=$PRODSITE; FROMDIR=$PRODDIR; TOSITE=$STAGESITE;  TODIR=$STAGEDIR; ;;
+  dev-prod) DIR="up";  FROMSITE=$PRODSITE;  FROMDIR=$PRODDIR;  TOSITE=$DEVSITE; TODIR=$DEVDIR; ;;
+  dev-stage)    DIR="up"   FROMSITE=$STAGESITE;  FROMDIR=$STAGEDIR;  TOSITE=$DEVSITE; TODIR=$DEVDIR; ;;
+  prod-dev)  DIR="down" FROMSITE=$DEVSITE; FROMDIR=$DEVDIR; TOSITE=$PRODSITE;  TODIR=$PRODDIR; ;;
+  stage-dev)    DIR="down" FROMSITE=$DEVSITE; FROMDIR=$DEVDIR; TOSITE=$STAGESITE;  TODIR=$STAGEDIR; ;;
+  stage-prod)    DIR="down" FROMSITE=$PRODSITE; FROMDIR=$PRODDIR; TOSITE=$STAGESITE;  TODIR=$STAGEDIR; ;;
+  prod-stage)    DIR="down" FROMSITE=$STAGESITE; FROMDIR=$STAGEDIR; TOSITE=$PRODSITE;  TODIR=$PRODDIR; ;;
   *) echo "usage: $0 dev prod | dev stage | prod dev | prod stage | stage prod" && exit 1 ;;
 esac
 
@@ -54,6 +54,7 @@ if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
 fi
 
 if [[ "$uploads" =~ ^([yY][eE][sS]|[yY])$ ]]; then
+  # ssh -tt web@$TOSITE 'rm -rf /srv/www/kaa/current/web/app/uploads/*'
   if [ $FROM != "dev" ] && [ $TO != "dev" ]; then
     mkdir "./temp-uploads"
     rsync -avz --progress "$FROMDIR" "./temp-uploads/"
