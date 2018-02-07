@@ -32,47 +32,54 @@
   </ul>
   <div class="site-nav__utilities">
     <div class="site-nav__contact">
-      <ul class="site-nav__social">
-        <li class="site-nav__social-item site-nav__social-item--pinterest">
-          <a class="site-nav__social-link" href="https://www.pinterest.com/kaadesigngroup/" target="_blank">
-            <?php include(__DIR__ ."/../svgs/pinterest.svg"); ?>
-          </a>
-        </li>
-        <li class="site-nav__social-item site-nav__social-item--facebook">
-          <a class="site-nav__social-link" href="https://www.facebook.com/kaadesigngroup" target="_blank">
-            <?php include(__DIR__ ."/../svgs/facebook.svg"); ?>
-          </a>
-        </li>
-        <li class="site-nav__social-item site-nav__social-item--instagram">
-          <a class="site-nav__social-link" href="https://www.instagram.com/_kaa_design/" target="_blank">
-            <?php include(__DIR__ ."/../svgs/instagram.svg"); ?>
-          </a>
-        </li>
-        <li class="site-nav__social-item site-nav__social-item--houzz">
-          <a class="site-nav__social-link" href="https://www.houzz.com/pro/kaa-design/kaa-design" target="_blank">
-            <?php include(__DIR__ ."/../svgs/houzz.svg"); ?>
-          </a>
-        </li>
-      </ul>
+      <?php if( have_rows('footer_social', 'option') ): ?>
+        <ul class="site-nav__social">
+        <?php while( have_rows('footer_social', 'option') ): the_row(); ?>
+          <?php
+            $link = get_sub_field('link');
+            $icon = get_sub_field('icon');
+          ?>
+          <li class="site-nav__social-item site-nav__social-item--<?php echo $icon; ?>">
+            <a class="site-nav__social-link" href="<?php echo $link; ?>" target="_blank">
+              <?php include(__DIR__ ."/../svgs/".$icon.".svg"); ?>
+            </a>
+          </li>
+        <?php endwhile; ?>
+        </ul>
+      <?php endif; ?>
     </div>
     <div class="site-nav__info">
-      <div class="site-nav__section site-nav__section--address">
-        <p class="site-nav__text">
-          <a class="site-nav__text-link" href="https://goo.gl/maps/uE1mQLdKqgv" target="_blank">
-          KAA Design <br>
-          4201 Redwood Avenue <br>
-          Los Angeles, CA 90066
-          </a>
-        </p>
-      </div>
-      <div class="site-nav__section site-nav__section--contact">
-        <p class="site-nav__text">
-          <a class="site-nav__text-link" href="tel:310.821.1400" target="_blank">310.821.1400</a>
-        </p>
-        <p class="site-nav__text">
-          <a class="site-nav__text-link" href="mailto:info@kaadesigngroup.com" target="_blank">info@kaadesigngroup.com</a>
-        </p>
-      </div>
+      <?php
+        $address = get_field('footer_address', 'option');
+      ?>
+      <?php if ($address) : ?>
+        <div class="site-nav__section site-nav__section--address">
+          <p class="site-nav__text">
+            <a class="site-nav__text-link" href="<?php echo $address['address_link']; ?>" target="_blank">
+            <?php echo $address['address_text']; ?>
+            </a>
+          </p>
+        </div>
+      <?php endif; ?>
+      <?php if( have_rows('footer_contact', 'option') ): ?>
+        <div class="site-nav__section site-nav__section--contact">
+        <?php while( have_rows('footer_contact', 'option') ): the_row(); ?>
+          <?php
+            $text = get_sub_field('text');
+            $link = get_sub_field('link');
+          ?>
+          <p class="site-nav__text">
+            <?php if ($link): ?>
+            <a class="site-nav__text-link" href="<?php echo $link; ?>" target="_blank">
+            <?php endif; ?>
+              <?php echo $text; ?>
+            <?php if ($link): ?>
+            </a>
+            <?php endif; ?>
+          </p>
+        <?php endwhile; ?>
+        </div>
+      <?php endif; ?>
     </div>
   </div>
 </nav>
