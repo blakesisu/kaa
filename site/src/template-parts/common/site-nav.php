@@ -3,18 +3,32 @@
     <?php include(__DIR__ ."/../svgs/close.svg"); ?>
   </button>
   <ul class="site-nav__list">
-    <li class="site-nav__item">
-      <a href="/" class="site-nav__link is-current">Home</a>
-    </li>
-    <li class="site-nav__item">
-      <a href="/projects" class="site-nav__link">Projects</a>
-    </li>
-    <li class="site-nav__item">
-      <a href="/press-example" class="site-nav__link">Press</a>
-    </li>
-    <li class="site-nav__item">
-      <a href="/about" class="site-nav__link">About</a>
-    </li>
+  <?php if( have_rows('site_navigation', 'option') ): ?>
+    <?php while( have_rows('site_navigation', 'option') ): the_row(); ?>
+      <?php
+        $id = get_sub_field('site_navigation_link', false, false);
+        $label = get_sub_field('site_navigation_label');
+        $link = get_sub_field('site_navigation_link');
+        $uri = explode('/', $_SERVER['REQUEST_URI']);
+        $isCurrent = false;
+
+        if (count($uri) >= 3) {
+          if (strpos($link, $uri[1]) !== false) {
+            $isCurrent = true;
+          };
+        } else if ($label === 'Home') {
+          $isCurrent = true;
+        }
+      ?>
+      <li class="site-nav__item">
+        <a
+          href="<?php echo $link; ?>"
+          class="site-nav__link <?php if ($isCurrent === true) { echo 'is-current'; } ?>">
+            <?php echo $label; ?>
+          </a>
+      </li>
+    <?php endwhile; ?>
+  <?php endif; ?>
   </ul>
   <div class="site-nav__utilities">
     <div class="site-nav__contact">
