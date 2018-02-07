@@ -12,7 +12,7 @@
         </span>
       </a>
     </h2>
-    <?php if(is_archive('projects')): ?>
+    <?php if(is_post_type_archive('projects')): ?>
       <?php
         $taxonomy = get_taxonomy( 'project_category' );
         $terms = get_terms([
@@ -39,6 +39,9 @@
           <?php endforeach; ?>
         </ul>
       </div>
+    <?php elseif(get_post_type() == 'press'): ?>
+      <?php $post_type = get_post_type_object( get_post_type($post) ); ?>
+      <h1 class="site-header__page-title"><?php echo $post_type->label; ?></h1>
     <?php else: ?>
       <h1 class="site-header__page-title"><?php echo get_the_title(); ?></h1>
     <?php endif; ?>
