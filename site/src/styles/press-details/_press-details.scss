@@ -23,3 +23,10 @@ body.page-template-press {
 .press-details-highlight {
   color: $orange;
 }
+
+picture {
+  width: 100%;
+  // height: auto;
+  line-height: 0;
+  display: block;
+}
