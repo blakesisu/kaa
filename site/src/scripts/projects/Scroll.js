@@ -25,13 +25,6 @@ const Scroll = function (el) {
     }, Math.floor(Math.random() * ((500 + 1) + 1)));
   };
 
-  // On link click
-  $el.click((e) => {
-    e.preventDefault();
-    // Publish the id
-    globalChannel.publish('modal.open', id);
-  });
-
   // Listen for window resize
   globalChannel.subscribe('window.resize', () => {
     checkSizeAndPosition();
