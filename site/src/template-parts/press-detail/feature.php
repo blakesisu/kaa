@@ -3,24 +3,24 @@
     <!-- use php boolean logic here to determine whether to show placeholder or hero -->
 
     <!-- placeholder -->
-    <!-- <div class="press&#45;details&#45;placeholder"> -->
-    <!--   <div class="press&#45;details&#45;placeholder&#45;wrapper"> -->
-    <!--     <picture class="press&#45;details&#45;picture"> -->
-    <!--       <source srcset="<?php bloginfo('template_url'); ?>/images/details/hero/details&#45;hero&#45;lg.jpg"> -->
-    <!--       <img class="press&#45;details&#45;img" srcset="<?php bloginfo('template_url'); ?>/images/details/hero/details&#45;hero&#45;lg.jpg" alt=""> -->
-    <!--     </picture> -->
-    <!--   </div> -->
-    <!-- </div> -->
-
-    <!-- hero -->
-    <div class="press-details-hero">
-      <div class="press-details-hero-wrapper">
+    <div class="press-details-placeholder">
+      <div class="press-details-placeholder-wrapper">
         <picture class="press-details-picture">
-          <source srcset="<?php bloginfo('template_url'); ?>/images/about/hero/about-hero-lg.jpg">
-          <img class="press-details-img" srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/Book.jpg" alt="">
+          <source srcset="<?php bloginfo('template_url'); ?>/images/details/hero/details-hero-lg.jpg">
+          <img class="press-details-img" srcset="<?php bloginfo('template_url'); ?>/images/details/hero/details-hero-lg.jpg" alt="">
         </picture>
       </div>
     </div>
+
+    <!-- hero -->
+    <!-- <div class="press&#45;details&#45;hero"> -->
+    <!--   <div class="press&#45;details&#45;hero&#45;wrapper"> -->
+    <!--     <picture class="press&#45;details&#45;picture"> -->
+    <!--       <source srcset="<?php bloginfo('template_url'); ?>/images/about/hero/about&#45;hero&#45;lg.jpg"> -->
+    <!--       <img class="press&#45;details&#45;img" srcset="<?php bloginfo('template_url'); ?>/images/press/desktop/Book.jpg" alt=""> -->
+    <!--     </picture> -->
+    <!--   </div> -->
+    <!-- </div> -->
 
     <!-- Content date, title, links -->
     <div class="press-details-item press-details-feature-meta press-details-dual">
@@ -47,12 +47,12 @@
     </div>
 
     <!-- Content description -->
-    <!-- php boolean for feature content: give either dual or single-feature -->
+    <!-- php boolean for feature content: give either dual or single&#45;feature -->
     <!-- <div class="press&#45;details&#45;item press&#45;details&#45;feature&#45;content press&#45;details&#45;dual"> -->
     <div class="press-details-item press-details-feature-content press-details-single-feature">
       <p>Situated on a hillside property on a southern flank of the Santa Monica Mountains, Tower Grove rises high above to capture breathtaking and privileged views of Los Angeles and the Pacific Ocean beyond.Explore the houses of founder Grant C. Kirkpatrick and KAA Design, and our love for nature, design and storytelling Situated on a hillside property on a southern flank of the Santa Monica Mountains, Tower Grove rises high above to capture breathtaking and privileged views of Los Angeles and the Pacific Ocean beyond.Explore the houses of founder Grant C. Kirkpatrick and KAA Design, and our love for nature, design and storytelling Situated on a hillside property on a southern flank of the Santa Monica Mountains, Tower Grove rises high above to capture breathtaking and privileged views of Los Angeles and the Pacific Ocean beyond.Explore the houses of founder Grant C. Kirkpatrick and KAA Design, and our love for nature, design and storytelling</p>
 
-      <!-- php boolean for display -->
+      <!-- php boolean for share link display -->
       <!-- <a href="#" class="press&#45;details&#45;share&#45;button"> -->
       <!--   <?php include(__DIR__ ."/../svgs/share.svg"); ?> Share -->
       <!-- </a> -->
@@ -61,11 +61,35 @@
     <!-- Additional narrative (light) -->
     <div class="press-details-item press-details-text-aside press-details-single">
       <p>Situated on a hillside property on a southern flank of the Santa Monica Mountains, Tower Grove rises high above to capture breathtaking and privileged views of Los Angeles and the Pacific Ocean beyond.Explore the houses of founder Grant C. Kirkpatrick and KAA Design, and our love for nature, design and storytelling Situated on a hillside property on a southern flank of the Santa Monica Mountains, Tower Grove rises high above to capture breathtaking and privileged views of Los Angeles and the Pacific Ocean beyond.Explore the houses of founder Grant C. Kirkpatrick and KAA Design, and our love for nature, design and storytelling Situated on a hillside property on a southern flank of the Santa Monica Mountains, Tower Grove rises high above to capture breathtaking and privileged views of Los Angeles and the Pacific Ocean beyond.Explore the houses of founder Grant C. Kirkpatrick and KAA Design, and our love for nature, design and storytelling</p>
+      <!-- php boolean for share link display -->
+      <!-- <a href="#" class="press&#45;details&#45;share&#45;button"> -->
+      <!--   <?php include(__DIR__ ."/../svgs/share.svg"); ?> Share -->
+      <!-- </a> -->
     </div>
 
     <!-- Additional narrative (dark) -->
     <div class="press-details-item press-details-text-aside press-details-single press-details-dark">
       <p>Situated on a hillside property on a southern flank of the Santa Monica Mountains, Tower Grove rises high above to capture breathtaking and privileged views of Los Angeles and the Pacific Ocean beyond.Explore the houses of founder Grant C. Kirkpatrick and KAA Design, and our love for nature, design and storytelling Situated on a hillside property on a southern flank of the Santa Monica Mountains, Tower Grove rises high above to capture breathtaking and privileged views of Los Angeles and the Pacific Ocean beyond.Explore the houses of founder Grant C. Kirkpatrick and KAA Design, and our love for nature, design and storytelling Situated on a hillside property on a southern flank of the Santa Monica Mountains, Tower Grove rises high above to capture breathtaking and privileged views of Los Angeles and the Pacific Ocean beyond.Explore the houses of founder Grant C. Kirkpatrick and KAA Design, and our love for nature, design and storytelling</p>
+
+    </div>
+
+
+    <div class="press-details-item press-details-single press-details-medium">
+      <div class="press-details-advert-wrapper">
+        <picture class="press-details-picture">
+          <source srcset="<?php bloginfo('template_url'); ?>/images/press-details/press-detail-test-advert.png">
+          <img class="press-details-img" srcset="<?php bloginfo('template_url'); ?>/images/press-details/press-detail-test-advert.png" alt="">
+        </picture>
+      </div>
+    </div>
+
+    <div class="press-details-item press-details-single press-details-medium">
+      <div class="press-details-advert-wrapper">
+        <picture class="press-details-picture">
+          <source srcset="<?php bloginfo('template_url'); ?>/images/press-details/press-details-test-advert2.png">
+          <img class="press-details-img" srcset="<?php bloginfo('template_url'); ?>/images/press-details/press-details-test-advert2.png" alt="">
+        </picture>
+      </div>
     </div>
 
 

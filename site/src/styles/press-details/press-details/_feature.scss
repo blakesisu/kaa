@@ -1,8 +1,8 @@
 // section class .press-details
+
 .press-details {
   display: flex;
   width: 100%;
-  // flex-direction: column;
   flex-flow: row wrap;
   @media (max-width: $press-single-column-break) {
     flex-flow: column wrap;
@@ -11,7 +11,10 @@
 
 .press-details-placeholder {
   width: 100%;
-  height: 13vw;
+  height: 18.6vw;
+  @media (max-width: $press-single-column-break) {
+    height: 36vw;
+  }
 }
 
 .press-details-hero {
@@ -27,11 +30,6 @@
   .press-details-img {
     width: 100%;
     height: auto;
-
-    // @media (max-width: $about-single-column-break) {
-    //   width: 100%;
-    //   height: 25vh;
-    // }
   }
 }
 
@@ -45,13 +43,18 @@
   flex: 0 0 100%;
   width: 100%;
   padding: 8vw 25vw;
+  flex-direction: column;
+  & > * {
+    margin: 1vw 0;
+  }
+  @media (max-width: $press-single-column-break) {
+    padding: 8vw 10vw;
+  }
 }
 .press-details-dual {
   position: relative;
-  // height: 25vw;
   flex: 1 1 50%;
   width: 50%;
-  // overflow: hidden;
 
   @media (max-width: $press-single-column-break) {
     flex: 0 0 100%;
@@ -85,20 +88,10 @@
 }
 
 .press-details-feature-header {
-  font-size: px2vw(37, $designLarge);
-  line-height: px2lh(37, 52);
+  font-size: px2vw(50, $designLarge);
+  line-height: px2lh(50, 67);
   letter-spacing: ps2em(1);
 
-  @media (max-width: $press-break) {
-    font-size: 26.34px;
-    line-height: 37px;
-    letter-spacing: 0.026;
-  }
-  @media (max-width: $press-text-break) {
-    font-size: 19.50px;
-    line-height: 27.40px;
-    letter-spacing: 0.019;
-  }
   @media (max-width: $press-single-column-break) {
     // font-size: px2vw(22.5, $designSmall);
     font-size: px2vw(22, $designSmall);
@@ -114,7 +107,6 @@
 
   @media (max-width: $press-break) {
     font-size: 12.79px;
-    // line-height: 37px;
   }
   @media (max-width: $press-single-column-break) {
     font-size: px2vw(15, $designSmall);
@@ -126,8 +118,6 @@
 .press-details-read-button {
   @media (min-width: $press-single-column-break + 1) {
     @include button-lrg;
-    // padding: 18px 26px;
-    // padding: 30px 36px;
     letter-spacing: .1em;
     padding: 1.5vw 1.7vw;
     margin-bottom: 0;
@@ -147,19 +137,20 @@
   }
 }
 
-.press-details-feature-content {
+
+.press-details-feature-content ,
+.press-details-text-aside {
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  padding: 4vw 7vw;
-  font-size: px2vw(18, $designLarge);
-  line-height: px2lh(18, 35);
+  font-size: px2vw(24, $designLarge);
+  line-height: px2lh(24, 45);
   letter-spacing: ps2em(0);
 
-  @media (max-width: $press-break) {
-    font-size: 12.79px;
-    // line-height: 37px;
+  @media (max-width: $press-text-break) {
+    font-size: 12.78px;
+    line-height: 23px;
   }
   @media (max-width: $press-single-column-break) {
     font-size: px2vw(15, $designSmall);
@@ -172,34 +163,36 @@
   }
 }
 
+.press-details-feature-content {
+  padding: 4vw 7vw;
+
+  @media (max-width: $press-single-column-break) {
+    padding: 8vw 10vw 0 10vw;
+  }
+}
+
+.press-details-text-aside {
+  color: $brown;
+  font-family: $regular;
+}
+
 .press-details-single-feature {
   position: relative;
   flex: 0 0 100%;
   width: 100%;
-  padding: 4vw 18vw;
+  padding: 4vw 18vw 0 18vw;
   color: $lightBrown;
-}
+  font-size: px2vw(30, $designLarge);
+  line-height: px2lh(30, 50);
 
-.press-details-text-aside {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // padding: 0 8vw;
-  color: $brown;
-  font-family: $regular;
-
-  font-size: px2vw(18, $designLarge);
-  line-height: px2lh(18, 35);
-  letter-spacing: ps2em(0);
-
-  @media (max-width: $press-break) {
-    font-size: 12.79px;
-    // line-height: 37px;
+  @media (max-width: $press-text-break) {
+    font-size: 15.79px;
+    line-height: 26px;
   }
   @media (max-width: $press-single-column-break) {
-    font-size: px2vw(15, $designSmall);
-    line-height: px2lh(15, 25);
-    letter-spacing: ps2em(0);
+    padding: 8vw 10vw 0 10vw;
+    font-size: px2vw(18, $designSmall);
+    line-height: px2lh(18, 30);
   }
 }
 
@@ -209,18 +202,19 @@
   height: auto;
 
   .press-details-img {
-    // width: 100%;
-    // height: auto;
     position: absolute;
     width: auto;
     height: 100%;
     left: 50%;
     transform: translateX(-50%);
 
-    // @media (max-width: $about-single-column-break) {
-    //   width: 100%;
-    //   height: 25vh;
-    // }
+    @media (max-width: $about-single-column-break) {
+      position: relative;
+      width: 100%;
+      height: auto;
+      left: 0;
+      transform: translateX(0);
+    }
   }
 }
 
@@ -230,12 +224,10 @@
 
   .press-details-img {
     width: 100%;
-    height: 13vw;
-
-    // @media (max-width: $about-single-column-break) {
-    //   width: 100%;
-    //   height: 25vh;
-    // }
+    height: 18.6vw;
+    @media (max-width: $press-single-column-break) {
+      height: 36vw;
+    }
   }
 }
 
@@ -243,7 +235,6 @@
 .press-details-placeholder-wrapper {
   picture {
     width: 100%;
-    // height: auto;
     line-height: 0;
     display: block;
   }
@@ -253,6 +244,34 @@
   background-color: $brown;
   color: #fff;
   padding: 8vw 20vw;
+
+  @media (max-width: $press-single-column-break) {
+    padding: 8vw 10vw;
+  }
+}
+
+.press-details-medium {
+  background-color: #efeded;
+  // color: #fff;
+  // padding: 8vw 40vw;
+
+  // @media (max-width: $press-single-column-break) {
+  //   padding: 8vw 10vw;
+  // }
+}
+
+.press-details-advert-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  picture {
+    line-height: 0;
+    display: block;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 
 .press-details-share-button {
@@ -271,7 +290,7 @@
     margin-right: 0.35vw;
   }
 
-  @media (max-width: $details-grid-break) {
+  @media (max-width: $press-break) {
     font-size: 10.6719px;
 
     svg {
@@ -281,7 +300,7 @@
     }
   }
 
-  @media (max-width: $details-grid-single-column-break) {
+  @media (max-width: $press-single-column-break) {
     font-size: 12.5px;
 
     svg {
@@ -297,6 +316,9 @@
   flex: 0 0 100%;
   width: 100%;
   margin-top: 4.1vw;
+  @media (max-width: $press-single-column-break) {
+    margin-top: 8vw;
+  }
 }
 .press-details-actions {
   width: 100%;
@@ -304,5 +326,8 @@
   flex-direction: row;
   & > * {
     margin-right: 1vw;
+    @media (max-width: $press-single-column-break) {
+      margin-right: 5vw;
+    }
   }
 }
