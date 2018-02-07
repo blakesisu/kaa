@@ -36,6 +36,10 @@
 @import 'press/mixins';
 @import 'press/press';
 
+// press-details
+@import 'press-details/mixins';
+@import 'press-details/press-details';
+
 html,
 body {
   height: 100%;

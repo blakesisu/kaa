@@ -1,0 +1,25 @@
+// press sections
+@import "press-details/feature";
+
+// no glob line-height for press page
+body.page-template-press {
+  line-height: 0;
+}
+
+// grid Styles
+// min-width since the mobile styles are so different it was easier to not have to override anything
+// ------------------------------------------------------------------------------------------------- //
+.press-article-description {
+  display: flex;
+  // justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.press-details-img {
+  width: 100%;
+  height: auto;
+}
+
+.press-details-highlight {
+  color: $orange;
+}

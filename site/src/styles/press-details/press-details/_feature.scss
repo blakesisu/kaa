@@ -1,0 +1,212 @@
+// section class .press-details
+.press-details {
+  display: flex;
+  width: 100%;
+  // flex-direction: column;
+  flex-flow: row wrap;
+  @media (max-width: $press-single-column-break) {
+    flex-flow: column wrap;
+  }
+}
+
+.press-details-feature-placeholder {
+  width: 100%;
+  height: 13vw;
+}
+
+.press-details-feature-hero {
+  width: 100%;
+  height: auto;
+}
+
+.press-details-item {
+  display: flex;
+}
+
+.press-details-single {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  height: 50vw;
+}
+.press-details-dual {
+  position: relative;
+  // height: 25vw;
+  flex: 1 1 50%;
+  width: 50%;
+  // overflow: hidden;
+
+  @media (max-width: $press-single-column-break) {
+    flex: 0 0 100%;
+    width: 100%
+  }
+}
+
+.press-details-text-feature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $brown;
+}
+
+.press-details-text-aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 8vw;
+  color: $brown;
+  font-family: $regular;
+
+  font-size: px2vw(18, $designLarge);
+  line-height: px2lh(18, 35);
+  letter-spacing: ps2em(0);
+
+  @media (max-width: $press-break) {
+    font-size: 12.79px;
+    // line-height: 37px;
+  }
+  @media (max-width: $press-single-column-break) {
+    font-size: px2vw(15, $designSmall);
+    line-height: px2lh(15, 25);
+    letter-spacing: ps2em(0);
+  }
+}
+
+.press-details-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 35vw;
+  height: 18vw;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  @media (max-width: 890px) {
+    height: 29vw;
+  }
+
+  @media (max-width: $press-single-column-break) {
+    width: 93%;
+    height: 100%;
+    padding: 10% 0;
+  }
+  & > * {
+    margin: 2% 0;
+  }
+
+
+  .press-details-text-header,
+  .press-details-text-description {
+    font-family: $regular;
+    color: #ffffff;
+    height: auto;
+    width: 100%;
+  }
+
+  .press-details-text-header {
+    font-size: px2vw(37, $designLarge);
+    line-height: px2lh(37, 52);
+    letter-spacing: ps2em(1);
+
+    @media (max-width: $press-break) {
+      font-size: 26.34px;
+      line-height: 37px;
+      letter-spacing: 0.026;
+    }
+    @media (max-width: $press-text-break) {
+      font-size: 19.50px;
+      line-height: 27.40px;
+      letter-spacing: 0.019;
+    }
+    @media (max-width: $press-single-column-break) {
+      // font-size: px2vw(22.5, $designSmall);
+      font-size: px2vw(22, $designSmall);
+      line-height: px2lh(22.5, 32.5);
+      letter-spacing: ps2em(10);
+    }
+  }
+
+  .press-details-text-description {
+    font-size: px2vw(18, $designLarge);
+    line-height: px2lh(18, 35);
+    letter-spacing: ps2em(0);
+
+    @media (max-width: $press-break) {
+      font-size: 12.79px;
+      // line-height: 37px;
+    }
+    @media (max-width: $press-single-column-break) {
+      font-size: px2vw(15, $designSmall);
+      line-height: px2lh(15, 25);
+      letter-spacing: ps2em(0);
+    }
+  }
+}
+
+.press-details-read-button {
+  @media (min-width: $press-single-column-break + 1) {
+    @include button-lrg;
+    // padding: 18px 26px;
+    // padding: 30px 36px;
+    letter-spacing: .1em;
+    padding: 1.5vw 1.7vw;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $press-break) {
+    line-height: 0;
+    // @include button;
+    font-size: 11.05px;
+    padding: 20.47px 23.20px;
+  }
+
+  @media (max-width: $press-single-column-break) {
+    @include button--small;
+    letter-spacing: .2em;
+    padding: 6vw 5.5vw;
+  }
+}
+
+.press-details-img-wrapper {
+  position: relative;
+  width: 100%;
+
+  picture {
+    width: 100%;
+    height: auto;
+  }
+
+  .press-details-img {
+    width: 100%;
+    height: auto;
+
+    // @media (max-width: $about-single-column-break) {
+    //   width: 100%;
+    //   height: 25vh;
+    // }
+  }
+}
+
+.press-details-placeholder-wrapper {
+  position: relative;
+  width: 100%;
+
+  picture {
+    width: 100%;
+    // height: auto;
+  }
+
+  .press-details-img {
+    width: 100%;
+    height: 13vw;
+
+    // @media (max-width: $about-single-column-break) {
+    //   width: 100%;
+    //   height: 25vh;
+    // }
+  }
+}
+
+.press-details-dark {
+  background-color: $brown;
+  color: #fff;
+}
