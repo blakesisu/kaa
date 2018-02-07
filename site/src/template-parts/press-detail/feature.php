@@ -27,7 +27,11 @@
       <div class="press-details-feature-wrapper">
         <p class="press-details-feature-date">APR 5, 2015</h2>
         <h2 class="press-details-feature-header">CALIFORNIA CONTEMPORARY: A Book Over 30 Years in the Making</h2>
-        <a href="#" class="press-details-read-button">READ MORE</a>
+        <div class="press-details-actions">
+          <!-- php boolean for actions if exist -->
+          <a href="#" class="press-details-read-button">READ MORE</a>
+          <a href="#" class="press-details-read-button">READ MORE</a>
+        </div>
       </div>
     </div>
 
