@@ -44,6 +44,17 @@ get_header(); ?>
               <?php if ( $fullImageLink ) : ?>
               <p class="hm-project-block__more">More <?php include(__DIR__ ."/template-parts/svgs/chevron-right.svg"); ?></p>
               <?php endif; ?>
+              <div class="hm-grid__video-wrapper">
+                <iframe
+                  src="https://www.youtube.com/embed/CcpcdbAWLLI?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=CcpcdbAWLLI"
+                  width="640"
+                  height="360"
+                  frameborder="0"
+                  webkitallowfullscreen
+                  mozallowfullscreen
+                  allowfullscreen
+                ></iframe>
+              </div>
               <picture class="hm-grid__picture hm-project-block__picture">
                 <source srcset="<?php echo $fullImage['mobile']; ?>" media="(max-width: 700px)">
                 <source srcset="<?php echo $fullImage['desktop']; ?>">
@@ -118,6 +129,17 @@ get_header(); ?>
               <?php if ($largeSquareLink) : ?>
               <p class="hm-project-block__more">More <?php include(__DIR__ ."/template-parts/svgs/chevron-right.svg"); ?></p>
               <?php endif; ?>
+              <!-- <div class="hm-grid__video-wrapper">
+                <iframe
+                  src="https://player.vimeo.com/video/76979871?background=1"
+                  width="640"
+                  height="360"
+                  frameborder="0"
+                  webkitallowfullscreen
+                  mozallowfullscreen
+                  allowfullscreen
+                ></iframe>
+              </div> -->
               <picture class="hm-grid__picture hm-project-block__picture">
                 <source srcset="<?php echo $largeSquareImage['mobile']; ?>" media="(max-width: 700px)">
                 <source srcset="<?php echo $largeSquareImage['desktop']; ?>">
