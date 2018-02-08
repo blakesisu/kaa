@@ -32,13 +32,13 @@
       <!-- Text Block TODO: check landing for layout inspiration on text blocks-->
       <div class="press-column-item press-text-feature">
         <div class="press-text-wrapper">
-          <div class="press-text-header">
+          <a href="<?php echo the_permalink($post->ID); ?>" class="press-text-header">
             <h2><?php echo $title; ?></h2>
-          </div>
+          </a>
           <div class="press-text-description">
             <p><?php echo $content; ?></p>
           </div>
-          <a href="#" class="press-read-button">READ MORE</a>
+          <a href="<?php echo the_permalink($post->ID); ?>" class="press-read-button">READ MORE</a>
         </div>
       </div>
 

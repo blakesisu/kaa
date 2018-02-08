@@ -29,8 +29,8 @@
             $title = get_the_title();
             $content = get_field('press_article_main_content'); ?>
 
-          <div href="#" class="press-news-item">
-            <a href="#">
+          <div class="press-news-item">
+            <a href="<?php echo the_permalink($post->ID); ?>">
               <picture class="press-news-picture">
                 <source srcset="<?php echo $image; ?>" media="(max-width: 700px)">
                 <source srcset="<?php echo $image; ?>">
@@ -39,7 +39,7 @@
             </a>
             <div class="press-news-article">
               <p class="press-news-article-date"><?php echo $date; ?></p>
-              <a href="#" class="press-news-article-title"><h3><?php echo $title; ?></h3></a>
+              <a href="<?php echo the_permalink($post->ID); ?>" class="press-news-article-title"><h3><?php echo $title; ?></h3></a>
               <div class="press-news-article-content"><?php echo $content; ?></div>
             </div>
           </div>
