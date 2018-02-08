@@ -29,8 +29,8 @@
         <h2 class="press-details-feature-header">CALIFORNIA CONTEMPORARY: A Book Over 30 Years in the Making</h2>
         <div class="press-details-actions">
           <!-- php boolean for actions if exist -->
-          <a href="#" class="press-details-read-button">DOWNLOAD ARTICLE</a>
-          <a href="#" class="press-details-read-button">READ ONLINE</a>
+          <a href="#" class="press-details-read-button">READ MORE</a>
+          <a href="#" class="press-details-read-button">READ MORE</a>
         </div>
       </div>
     </div>
