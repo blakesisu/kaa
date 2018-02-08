@@ -11,7 +11,7 @@
               'paged' => $paged,
               'posts_per_page' => 9,
               'order' => 'DESC',
-              'meta_key' => 'press_article_feature',
+              'meta_key' => 'press_article_featured',
               'meta_compare' => 'NOT EXISTS'
             )
         );
@@ -24,10 +24,10 @@
             <?php foreach ($posts as $post) :
                 setup_postdata($post) ?>
             <?php
-            $image = get_field('press_article_image');
+            $image = get_field('press_article_thumbnail');
             $date = get_the_date();
             $title = get_the_title();
-            $content = get_field('press_article_content'); ?>
+            $content = get_field('press_article_main_content'); ?>
 
           <div href="#" class="press-news-item">
             <a href="#">

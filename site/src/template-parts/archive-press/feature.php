@@ -2,7 +2,7 @@
     $feature_query = new WP_Query(
         array(
           'post_type' => 'press',
-          'meta_key' => 'press_article_feature',
+          'meta_key' => 'press_article_featured',
           'meta_value' => 1
         )
     );
@@ -18,9 +18,9 @@
       <div class="press-column-item">
         <div class="press-img-wrapper">
             <?php
-              $image = get_field('press_article_image');
+              $image = get_field('press_article_thumbnail');
               $title = get_the_title();
-              $content = get_field('press_article_content');
+              $content = get_field('press_article_main_content');
             ?>
           <picture class="press-picture"><source srcset="<?php echo $image; ?>" media="(max-width: 700px)">
             <source srcset="<?php echo $image; ?>">

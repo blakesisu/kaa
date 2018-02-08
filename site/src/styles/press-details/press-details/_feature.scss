@@ -12,9 +12,7 @@
 .press-details-placeholder {
   width: 100%;
   height: 18.6vw;
-  @media (max-width: $press-single-column-break) {
-    height: 36vw;
-  }
+  overflow: hidden;
 }
 
 .press-details-hero {
@@ -224,10 +222,11 @@
 
   .press-details-img {
     width: 100%;
-    height: 18.6vw;
-    @media (max-width: $press-single-column-break) {
-      height: 36vw;
-    }
+    // height: 18.6vw;
+    height: 100%;
+    // @media (max-width: $press-single-column-break) {
+    //   height: 36vw;
+    // }
   }
 }
 

@@ -6,8 +6,8 @@
     <div class="press-details-placeholder">
       <div class="press-details-placeholder-wrapper">
         <picture class="press-details-picture">
-          <source srcset="<?php bloginfo('template_url'); ?>/images/details/hero/details-hero-lg.jpg">
-          <img class="press-details-img" srcset="<?php bloginfo('template_url'); ?>/images/details/hero/details-hero-lg.jpg" alt="">
+          <source srcset="<?php bloginfo('template_url'); ?>/images/press-details/press-details-placeholder.png">
+          <img class="press-details-img" srcset="<?php bloginfo('template_url'); ?>/images/press-details/press-details-placeholder.png" alt="">
         </picture>
       </div>
     </div>
