@@ -183,8 +183,11 @@
 }
 
 .press-media-mag-item {
-  width: 100%;
+  width: 20%;
   display: flex;
+  @media (max-width: $press-single-column-break) {
+    width: 100%;
+  }
 }
 
 .press-media-mag-content {
