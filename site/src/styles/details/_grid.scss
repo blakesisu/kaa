@@ -24,6 +24,8 @@
   }
 }
 .pd-grid--image-right {
+  flex-direction: row-reverse;
+
   // mobile
   @media (max-width: $details-grid-single-column-break) {
     flex-direction: column-reverse;
