@@ -183,8 +183,11 @@
 }
 
 .press-media-mag-item {
-  width: 100%;
+  width: 20%;
   display: flex;
+  @media (max-width: $press-single-column-break) {
+    width: 100%;
+  }
 }
 
 .press-media-mag-content {
@@ -315,12 +318,18 @@
     display: flex;
     align-items: center;
     svg {
+      fill: $lightBrown;
       margin-right: 10%;
       position: relative;
       width: 15px;
       height: auto;
       @media (max-width: $press-single-column-break) {
         width: 10px;
+      }
+    }
+    &:hover {
+      svg {
+        fill: #fff;
       }
     }
   }
