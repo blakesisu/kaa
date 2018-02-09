@@ -158,6 +158,7 @@
   font-size: px2vw(24, $designLarge);
   line-height: px2lh(24, 46);
   letter-spacing: ps2em(6);
+  width: 100%;
 
   // fixed font size
   @media (max-width: $details-grid-break) {
