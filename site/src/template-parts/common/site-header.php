@@ -47,10 +47,13 @@
     <?php endif; ?>
 
     <div class="site-header__utility-links">
-      <a href="#" class="site-header__book-cta">
-        <span>Get the book</span>
+      <?php $promo = get_field('site_promo', 'option'); ?>
+      <?php if ($promo['link']): ?>
+      <a href="<?php echo $promo['link']; ?>" class="site-header__book-cta">
+        <span><?php echo $promo['label']; ?></span>
         <?php include(__DIR__ ."/../svgs/book.svg"); ?>
       </a>
+      <?php endif; ?>
       <button class="site-header__menu-btn">
         <?php include(__DIR__ ."/../svgs/hamburger.svg"); ?>
       </button>

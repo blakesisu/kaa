@@ -36,11 +36,22 @@
 
     <!-- Contact -->
     <div class="pd-contact">
-      <h2 class="pd-contact__header">Contact Us</h2>
-      <p class="pd-contact__description">Lifestyle design starts with a story. <br>Let us help tell yours.</p>
-      <p class="pd-contact__cta">
-        <a href="#" class="pd-contact__cta-link">Contact KAA Design</a>
-      </p>
+      <?php
+        $contactTitle = get_field('contact_block_title', 'option');
+        $contactDescription = get_field('contact_block_description', 'option');
+        $contactBtn = get_field('contact_block_button', 'option');
+      ?>
+      <?php if ($contactTitle): ?>
+        <h2 class="pd-contact__header"><?php echo $contactTitle; ?></h2>
+      <?php endif; ?>
+      <?php if ($contactDescription): ?>
+        <p class="pd-contact__description"><?php echo $contactDescription; ?></p>
+      <?php endif; ?>
+      <?php if ($contactBtn['link']): ?>
+        <p class="pd-contact__cta">
+          <a href="<?php echo $contactBtn['link'] ?>" class="pd-contact__cta-link"><?php echo $contactBtn['label'] ?></a>
+        </p>
+      <?php endif; ?>
       <p class="pd-contact__share">
         <a href="#" class="pd-contact__share-link">
           <?php include(__DIR__ ."/../svgs/share.svg"); ?> Share
