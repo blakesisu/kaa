@@ -17,6 +17,20 @@
   }
 }
 
+.about__video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+
+  iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
 // single column
 // ------------------------------------------------------------------------------------------------- //
 @media (max-width: $about-single-column-break) {
