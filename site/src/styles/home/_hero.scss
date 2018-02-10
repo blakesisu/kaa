@@ -30,6 +30,26 @@
   -webkit-font-smoothing: auto;
 }
 
+// video
+// ----------------------------------------- //
+.hm-hero__video-wrapper {
+  position: absolute;
+  padding-top: 100vh;
+  z-index: 1;
+  width: 177.777777778vw;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 // image
 // ----------------------------------------- //
 .hm-hero__img {
@@ -41,6 +61,7 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  z-index: 5;
 }
 
 .no-touchevents {
