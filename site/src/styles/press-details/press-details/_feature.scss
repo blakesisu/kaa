@@ -70,7 +70,7 @@
 .press-details-single {
   position: relative;
   flex: 0 0 100%;
-  width: 100%;
+  max-width: 100%;
   padding: 8vw 25vw;
   flex-direction: column;
   & > * {
@@ -99,13 +99,13 @@
 }
 
 .press-details-feature-wrapper {
-  display: flex;
+  // display: flex;
   flex-direction: column;
   padding: 8vw 5vw;
   justify-content: flex-end;
   align-items: flex-start;
   & > * {
-    margin: 2% 0;
+    margin: 3% 0;
   }
 }
 
@@ -212,7 +212,7 @@
 .press-details-single-feature {
   position: relative;
   flex: 0 0 100%;
-  width: 100%;
+  max-width: 100%;
   // padding: 4vw 18vw 0 18vw;
   padding: 4vw 18vw;
   color: $lightBrown;

@@ -111,10 +111,14 @@
 
   // first text box before bio pics
   &:nth-child(1) {
-    display: flex;
+    // display: flex;
 
     .about-text-flex-column {
       justify-content: center;
+      padding: 0 12%;
+      @media (max-width: $about-single-column-break) {
+        padding: 0 2%;
+      }
     }
 
     @media (max-width: $about-single-column-break) {

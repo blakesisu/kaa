@@ -95,7 +95,7 @@ body.page-template-press {
   .press-horizontal {
     // display: inherit;
     // flex-direction: row;
-    flex: 1 1 0;
+    flex: 1 1 0%;
     // height: auto;
     // align-items: center;
   }
@@ -108,8 +108,8 @@ body.page-template-press {
 }
 
 .press-trip-container {
-  display: flex;
-  flex-flow: row wrap;
+  // display: flex;
+  // flex-flow: row wrap;
 
   @media (max-width: $single-column-break) {
     flex-direction: column;

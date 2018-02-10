@@ -29,22 +29,15 @@
 }
 
 .press-text-wrapper {
-  display: flex;
   flex-direction: column;
-  width: 35vw;
-  height: 18vw;
+  padding: 0 8vw;
   justify-content: flex-end;
   align-items: flex-start;
 
   @media (max-width: 890px) {
-    height: 29vw;
+    padding: 10vw 3vw;
   }
 
-  @media (max-width: $press-single-column-break) {
-    width: 93%;
-    height: 100%;
-    padding: 10% 0;
-  }
   & > * {
     margin: 2% 0;
   }
@@ -132,11 +125,11 @@
   }
 
   .press-book-img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
 
     // @media (max-width: $about-single-column-break) {
-    //   width: 100%;
+    //   max-width: 100%;
     //   height: 25vh;
     // }
   }
