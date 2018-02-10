@@ -151,6 +151,9 @@
 // ----------------------------------------- //
 .pd-grid__block--text {
   display: flex;
+  @media all and (-ms-high-contrast:none) {
+    display: block;
+  }
   flex-direction: column;
   justify-content: center;
   font-size: px2vw(24, $designLarge);
