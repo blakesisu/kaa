@@ -239,7 +239,11 @@ var AmeActorManager = /** @class */ (function () {
             }
         }
         //Step #3: Check owned/default capabilities. Always checked.
-        var actor = this.getActor(actorId), hasOwnCap = actor.hasOwnCap(capability);
+        var actor = this.getActor(actorId);
+        if (actor === null) {
+            return false;
+        }
+        var hasOwnCap = actor.hasOwnCap(capability);
         if (hasOwnCap !== null) {
             return hasOwnCap;
         }

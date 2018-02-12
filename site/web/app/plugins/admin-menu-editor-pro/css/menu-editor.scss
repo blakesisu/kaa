@@ -1089,8 +1089,10 @@ a#ws-ame-delete-color-preset:hover {
 /* Color scheme display in the editor widget. */
 
 .ws_color_scheme_display {
+	$colorFieldHeight: 20px;
+
     display: inline-block;
-    height: 20px;
+    height: $colorFieldHeight;
     width: 186px;
 
     margin-right: 5px;
@@ -1100,6 +1102,8 @@ a#ws-ame-delete-color-preset:hover {
     border: 1px solid #ddd;
     background: white;
     cursor: pointer;
+
+	line-height: $colorFieldHeight;
 }
 
 .ws_color_display_item {

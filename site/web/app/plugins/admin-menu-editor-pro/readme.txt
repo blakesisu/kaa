@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: admin, dashboard, menu, security, wpmu
 Requires at least: 4.1
 Tested up to: 4.9.1
-Stable tag: 2.6.1
+Stable tag: 2.6.2
 
 Lets you directly edit the WordPress admin menu. You can re-order, hide or rename existing menus, add custom menus and more.
 
@@ -83,6 +83,19 @@ Here are some usage tips and other things that can be good to know when using th
 == Changelog ==
 
 [Get the latest version here.](http://adminmenueditor.com/updates/)
+
+= 2.6.2 =
+##### Added
+* Added an `[ame-count-bubble]` shortcode. When used in a menu title, it takes the number bubble from the default menu title and displays it in the custom title. A "bubble" is the small number in a colored circle that appears on some menu items, like "Dashboard -> Updates (3)", "Comments (12)", or "WooCommerce -> Orders (5)".
+
+##### Fixed
+* Fixed a PHP 7.2 compatibility issue that caused this warning to show up on the menu editor page: "count(): Parameter must be an array or an object that implements Countable in menu-editor-core.php".
+* Fixed a JavaScript error "cannot read property 'replace' of null" in the "Meta Boxes" tab that would show up if another plugin added a meta box without a valid title. 
+* Fixed a JavaScript error "actor is null" when trying to save dashboard widget settings that contain user-specific permissions for nonexistent users. This typically happened when importing settings from another site.
+* Fixed a conflict with Ultra WordPress Admin 7.4 that made it impossible to hide plugins.
+
+##### Changed
+* Tested with WP 4.9.4 and 5.0-alpha.
 
 = 2.6.1 (2018-01-07) =
 ##### Added

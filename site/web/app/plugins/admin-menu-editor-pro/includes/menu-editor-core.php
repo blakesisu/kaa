@@ -341,6 +341,14 @@ class WPMenuEditor extends MenuEd_ShadowPluginFramework {
 			add_action('admin_notices', array($this, 'display_security_log'));
 		}
 
+		if ( did_action('plugins_loaded') ) {
+			$this->load_modules();
+		} else {
+			add_action('plugins_loaded', array($this, 'load_modules'), 11);
+		}
+	}
+
+	public function load_modules() {
 		//Modules
 		foreach($this->get_active_modules() as $module) {
 			/** @noinspection PhpIncludeInspection */
@@ -350,7 +358,7 @@ class WPMenuEditor extends MenuEd_ShadowPluginFramework {
 			}
 		}
 
-		//Set up the tabs for the menu editor page.
+		//Set up the tabs for the menu editor page. Many tabs are provided by modules.
 		$firstTabs = array('editor' => 'Admin Menu');
 		if ( is_network_admin() ) {
 			//TODO: This could be in extras.php
@@ -1314,7 +1322,7 @@ class WPMenuEditor extends MenuEd_ShadowPluginFramework {
 	 * @param string $login
 	 * @param WP_User $current_user
 	 */
-	public function maybe_reset_plugin_access(/** @noinspection PhpUnusedParameterInspection */ $login, $current_user) {
+	public function maybe_reset_plugin_access(/** @noinspection PhpUnusedParameterInspection */ $login = null, $current_user = null) {
 		if ( ($this->options['plugin_access'] !== 'specific_user') || !$current_user || !$current_user->exists() ) {
 			return;
 		}
@@ -3978,7 +3986,7 @@ class WPMenuEditor extends MenuEd_ShadowPluginFramework {
 					continue;
 				}
 
-				if ( count($line) >= 2 ) {
+				if ( is_array($line) && (count($line) >= 2) ) {
 					$cap_power[strval($line[0])] = floatval(str_replace(',', '.', $line[1]));
 				}
 			}
@@ -4066,6 +4074,8 @@ class WPMenuEditor extends MenuEd_ShadowPluginFramework {
 			}
 		}
 		unset($module);
+
+		$modules = apply_filters('admin_menu_editor-available_modules', $modules);
 
 		$modules = array_filter($modules, array($this, 'module_path_exists'));
 

@@ -323,8 +323,11 @@ class AmeActorManager {
 		}
 
 		//Step #3: Check owned/default capabilities. Always checked.
-		let actor = this.getActor(actorId),
-			hasOwnCap = actor.hasOwnCap(capability);
+		let actor = this.getActor(actorId);
+		if (actor === null) {
+			return false;
+		}
+		let hasOwnCap = actor.hasOwnCap(capability);
 		if (hasOwnCap !== null) {
 			return hasOwnCap;
 		}

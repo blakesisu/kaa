@@ -40,6 +40,7 @@ class wsMenuEditorExtras {
 	private $virtual_caps_for_this_call = array();
 
 	private $fields_supporting_shortcodes = array('page_title', 'menu_title', 'file', 'css_class', 'hookname', 'icon_url');
+	private $current_shortcode_item = null;
 
 	/**
 	 * Class constructor.
@@ -76,6 +77,7 @@ class wsMenuEditorExtras {
 		foreach($info_shortcodes as $tag){
 			add_shortcode($tag, $shortcode_callback);
 		}
+		add_shortcode('ame-count-bubble', array($this, 'handle_count_shortcode'));
 		
 		//Output the menu-modification JS after the menu has been generated.
 		//'in_admin_header' is, AFAIK, the action that fires the soonest after menu
@@ -172,7 +174,9 @@ class wsMenuEditorExtras {
 			if ( isset($item[$field]) ) {
 				$value = $item[$field];
 				if ( strpos($value, '[') !== false ){
+					$this->current_shortcode_item = $item;
 					$item[$field] = do_shortcode($value);
+					$this->current_shortcode_item = null;
 				}
 			}
 		}
@@ -226,6 +230,40 @@ class wsMenuEditorExtras {
 		}
 		
 		return $info;
+	}
+
+	/**
+	 * Get the HTML code for the small "(123)" bubble in the title of the current menu item.
+	 *
+	 * The count bubble shortcode is intended for situations where the user wants to rename
+	 * a menu item like "WooCommerce -> Orders" that includes a small bubble showing the number
+	 * of pending orders (or plugin updates, comments awaiting moderation, etc). The shortcode
+	 * extracts the count from the default menu title and shows it in the custom title.
+	 *
+	 * @return string
+	 */
+	public function handle_count_shortcode() {
+		if (isset(
+			$this->current_shortcode_item,
+			$this->current_shortcode_item['defaults'],
+			$this->current_shortcode_item['defaults']['menu_title']
+		)) {
+			//Oh boy, this is excessive! Tests say it takes < 1 ms per shortcode,
+			//but it still seems wrong to go this far just to extract a <span> tag.
+			$title = $this->current_shortcode_item['defaults']['menu_title'];
+			if ( stripos($title, '<span') !== false ) {
+				$dom = new domDocument;
+				if ( @$dom->loadHTML($title) ) {
+					$xpath = new DOMXpath($dom);
+					$result = $xpath->query('//span[contains(@class,"update-plugins") or contains(@class,"awaiting-mod")]');
+					if ( $result->length > 0 ) {
+						$span = $result->item(0);
+						return $span->ownerDocument->saveHTML($span);
+					}
+				}
+			}
+		}
+		return '';
 	}
 	
 	/**

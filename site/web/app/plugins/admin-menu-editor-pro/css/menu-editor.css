@@ -812,7 +812,8 @@ a#ws-ame-delete-color-preset:hover {
   font-size: 12px;
   border: 1px solid #ddd;
   background: white;
-  cursor: pointer; }
+  cursor: pointer;
+  line-height: 20px; }
 
 .ws_color_display_item {
   display: inline-block;
