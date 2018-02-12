@@ -9,7 +9,7 @@
   <meta name="keywords" content="">
   <meta http-equiv="content-language" content="en">
 
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="<?php bloginfo('template_url'); ?>/favicon.ico">
 
   <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
 
