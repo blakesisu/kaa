@@ -203,8 +203,8 @@
 .ab-bio__text-container {
   flex: 0 0 50%;
   padding: 4% 10.2% 4% 7.2%;
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
 
   // Mobile
   @media (max-width: 700px) {
@@ -213,10 +213,16 @@
   }
 }
 .ab-bio__scroller {
+  height: 100%;
+  width: 100%;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
 .ab-bio__copy {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+    margin-right: 20%;
+  }
   font-size: px2vw(18, $designLarge);
   line-height: px2lh(18, 35);
   letter-spacing: ps2em(10);
