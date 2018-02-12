@@ -56,6 +56,12 @@
   letter-spacing: ps2em(300);
   line-height: px2lh(22, 30);
 
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $brown;
+  }
+
   @media (max-width: $mid-break) {
     font-size: 15.652px;
     letter-spacing: 4.69561px;
@@ -116,7 +122,58 @@
   }
 }
 
+// video
+// ----------------------------------------- //
+.proj-project__video {
+  position: relative;
+  padding-top: 56.25%;
+  overflow: hidden;
+
+  .proj-project__dual &:hover {
+
+    iframe {
+      transform: scale(1.08);
+    }
+  }
+
+  .proj-project__tri &:hover {
+
+    iframe {
+      transform: scale(1.1);
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.proj-project__video-wrapper {
+  position: absolute;
+  padding-top: 56.25%;
+  width: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s $easeOutQuad;
+  }
+}
+
 // transition scroll effect styles
+// ----------------------------------------- //
 .proj-projects__project {
   display: block;
   opacity: 0;

@@ -18,6 +18,7 @@ get_header(); ?>
         $fullImage = get_sub_field('full_image_image');
         $fullType = get_sub_field('full_image_type');
         $fullVideo = get_sub_field('full_image_video');
+        $fullVideoSrc = getBackgroundVideoSrc($fullVideo);
         $fullImageLink = get_sub_field('full_image_link');
         $fullImageTitle = get_sub_field('full_image_title');
         $fullImageBtnLabel = get_sub_field('full_image_button_label');
@@ -54,24 +55,10 @@ get_header(); ?>
                   <img class="hm-grid__img hm-project-block__img" srcset="<?php echo $fullImage['desktop']; ?>" alt="">
                 </picture>
               <?php else: ?>
-                <?php
-                  $videoID = null;
-                  $videoSrc = null;
-
-                  // If vimeo video
-                  if (strpos($fullVideo, 'vimeo') !== false) {
-                    $videoID = getVimeoId($fullVideo);
-                    $videoSrc = 'https://player.vimeo.com/video/'.$videoID.'?background=1';
-                  // If youtube video
-                  } else {
-                    $videoID = getYoutubeId($fullVideo);
-                    $videoSrc = 'https://www.youtube.com/embed/'.$videoID.'?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1&playlist='.$videoID;
-                  }
-                ?>
-                <?php if ($videoSrc): ?>
+                <?php if ($fullVideoSrc): ?>
                   <div class="hm-grid__video-wrapper">
                     <iframe
-                      src="<?php echo $videoSrc; ?>"
+                      src="<?php echo $fullVideoSrc; ?>"
                       width="640"
                       height="360"
                       frameborder="0"
@@ -104,6 +91,7 @@ get_header(); ?>
         $largeSquareType = get_sub_field('large_square_type');
         $largeSquareImage = get_sub_field('large_square_image');
         $largeSquareVideo = get_sub_field('large_square_video');
+        $largeSquareVideoSrc = getBackgroundVideoSrc($largeSquareVideo);
         $largeSquareLink = get_sub_field('large_square_link');
         $largeSquareTitle = get_sub_field('large_square_title');
         $largeSquareButtonLabel = get_sub_field('large_square_button_label');
@@ -160,24 +148,10 @@ get_header(); ?>
                   <img class="hm-grid__img hm-project-block__img" srcset="<?php echo $largeSquareImage['desktop']; ?>" alt="">
                 </picture>
               <?php else: ?>
-              <?php
-                  $videoID = null;
-                  $videoSrc = null;
-
-                  // If vimeo video
-                  if (strpos($largeSquareVideo, 'vimeo') !== false) {
-                    $videoID = getVimeoId($largeSquareVideo);
-                    $videoSrc = 'https://player.vimeo.com/video/'.$videoID.'?background=1';
-                  // If youtube video
-                  } else {
-                    $videoID = getYoutubeId($largeSquareVideo);
-                    $videoSrc = 'https://www.youtube.com/embed/'.$videoID.'?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1&playlist='.$videoID;
-                  }
-                ?>
-                <?php if ($videoSrc): ?>
+                <?php if ($largeSquareVideoSrc): ?>
                   <div class="hm-grid__video-wrapper">
                     <iframe
-                      src="<?php echo $videoSrc; ?>"
+                      src="<?php echo $largeSquareVideoSrc; ?>"
                       width="640"
                       height="360"
                       frameborder="0"
@@ -254,6 +228,7 @@ get_header(); ?>
         $largeSquareType2 = get_sub_field('large_square_type');
         $largeSquareImage2 = get_sub_field('large_square_image');
         $largeSquareVideo2 = get_sub_field('large_square_video');
+        $largeSquareVideoSrc2 = getBackgroundVideoSrc($largeSquareVideo2);
         $largeSquareLink2 = get_sub_field('large_square_link');
         $largeSquareTitle2 = get_sub_field('large_square_title');
         $largeSquareButtonLabel2 = get_sub_field('large_square_button_label');
@@ -309,24 +284,10 @@ get_header(); ?>
                   <img class="hm-grid__img hm-project-block__img" srcset="<?php echo $largeSquareImage2['desktop']; ?>" alt="">
                 </picture>
               <?php else: ?>
-                <?php
-                  $videoID2 = null;
-                  $videoSrc2 = null;
-
-                  // If vimeo video
-                  if (strpos($largeSquareVideo2, 'vimeo') !== false) {
-                    $videoID2 = getVimeoId($largeSquareVideo2);
-                    $videoSrc2 = 'https://player.vimeo.com/video/'.$videoID2.'?background=1';
-                  // If youtube video
-                  } else {
-                    $videoID2 = getYoutubeId($largeSquareVideo2);
-                    $videoSrc2 = 'https://www.youtube.com/embed/'.$videoID2.'?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1&playlist='.$videoID;
-                  }
-                ?>
-                <?php if ($videoSrc2): ?>
+                <?php if ($largeSquareVideoSrc2): ?>
                   <div class="hm-grid__video-wrapper">
                     <iframe
-                      src="<?php echo $videoSrc2; ?>"
+                      src="<?php echo $largeSquareVideoSrc2; ?>"
                       width="640"
                       height="360"
                       frameborder="0"

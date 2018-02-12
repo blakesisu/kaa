@@ -11,18 +11,7 @@
     <?php else: ?>
       <?php
         $video = get_field('about_hero_video');
-        $videoID = null;
-        $videoSrc = null;
-
-        // If vimeo video
-        if (strpos($video, 'vimeo') !== false) {
-          $videoID = getVimeoId($video);
-          $videoSrc = 'https://player.vimeo.com/video/'.$videoID.'?title=0&byline=0&portrait=0';
-        // If youtube video
-        } else {
-          $videoID = getYoutubeId($video);
-          $videoSrc = 'https://www.youtube.com/embed/'.$videoID;
-        }
+        $videoSrc = getForegroundVideoSrc($video);
       ?>
       <?php if ($videoSrc): ?>
         <div class="about__video-wrapper">

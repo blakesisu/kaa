@@ -9,6 +9,40 @@ function admin_style()
 
 add_action('admin_enqueue_scripts', 'admin_style');
 
+function getBackgroundVideoSrc($video) {
+  $videoID = null;
+  $videoSrc = null;
+
+  // If vimeo video
+  if (strpos($video, 'vimeo') !== false) {
+    $videoID = getVimeoId($video);
+    $videoSrc = 'https://player.vimeo.com/video/'.$videoID.'?background=1';
+  // If youtube video
+  } else {
+    $videoID = getYoutubeId($video);
+    $videoSrc = 'https://www.youtube.com/embed/'.$videoID.'?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1&playlist='.$videoID;
+  }
+
+  return $videoSrc;
+}
+
+function getForegroundVideoSrc($video) {
+  $videoID = null;
+  $videoSrc = null;
+
+  // If vimeo video
+  if (strpos($video, 'vimeo') !== false) {
+    $videoID = getVimeoId($video);
+    $videoSrc = 'https://player.vimeo.com/video/'.$videoID.'?title=0&byline=0&portrait=0';
+  // If youtube video
+  } else {
+    $videoID = getYoutubeId($video);
+    $videoSrc = 'https://www.youtube.com/embed/'.$videoID.'?modestbranding=1&showinfo=0&rel=0';
+  }
+
+  return $videoSrc;
+}
+
 // https://github.com/lingtalfi/video-ids-and-thumbnails/blob/master/function.video.php
 function getVimeoId($url) {
   if (preg_match('#(?:https?://)?(?:www.)?(?:player.)?vimeo.com/(?:[a-z]*/)*([0-9]{6,11})[?]?.*#', $url, $m)) {
