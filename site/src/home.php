@@ -16,6 +16,8 @@ get_header(); ?>
     <?php if( get_row_layout() == 'full_image' ): ?>
       <?php
         $fullImage = get_sub_field('full_image_image');
+        $fullType = get_sub_field('full_image_type');
+        $fullVideo = get_sub_field('full_image_video');
         $fullImageLink = get_sub_field('full_image_link');
         $fullImageTitle = get_sub_field('full_image_title');
         $fullImageBtnLabel = get_sub_field('full_image_button_label');
@@ -44,11 +46,42 @@ get_header(); ?>
               <?php if ( $fullImageLink ) : ?>
               <p class="hm-project-block__more">More <?php include(__DIR__ ."/template-parts/svgs/chevron-right.svg"); ?></p>
               <?php endif; ?>
-              <picture class="hm-grid__picture hm-project-block__picture">
-                <source srcset="<?php echo $fullImage['mobile']; ?>" media="(max-width: 700px)">
-                <source srcset="<?php echo $fullImage['desktop']; ?>">
-                <img class="hm-grid__img hm-project-block__img" srcset="<?php echo $fullImage['desktop']; ?>" alt="">
-              </picture>
+
+              <?php if ($fullType === 'image'): ?>
+                <picture class="hm-grid__picture hm-project-block__picture">
+                  <source srcset="<?php echo $fullImage['mobile']; ?>" media="(max-width: 700px)">
+                  <source srcset="<?php echo $fullImage['desktop']; ?>">
+                  <img class="hm-grid__img hm-project-block__img" srcset="<?php echo $fullImage['desktop']; ?>" alt="">
+                </picture>
+              <?php else: ?>
+                <?php
+                  $videoID = null;
+                  $videoSrc = null;
+
+                  // If vimeo video
+                  if (strpos($fullVideo, 'vimeo') !== false) {
+                    $videoID = getVimeoId($fullVideo);
+                    $videoSrc = 'https://player.vimeo.com/video/'.$videoID.'?background=1';
+                  // If youtube video
+                  } else {
+                    $videoID = getYoutubeId($fullVideo);
+                    $videoSrc = 'https://www.youtube.com/embed/'.$videoID.'?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1&playlist='.$videoID;
+                  }
+                ?>
+                <?php if ($videoSrc): ?>
+                  <div class="hm-grid__video-wrapper">
+                    <iframe
+                      src="<?php echo $videoSrc; ?>"
+                      width="640"
+                      height="360"
+                      frameborder="0"
+                      webkitallowfullscreen
+                      mozallowfullscreen
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                <?php endif; ?>
+              <?php endif; ?>
             </div>
           <?php if ( $fullImageLink ) : ?>
           </a>
@@ -68,7 +101,9 @@ get_header(); ?>
         $textBlockCopy = get_sub_field('text_block_copy');
         $textBlockLinkLabel = get_sub_field('text_block_link_label');
 
+        $largeSquareType = get_sub_field('large_square_type');
         $largeSquareImage = get_sub_field('large_square_image');
+        $largeSquareVideo = get_sub_field('large_square_video');
         $largeSquareLink = get_sub_field('large_square_link');
         $largeSquareTitle = get_sub_field('large_square_title');
         $largeSquareButtonLabel = get_sub_field('large_square_button_label');
@@ -118,11 +153,41 @@ get_header(); ?>
               <?php if ($largeSquareLink) : ?>
               <p class="hm-project-block__more">More <?php include(__DIR__ ."/template-parts/svgs/chevron-right.svg"); ?></p>
               <?php endif; ?>
-              <picture class="hm-grid__picture hm-project-block__picture">
-                <source srcset="<?php echo $largeSquareImage['mobile']; ?>" media="(max-width: 700px)">
-                <source srcset="<?php echo $largeSquareImage['desktop']; ?>">
-                <img class="hm-grid__img hm-project-block__img" srcset="<?php echo $largeSquareImage['desktop']; ?>" alt="">
-              </picture>
+              <?php if ($largeSquareType === 'image'): ?>
+                <picture class="hm-grid__picture hm-project-block__picture">
+                  <source srcset="<?php echo $largeSquareImage['mobile']; ?>" media="(max-width: 700px)">
+                  <source srcset="<?php echo $largeSquareImage['desktop']; ?>">
+                  <img class="hm-grid__img hm-project-block__img" srcset="<?php echo $largeSquareImage['desktop']; ?>" alt="">
+                </picture>
+              <?php else: ?>
+              <?php
+                  $videoID = null;
+                  $videoSrc = null;
+
+                  // If vimeo video
+                  if (strpos($largeSquareVideo, 'vimeo') !== false) {
+                    $videoID = getVimeoId($largeSquareVideo);
+                    $videoSrc = 'https://player.vimeo.com/video/'.$videoID.'?background=1';
+                  // If youtube video
+                  } else {
+                    $videoID = getYoutubeId($largeSquareVideo);
+                    $videoSrc = 'https://www.youtube.com/embed/'.$videoID.'?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1&playlist='.$videoID;
+                  }
+                ?>
+                <?php if ($videoSrc): ?>
+                  <div class="hm-grid__video-wrapper">
+                    <iframe
+                      src="<?php echo $videoSrc; ?>"
+                      width="640"
+                      height="360"
+                      frameborder="0"
+                      webkitallowfullscreen
+                      mozallowfullscreen
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                <?php endif; ?>
+              <?php endif; ?>
             <?php if ($largeSquareLink) : ?>
             </a>
             <?php else: ?>
@@ -186,7 +251,9 @@ get_header(); ?>
         $textBlockCopy2 = get_sub_field('text_block_copy');
         $textBlockLinkLabel2 = get_sub_field('text_block_link_label');
 
+        $largeSquareType2 = get_sub_field('large_square_type');
         $largeSquareImage2 = get_sub_field('large_square_image');
+        $largeSquareVideo2 = get_sub_field('large_square_video');
         $largeSquareLink2 = get_sub_field('large_square_link');
         $largeSquareTitle2 = get_sub_field('large_square_title');
         $largeSquareButtonLabel2 = get_sub_field('large_square_button_label');
@@ -207,7 +274,7 @@ get_header(); ?>
             $newstr2 .= substr($str2,$i,1);
           }
 
-          if (substr($str,$i,1) == ">") {
+          if (substr($str2,$i,1) == ">") {
             $notintag2 = true;
           }
         }
@@ -235,11 +302,41 @@ get_header(); ?>
               <?php if ($largeSquareLink2) : ?>
               <p class="hm-project-block__more">More <?php include(__DIR__ ."/template-parts/svgs/chevron-right.svg"); ?></p>
               <?php endif; ?>
-              <picture class="hm-grid__picture hm-project-block__picture">
-                <source srcset="<?php echo $largeSquareImage2['mobile']; ?>" media="(max-width: 700px)">
-                <source srcset="<?php echo $largeSquareImage2['desktop']; ?>">
-                <img class="hm-grid__img hm-project-block__img" srcset="<?php echo $largeSquareImage2['desktop']; ?>" alt="">
-              </picture>
+              <?php if ($largeSquareType2 === 'image'): ?>
+                <picture class="hm-grid__picture hm-project-block__picture">
+                  <source srcset="<?php echo $largeSquareImage2['mobile']; ?>" media="(max-width: 700px)">
+                  <source srcset="<?php echo $largeSquareImage2['desktop']; ?>">
+                  <img class="hm-grid__img hm-project-block__img" srcset="<?php echo $largeSquareImage2['desktop']; ?>" alt="">
+                </picture>
+              <?php else: ?>
+                <?php
+                  $videoID2 = null;
+                  $videoSrc2 = null;
+
+                  // If vimeo video
+                  if (strpos($largeSquareVideo2, 'vimeo') !== false) {
+                    $videoID2 = getVimeoId($largeSquareVideo2);
+                    $videoSrc2 = 'https://player.vimeo.com/video/'.$videoID2.'?background=1';
+                  // If youtube video
+                  } else {
+                    $videoID2 = getYoutubeId($largeSquareVideo2);
+                    $videoSrc2 = 'https://www.youtube.com/embed/'.$videoID2.'?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1&playlist='.$videoID;
+                  }
+                ?>
+                <?php if ($videoSrc2): ?>
+                  <div class="hm-grid__video-wrapper">
+                    <iframe
+                      src="<?php echo $videoSrc2; ?>"
+                      width="640"
+                      height="360"
+                      frameborder="0"
+                      webkitallowfullscreen
+                      mozallowfullscreen
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                <?php endif; ?>
+              <?php endif; ?>
             <?php if ($largeSquareLink2) : ?>
             </a>
             <?php else: ?>
