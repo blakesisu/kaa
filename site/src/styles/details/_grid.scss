@@ -10,6 +10,7 @@
 // The text and image blocks will scale to fit these layouts
 .pd-grid {
   display: flex;
+  width: 100%;
 
   // mobile
   @media (max-width: $details-grid-single-column-break) {
@@ -40,6 +41,64 @@
 
     p:not(:first-child) {
       margin-top: 2vw;
+    }
+
+    strong {
+      font-family: $bold;
+    }
+
+    em {
+      font-family: $italic;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: $bold;
+      line-height: 1.1;
+    }
+
+    h1 {
+      font-size: 60px;
+    }
+
+    h2 {
+      font-size: 45px;
+    }
+
+    h3 {
+      font-size: 40px;
+    }
+
+    h4 {
+      font-size: 30px;
+    }
+
+    h5 {
+      font-size: 20px;
+    }
+
+    h6 {
+      font-size: 18px;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+    }
+
+    ul {
+      list-style: disc;
+    }
+
+    ol {
+      list-style: decimal;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: $orange;
     }
   }
 
@@ -218,7 +277,10 @@
 }
 
 // brown text block
-.pd-grid__block--brown {
+.pd-grid__block--dark {
   color: $white;
   background-color: $brown;
+}
+.pd-grid__block--medium {
+  background-color: $lightLightLightBrown;
 }

@@ -1,9 +1,37 @@
-<section class="pd-hero">
-  <div class="pd-hero__container">
-    <picture class="pd-hero__picture">
-      <source srcset="<?php bloginfo('template_url'); ?>/images/details/hero/details-hero-sm.jpg" media="(max-width: 700px)">
-      <source srcset="<?php bloginfo('template_url'); ?>/images/details/hero/details-hero-lg.jpg">
-      <img class="pd-hero__img" srcset="<?php bloginfo('template_url'); ?>/images/details/hero/details-hero-lg.jpg" alt="">
-    </picture>
-  </div>
-</section>
+<?php
+  $type = get_field('project_detail_hero_type');
+  $hero = get_field('project_detail_hero');
+  $video = get_field('project_detail_hero_video');
+  $videoSrc = getForegroundVideoSrc($video);
+?>
+<?php if ($type === 'video'): ?>
+  <section class="pd-grid pd-grid--full">
+    <div class="pd-grid__block pd-grid__block--video">
+      <?php if ($videoSrc): ?>
+        <div class="pd-grid__video-wrapper">
+          <iframe
+            src="<?php echo $videoSrc; ?>"
+            width="640"
+            height="360"
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen
+          ></iframe>
+        </div>
+      <?php endif; ?>
+    </div>
+  </section>
+<?php else: ?>
+  <?php if ($hero['desktop']) : ?>
+    <section class="pd-grid pd-grid--full">
+      <div class="pd-grid__block pd-grid__block--image">
+        <picture class="pd-grid__picture">
+          <source srcset="<?php echo $hero['mobile']; ?>" media="(max-width: 700px)">
+          <source srcset="<?php echo $hero['desktop']; ?>">
+          <img class="pd-grid__img" srcset="<?php echo $hero['desktop']; ?>" alt="">
+        </picture>
+      </div>
+    </section>
+  <? endif; ?>
+<?php endif; ?>
