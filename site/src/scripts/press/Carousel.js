@@ -52,8 +52,7 @@ export default class Carousel {
             ele = $(ele);
 
             console.log(magId);
-            // if ( ele.attr('data-magitem') !== magId) {
-            if (( ele.attr('data-magitem')).split(' ').indexOf(magId) < 0) {
+            if ( ele.attr('data-magitem') !== magId) {
               ele.addClass('swiper-hidden-slide')
                 .removeClass('swiper-slide swiper-slide-active');
             } else {
