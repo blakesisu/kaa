@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e6c5f86c2247ad635ef990a5f206a7db",
+    "content-hash": "09bb4e32890bdb6060955b41236b2c5c",
     "packages": [
         {
             "name": "composer/installers",
@@ -464,6 +464,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/custom-post-type-ui/"
+        },
+        {
+            "name": "wpackagist-plugin/peters-login-redirect",
+            "version": "2.9.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/peters-login-redirect/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/peters-login-redirect.zip?timestamp=1496267896",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/peters-login-redirect/"
         }
     ],
     "packages-dev": [
