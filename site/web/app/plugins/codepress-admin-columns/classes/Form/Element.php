@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-abstract class AC_Settings_Form_Element {
+abstract class AC_Form_Element {
 
 	/**
 	 * @var array

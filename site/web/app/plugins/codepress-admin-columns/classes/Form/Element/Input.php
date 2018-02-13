@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class AC_Settings_Form_Element_Input extends AC_Settings_Form_Element {
+class AC_Form_Element_Input extends AC_Form_Element {
 
 	protected function is_valid_type( $type ) {
 		$valid_types = array(
