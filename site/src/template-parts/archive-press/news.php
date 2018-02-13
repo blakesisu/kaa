@@ -10,9 +10,9 @@
               'post_type' => 'press',
               'paged' => $paged,
               'posts_per_page' => 9,
-              'order' => 'DESC',
-              'meta_key' => 'press_article_featured',
-              'meta_compare' => 'NOT EXISTS'
+              // 'order' => 'DESC',
+              // 'meta_key' => 'press_article_featured',
+              // 'meta_compare' => 'NOT EXISTS'
             )
         );
 
@@ -24,18 +24,19 @@
             <?php foreach ($posts as $post) :
                 setup_postdata($post) ?>
             <?php
-            $image = get_field('press_article_thumbnail');
-            $date = get_the_date();
-            $title = get_the_title();
-            $content = get_field('press_article_main_content'); ?>
+              $image = get_field('press_article_thumbnail');
+              $date = get_the_date();
+              $title = get_the_title();
+              $content = get_field('press_article_main_content');
+            ?>
 
           <div class="press-news-item">
             <a href="<?php echo the_permalink($post->ID); ?>">
-              <picture class="press-news-picture">
-                <source srcset="<?php echo $image; ?>" media="(max-width: 700px)">
-                <source srcset="<?php echo $image; ?>">
-                <img class="press-news-img" srcset="<?php echo $image; ?>" alt="margolis">
-              </picture>
+              <?php if ($image): ?>
+                <img class="press-news-img" src="<?php echo $image; ?>" alt="">
+              <?php else: ?>
+                <img class="press-news-img" src="<?php bloginfo('template_url'); ?>/images/press-placeholder.jpg" alt="">
+              <?php endif; ?>
             </a>
             <div class="press-news-article">
               <p class="press-news-article-date"><?php echo $date; ?></p>

@@ -31,9 +31,19 @@
   }
 }
 
+.press-details-picture {
+  display: block;
+  line-height: 0;
+  font-size: 0;
+}
+
 .press-details-item {
   display: flex;
   overflow: hidden;
+
+  a {
+    color: $orange;
+  }
 }
 
 .press-details-share-light ,
@@ -207,6 +217,61 @@
 .press-details-text-aside {
   color: $brown;
   font-family: $regular;
+
+  strong {
+    font-family: $bold;
+  }
+
+  em {
+    font-family: $italic;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $bold;
+    line-height: 1.1;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 45px;
+  }
+
+  h3 {
+    font-size: 40px;
+  }
+
+  h4 {
+    font-size: 30px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  h6 {
+    font-size: 18px;
+  }
+
+  ul, ol {
+    margin-left: 20px;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
 }
 
 .press-details-single-feature {

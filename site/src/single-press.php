@@ -60,6 +60,7 @@ get_header(); ?>
   <?php
     $thumb_toggle = get_field('press_article_thumbnail_toggle');
     $main_content = get_field('press_article_main_content');
+    $last_row = 'light';
   ?>
   <?php if ($thumb_toggle) : ?>
     <?php
@@ -78,7 +79,7 @@ get_header(); ?>
   <?php else : ?>
     <div class="press-details-item press-details-feature-content press-details-dual">
   <?php endif; ?>
-      <p><?php echo $main_content ?></p>
+      <?php echo $main_content ?>
       <?php if (!$thumb_toggle) : ?>
         <a href="#" class="press-details-share-button">
           <?php include(__DIR__ ."/template-parts/svgs/share.svg"); ?> Share
@@ -176,11 +177,17 @@ get_header(); ?>
               <h2 class="pd-related-project__header"><?php echo the_title(); ?></h2>
             </div>
             <p class="pd-related-project__more">More <?php include(__DIR__ ."/template-parts/svgs/chevron-right.svg"); ?></p>
-            <picture class="pd-related-project__picture">
-
-              <source srcset="<?php echo $thumbnail; ?>">
-              <img class="pd-related-project__img" srcset="<?php echo $thumbnail; ?>" alt="">
-            </picture>
+            <?php if ($thumbnail): ?>
+              <picture class="pd-related-project__picture">
+                <source srcset="<?php echo $thumbnail; ?>">
+                <img class="pd-related-project__img" src="<?php echo $thumbnail; ?>" alt="">
+              </picture>
+            <?php else: ?>
+              <picture class="pd-related-project__picture">
+                <source srcset="<?php bloginfo('template_url'); ?>/images/press-placeholder.jpg">
+                <img class="pd-related-project__img" src="<?php bloginfo('template_url'); ?>/images/press-placeholder.jpg" alt="">
+              </picture>
+            <?php endif; ?>
           </a>
         </div>
         <?php
