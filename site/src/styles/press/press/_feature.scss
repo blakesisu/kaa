@@ -115,6 +115,20 @@
   }
 }
 
+.press-img-wrapper-link {
+  display: block;
+  overflow: hidden;
+  line-height: 0;
+  font-size: 0;
+  img {
+    transition: 0.5s $easeOutQuad;
+  }
+  &:hover img {
+    transform: scale(1.08);
+  }
+}
+
+
 .press-img-wrapper {
   position: relative;
   width: 100%;

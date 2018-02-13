@@ -2,36 +2,36 @@
   <!-- featured post -->
   <?php include("feature.php"); ?>
 
-  <div class="press-news-container">
-    <?php
-      $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-        $article_query = new WP_Query(
-            array(
-              'post_type' => 'press',
-              'paged' => $paged,
-              'posts_per_page' => 9,
-              // 'order' => 'DESC',
-              // 'meta_key' => 'press_article_featured',
-              // 'meta_compare' => 'NOT EXISTS'
-            )
-        );
+  <?php
+    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-        $posts = $article_query->posts;
-        // var_dump($posts);
+    $article_query = new WP_Query(
+        array(
+          'post_type' => 'press',
+          'paged' => $paged,
+          'posts_per_page' => 9,
+          'meta_key' => 'press_article_featured',
+          'meta_value' => 0
+        )
+    );
 
-        if ($posts) : ?>
-          <div class="proj">
-            <?php foreach ($posts as $post) :
-                setup_postdata($post) ?>
-            <?php
-              $image = get_field('press_article_thumbnail');
-              $date = get_the_date();
-              $title = get_the_title();
-              $content = get_field('press_article_main_content');
-            ?>
+    $posts = $article_query->posts;
+  ?>
+
+  <?php if ($posts) : ?>
+    <div class="press-news-container">
+      <div class="press-news-list">
+        <?php foreach ($posts as $post) : ?>
+          <?php
+            setup_postdata($post);
+            $image = get_field('press_article_thumbnail');
+            $date = get_the_date();
+            $title = get_the_title();
+            $content = get_field('press_article_main_content');
+          ?>
 
           <div class="press-news-item">
-            <a href="<?php echo the_permalink($post->ID); ?>">
+            <a href="<?php echo the_permalink($post->ID); ?>" class="press-news-item__link">
               <?php if ($image): ?>
                 <img class="press-news-img" src="<?php echo $image; ?>" alt="">
               <?php else: ?>
@@ -44,17 +44,14 @@
               <div class="press-news-article-content"><?php echo $content; ?></div>
             </div>
           </div>
-            <?php endforeach; ?>
+        <?php endforeach; ?>
       </div>
+      <!-- end proj -->
     </div>
+    <!-- end press-news-container -->
 
-    <div class="press-news-paginator">
-      <div class="press-news-pages">
-        <?php
-          pagination_bar();
-        ?>
-      </div>
-    </div>
+    <?php include(__DIR__ ."/../common/pagination.php"); ?>
+
     <?php wp_reset_postdata(); ?>
-        <?php endif; ?>
+  <?php endif; ?>
 </section>

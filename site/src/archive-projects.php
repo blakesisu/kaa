@@ -62,4 +62,6 @@ get_header(); ?>
   </div>
 <?php endif; ?>
 
+<?php include("template-parts/common/pagination.php"); ?>
+
 <?php get_footer(); ?>

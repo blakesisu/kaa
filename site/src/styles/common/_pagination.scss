@@ -1,0 +1,64 @@
+.paginator {
+  margin: 0 auto 5% auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .screen-reader-text {
+    position: absolute;
+    left: -9999px;
+  }
+
+}
+.paginator__pages {
+  display: flex;
+  margin: 0 auto;
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
+
+  .page-numbers {
+    font-family: $demiBold;
+    color: $brown;
+    font-size: px2vw(18, $designLarge);
+    text-decoration: none;
+    margin: 0 .42vw;
+
+    &:hover {
+      color: $orange;
+    }
+
+    @media (max-width: $press-break) {
+      font-size: 12.81px;
+    }
+
+    @media (max-width: $press-single-column-break) {
+      font-size: px2vw(15, $designSmall);
+      margin: 0 2vw;
+    }
+  }
+
+  .page-numbers.current {
+    color: $orange;
+  }
+
+  // svg
+  .prev_arrow,
+  .next_arrow {
+    height: auto;
+    width: 11px;
+    fill: $brown;
+    &:hover {
+      fill: $orange;
+    }
+  }
+  .prev_arrow {
+    transform: rotate(180deg);
+    margin-right: 0.5vw;
+  }
+  .next_arrow {
+    margin-left: 0.5vw;
+  }
+}

@@ -80,7 +80,6 @@ function getYoutubeId($url) {
 }
 
 // limit posts per type
-add_action('pre_get_posts', 'be_change_event_posts_per_page');
 /**
  * Change Posts Per Page for Event Archive
  *
@@ -89,13 +88,13 @@ add_action('pre_get_posts', 'be_change_event_posts_per_page');
  * @param object $query data
  *
  */
-
-function be_change_event_posts_per_page($query)
-{
-    if ($query->is_main_query() && !is_admin() && is_post_type_archive('press')) {
-        // default should be 9
-        $query->set('posts_per_page', 9);
+add_action('pre_get_posts', 'changePostsPerPage');
+function changePostsPerPage($query) {
+  if ($query->is_main_query() && !is_admin()) {
+    if (is_post_type_archive('press')) {
+      $query->set('posts_per_page', 9);
     }
+  }
 }
 
 if (!function_exists('pagination_bar')) :
