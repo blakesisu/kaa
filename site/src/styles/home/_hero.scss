@@ -62,18 +62,20 @@
   background-position: center center;
   background-size: cover;
   z-index: 5;
-}
 
-.no-touchevents {
-  .hm-hero__img {
-    opacity: 0;
-    transform: scale(1.08);
-    transition: all 1.5s $easeOutQuad;
+  opacity: 0;
+  transform: scale(1.08);
+  transition: all 1.5s $easeOutQuad;
 
-    &.is-loaded {
-      opacity: 1;
-      transform: scale(1);
-    }
+  &.is-loaded {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  @media (max-width: 700px) {
+    transition: none;
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
