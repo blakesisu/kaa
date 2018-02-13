@@ -17,7 +17,7 @@
   <div class="press-details-placeholder">
     <div class="press-details-placeholder-wrapper">
       <picture class="press-details-picture">
-        <source srcset="<?php bloginfo('template_url'); ?>/images/press-details/press-details-placeholder.png">
+        <source srcset="<?php bloginfo('template_url'); ?>/images/press-placeholder-hero.jpg">
         <img class="press-details-img" srcset="<?php bloginfo('template_url'); ?>/images/press-details/press-details-placeholder.png" alt="">
         </picture>
     </div>
