@@ -5,6 +5,8 @@
 
 get_header(); ?>
 
-<h1>Oops! That page can&rsquo;t be found.</h1>
+<div class="default-content">
+  <h1 class="header-404">Oops! That page can&rsquo;t be found.</h1>
+</div>
 
 <?php get_footer();
