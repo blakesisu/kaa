@@ -11,7 +11,13 @@
     <?php else: ?>
       <?php
         $video = get_field('about_hero_video');
-        $videoSrc = getForegroundVideoSrc($video);
+        $controls = get_field('about_hero_controls');
+
+        if ($controls === true) {
+          $videoSrc = getForegroundVideoSrc($video);
+        } else {
+          $videoSrc = getBackgroundVideoSrc($video);
+        }
       ?>
       <?php if ($videoSrc): ?>
         <div class="about__video-wrapper">

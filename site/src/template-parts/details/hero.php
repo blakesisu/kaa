@@ -2,7 +2,14 @@
   $type = get_field('project_detail_hero_type');
   $hero = get_field('project_detail_hero');
   $video = get_field('project_detail_hero_video');
-  $videoSrc = getForegroundVideoSrc($video);
+  $controls = get_field('project_detail_hero_controls');
+
+  if ($controls === true) {
+    $videoSrc = getForegroundVideoSrc($video);
+  } else {
+    $videoSrc = getBackgroundVideoSrc($video);
+  }
+
 ?>
 <?php if ($type === 'video'): ?>
   <section class="pd-grid pd-grid--full">

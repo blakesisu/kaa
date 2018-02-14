@@ -7,7 +7,13 @@
         $projectRowImageType = get_sub_field('project_row_image_type');
         $projectRowImage = get_sub_field('project_row_image');
         $projectRowImageVideo = get_sub_field('project_row_image_video');
-        $projectRowImageVideoSrc = getBackgroundVideoSrc($projectRowImageVideo);
+        $projectRowImageControls = get_sub_field('project_row_image_controls');
+
+        if ($projectRowImageControls === true) {
+          $projectRowImageVideoSrc = getForegroundVideoSrc($projectRowImageVideo);
+        } else {
+          $projectRowImageVideoSrc = getBackgroundVideoSrc($projectRowImageVideo);
+        }
       ?>
       <section class="pd-grid pd-grid--full">
         <?php if ($projectRowImageType === 'video'): ?>
