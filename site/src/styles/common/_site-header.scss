@@ -108,6 +108,10 @@
   align-items: center;
   text-align: left;
 
+  a {
+    color: $white;
+  }
+
   // fixed size on medium screens
   @media (max-width: $hm-grid-break) {
     font-size: 21.3438px;
