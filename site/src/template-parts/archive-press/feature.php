@@ -23,7 +23,7 @@
               $content = get_field('press_article_main_content');
             ?>
           <a href="<?php echo the_permalink($post->ID); ?>" class="press-img-wrapper-link">
-            <picture class="press-picture"><source srcset="<?php echo $image; ?>" media="(max-width: 700px)">
+            <picture>
               <source srcset="<?php echo $image; ?>">
               <img class="press-book-img" srcset="<?php echo $image; ?>" alt="">
             </picture>
