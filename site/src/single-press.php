@@ -13,13 +13,11 @@ get_header(); ?>
     $title = get_the_title();
     $date = get_the_date();
   ?>
-  <div class="press-details-item press-details-feature-meta press-details-dual">
+  <div class="press-details-feature-meta press-details-dual">
     <div class="press-details-feature-wrapper">
       <p class="press-details-feature-date"><?php echo $date ?></h2>
       <h2 class="press-details-feature-header"><?php echo $title ?></h2>
-      <a href="#" class="press-details-share-button">
-        <?php include(__DIR__ ."/template-parts/svgs/share.svg"); ?> Share
-      </a>
+      <?php include("template-parts/common/share.php"); ?>
     </div>
   </div>
 

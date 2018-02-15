@@ -52,11 +52,7 @@
           <a href="<?php echo $contactBtn['link'] ?>" class="pd-contact__cta-link"><?php echo $contactBtn['label'] ?></a>
         </p>
       <?php endif; ?>
-      <p class="pd-contact__share">
-        <a href="#" class="pd-contact__share-link">
-          <?php include(__DIR__ ."/../svgs/share.svg"); ?> Share
-        </a>
-      </p>
+      <?php include(__DIR__ ."/../common/share.php"); ?>
     </div>
 
   </div>
