@@ -97,6 +97,7 @@
   display: flex;
   border: 1px solid $lightBrown;
   background-color: $white;
+  padding: 0 px2vw(15, $designLarge);
 
   &:before,
   &:after {
