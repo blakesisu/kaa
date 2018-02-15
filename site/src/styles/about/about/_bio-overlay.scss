@@ -27,6 +27,7 @@
   position: absolute;
   top: px2vw(40, $designLarge);
   right: px2vw(45, $designLarge);
+  z-index: 999;
   svg {
     width: px2vw(19, $designLarge);
     height: px2vw(19, $designLarge);
@@ -106,6 +107,14 @@
     font-size: 49.802px;
     margin-left: -1.781px;
     margin-bottom: 4.453px;
+  }
+
+  @media (max-width: 1114px) {
+    font-size: 39px;
+  }
+
+  @media (max-width: 930px) {
+    font-size: 29px;
   }
 
   // Mobile
@@ -191,7 +200,6 @@
 
   // Mobile
   @media (max-width: 700px) {
-    object-fit: none;
     position: static;
     width: 100%;
     height: auto;
@@ -201,20 +209,29 @@
 // Text
 // ----------------------------------------- //
 .ab-bio__text-container {
+  position: relative;
   flex: 0 0 50%;
-  padding: 4% 10.2% 4% 7.2%;
-  display: flex;
-  flex-direction: column;
-  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    /* IE10+ CSS styles go here */
-    display: block;
-    flex-direction: none;
-  }
+  // padding: 4% 10.2% 4% 7.2%;
 
   // Mobile
   @media (max-width: 700px) {
-    display: block;
     padding: 28px 20px;
+  }
+}
+
+.ab-bio__text-wrapper {
+  position: absolute;
+  top: 4%;
+  right: 10.2%;
+  bottom: 4%;
+  left: 10.2%;
+  display: flex;
+  flex-direction: column;
+
+  // Mobile
+  @media (max-width: 700px) {
+    position: static;
+    display: block;
   }
 }
 .ab-bio__scroller {

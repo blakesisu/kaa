@@ -1,4 +1,9 @@
 // section class .about-family
+@media (max-width: $about-single-column-break) {
+  .about-family-copy {
+    display: none;
+  }
+}
 
 @media (min-width: $about-single-column-break + 1) {
   .about-family-link {
@@ -78,6 +83,10 @@
     .about-project-block__more {
       display: none;
     }
+  }
+
+  .touchevents {
+
   }
 }
 
