@@ -1,7 +1,5 @@
 <?php
-  $permalink = '//' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-  $encodedURL = urlencode($permalink);
-  // $encodedURL = 'https%3A%2F%2Fwww.urlencoder.org%2F';
+  $encodedURL = urlencode(getPageURL());
 ?>
 <div class="share">
   <button href="#" target="_blank" class="share__btn">
