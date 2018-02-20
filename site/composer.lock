@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "09bb4e32890bdb6060955b41236b2c5c",
+    "content-hash": "d0e0dcfa7b843fb31f776a4fa74a789f",
     "packages": [
         {
             "name": "composer/installers",
@@ -427,15 +427,15 @@
         },
         {
             "name": "wpackagist-plugin/all-in-one-wp-migration",
-            "version": "6.62",
+            "version": "6.63",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/all-in-one-wp-migration/",
-                "reference": "tags/6.62"
+                "reference": "tags/6.63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/all-in-one-wp-migration.6.62.zip",
+                "url": "https://downloads.wordpress.org/plugin/all-in-one-wp-migration.6.63.zip",
                 "reference": null,
                 "shasum": null
             },
