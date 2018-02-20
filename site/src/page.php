@@ -4,10 +4,7 @@
  */
 get_header(); ?>
 
-<div class="default-content">
-  <?php while ( have_posts() ) : the_post();
-    the_content();
-  endwhile; ?>
-</div>
+<?php include("template-parts/about/hero.php"); ?>
+<?php include("template-parts/common/page-content.php"); ?>
 
 <?php get_footer(); ?>
