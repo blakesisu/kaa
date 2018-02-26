@@ -16,9 +16,11 @@
     <div class="press-media-dynamos">
       <div class="press-media-dropdown">
         <!-- dropdown header -->
-        <button class="press-media-dropdown-header">
-          <p>ALL PUBLICATIONS</p>
-          <?php include(__DIR__ ."/../svgs/right-chev.svg"); ?>
+        <button>
+          <span class="press-media-dropdown-header">
+            <p>ALL PUBLICATIONS</p>
+            <?php include(__DIR__ ."/../svgs/right-chev.svg"); ?>
+          </span>
         </button>
         <!-- dropdown options -->
         <div class="press-media-dropdown-container">
